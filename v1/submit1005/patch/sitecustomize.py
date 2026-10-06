@@ -69,46 +69,63 @@ def _tuning3_scaled_mm(
         and out_dtype is torch.bfloat16
         and isinstance(a, torch.Tensor)
         and isinstance(b, torch.Tensor)
+        and a.is_cuda
+        and b.is_cuda
         and a.dtype is torch.int8
         and b.dtype is torch.int8
         and a.ndim == 2
         and b.ndim == 2
-        and a.is_contiguous()
-        and scale_a.dtype is torch.float32
-        and scale_b.dtype is torch.float32
         and _lds_unified is not None
     ):
-        M = a.shape[0]
-        K = a.shape[1]
+        try:
+            M = a.shape[0]
+            K = a.shape[1]
 
-        if M in (1, 2, 3, 4):
-            # Check weight layout
-            if int(b.shape[0]) == K: # [K, N] from triton_scaled_mm
-                N = b.shape[1]
-                w = getattr(b, "_ldsx_w", None)
-                if w is None:
-                    w = b.t().contiguous()
-                    b._ldsx_w = w
-            elif int(b.shape[1]) == K: # [N, K] from blaslt_scaled_mm
-                N = b.shape[0]
-                w = b if b.is_contiguous() else b.contiguous()
-            else:
-                N = None
+            if M in (1, 2, 3, 4):
+                # Check weight layout
+                if int(b.shape[0]) == K: # [K, N] from triton_scaled_mm
+                    N = b.shape[1]
+                    w = getattr(b, "_ldsx_w", None)
+                    if w is None or w.device != b.device or not w.is_contiguous():
+                        w = b.t().contiguous()
+                        b._ldsx_w = w
+                elif int(b.shape[1]) == K: # [N, K] from blaslt_scaled_mm
+                    N = b.shape[0]
+                    w = b if b.is_contiguous() else b.contiguous()
+                else:
+                    N = None
 
-            if N is not None:
-                if K == 5120 and (N in (8192, 14336, 17408, 34816)):
-                    key = ("lds_k5120", K, N)
-                    if key not in _seen_mm:
-                        _seen_mm.add(key)
-                        print(f"[Tuning3 Patch] Active K5120 Unified LDS-x for M={M} K={K}->N={N}", flush=True)
-                    return _lds_unified.gemv_k5120(a, w, scale_a.reshape(-1), scale_b.reshape(-1), 4)
+                if N is not None:
+                    # Defensive memory, contiguity, and 16-byte alignment checks
+                    a_c = a if a.is_contiguous() else a.contiguous()
+                    if a_c.data_ptr() % 16 == 0 and w.data_ptr() % 16 == 0:
+                        sa = scale_a.to(device=a.device, dtype=torch.float32).reshape(-1)
+                        sb = scale_b.to(device=b.device, dtype=torch.float32).reshape(-1)
+                        if sa.numel() == 1 and M > 1:
+                            sa = sa.expand(M).contiguous()
+                        else:
+                            sa = sa.contiguous()
+                        if sb.numel() == 1 and N > 1:
+                            sb = sb.expand(N).contiguous()
+                        else:
+                            sb = sb.contiguous()
 
-                if (K == 8704 or K == 3072) and N == 5120:
-                    key = ("lds_row", K, N)
-                    if key not in _seen_mm:
-                        _seen_mm.add(key)
-                        print(f"[Tuning3 Patch] Active TP2 Row Unified LDS-x for M={M} K={K}->N={N}", flush=True)
-                    return _lds_unified.gemv_row(a, w, scale_a.reshape(-1), scale_b.reshape(-1), 4)
+                        if sa.numel() >= M and sb.numel() >= N:
+                            if K == 5120 and (N in (8192, 14336, 17408, 34816)):
+                                key = ("lds_k5120", K, N)
+                                if key not in _seen_mm:
+                                    _seen_mm.add(key)
+                                    print(f"[Tuning3 Patch] Active K5120 Unified LDS-x for M={M} K={K}->N={N}", flush=True)
+                                return _lds_unified.gemv_k5120(a_c, w, sa, sb, 4)
+
+                            if (K == 8704 or K == 3072) and N == 5120:
+                                key = ("lds_row", K, N)
+                                if key not in _seen_mm:
+                                    _seen_mm.add(key)
+                                    print(f"[Tuning3 Patch] Active TP2 Row Unified LDS-x for M={M} K={K}->N={N}", flush=True)
+                                return _lds_unified.gemv_row(a_c, w, sa, sb, 4)
+        except Exception:
+            pass
 
     if orig_fn is not None:
         return orig_fn(a, b, scale_a, scale_b, out_dtype, bias, best_config)
