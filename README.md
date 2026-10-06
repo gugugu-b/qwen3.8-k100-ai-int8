@@ -135,8 +135,8 @@ docker run -itd \
     -v /data/:/data/ \
     harbor.sourcefind.cn:5443/hcu/admin/base/sglang:0.5.12-ubuntu22.04-dtk2604-py3.10 bash
 
-docker exec -it Qwen3.8-27B-Channel-INT8 bash
-cd /path/to/v1/submit1005
+docker exec -it qwen3.8-k100-ai-int8 bash
+cd qwen3.8-k100-ai-int8/v1/submit1005
 ```
 
 ### 2. 模块化执行（推荐）
