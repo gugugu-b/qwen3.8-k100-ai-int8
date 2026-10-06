@@ -1,0 +1,107 @@
+# Environment Declaration for Qwen3.8-27B-Channel-INT8-w8a8 on Hygon K100-AI
+schema_version: "1.0"
+date: "2026-10-05"
+
+hardware:
+  platform: "Hygon DCU / GPGPU"
+  device_name: "K100-AI"
+  gpu_arch: "gfx928"
+  total_gpus: 8
+  memory_per_gpu_mib: 65520
+  deployment_tp: 2
+  assigned_gpus: [4, 5]
+  reserved_gpus: [0, 1, 2, 3] # STRICT: reserved for other workloads
+
+system:
+  os: "Ubuntu 22.04.4 LTS"
+  kernel: "5.15.0"
+  dtk_version: "26.04"
+  rocm_path: "/opt/dtk"
+  hip_path: "/opt/dtk/hip"
+  hyhal_path: "/opt/hyhal"
+  python_version: "3.10.12"
+  container_runtime: "Docker"
+  docker_image: "harbor.sourcefind.cn:5443/hcu/admin/base/sglang:0.5.12-ubuntu22.04-dtk2604-py3.10"
+  container_name: "Qwen3.8-27B-sglang0.5.12-tuning3"
+
+model:
+  name: "Qwen3.8-27B-Channel-INT8-w8a8"
+  path: "/data/model/Qwen3.8-27B-Channel-INT8-w8a8"
+  precision: "INT8-W8A8 (per-channel weight, per-token activation)"
+  architecture: "Hybrid Linear Attention (48 layers GDN) + Dense Attention (16 layers Full Attn)"
+  hidden_size: 5120
+  intermediate_size: 17408
+  num_hidden_layers: 64
+  num_attention_heads: 24 (tp=2 -> 12)
+  num_key_value_heads: 4 (tp=2 -> 2)
+  head_dim: 256
+
+serving:
+  framework: "SGLang"
+  version: "0.5.12"
+  host: "0.0.0.0"
+  port: 31004
+  nccl_port: 31005
+  context_length: 67584
+  max_running_requests: 32
+  cuda_graph_max_bs: 32
+  mem_fraction_static: 0.85
+  chunked_prefill_size: 8192
+  max_prefill_tokens: 65536
+  page_size: 64
+  attention_backend: "fa3"
+  mm_attention_backend: "fa3"
+  mamba_scheduler_strategy: "no_buffer"
+  disable_radix_cache: true
+  disable_custom_all_reduce: true
+
+speculative_decoding:
+  algorithm: "NEXTN"
+  num_steps: 1
+  num_draft_tokens: 2
+  eagle_topk: 1
+
+environment_variables:
+  HIP_VISIBLE_DEVICES: "4,5"
+  HSA_FORCE_FINE_GRAIN_PCIE: "1"
+  SGLANG_USE_LIGHTOP: "1"
+  SGLANG_USE_FUSED_TOPK_SOFTMAX: "1"
+  SGLANG_ROCM_USE_AITER_MOE: "False"
+  SGLANG_USE_CUDA_IPC_TRANSPORT: "1"
+  SGLANG_USE_AITER_LINEAR_ATTN: "1"
+  ROCBLAS_TENSILE_LIBPATH: "/data/wangzy/library_gpu4_int8tuned_stock_clean"
+  PYTHONPATH: "submit1005/patch:$PYTHONPATH"
+
+optimizations:
+  unified_multi_m_gemv:
+    description: "Native C++/HIP Multi-M (M in [1, 2, 3, 4]) LDS-x GEMV covering qkv, gate_up, down, out projections"
+    binary_path: "/data/wangzy/native_ext/k100_int8_gemv_unified.so"
+    speedup_vs_lightop: "1.55x - 3.62x"
+  triton_longkv_prefill:
+    description: "Triton Long-KV GQA (BM128/BN64/w8) for 16 dense full-attention prefill layers"
+    speedup_at_64k: "5.82x (84ms vs 490ms)"
+  aiter_gdn_tuning:
+    description: "Aiter Triton linear attention configs patched with TP=2 real dimensions (H=8, HV=24)"
+    config_dir: "/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/"
+  rocblas_layer3_tuning:
+    description: "rocBLAS Tensile autotune library overlay for M=48 K=5120 bf16_r/TN GEMM calls (Clean Stock DTK 26.04 tuned, zero pollution)"
+    library_path: "/data/wangzy/library_gpu4_int8tuned_stock_clean"
+    dat_sha256: "c3e295b24494507ede49ee2b330a96ddc9fe1654c58e5fd9611b3adf8b227c55"
+
+benchmark:
+  dataset_path: "/data/wangzy/bench/ShareGPT_V3_unfiltered_cleaned_split.json"
+  evaluator: "/data/wangzy/bench/benchmark.py"
+  concurrency: 8
+  scenarios:
+    - name: "4k1k"
+      input_len: 4096
+      output_len: 1024
+      requests_per_round: 16
+      warmup_rounds: 2
+      measure_rounds: 3
+    - name: "64k1k"
+      input_len: 65536
+      output_len: 1024
+      requests_per_round: 16
+      warmup_rounds: 1
+      measure_rounds: 1
