@@ -21,6 +21,7 @@ v1/
 │   ├── VERIFICATION_REPORT.md # 独立复现报告
 │   ├── compare_verify.py  # 跨轮次/跨容器指标对比分析脚本
 │   └── results/           # tuning5 独立复现实测完整原始数据（4k1k 3轮, 64k1k 3轮）
+├── 综合评测报告-v1.md     # v1 综合评测报告（GSM8K + LiveCodeBench + ShareGPT + 4K/64K）
 └── README.md              # 本文档
 ```
 
