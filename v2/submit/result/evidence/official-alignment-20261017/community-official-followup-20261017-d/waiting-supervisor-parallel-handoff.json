@@ -1,0 +1,11 @@
+{
+  "pid": 1236075,
+  "state": {
+    "status": "WAITING_FOR_MATRIX",
+    "pid": 1236075,
+    "utc": "2026-10-16T20:45:14.017827+00:00",
+    "accuracy": "GSM8K_SEPARATE_TASK_OTHER_THREE_NOT_RUN"
+  },
+  "source_sha256": "09417735cf8423850f01991433469aa69995f561cab8e3fb894365a1b53f46ff",
+  "reason": "User-authorized use of all idle GPU pairs; stop only the waiting CPU supervisor, no active measurement interrupted"
+}

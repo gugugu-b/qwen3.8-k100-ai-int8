@@ -1,0 +1,49 @@
+{
+  "status": "C32_LOCAL_REMOTE_INDEPENDENT_REVIEW_PASS",
+  "reviewed_at": "2026-10-16 12:01",
+  "source_snapshot_files": 80,
+  "raw_artifacts": 71,
+  "all_file_sha_size_match": true,
+  "producer_remote_local_review_bytes_identical": true,
+  "review_sha256": "7104baebc1429811ae55ce18a0b45727ef8f7efdb893e14844e76b633ce49660",
+  "raw_manifest_sha256": "b2843070aa4055ca4ac1247e7f7476f803165a65451fe1a0695bbcdf93009698",
+  "formal_requests": 9000,
+  "full_warmup_requests": 3000,
+  "short_warmup_requests_per_invocation": 64,
+  "benchmark_invocations": 12,
+  "raw_requests_errors": 0,
+  "physical_pair": [
+    6,
+    7
+  ],
+  "tp": 2,
+  "baseline_combined_mean_output_tps": 389.2721789894332,
+  "candidate_mean_output_tps": 419.78774515339853,
+  "gain_percent": 7.839133596237224,
+  "paired_gain_percent": [
+    7.8861314205971755,
+    7.665844987353032,
+    7.965922643370904
+  ],
+  "drift_percent": 1.0485930158839807,
+  "tail_changes": {
+    "p99_ttft_ms": -0.8409309651387864,
+    "p99_tpot_ms": -6.695782909997217,
+    "p95_itl_ms": -3.2031233335883535,
+    "p99_itl_ms": -3.493296619503361,
+    "p99_e2e_latency_ms": -7.047211308021328
+  },
+  "tail_regression_le_5_percent": true,
+  "meets_20_percent": false,
+  "accuracy": "NOT_RUN",
+  "actual_model_graph": "REVIEW_REQUIRED",
+  "frozen": false,
+  "files_at_or_above_16MiB_downloaded": 0,
+  "limitations": [
+    "Observed variation is a reference, not a statistical noise upper bound.",
+    "TTFT quantiles and output throughput are reconstructed exactly. ITL/TPOT/E2E retain the installed benchmark metrics and are independently aggregated/compared; text_chunks and per-request final latency are not serialized, so per-token ITL and exact E2E/TPOT cannot be reconstructed. Raw-chunk ITL and interval-sum diagnostics are separate and approximate.",
+    "This performance validation neither runs accuracy nor promotes/freezes the patch.",
+    "C32 v1 and candidate overlapped the independent HCU4,5 64K queue. The return v1 stage straddled release of HCU4,5 at 11:31:38; no isolated-environment or statistical-significance claim.",
+    "Seed/dataset SHA and input-length sequences agree; per-request prompt text identity is not serialized."
+  ]
+}

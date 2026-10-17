@@ -1,0 +1,154 @@
+{
+  "status": "BENCHMARK_COMPLETE",
+  "pair": "4,5",
+  "client_concurrency": 64,
+  "server_max_running_requests": 64,
+  "cuda_graph_max_bs": 64,
+  "port": 31540,
+  "pid": 3403466,
+  "run_id": "high-concurrency-20261017-a",
+  "scenes": [
+    {
+      "run_id": "high-concurrency-20261017-a-p45-server64-4k-c64",
+      "scene": "4k",
+      "c": 64,
+      "path": "/data/wangzy/v2/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64",
+      "validation": {
+        "status": "PERFORMANCE_MEASUREMENTS_COMPLETE_TEXT_FLAGGED",
+        "performance_status": "PASS",
+        "text_integrity_status": "FLAGGED_UNRESOLVED",
+        "original_strict_text_gate_overridden": false,
+        "quality": "NOT_RUN",
+        "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+        "measured_rounds": 3,
+        "requests": 384,
+        "mean_output_tps": 398.9657228595904,
+        "output_tps_rounds": [
+          397.53899170401667,
+          400.03573100401576,
+          399.3224458707389
+        ],
+        "spread_percent": 0.6258029592376234,
+        "text_flags": [
+          {
+            "phase": "measure",
+            "round": 1,
+            "index": 59,
+            "replacement_chars": 1
+          },
+          {
+            "phase": "measure",
+            "round": 1,
+            "index": 114,
+            "replacement_chars": 1
+          },
+          {
+            "phase": "measure",
+            "round": 2,
+            "index": 72,
+            "replacement_chars": 1
+          }
+        ],
+        "raw_sha256": {
+          "warmup-01/requests.jsonl": "834d84aeab5f3e21cf7398c1e3b311e02f4b24bfb37b73012ca3607148eec894",
+          "warmup-01/summary.json": "5e3a56b7da13a0d4b47e5afa047a4fb9191f97189c52af04ebeff624e11eee40",
+          "warmup-02/requests.jsonl": "05f86bb14c1cd2b62b9c0819848351a41b92da9fec111c080e04d1a8c2d16c02",
+          "warmup-02/summary.json": "46f46c211c94e0433dd35044e0c45b1d7c5895f5ac5943ddba86592536bc63c5",
+          "round-01/requests.jsonl": "1d17e8c82470184553c45c3e1e2e075fe92807cdc94b3f817682aa1581fe0d08",
+          "round-01/summary.json": "abc20801b3239e130f6d1e49bb4fb5081ec8a096cf631c6fa71e01fc1e10578d",
+          "round-02/requests.jsonl": "f4637c7bf21c6267671cc78d90987bb73c007d479b6ae9ee1a75ba19e05e9197",
+          "round-02/summary.json": "333510bb8f08a355709482fe83c98be2af0800ae5305bc6b4a27121fd14bd09f",
+          "round-03/requests.jsonl": "d6c5a2aa864c3a47abb325c015a02d790b065c197ce6c2f420ad8e7b808f46f5",
+          "round-03/summary.json": "0ed9bf572639552c545a1065d5a3c148c60f96bf9e17ca61ec9c8333c5868273"
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31540",
+          "concurrency": 64,
+          "input_len": 4096,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64",
+          "output_len": 1024,
+          "requests_per_round": 128,
+          "seed": 20260912,
+          "timeout": 3600,
+          "warmup_rounds": 2
+        },
+        "official_final_acceptance": false,
+        "ttft_s_mean_mean_of_rounds": 25.618354300241815,
+        "ttft_s_p50_mean_of_rounds": 13.864075549334908,
+        "ttft_s_p95_mean_of_rounds": 77.27599134893585,
+        "ttft_s_p99_mean_of_rounds": 82.16694474427864,
+        "tpot_ms_mean_mean_of_rounds": 133.05002895041198,
+        "tpot_ms_p50_mean_of_rounds": 131.35490701498196,
+        "tpot_ms_p95_mean_of_rounds": 200.59999438763754,
+        "tpot_ms_p99_mean_of_rounds": 219.52646996118756,
+        "e2e_s_mean_mean_of_rounds": 161.72853391651324,
+        "e2e_s_p50_mean_of_rounds": 160.29597556832596,
+        "e2e_s_p95_mean_of_rounds": 238.73529317605136,
+        "e2e_s_p99_mean_of_rounds": 249.80135241903753
+      },
+      "config": {
+        "base_url": "http://127.0.0.1:31540",
+        "concurrency": 64,
+        "input_len": 4096,
+        "measure_rounds": 3,
+        "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+        "output_dir": "/data/wangzy/v2/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64",
+        "output_len": 1024,
+        "requests_per_round": 128,
+        "seed": 20260912,
+        "timeout": 3600,
+        "warmup_rounds": 2
+      },
+      "provisional_SLA_by_statistic": {
+        "challenge_p95": false,
+        "tutorial_p95": false
+      },
+      "official_SLA_max": null
+    }
+  ],
+  "server_run_id": "high-concurrency-20261017-a-p45-server",
+  "parallel_instances": 2,
+  "same_host_interference": true,
+  "accuracy": "NOT_RUN",
+  "automatic_downgrade": false,
+  "utc": "2026-10-17T04:03:27.861909+00:00",
+  "container": "qwen38-high-concurrency-20261017-a-p45",
+  "runtime": "/data/wangzy/v2/retest-server64-128-20261017-a/runtime-p45",
+  "metrics_sampling": {
+    "samples": 269,
+    "error": null,
+    "joined": true,
+    "target_start_interval_s": 5,
+    "http_timeout_s": 4,
+    "output": "/data/wangzy/v2/retest-server64-128-20261017-a/runtime-p45/running-metrics.jsonl",
+    "gauge_aggregation": "NONE",
+    "requests_during_benchmark": true,
+    "profiler_or_trace": false
+  },
+  "outcome_before_cleanup": "BENCHMARK_COMPLETE",
+  "cleanup_status": "OWNED_CONTAINER_STOPPED_OR_NOT_CREATED",
+  "gpu_after": {
+    "card4": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "5"
+    },
+    "card5": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "5"
+    }
+  },
+  "lock_acquired": true,
+  "lock_released": true,
+  "unchanged_default_sources": {
+    "scripts/serve.sh": "1d5e381cc7e0057d2c9f8b27cee1bd5db79b80331b1a758d5ef118206294489b",
+    "scripts/start_server.sh": "e2b28b978ff47010ffa7530152029a7e3bcacf3b5fde2eb83e2bcc703f012417",
+    "patch/sitecustomize.py": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+    "patch/native_bf16_ar_guard.py": "55485f3994417b012fd76f3cf423b03b33fd90d52e2c73d98d0fc9315ab0b5aa",
+    "patch/k100_int8_gemv_unified.so": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d"
+  },
+  "finished_utc": "2026-10-17T04:03:27.861871+00:00"
+}

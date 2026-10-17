@@ -1,0 +1,13 @@
+{
+  "phase": "failed",
+  "pid": 3368076,
+  "utc": "2026-10-10T00:05:37.152732+00:00",
+  "run_id": "delivery-native-ar-4k1k-20261010-a",
+  "physical_pair": "6,7",
+  "tp": 2,
+  "profiler_used": false,
+  "observer_enabled": false,
+  "default_patch": "v1",
+  "formal_acceptance": false,
+  "error": "CalledProcessError(1, ['docker', 'top', 'qwen38-submit1009-ab', '-eo', 'pid,ppid,args'])"
+}

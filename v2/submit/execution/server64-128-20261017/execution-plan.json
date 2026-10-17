@@ -1,0 +1,19 @@
+{
+  "run_id": "high-concurrency-20261017-a",
+  "control": "/data/wangzy/v2/retest-server64-128-20261017-a",
+  "candidate_changed": false,
+  "server_context": 67584,
+  "tp": 2,
+  "seed": 20260912,
+  "input_tokens": 4096,
+  "output_tokens": 1024,
+  "warmup_rounds": 2,
+  "formal_rounds": 3,
+  "workers": [
+    {"pair": "4,5", "port": 31540, "client_concurrency": 64, "max_running_requests": 64, "cuda_graph_max_bs": 64},
+    {"pair": "6,7", "port": 31560, "client_concurrency": 128, "max_running_requests": 128, "cuda_graph_max_bs": 128}
+  ],
+  "failed_capacity_policy": "Preserve failure; no silent fallback to service32 or Graph32",
+  "parallel_conditions": "Two TP2 instances on same host; not isolated measurements",
+  "previous_assets": "v2/submit/result/evidence/readme-patch-review-20261017/assets-identity-review.json"
+}

@@ -1,0 +1,15 @@
+{
+  "phase": "delivery-4k1k-complete",
+  "pid": 3379907,
+  "utc": "2026-10-10T00:26:58.749850+00:00",
+  "run_id": "delivery-native-ar-4k1k-20261010-b",
+  "physical_pair": "6,7",
+  "tp": 2,
+  "profiler_used": false,
+  "observer_enabled": false,
+  "default_patch": "v1",
+  "formal_acceptance": false,
+  "comparison": "result/delivery-native-ar-4k1k-20261010-b/comparison.json",
+  "native_ar_gain_vs_v1_percent": 14.187511668793928,
+  "rounds_per_variant": 3
+}

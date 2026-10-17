@@ -1,0 +1,97 @@
+{
+  "pair": "6,7",
+  "pid": 1364382,
+  "utc": "2026-10-16T17:29:00.903846+00:00",
+  "stage": "random_matrix",
+  "status": "MATRIX_COMPLETE",
+  "scenes": [
+    {
+      "run_id": "community-v2-20261016-a-p67-matrix-64k-c32",
+      "scene": "64k",
+      "c": 32,
+      "path": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p67-matrix-64k-c32/64k-c32",
+      "validation": {
+        "status": "PASS",
+        "measured_rounds": 3,
+        "requests": 192,
+        "output_tps_rounds": [
+          32.88725808698639,
+          32.84444052055145,
+          32.76262236973469
+        ],
+        "mean_output_tps": 32.83144032575751,
+        "spread_percent": 0.3796230564819843,
+        "mean_wall_s": 1996.140345689666,
+        "ttft_s_p50_mean_of_rounds": 547.2617703795064,
+        "ttft_s_p50_range": [
+          546.4936681240215,
+          547.8631624740083
+        ],
+        "ttft_s_p95_mean_of_rounds": 832.165502942144,
+        "ttft_s_p95_range": [
+          831.9679228735215,
+          832.3270446815092
+        ],
+        "ttft_s_p99_mean_of_rounds": 961.1044932473029,
+        "ttft_s_p99_range": [
+          959.5974342610099,
+          962.9278110610076
+        ],
+        "tpot_ms_p50_mean_of_rounds": 382.7835161412318,
+        "tpot_ms_p50_range": [
+          353.2863130077983,
+          397.6807813650875
+        ],
+        "tpot_ms_p95_mean_of_rounds": 617.5397757703139,
+        "tpot_ms_p95_range": [
+          599.9317887077452,
+          649.3115977080851
+        ],
+        "tpot_ms_p99_mean_of_rounds": 682.1556657623763,
+        "tpot_ms_p99_range": [
+          663.7575406511261,
+          697.6062902144062
+        ]
+      },
+      "config": {
+        "base_url": "http://127.0.0.1:31130",
+        "concurrency": 32,
+        "input_len": 65536,
+        "measure_rounds": 3,
+        "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+        "output_dir": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p67-matrix-64k-c32/64k-c32",
+        "output_len": 1024,
+        "requests_per_round": 64,
+        "seed": 20260912,
+        "timeout": 7200,
+        "warmup_rounds": 1
+      },
+      "provisional_SLA_by_statistic": {
+        "mean": false,
+        "p99": false
+      },
+      "official_SLA_max": null
+    }
+  ],
+  "accuracy": "NOT_RUN",
+  "parallel_instances": 4,
+  "container": "qwen38-community-v2-67-20261016-a",
+  "current": {
+    "scene": "64k",
+    "c": 32
+  },
+  "gpu_after": {
+    "card6": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card7": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    }
+  },
+  "finished_utc": "2026-10-16T17:29:32.768365+00:00",
+  "lock_released": true
+}

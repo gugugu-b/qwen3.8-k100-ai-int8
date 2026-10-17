@@ -1,0 +1,21 @@
+{
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/server.log": "f964573e4673b5be27cf508f9732c3a97cc3003e1dbd1f83078a2583d76a3e61",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/server-info.json": "e2c9b8866cfbc0e6ddec03093e8c5ba125be073d998465ea9ad2a029992add7a",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/patch-load-review.json": "dd6c6a2a122bd52ee859f1b209f555006a781153d64aed5f1e23be1c3859f5f5",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/screen-config.json": "5dbc7e350187201b854dc021b57515cd74f1715abb8fbd38838f114ec3ede812",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/config.json": "0873842b1ba25df362bb5de48170503fcbb09b2590b4d4be1108648ba8f84ae3",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/summary.json": "889fc4c296f5c6f057c1e314ad3963e6ae26b9b2159a937ef9b7384f42960e9a",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/validated_summary.json": "b245a7407f58649758676dcc6813f8fda772ad45a0fe37532108f1c411d060e4",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/progress.json": "506e1b7ac5946f5a15ad914ca3d36868f575511519aa12c7a0c82f4ef16b837a",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/bench.log": "292972012348e51e0a87e441ad98697a3067218b734c4034c51d20b2e289b85d",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/warmup-02/summary.json": "76bc75d002b79a52cf133d8c569857561e5454b8c82792b62db42586fef9784c",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/warmup-02/requests.jsonl": "d9e46e51ea313be56ed144ef198fca0e5a18d7adfacba2d801f702deeb1b0638",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/warmup-01/summary.json": "7ff31b66059c2058e0b115cb95863770b3ed2b96de3ea5f8338c89fc78afe6a1",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/warmup-01/requests.jsonl": "25acc438a381e2719982ab02045ec87e7c2fd7966f2ebfb727335733e5dc49e1",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-01/summary.json": "b9fb075b84c2906ab3ad440ef962307402857cf42ab12940d481b540b4535403",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-01/requests.jsonl": "7ebf93d2c7f69201d53e5a03e42887b76e7c2f27b68ff3ef6ea197e86315f80a",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-03/summary.json": "ee3bfd49d64f3986632fba647cb9c1563a81666c673e095502893d1f29d67624",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-03/requests.jsonl": "87e70fd20c49679bea42939bff40a67cd9ca3d882d5de640ef61ed890cbffbce",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-02/summary.json": "cf1f0cb14af28791aca266ef3a5a9022715348adcae5931ae6d54ac7795a034c",
+  "result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-02/requests.jsonl": "d8a201e6a76e840e6631d83c67a99c998b8222a97b8fb31642ae73482bf85344"
+}

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-16T14:43:49.454718+00:00",
+  "gpu": {
+    "card0": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card1": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    }
+  },
+  "own_container_stopped": true
+}

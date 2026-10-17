@@ -1,0 +1,14 @@
+{
+  "phase": "submit-candidate-performance-complete",
+  "pid": 1621554,
+  "utc": "2026-10-16T08:39:00.752776+00:00",
+  "run": "submit-current-c1-pair45-20261016-a",
+  "physical_pair": [
+    4,
+    5
+  ],
+  "elapsed_s": 14836.888396103983,
+  "accuracy": "NOT_RUN",
+  "default_patch_changed": false,
+  "frozen": false
+}

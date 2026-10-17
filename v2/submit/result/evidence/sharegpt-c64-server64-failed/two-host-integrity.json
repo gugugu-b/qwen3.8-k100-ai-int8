@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_RUN_RAW_SHA_COVERAGE_AND_NUMERIC_AUDIT_TWO_HOST_BYTES_MATCH",
+  "original_validation_gate_pass": false,
+  "original_queue_status": "FAILED",
+  "remote_only_large_files": [],
+  "inventory_files_size_sha_verified": 52,
+  "remote_and_local_report_sha256": "d5ddcc2e70e2a6a91c0c3d43f5cac37dfd2701876566c2086e3680545e9f04a7",
+  "accuracy": "NOT_RUN",
+  "frozen": false,
+  "original_result_modified": false
+}

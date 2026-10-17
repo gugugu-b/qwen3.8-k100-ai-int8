@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-16T15:24:19.356886+00:00",
+  "hostname": "test",
+  "model_source": "hygon/Qwen3.8-27B-Channel-INT8-w8a8 per on-disk model README; official contest asset permission pending",
+  "cpu": "Architecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        48 bits physical, 48 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               128\nOn-line CPU(s) list:                  0-127\nVendor ID:                            HygonGenuine\nModel name:                           Hygon C86 7490 64-core Processor\nCPU family:                           24\nModel:                                4\nThread(s) per core:                   1\nCore(s) per socket:                   64\nSocket(s):                            2\nStepping:                             1\nFrequency boost:                      enabled\nCPU max MHz:                          2700.0000\nCPU min MHz:                          1600.0000\nBogoMIPS:                             5400.38\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid amd_dcm aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb hw_pstate ssbd ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 xsaves clzero irperf xsaveerptr arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip overflow_recov succor smca sme sev sev_es\nVirtualization:                       AMD-V\nL1d cache:                            4 MiB (128 instances)\nL1i cache:                            4 MiB (128 instances)\nL2 cache:                             64 MiB (128 instances)\nL3 cache:                             512 MiB (32 instances)\nNUMA node(s):                         8\nNUMA node0 CPU(s):                    0-15\nNUMA node1 CPU(s):                    16-31\nNUMA node2 CPU(s):                    32-47\nNUMA node3 CPU(s):                    48-63\nNUMA node4 CPU(s):                    64-79\nNUMA node5 CPU(s):                    80-95\nNUMA node6 CPU(s):                    96-111\nNUMA node7 CPU(s):                    112-127\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Mitigation; untrained return thunk; SMT disabled\nVulnerability Spec rstack overflow:   Mitigation; safe RET, no microcode\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl and seccomp\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; IBPB conditional; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n",
+  "memory": "MemTotal:       1056563624 kB\nMemFree:        398314380 kB\nMemAvailable:   1020691876 kB\nBuffers:         4261052 kB\nCached:         615521000 kB\nSwapCached:            0 kB\nActive:         252496484 kB\nInactive:       379557812 kB\nActive(anon):    2224144 kB\nInactive(anon): 12292080 kB\nActive(file):   250272340 kB\nInactive(file): 367265732 kB\nUnevictable:       28000 kB\nMlocked:           28000 kB\nSwapTotal:       8388604 kB\nSwapFree:        8388604 kB\nDirty:            534300 kB\nWriteback:          7812 kB\nAnonPages:      12302188 kB\nMapped:           352132 kB\nShmem:           2234912 kB\nKReclaimable:   10264476 kB\nSlab:           11786052 kB\nSReclaimable:   10264476 kB\nSUnreclaim:      1521576 kB\nKernelStack:       48320 kB\nPageTables:        39948 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    536670416 kB\nCommitted_AS:    9437416 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      539328 kB\nVmallocChunk:          0 kB\nPercpu:           452096 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:     8271316 kB\nDirectMap2M:    414058496 kB\nDirectMap1G:    652214272 kB\n",
+  "kernel": "Linux test 5.15.0-119-generic #129-Ubuntu SMP Fri Aug 2 19:25:20 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux\n",
+  "driver": null,
+  "disk": "Filesystem                         Size  Used Avail Use% Mounted on\n/dev/mapper/ubuntu--vg-ubuntu--lv  3.5T  3.2T  146G  96% /\n",
+  "other_containers": "bge-reranker-svc\tUp 7 hours\nbge-m3-svc\tUp 7 hours\npoc_deepseek-v4-flash-int-k100ai\tUp 10 hours\nqwen3vl-s002-repro\tUp 2 days\nvllm-vl\tUp 3 days\nqwen3vl-vllm\tUp 3 days\nocr-dev\tUp 3 days\nk100_deepseekv4_flash\tUp 12 hours\ndeepseek-v4-flash-int\tUp 12 hours\nQwen3.8-27B-0916\tUp 31 hours\n",
+  "gpu_before": {
+    "card0": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card1": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card2": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card3": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card4": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card5": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card6": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card7": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+RUN: python3 -u -m sglang.launch_server --model-path /data/model/Qwen3.8-27B-Channel-INT8-w8a8 --tp-size 2 --pp-size 1 --attention-backend fa3 --mm-attention-backend fa3 --page-size 64 --served-model-name Qwen3.8-27B-Channel-INT8-w8a8 --host 0.0.0.0 --port 31014 --nccl-port 31015 --context-length 67584 --disable-radix-cache --mem-fraction-static 0.85 --max-running-requests 32 --max-prefill-tokens 65536 --chunked-prefill-size 8192 --mamba-scheduler-strategy no_buffer --cuda-graph-max-bs 32 --tool-call-parser qwen3_coder --reasoning-parser qwen3 --enable-metrics --speculative-algorithm NEXTN --speculative-num-steps 1 --speculative-eagle-topk 1 --speculative-num-draft-tokens 2 --custom-all-reduce-backend native
+[Tuning3 Patch] Initializing Qwen3.8-27B optimizations on K100-AI...
+[Tuning3 Patch] Loaded Unified Multi-M LDS-x from /data/wangzy/submit1009/delivery/20261010-4k1k/submit1009/patch/k100_int8_gemv_unified.so
+[Tuning3 Patch] Patched lmslim.quantize.quant_ops.triton_scaled_mm
+[lightop] DUP_REG_GUARD: gptq_gemm1 already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_tn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_nn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_channelwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_blockwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_fp16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_bf16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_rms_norm_dynamic_per_token_quant already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_lm_fuse_silu_mul_quant already registered by another module, keeping existing impl
+[Tuning3 Patch] Patched lightop.gemm_ops.triton_scaled_mm
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)

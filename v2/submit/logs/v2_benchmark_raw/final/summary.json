@@ -1,0 +1,1049 @@
+{
+  "status": "MEASURED_THREE_ROUND_MEANS",
+  "primary_random_count": 8,
+  "diagnostic_high_client_concurrency_count": 2,
+  "primary_sharegpt_count": 5,
+  "scenes": [
+    {
+      "id": "random:4k-c1",
+      "directory": "random/4k-c1",
+      "kind": "fixed_random",
+      "role": "primary_random",
+      "concurrency": 1,
+      "physical_pair": "0,1",
+      "source_directory": "result/runs/community-official-20261017-c-p01-matrix-4k-c1/4k-c1",
+      "output_tps_rounds": [
+        57.59404648411567,
+        57.15593681174255,
+        57.333664213254316
+      ],
+      "ttft_mean_s": 1.3027193407954958,
+      "tpot_mean_ms": 16.17672366352888,
+      "ttft_p95_s_mean_of_rounds": 1.308807774516754,
+      "tpot_p95_ms_mean_of_rounds": 17.237019027836425,
+      "formal_requests": 24,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 1.3074112065980443,
+          "tpot_p95_ms": 17.790524512144167,
+          "passed": true
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 1.3094118934881407,
+          "tpot_p95_ms": 16.829985530303546,
+          "passed": true
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 1.3096002234640765,
+          "tpot_p95_ms": 17.090547041061566,
+          "passed": true
+        }
+      ],
+      "every_formal_round_sla_pass": true,
+      "mean_output_tps": 57.361215836370846
+    },
+    {
+      "id": "random:4k-c8",
+      "directory": "random/4k-c8",
+      "kind": "fixed_random",
+      "role": "primary_random",
+      "concurrency": 8,
+      "physical_pair": "0,1",
+      "source_directory": "result/runs/community-official-20261017-c-p01-matrix-4k-c8/4k-c8",
+      "output_tps_rounds": [
+        231.15120266192346,
+        238.95570102857366,
+        241.0439253642351
+      ],
+      "ttft_mean_s": 4.850690275413702,
+      "tpot_mean_ms": 28.079878846817465,
+      "ttft_p95_s_mean_of_rounds": 10.253245667903684,
+      "tpot_p95_ms_mean_of_rounds": 33.76798914354193,
+      "formal_requests": 48,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 10.272673892002786,
+          "tpot_p95_ms": 33.927912944524394,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 10.261209166725166,
+          "tpot_p95_ms": 34.21194904593328,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 10.2258539449831,
+          "tpot_p95_ms": 33.16410544016813,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 237.0502763515774
+    },
+    {
+      "id": "random:4k-c16",
+      "directory": "random/4k-c16",
+      "kind": "fixed_random",
+      "role": "primary_random",
+      "concurrency": 16,
+      "physical_pair": "0,1",
+      "source_directory": "result/runs/community-official-20261017-c-p01-matrix-4k-c16/4k-c16",
+      "output_tps_rounds": [
+        307.390841779054,
+        306.69082960653367,
+        308.9944385574049
+      ],
+      "ttft_mean_s": 7.89280622854191,
+      "tpot_mean_ms": 43.093817628920775,
+      "ttft_p95_s_mean_of_rounds": 20.4733517733907,
+      "tpot_p95_ms_mean_of_rounds": 58.70310635893784,
+      "formal_requests": 96,
+      "flags_formal": 1,
+      "flags_warmup": 0,
+      "original_text_status": "FLAGGED_UNRESOLVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 20.52168721425114,
+          "tpot_p95_ms": 57.885878411679734,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 20.43167170905799,
+          "tpot_p95_ms": 62.198631929941264,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 20.46669639686297,
+          "tpot_p95_ms": 56.02480873519251,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 307.6920366476642
+    },
+    {
+      "id": "random:4k-c32",
+      "directory": "random/4k-c32",
+      "kind": "fixed_random",
+      "role": "primary_random",
+      "concurrency": 32,
+      "physical_pair": "4,5",
+      "source_directory": "result/runs/community-official-20261017-c-p45-matrix-4k-c32/4k-c32",
+      "output_tps_rounds": [
+        373.5504588057276,
+        373.7362083127948,
+        380.03395265470806
+      ],
+      "ttft_mean_s": 13.886839674354329,
+      "tpot_mean_ms": 69.83367559717625,
+      "ttft_p95_s_mean_of_rounds": 40.70323425635191,
+      "tpot_p95_ms_mean_of_rounds": 107.4366727707105,
+      "formal_requests": 192,
+      "flags_formal": 3,
+      "flags_warmup": 0,
+      "original_text_status": "FLAGGED_UNRESOLVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 40.63026433941268,
+          "tpot_p95_ms": 105.35758935474497,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 40.68800319299335,
+          "tpot_p95_ms": 111.71308409486704,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 40.791435236649704,
+          "tpot_p95_ms": 105.23934486251949,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 375.77353992441016
+    },
+    {
+      "id": "random:4k-c64",
+      "directory": "random/4k-c64",
+      "kind": "fixed_random",
+      "role": "diagnostic_high_client_concurrency",
+      "concurrency": 64,
+      "physical_pair": "4,5",
+      "source_directory": "result/runs/community-official-20261017-c-p45-matrix-4k-c64/4k-c64",
+      "output_tps_rounds": [
+        378.3248892294217,
+        379.39767086286065,
+        380.51584518634337
+      ],
+      "ttft_mean_s": 77.01322185878628,
+      "tpot_mean_ms": 75.51635726938345,
+      "ttft_p95_s_mean_of_rounds": 120.20555008407585,
+      "tpot_p95_ms_mean_of_rounds": 103.41861121564814,
+      "formal_requests": 384,
+      "flags_formal": 4,
+      "flags_warmup": 1,
+      "original_text_status": "FLAGGED_UNRESOLVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 120.27292389328942,
+          "tpot_p95_ms": 103.14782686225826,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 119.8476903560717,
+          "tpot_p95_ms": 104.7242127445343,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 120.49603600286646,
+          "tpot_p95_ms": 102.38379404015186,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 379.4128017595419
+    },
+    {
+      "id": "random:4k-c128",
+      "directory": "random/4k-c128",
+      "kind": "fixed_random",
+      "role": "diagnostic_high_client_concurrency",
+      "concurrency": 128,
+      "physical_pair": "4,5",
+      "source_directory": "result/runs/community-official-20261017-c-p45-matrix-4k-c128/4k-c128",
+      "output_tps_rounds": [
+        380.3697219734119,
+        379.3167023094975,
+        382.18482717891106
+      ],
+      "ttft_mean_s": 204.09545034469588,
+      "tpot_mean_ms": 78.41182835625811,
+      "ttft_p95_s_mean_of_rounds": 281.7887649651772,
+      "tpot_p95_ms_mean_of_rounds": 97.64869891502872,
+      "formal_requests": 768,
+      "flags_formal": 5,
+      "flags_warmup": 1,
+      "original_text_status": "FLAGGED_UNRESOLVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 282.64611606475955,
+          "tpot_p95_ms": 96.02989568427398,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 281.35680767126905,
+          "tpot_p95_ms": 99.596181845546,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 281.363371159503,
+          "tpot_p95_ms": 97.32001921526617,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 380.62375048727347
+    },
+    {
+      "id": "random:64k-c1",
+      "directory": "random/64k-c1",
+      "kind": "fixed_random",
+      "role": "primary_random",
+      "concurrency": 1,
+      "physical_pair": "2,3",
+      "source_directory": "result/runs/community-official-20261017-c-p23-matrix-64k-c1/64k-c1",
+      "output_tps_rounds": [
+        22.407415704170443,
+        22.58464621645333,
+        22.313720461810156
+      ],
+      "ttft_mean_s": 26.343744274413137,
+      "tpot_mean_ms": 18.865546055116244,
+      "ttft_p95_s_mean_of_rounds": 26.373226608970434,
+      "tpot_p95_ms_mean_of_rounds": 19.822082250341964,
+      "formal_requests": 24,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 26.372660034208092,
+          "tpot_p95_ms": 20.08243692427271,
+          "passed": true
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 26.37307693004841,
+          "tpot_p95_ms": 19.410441096869018,
+          "passed": true
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 26.373942862654804,
+          "tpot_p95_ms": 19.973368729884168,
+          "passed": true
+        }
+      ],
+      "every_formal_round_sla_pass": true,
+      "mean_output_tps": 22.435260794144643
+    },
+    {
+      "id": "random:64k-c8",
+      "directory": "random/64k-c8",
+      "kind": "fixed_random",
+      "role": "primary_random",
+      "concurrency": 8,
+      "physical_pair": "2,3",
+      "source_directory": "result/runs/community-official-20261017-c-p23-matrix-64k-c8/64k-c8",
+      "output_tps_rounds": [
+        31.558276428650164,
+        31.774898663409807,
+        31.71425625068154
+      ],
+      "ttft_mean_s": 75.82926062111801,
+      "tpot_mean_ms": 177.13798598157462,
+      "ttft_p95_s_mean_of_rounds": 192.80014148631503,
+      "tpot_p95_ms_mean_of_rounds": 340.28610738922754,
+      "formal_requests": 48,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 192.80852102674544,
+          "tpot_p95_ms": 347.29879464761706,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 192.756007254211,
+          "tpot_p95_ms": 339.53997540884086,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 192.83589617798862,
+          "tpot_p95_ms": 334.0195521112247,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 31.68247711424717
+    },
+    {
+      "id": "random:64k-c16",
+      "directory": "random/64k-c16",
+      "kind": "fixed_random",
+      "role": "primary_random",
+      "concurrency": 16,
+      "physical_pair": "2,3",
+      "source_directory": "result/runs/community-official-20261017-c-p23-matrix-64k-c16/64k-c16",
+      "output_tps_rounds": [
+        32.53491113513906,
+        32.53400897838248,
+        32.44416009170261
+      ],
+      "ttft_mean_s": 152.44243580808143,
+      "tpot_mean_ms": 332.0560720956963,
+      "ttft_p95_s_mean_of_rounds": 381.9429479608758,
+      "tpot_p95_ms_mean_of_rounds": 600.2013122318891,
+      "formal_requests": 96,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 381.55968054734984,
+          "tpot_p95_ms": 594.3555995808525,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 381.66282367439123,
+          "tpot_p95_ms": 633.57947120234,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 382.6063396608864,
+          "tpot_p95_ms": 572.6688659124748,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 32.50436006840805
+    },
+    {
+      "id": "random:64k-c32",
+      "directory": "random/64k-c32",
+      "kind": "fixed_random",
+      "role": "primary_random",
+      "concurrency": 32,
+      "physical_pair": "6,7",
+      "source_directory": "result/runs/community-official-20261017-c-p67-matrix-64k-c32/64k-c32",
+      "output_tps_rounds": [
+        32.82668332423304,
+        32.82929584377658,
+        32.655444495817726
+      ],
+      "ttft_mean_s": 522.0758747935188,
+      "tpot_mean_ms": 375.72772462609606,
+      "ttft_p95_s_mean_of_rounds": 833.5131687000355,
+      "tpot_p95_ms_mean_of_rounds": 600.7630873387544,
+      "formal_requests": 192,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 834.8179842078652,
+          "tpot_p95_ms": 560.4231478920167,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 832.3205459328398,
+          "tpot_p95_ms": 654.167956432279,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 833.4009759594018,
+          "tpot_p95_ms": 587.6981576919676,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 32.770474554609116
+    },
+    {
+      "id": "sharegpt:c1",
+      "directory": "sharegpt/c1",
+      "kind": "sharegpt",
+      "role": "primary_sharegpt",
+      "concurrency": 1,
+      "physical_pair": "4,5",
+      "source_directory": "result/evidence/sharegpt-c1/submit1009/experiments/performance-validation-20261016/result/submit-current-c1-pair45-20261016-a-c1-candidate/sharegpt-c1",
+      "output_tps_rounds": [
+        54.75779576773182,
+        54.730236178196236,
+        54.11959566128934
+      ],
+      "ttft_mean_s": 0.28619293732916895,
+      "tpot_mean_ms": 17.785022516581563,
+      "ttft_p99_ms_mean_of_rounds": 944.5735280353497,
+      "tpot_p99_ms_mean_of_rounds": 31.418907052963426,
+      "formal_requests": 3000,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "STRICT_VALIDATION_PASS",
+      "mean_output_tps": 54.53587586907246
+    },
+    {
+      "id": "sharegpt:c4",
+      "directory": "sharegpt/c4",
+      "kind": "sharegpt",
+      "role": "primary_sharegpt",
+      "concurrency": 4,
+      "physical_pair": "6,7",
+      "source_directory": "result/evidence/sharegpt-c4-c16-c64/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c4-candidate/sharegpt-c4",
+      "output_tps_rounds": [
+        145.08062208567463,
+        144.55703129048337,
+        144.1519478195047
+      ],
+      "ttft_mean_s": 0.3005613439195634,
+      "tpot_mean_ms": 27.808291144449495,
+      "ttft_p99_ms_mean_of_rounds": 945.6638778420164,
+      "tpot_p99_ms_mean_of_rounds": 61.95479494949963,
+      "formal_requests": 3000,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "STRICT_VALIDATION_PASS",
+      "mean_output_tps": 144.59653373188758
+    },
+    {
+      "id": "sharegpt:c16",
+      "directory": "sharegpt/c16",
+      "kind": "sharegpt",
+      "role": "primary_sharegpt",
+      "concurrency": 16,
+      "physical_pair": "6,7",
+      "source_directory": "result/evidence/sharegpt-c4-c16-c64/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c16-candidate/sharegpt-c16",
+      "output_tps_rounds": [
+        325.81168606238236,
+        326.8922524561388,
+        325.95077259208267
+      ],
+      "ttft_mean_s": 0.3325500574518616,
+      "tpot_mean_ms": 49.07562835728698,
+      "ttft_p99_ms_mean_of_rounds": 981.8911260397481,
+      "tpot_p99_ms_mean_of_rounds": 118.39951887091341,
+      "formal_requests": 3000,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "STRICT_VALIDATION_PASS",
+      "mean_output_tps": 326.21823703686795
+    },
+    {
+      "id": "sharegpt:c32",
+      "directory": "sharegpt/c32",
+      "kind": "sharegpt",
+      "role": "primary_sharegpt",
+      "concurrency": 32,
+      "physical_pair": "6,7",
+      "source_directory": "result/evidence/sharegpt-c32/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32",
+      "output_tps_rounds": [
+        420.0578464582912,
+        419.78596890059896,
+        419.5194201013055
+      ],
+      "ttft_mean_s": 0.5167407150653598,
+      "tpot_mean_ms": 76.76291614272405,
+      "ttft_p99_ms_mean_of_rounds": 2734.537610754293,
+      "tpot_p99_ms_mean_of_rounds": 246.42877870607964,
+      "formal_requests": 3000,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "STRICT_VALIDATION_PASS",
+      "mean_output_tps": 419.78774515339853
+    },
+    {
+      "id": "sharegpt:c64",
+      "directory": "sharegpt/c64",
+      "kind": "sharegpt",
+      "role": "primary_sharegpt",
+      "concurrency": 64,
+      "physical_pair": "6,7",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p67-sharegpt-c64-recheck/sharegpt-c64",
+      "output_tps_rounds": [
+        415.814210203474,
+        417.3176350000517,
+        417.4518428008529
+      ],
+      "ttft_mean_s": 14.859038827954945,
+      "tpot_mean_ms": 77.23965943351901,
+      "ttft_p99_ms_mean_of_rounds": 21359.996276011807,
+      "tpot_p99_ms_mean_of_rounds": 249.0410259356334,
+      "formal_requests": 3000,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "STRICT_VALIDATION_PASS",
+      "mean_output_tps": 416.8612293347929
+    },
+    {
+      "id": "sla:4k-c2",
+      "directory": "sla/4k-c2",
+      "kind": "fixed_random",
+      "role": "sla",
+      "concurrency": 2,
+      "physical_pair": "0,1",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c2/4k-c2",
+      "output_tps_rounds": [
+        99.39599543326418,
+        99.62131887475829,
+        98.59904802161361
+      ],
+      "ttft_mean_s": 1.7282421805818255,
+      "tpot_mean_ms": 18.27715828392929,
+      "ttft_p95_s_mean_of_rounds": 2.575925921918436,
+      "tpot_p95_ms_mean_of_rounds": 20.240744316169256,
+      "formal_requests": 24,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 2.5919856665248515,
+          "tpot_p95_ms": 20.540410534412494,
+          "passed": true
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 2.567730733283679,
+          "tpot_p95_ms": 20.54789659169681,
+          "passed": true
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 2.568061365946778,
+          "tpot_p95_ms": 19.633925822398464,
+          "passed": true
+        }
+      ],
+      "every_formal_round_sla_pass": true,
+      "mean_output_tps": 99.20545410987869
+    },
+    {
+      "id": "sla:4k-c3",
+      "directory": "sla/4k-c3",
+      "kind": "fixed_random",
+      "role": "sla",
+      "concurrency": 3,
+      "physical_pair": "0,1",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c3/4k-c3",
+      "output_tps_rounds": [
+        108.0943980848778,
+        109.44282471048197,
+        109.68667195946081
+      ],
+      "ttft_mean_s": 2.4822833712120578,
+      "tpot_mean_ms": 22.835304350357394,
+      "ttft_p95_s_mean_of_rounds": 3.8627825859342315,
+      "tpot_p95_ms_mean_of_rounds": 26.308113563198404,
+      "formal_requests": 24,
+      "flags_formal": 0,
+      "flags_warmup": 1,
+      "original_text_status": "FLAGGED_UNRESOLVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 3.866923807346029,
+          "tpot_p95_ms": 25.62326215118416,
+          "passed": true
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 3.8547225450049156,
+          "tpot_p95_ms": 26.952055518941926,
+          "passed": true
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 3.8667014054517495,
+          "tpot_p95_ms": 26.349023019469126,
+          "passed": true
+        }
+      ],
+      "every_formal_round_sla_pass": true,
+      "mean_output_tps": 109.07463158494019
+    },
+    {
+      "id": "sla:4k-c4",
+      "directory": "sla/4k-c4",
+      "kind": "fixed_random",
+      "role": "sla",
+      "concurrency": 4,
+      "physical_pair": "0,1",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c4/4k-c4",
+      "output_tps_rounds": [
+        142.56468259093052,
+        145.72908282536378,
+        142.33926405531247
+      ],
+      "ttft_mean_s": 3.3016295666675433,
+      "tpot_mean_ms": 24.08625281891707,
+      "ttft_p95_s_mean_of_rounds": 5.14514025542303,
+      "tpot_p95_ms_mean_of_rounds": 26.963793285968947,
+      "formal_requests": 24,
+      "flags_formal": 0,
+      "flags_warmup": 1,
+      "original_text_status": "FLAGGED_UNRESOLVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 5.136784173754859,
+          "tpot_p95_ms": 26.336301581219217,
+          "passed": true
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 5.158054846944287,
+          "tpot_p95_ms": 26.86195838984495,
+          "passed": true
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 5.140581745569944,
+          "tpot_p95_ms": 27.69311988684267,
+          "passed": true
+        }
+      ],
+      "every_formal_round_sla_pass": true,
+      "mean_output_tps": 143.54434315720226
+    },
+    {
+      "id": "sla:4k-c5",
+      "directory": "sla/4k-c5",
+      "kind": "fixed_random",
+      "role": "sla",
+      "concurrency": 5,
+      "physical_pair": "0,1",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c5/4k-c5",
+      "output_tps_rounds": [
+        166.66080837114828,
+        166.82667888305798,
+        169.2009740241789
+      ],
+      "ttft_mean_s": 3.7819869469676632,
+      "tpot_mean_ms": 25.52035403450696,
+      "ttft_p95_s_mean_of_rounds": 6.429601983976317,
+      "tpot_p95_ms_mean_of_rounds": 29.634398839985508,
+      "formal_requests": 30,
+      "flags_formal": 0,
+      "flags_warmup": 1,
+      "original_text_status": "FLAGGED_UNRESOLVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 6.423915342774126,
+          "tpot_p95_ms": 28.9348202526812,
+          "passed": true
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 6.427694740024163,
+          "tpot_p95_ms": 29.647533056449795,
+          "passed": true
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 6.437195869130664,
+          "tpot_p95_ms": 30.320843210825533,
+          "passed": true
+        }
+      ],
+      "every_formal_round_sla_pass": true,
+      "mean_output_tps": 167.56282042612838
+    },
+    {
+      "id": "sla:4k-c6",
+      "directory": "sla/4k-c6",
+      "kind": "fixed_random",
+      "role": "sla",
+      "concurrency": 6,
+      "physical_pair": "0,1",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c6/4k-c6",
+      "output_tps_rounds": [
+        184.15187542679874,
+        185.43046297859507,
+        186.7025311167467
+      ],
+      "ttft_mean_s": 3.9744727548693644,
+      "tpot_mean_ms": 27.683137723684645,
+      "ttft_p95_s_mean_of_rounds": 7.702408986567753,
+      "tpot_p95_ms_mean_of_rounds": 32.24339860336367,
+      "formal_requests": 36,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 7.712110684122308,
+          "tpot_p95_ms": 32.184504734592686,
+          "passed": true
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 7.6952130043122455,
+          "tpot_p95_ms": 32.61160284863366,
+          "passed": true
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 7.699903271268704,
+          "tpot_p95_ms": 31.934088226864663,
+          "passed": true
+        }
+      ],
+      "every_formal_round_sla_pass": true,
+      "mean_output_tps": 185.42828984071352
+    },
+    {
+      "id": "sla:4k-c7",
+      "directory": "sla/4k-c7",
+      "kind": "fixed_random",
+      "role": "sla",
+      "concurrency": 7,
+      "physical_pair": "0,1",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c7/4k-c7",
+      "output_tps_rounds": [
+        202.66794019458086,
+        204.4835892975373,
+        206.0424142382767
+      ],
+      "ttft_mean_s": 4.478063572335357,
+      "tpot_mean_ms": 29.17650669401164,
+      "ttft_p95_s_mean_of_rounds": 8.99207267947301,
+      "tpot_p95_ms_mean_of_rounds": 34.291120322429194,
+      "formal_requests": 42,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 9.016053507046308,
+          "tpot_p95_ms": 33.46969547803217,
+          "passed": true
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 8.993475666458835,
+          "tpot_p95_ms": 35.10795066674023,
+          "passed": true
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 8.966688864913886,
+          "tpot_p95_ms": 34.29571482251518,
+          "passed": true
+        }
+      ],
+      "every_formal_round_sla_pass": true,
+      "mean_output_tps": 204.39798124346495
+    },
+    {
+      "id": "sla:4k-c8",
+      "directory": "sla/4k-c8",
+      "kind": "fixed_random",
+      "role": "sla",
+      "concurrency": 8,
+      "physical_pair": "0,1",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c8/4k-c8",
+      "output_tps_rounds": [
+        230.749638236427,
+        237.57800628189412,
+        239.5601017670427
+      ],
+      "ttft_mean_s": 4.853968007378474,
+      "tpot_mean_ms": 28.223848401170024,
+      "ttft_p95_s_mean_of_rounds": 10.257742579604383,
+      "tpot_p95_ms_mean_of_rounds": 34.32191596693445,
+      "formal_requests": 48,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 10.240498704501078,
+          "tpot_p95_ms": 34.00151614957322,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 10.270240944533725,
+          "tpot_p95_ms": 35.58352052395479,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 10.262488089778344,
+          "tpot_p95_ms": 33.38071122727533,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 235.96258209512126
+    },
+    {
+      "id": "sla:64k-c1",
+      "directory": "sla/64k-c1",
+      "kind": "fixed_random",
+      "role": "sla",
+      "concurrency": 1,
+      "physical_pair": "4,5",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p45-sla-64k-c1/64k-c1",
+      "output_tps_rounds": [
+        22.25275284646443,
+        22.020278815616013,
+        22.22948483214269
+      ],
+      "ttft_mean_s": 26.8824671423378,
+      "tpot_mean_ms": 18.877632026751595,
+      "ttft_p95_s_mean_of_rounds": 28.108693111591858,
+      "tpot_p95_ms_mean_of_rounds": 19.946969609847415,
+      "formal_requests": 24,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 26.623957423420507,
+          "tpot_p95_ms": 20.405781639124566,
+          "passed": true
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 31.09093989497051,
+          "tpot_p95_ms": 19.497806061648596,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 26.611182016384554,
+          "tpot_p95_ms": 19.93732112876908,
+          "passed": true
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 22.167505498074377
+    },
+    {
+      "id": "sla:64k-c2",
+      "directory": "sla/64k-c2",
+      "kind": "fixed_random",
+      "role": "sla",
+      "concurrency": 2,
+      "physical_pair": "4,5",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p45-sla-64k-c2/64k-c2",
+      "output_tps_rounds": [
+        26.609989899495584,
+        26.564312294069527,
+        26.606820790413128
+      ],
+      "ttft_mean_s": 30.391158053913387,
+      "tpot_mean_ms": 45.31999029883617,
+      "ttft_p95_s_mean_of_rounds": 44.79856268633449,
+      "tpot_p95_ms_mean_of_rounds": 65.94445909994496,
+      "formal_requests": 24,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 44.885175329921196,
+          "tpot_p95_ms": 65.52353363193049,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 44.76948454345403,
+          "tpot_p95_ms": 67.03345692446953,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 44.741028185628245,
+          "tpot_p95_ms": 65.27638674343487,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 26.59370766132608
+    },
+    {
+      "id": "clean-runtime:4k-c8",
+      "directory": "clean-runtime/4k-c8",
+      "kind": "fixed_random",
+      "role": "clean_runtime",
+      "concurrency": 8,
+      "physical_pair": "2,3",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p23-clean-runtime-4k-c8/4k-c8",
+      "output_tps_rounds": [
+        232.83067666058287,
+        239.50533410661046,
+        241.67628010213355
+      ],
+      "ttft_mean_s": 4.81960183299816,
+      "tpot_mean_ms": 27.98342326077492,
+      "ttft_p95_s_mean_of_rounds": 10.18534673199368,
+      "tpot_p95_ms_mean_of_rounds": 34.02712256148642,
+      "formal_requests": 48,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 10.177541579731042,
+          "tpot_p95_ms": 33.72546868329483,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 10.174565237975912,
+          "tpot_p95_ms": 35.290269025627396,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 10.203933378274087,
+          "tpot_p95_ms": 33.06562997553705,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 238.00409695644228
+    },
+    {
+      "id": "clean-runtime:64k-c8",
+      "directory": "clean-runtime/64k-c8",
+      "kind": "fixed_random",
+      "role": "clean_runtime",
+      "concurrency": 8,
+      "physical_pair": "2,3",
+      "source_directory": "result/runs/community-official-followup-20261017-d-p23-clean-runtime-64k-c8/64k-c8",
+      "output_tps_rounds": [
+        31.433707018529365,
+        31.77786788510192,
+        31.729790769111318
+      ],
+      "ttft_mean_s": 75.89925170958061,
+      "tpot_mean_ms": 177.35191890466956,
+      "ttft_p95_s_mean_of_rounds": 192.99870321291868,
+      "tpot_p95_ms_mean_of_rounds": 328.0634685062857,
+      "formal_requests": 48,
+      "flags_formal": 0,
+      "flags_warmup": 0,
+      "original_text_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+      "sla_rounds": [
+        {
+          "round": 1,
+          "ttft_p95_s": 193.31348591200367,
+          "tpot_p95_ms": 349.00010456965214,
+          "passed": false
+        },
+        {
+          "round": 2,
+          "ttft_p95_s": 192.87283440951433,
+          "tpot_p95_ms": 333.6140966177983,
+          "passed": false
+        },
+        {
+          "round": 3,
+          "ttft_p95_s": 192.80978931723803,
+          "tpot_p95_ms": 301.5762043314067,
+          "passed": false
+        }
+      ],
+      "every_formal_round_sla_pass": false,
+      "mean_output_tps": 31.6471218909142
+    }
+  ],
+  "aggregation": "Arithmetic mean of each of three formal round statistics; warmups excluded",
+  "scope": "Local measurements; reference-client random protocol, ShareGPT separate vendor protocol; no admission certification"
+}

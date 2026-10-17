@@ -1,0 +1,5 @@
+{
+  "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+  "server_error": "Temporary failure in name resolution",
+  "url": "https://sail-moe.oss-cn-hangzhou.aliyuncs.com/open_data/gsm8k/test.jsonl"
+}

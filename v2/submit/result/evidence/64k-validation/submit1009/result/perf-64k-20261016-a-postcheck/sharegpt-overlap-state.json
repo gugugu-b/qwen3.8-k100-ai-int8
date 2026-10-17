@@ -1,0 +1,37 @@
+{
+  "phase": "benchmarking-sharegpt",
+  "pid": 1742606,
+  "utc": "2026-10-16T03:15:14.720917+00:00",
+  "run": "perf-sharegpt-20261016-a",
+  "physical_pair": [
+    6,
+    7
+  ],
+  "elapsed_s": 4912.737845555006,
+  "command_pid": 3859020,
+  "log": "result/perf-sharegpt-20261016-a/evidence/c32-v1-return/benchmark-command.log",
+  "overlap": {
+    "utc": "2026-10-16T03:15:14.693760+00:00",
+    "perf-64k-20261016-a-state.json": {
+      "phase": "benchmarking-64k1k",
+      "pid": 1633240,
+      "utc": "2026-10-16T02:59:43.987560+00:00",
+      "run_id": "perf-64k-20261016-a",
+      "physical_pair": "4,5",
+      "tp": 2,
+      "scene": "64k1k-c8",
+      "quality_evaluation": false,
+      "formal_acceptance": false,
+      "frozen": false,
+      "kind": "v1-return",
+      "begin_utc": "2026-10-16T02:59:43.987536+00:00"
+    },
+    "qwen38-submit1009-perf45-20261016": {
+      "running": true,
+      "pid": 3415479
+    }
+  },
+  "client_concurrency": 32,
+  "kind": "v1-return",
+  "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-v1-return/sharegpt-c32"
+}

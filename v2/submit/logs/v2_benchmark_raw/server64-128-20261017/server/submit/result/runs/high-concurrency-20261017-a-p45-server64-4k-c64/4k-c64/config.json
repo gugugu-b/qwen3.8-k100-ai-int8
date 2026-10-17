@@ -1,0 +1,13 @@
+{
+  "base_url": "http://127.0.0.1:31540",
+  "concurrency": 64,
+  "input_len": 4096,
+  "measure_rounds": 3,
+  "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+  "output_dir": "/data/wangzy/v2/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64",
+  "output_len": 1024,
+  "requests_per_round": 128,
+  "seed": 20260912,
+  "timeout": 3600,
+  "warmup_rounds": 2
+}

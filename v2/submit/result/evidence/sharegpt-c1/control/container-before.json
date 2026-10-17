@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-16T08:39:44.372929+00:00",
+  "container": "qwen38-submit1009-perf45-20261016",
+  "id": "d88b4f472b49aba4d6be0cbd4a4c17b2f97a0d2f121ea8fcdddceabff513442e",
+  "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+  "state": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 137,
+    "Error": "",
+    "StartedAt": "2026-10-16T04:31:45.285043213Z",
+    "FinishedAt": "2026-10-16T08:38:50.271164927Z"
+  },
+  "physical_pair": [
+    4,
+    5
+  ],
+  "label": {
+    "qwen38.submit1009.performance": "20261016"
+  },
+  "root_mount_verified": true
+}

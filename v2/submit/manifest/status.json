@@ -1,0 +1,28 @@
+{
+  "status": "DRAFT_NOT_READY_FOR_FINAL_SUBMISSION",
+  "as_of": "2026-10-16 Asia/Shanghai",
+  "track": "K100-AI/SGLang/TP2",
+  "performed_this_assembly": [
+    "source_and_evidence_collection",
+    "community_gap_analysis",
+    "reproduction_and_demo_scripts",
+    "CPU_checks"
+  ],
+  "gpu_work_performed_this_assembly": false,
+  "remote_state_changed": false,
+  "pending_in_order": [
+    "official_benchmark_and_model_alignment",
+    "random_matrix_8_proposed_missing_points",
+    "4k_and_64k_SLA_boundary",
+    "C64_tail_review",
+    "complete_runtime_library_and_model_assets",
+    "clean_container_performance_and_final_graph_evidence",
+    "record_real_demo_video",
+    "four_accuracy_benchmarks_last"
+  ],
+  "accuracy": "NOT_RUN",
+  "formal_acceptance": false,
+  "frozen": false,
+  "execution": "AUTHORIZED_EIGHT_CARDS_FOUR_TP2_INSTANCES_PREPARING",
+  "later_c64_server64_evidence": "MEASUREMENTS_COMPLETE_ORIGINAL_TEXT_INTEGRITY_FAILED"
+}

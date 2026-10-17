@@ -1,0 +1,8 @@
+{
+  "status": "RAW_RESPONSE_RESCORING_AND_1319_INDEX_PROMPT_SHA_PASS",
+  "requests": 1319,
+  "correct": 1288.0,
+  "accuracy": 0.976497346474602,
+  "threshold_pass": true,
+  "note": "Integrity and local-protocol rescore only; final official data/script equivalence remains pending"
+}

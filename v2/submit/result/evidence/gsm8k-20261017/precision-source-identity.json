@@ -1,0 +1,14 @@
+{
+  "audit_utc": "2026-10-16T21:20:35.264334+00:00",
+  "pid": 1259697,
+  "process_command": "python3 -B /data/wangzy/v2/submit/execution/gsm8k-community-20261017/controller.py ",
+  "source_sha256": {
+    "controller.py": "13624bc9d1e068d24b23a9d126c10ce942a72e62548676acee52e3a7de577ce3",
+    "evaluate.py": "f9536287a77821678f8633a83235b2b1115e67dc893b42eb439d93b9c36dac91",
+    "review.py": "db9c275c4feb9aacc15ee5133c311dbdb60c7bb9dc9352940328233c6dc06a18",
+    "quality-dependencies.json": "4ad2734d36117023152115d259531395b323c50a0a433a6e083acd8e5d1eecb7",
+    "gsm8k-reference.jsonl": "b676b0128b716b38d3200ae07f21f51a9f8e5b116eda760a3cc28ea5e060fed2",
+    "evalscope_math_parser_1_6_1.py": "809d4d47631ccb3b7da8c751f08d3ee94df5273a1ef1aeb252ec2f6b260f8b87"
+  },
+  "note": "Recorded during evaluation; controller SHA agrees with verified launch source"
+}

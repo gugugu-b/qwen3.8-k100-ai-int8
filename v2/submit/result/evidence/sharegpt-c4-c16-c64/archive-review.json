@@ -1,0 +1,32 @@
+{
+  "status": "LATEST_SUBMIT_FINAL_ARCHIVE_INDEPENDENT_REVIEW_PASS",
+  "utc": "2026-10-16T07:46:14.995070+00:00",
+  "run": "submit-current-sharegpt-pair67-20261016-a",
+  "physical_pair": [
+    6,
+    7
+  ],
+  "scenes": [
+    16,
+    64,
+    4
+  ],
+  "complete": true,
+  "queue_pid_absent": true,
+  "owned_container_stopped": true,
+  "nonblocking_pair_lock_verified_free": true,
+  "artifact_sha256": "299018c8c569f917ac2ff2523ad51a2129892b2bd861921658037f28e7245930",
+  "control_sha256": "4794805da2c75895144f468513d02b9105a80a1edd20148516964ba0c8d03ca8",
+  "producer_summary_sha256": "421f90f4aa597f7e2e9ddc480f838de9ccf013bf566960a14433c09b344bb382",
+  "independent_summary_sha256": "421f90f4aa597f7e2e9ddc480f838de9ccf013bf566960a14433c09b344bb382",
+  "summaries_byte_identical": true,
+  "source_union_files": 87,
+  "original_queue_sources_results_manifests_unchanged": true,
+  "container_mutated": false,
+  "lock_contents_changed": false,
+  "accuracy": "NOT_RUN",
+  "formal_acceptance": false,
+  "default_patch_changed": false,
+  "frozen": false,
+  "caveat": "Historical v1 report comparison only. No new v1 run, accuracy test, promotion or freeze."
+}

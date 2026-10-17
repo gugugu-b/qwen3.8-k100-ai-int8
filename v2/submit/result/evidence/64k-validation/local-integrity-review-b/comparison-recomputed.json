@@ -1,0 +1,194 @@
+{
+  "status": "THREE_ROUND_64K1K_PERFORMANCE_VALIDATION_COMPLETE",
+  "physical_pair": "4,5",
+  "tp": 2,
+  "summaries": {
+    "v1": {
+      "status": "PASS",
+      "measured_rounds": 3,
+      "requests": 48,
+      "output_tps_rounds": [
+        30.200801882049994,
+        30.308377607851625,
+        30.265008033301143
+      ],
+      "mean_output_tps": 30.258062507734255,
+      "spread_percent": 0.3555274756079758,
+      "mean_wall_s": 541.476671051331,
+      "ttft_s_p50_mean_of_rounds": 45.13685816716073,
+      "ttft_s_p50_range": [
+        40.90204461599933,
+        52.04545795399463
+      ],
+      "ttft_s_p95_mean_of_rounds": 200.09263145099007,
+      "ttft_s_p95_range": [
+        199.6904181002319,
+        200.89115817497805
+      ],
+      "ttft_s_p99_mean_of_rounds": 214.84773182458787,
+      "ttft_s_p99_range": [
+        214.4458839776256,
+        215.6461551229746
+      ],
+      "tpot_ms_p50_mean_of_rounds": 184.88754167823345,
+      "tpot_ms_p50_range": [
+        167.16364341496273,
+        194.1823865498414
+      ],
+      "tpot_ms_p95_mean_of_rounds": 351.102225101665,
+      "tpot_ms_p95_range": [
+        322.3044784161776,
+        369.0456316153545
+      ],
+      "tpot_ms_p99_mean_of_rounds": 372.79878016168425,
+      "tpot_ms_p99_range": [
+        337.8053696202857,
+        411.1804137092305
+      ]
+    },
+    "candidate": {
+      "status": "PASS",
+      "measured_rounds": 3,
+      "requests": 48,
+      "output_tps_rounds": [
+        31.14724992925327,
+        31.55445871523553,
+        31.4528521564883
+      ],
+      "mean_output_tps": 31.3848536003257,
+      "spread_percent": 1.2974691268849303,
+      "mean_wall_s": 522.0511723903279,
+      "ttft_s_p50_mean_of_rounds": 43.97382450817289,
+      "ttft_s_p50_range": [
+        40.17903723900963,
+        50.43677528749686
+      ],
+      "ttft_s_p95_mean_of_rounds": 195.03412492725087,
+      "ttft_s_p95_range": [
+        194.26545975000045,
+        196.02378619700175
+      ],
+      "ttft_s_p99_mean_of_rounds": 209.50868834384502,
+      "ttft_s_p99_range": [
+        208.6230951899968,
+        210.69687019459525
+      ],
+      "tpot_ms_p50_mean_of_rounds": 173.91561625415673,
+      "tpot_ms_p50_range": [
+        159.79135309725876,
+        187.75036787928423
+      ],
+      "tpot_ms_p95_mean_of_rounds": 345.9634319061547,
+      "tpot_ms_p95_range": [
+        330.3632951001854,
+        354.87556964661604
+      ],
+      "tpot_ms_p99_mean_of_rounds": 362.1596184234515,
+      "tpot_ms_p99_range": [
+        330.70502699812715,
+        400.51134679570924
+      ]
+    },
+    "v1-return": {
+      "status": "PASS",
+      "measured_rounds": 3,
+      "requests": 48,
+      "output_tps_rounds": [
+        30.23502415933765,
+        30.453332137566314,
+        30.373724766200052
+      ],
+      "mean_output_tps": 30.35402702103467,
+      "spread_percent": 0.7192059823804574,
+      "mean_wall_s": 539.7684077443361,
+      "ttft_s_p50_mean_of_rounds": 45.047336310667255,
+      "ttft_s_p50_range": [
+        40.84956633100228,
+        51.72347917749721
+      ],
+      "ttft_s_p95_mean_of_rounds": 199.321886211818,
+      "ttft_s_p95_range": [
+        199.27920649923908,
+        199.38240348498948
+      ],
+      "ttft_s_p99_mean_of_rounds": 214.03796967542536,
+      "ttft_s_p99_range": [
+        213.98868694145057,
+        214.1137672801924
+      ],
+      "tpot_ms_p50_mean_of_rounds": 180.4137703183563,
+      "tpot_ms_p50_range": [
+        166.56242827077455,
+        193.2446960811476
+      ],
+      "tpot_ms_p95_mean_of_rounds": 343.5644509907904,
+      "tpot_ms_p95_range": [
+        321.90560081231763,
+        367.04287013342093
+      ],
+      "tpot_ms_p99_mean_of_rounds": 370.5731850042869,
+      "tpot_ms_p99_range": [
+        337.44156595485026,
+        406.81672837090866
+      ]
+    }
+  },
+  "combined_v1_tps": 30.306044764384463,
+  "gain_percent": 3.55971504803243,
+  "paired_round_gain_percent": [
+    3.075450339416297,
+    3.8629717545598297,
+    3.7384876114925136
+  ],
+  "v1_return_drift_percent": 0.31715352982659706,
+  "observed_variation_reference_percent": 1.2974691268849303,
+  "variation_note": "Input differs by round, matches across variants; not a statistical confidence bound",
+  "gain_exceeds_observed_variation": true,
+  "mean_tail_changes_percent": {
+    "ttft_s_p95": -2.339992012057157,
+    "ttft_s_p99": -2.3009218488303618,
+    "tpot_ms_p95": -0.3944067528267814,
+    "tpot_ms_p99": -2.563014104898942,
+    "e2e_s_p95": -3.032668267880456,
+    "e2e_s_p99": -3.0295993100151963
+  },
+  "paired_round_tail_changes_percent": {
+    "ttft_s_p95": [
+      -1.7603927933031782,
+      -2.908622477252165,
+      -2.349398607408326
+    ],
+    "ttft_s_p99": [
+      -1.6720918190958112,
+      -2.8835304941524753,
+      -2.345691694377483
+    ],
+    "tpot_ms_p95": [
+      0.2275701789976603,
+      -3.5780157403589308,
+      2.563839266789447
+    ],
+    "tpot_ms_p99": [
+      -2.0751232022101274,
+      -3.5755004129128687,
+      -2.0491587373286158
+    ],
+    "e2e_s_p95": [
+      -2.5020096102409406,
+      -3.4482474888172576,
+      -3.1476012057265024
+    ],
+    "e2e_s_p99": [
+      -2.5173685309700433,
+      -3.4310490973066154,
+      -3.1409474425644013
+    ]
+  },
+  "mean_tail_5pct_pass": true,
+  "paired_round_tail_5pct_pass": true,
+  "measured_20pct_pass": false,
+  "formal_acceptance": false,
+  "frozen": false,
+  "actual_model_graph_gate": "REVIEW_REQUIRED",
+  "quality_evaluation": "NOT_RUN_USER_REQUEST"
+}

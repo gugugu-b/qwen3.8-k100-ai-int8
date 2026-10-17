@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "rounds": 3,
+  "requests": 3000,
+  "errors": 0,
+  "full_workload_warmup_rounds": 1,
+  "short_warmup_requests_per_run": 64,
+  "client_concurrency": 16,
+  "output_tps_rounds": [
+    325.81168606238236,
+    326.8922524561388,
+    325.95077259208267
+  ],
+  "mean_output_tps": 326.21823703686795,
+  "spread_percent": 0.33124033885154014,
+  "mean_duration_s": 602.3618628846694,
+  "median_ttft_ms_mean_of_rounds": 258.58049783467624,
+  "median_ttft_ms_range": [
+    258.21866499609314,
+    258.7731190142222
+  ],
+  "p99_ttft_ms_mean_of_rounds": 981.8911260397481,
+  "p99_ttft_ms_range": [
+    959.3005488545168,
+    1006.2779284958374
+  ],
+  "median_tpot_ms_mean_of_rounds": 45.97792632647422,
+  "median_tpot_ms_range": [
+    45.69752815080082,
+    46.14203408877539
+  ],
+  "p99_tpot_ms_mean_of_rounds": 118.39951887091341,
+  "p99_tpot_ms_range": [
+    106.78314359991211,
+    125.08578106917805
+  ],
+  "median_itl_ms_mean_of_rounds": 27.017038829702262,
+  "median_itl_ms_range": [
+    27.001513502909802,
+    27.02582899655681
+  ],
+  "p95_itl_ms_mean_of_rounds": 121.8923374069466,
+  "p95_itl_ms_range": [
+    121.69692549796308,
+    122.0405547297558
+  ],
+  "p99_itl_ms_mean_of_rounds": 238.64545409092284,
+  "p99_itl_ms_range": [
+    238.3458452828925,
+    239.13789460348198
+  ],
+  "p99_e2e_latency_ms_mean_of_rounds": 38641.896901752814,
+  "p99_e2e_latency_ms_range": [
+    38437.782788417244,
+    38761.458800770335
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "MEASURED_RUNTIME_CACHE_PACKAGED",
+  "cache_sha256": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+  "cache_bytes": 200624,
+  "source_container": "qwen38-submit1009-diag",
+  "unchanged_candidate_sha256": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+  "previous_smoke": "FAILED_RECURSIVE_OPTIONAL_BUILDER",
+  "current_smoke": "NOT_RUN",
+  "performance_data_modified": false,
+  "shared_library_modified": false
+}

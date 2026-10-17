@@ -1,0 +1,9 @@
+{
+  "status": "WAITING_FOR_PAIR01_MATRIX_CLEANUP",
+  "pid": 1229995,
+  "utc": "2026-10-16T20:45:00.106409+00:00",
+  "pair": "0,1",
+  "port": 31400,
+  "benchmark": "GSM8K",
+  "other_accuracy": "NOT_RUN"
+}

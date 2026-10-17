@@ -1,0 +1,38 @@
+{
+  "pid": 3899686,
+  "utc": "2026-10-16T22:28:44.827502+00:00",
+  "source_sha256": "8069b8818cf6077ecd8f5b017c16126a61a591fed5215e64a172f4847d0f186a",
+  "tasks": [
+    [
+      {
+        "pair": "0,1",
+        "port": 31200
+      },
+      "sla-4k"
+    ],
+    [
+      {
+        "pair": "4,5",
+        "port": 31220,
+        "remeasure_c1": true
+      },
+      "sla-64k"
+    ],
+    [
+      {
+        "pair": "2,3",
+        "port": 31210
+      },
+      "demo-and-clean-runtime"
+    ],
+    [
+      {
+        "pair": "6,7",
+        "port": 31230
+      },
+      "sharegpt-c64-recheck"
+    ]
+  ],
+  "reason": "User requests all idle cards to accelerate work; each pair starts after its own predecessor review and lock release",
+  "parallel_interference": "Mixed matrix/SLA/clean-runtime/ShareGPT jobs on same host, no isolation claim"
+}

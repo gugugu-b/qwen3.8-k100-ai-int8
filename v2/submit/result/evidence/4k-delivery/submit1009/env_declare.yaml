@@ -1,0 +1,69 @@
+{
+  "image": "harbor.sourcefind.cn:5443/hcu/admin/base/sglang:0.5.12-ubuntu22.04-dtk2604-py3.10",
+  "image_id": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+  "image_digest": "sha256:878d317dfa18efae70516a59cc836efc77b251efbe4ca85de67171bc2c3aca68",
+  "arch": "gfx928",
+  "physical_devices": [
+    6,
+    7
+  ],
+  "tp": 2,
+  "model_path": "/data/model/Qwen3.8-27B-Channel-INT8-w8a8",
+  "model_precision": "Channel INT8 W8A8; original BF16 outputs and scales unchanged",
+  "python": "3.10.12",
+  "versions": {
+    "torch": "2.10.0+das.opt1.dtk2604.2608131652.g28498c",
+    "triton": "3.6.0+das185.dtk2604.torch2100.2608131719.gb796b1",
+    "sglang": "0.5.12+das185.dtk2604.torch2100.2608121934.gcbf025",
+    "aiter": "0.1.5+das185.dtk2604.torch2100.2608131714.gb0979d",
+    "transformers": "5.6.0",
+    "aiohttp": "3.14.3",
+    "requests": "2.34.2"
+  },
+  "runtime_overlay": {
+    "installed_path": "/usr/local/lib/python3.10/dist-packages/lightop/_lmslim_native/vllm_compat/direct_register_custom_op.py",
+    "sha256": "e6ee8f1b25e60d02811658483cdf150b33c79ba5c94f27198167268a44a8b545",
+    "method": "Read-only per-container bind overlay copied from measured container; no shared installation edits",
+    "rollback": "Stop and remove delivery container"
+  },
+  "service": {
+    "port": 31014,
+    "nccl_port": 31015,
+    "context_length": 67584,
+    "mem_fraction_static": 0.85,
+    "max_running_requests": 32,
+    "max_prefill_tokens": 65536,
+    "chunked_prefill_size": 8192,
+    "mamba_scheduler_strategy": "no_buffer",
+    "cuda_graph_max_bs": 32,
+    "speculative_algorithm": "NEXTN (API normalized to EAGLE)",
+    "speculative_num_steps": 1,
+    "speculative_num_draft_tokens": 2,
+    "custom_all_reduce_backend": "native",
+    "one_stage_allreduce": true
+  },
+  "benchmark": {
+    "input_len": 4096,
+    "output_len": 1024,
+    "concurrency": 8,
+    "seed": 20260912,
+    "warmup_rounds": 2,
+    "warmup_requests_per_round": 8,
+    "measure_rounds": 3,
+    "requests_per_round": 16
+  },
+  "candidate_site_sha256": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+  "default_task_patch": "v1 (not changed)",
+  "delivery_status": "PERFORMANCE_ONLY; complete three-scene 20% acceptance not achieved",
+  "runtime_cache": {
+    "source": "Exact cache copied from the stopped, measured qwen38-submit1009-diag container",
+    "file": "patch/runtime/tvm-ffi/libtorch_c_dlpack_addon_torch210-rocm.so",
+    "sha256": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "bytes": 200624,
+    "mount": "/run/qwen38-tvm-ffi:ro",
+    "variable": "TVM_FFI_CACHE_DIR",
+    "reason": "Fresh image has no cached Torch C DLPack addon; Python site import recurses into the optional builder",
+    "no_tvm_disable": true,
+    "shared_installation_modified": false
+  }
+}

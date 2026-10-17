@@ -1,0 +1,11 @@
+{
+  "phase": "public-eager",
+  "index": 1,
+  "equal": true,
+  "elements": 40960,
+  "finite_count": 40960,
+  "nonfinite_count": 0,
+  "mismatch_vs_rccl": 0,
+  "mismatch_vs_explicit_sum": 0,
+  "max_abs": 0.0
+}

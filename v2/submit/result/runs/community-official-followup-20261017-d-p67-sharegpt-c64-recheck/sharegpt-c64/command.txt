@@ -1,0 +1,1 @@
+seed=20260912; dataset=/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json; C=64; prompts=1000; full_warmup=1; rounds=3; short_warmup=64

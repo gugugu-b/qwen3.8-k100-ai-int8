@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-10T00:05:36.946296+00:00",
+  "container": "qwen38-submit1009-ab",
+  "physical_pair": "4,5",
+  "pre_stop_top": "PID                 PPID                COMMAND\n1560867             1560832             sleep infinity\n1577052             1560867             python3 -u -m sglang.launch_server --model-path /data/model/Qwen3.8-27B-Channel-INT8-w8a8 --tp-size 2 --pp-size 1 --attention-backend fa3 --mm-attention-backend fa3 --page-size 64 --served-model-name Qwen3.8-27B-Channel-INT8-w8a8 --host 0.0.0.0 --port 31004 --nccl-port 31005 --context-length 67584 --disable-radix-cache --mem-fraction-static 0.85 --max-running-requests 32 --max-prefill-tokens 65536 --chunked-prefill-size 8192 --mamba-scheduler-strategy no_buffer --cuda-graph-max-bs 32 --disable-custom-all-reduce --tool-call-parser qwen3_coder --reasoning-parser qwen3 --enable-metrics --speculative-algorithm NEXTN --speculative-num-steps 1 --speculative-eagle-topk 1 --speculative-num-draft-tokens 2\n1590367             1577052             /usr/bin/python3 -c from multiprocessing.resource_tracker import main;main(19)\n1590369             1577052             sglang::scheduler_TP0\n1590374             1577052             sglang::scheduler_TP1\n1590375             1577052             sglang::detokenizer\n",
+  "running_after": false,
+  "reason": "Human one-hour delivery and release all task cards"
+}

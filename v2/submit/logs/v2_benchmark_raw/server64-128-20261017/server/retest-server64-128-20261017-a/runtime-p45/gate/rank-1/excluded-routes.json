@@ -1,0 +1,67 @@
+{
+  "status": "ROUTE_EXCLUSIONS_PASS",
+  "rows": [
+    {
+      "dtype": "torch.float32",
+      "m": 1,
+      "bytes": 20480,
+      "native_called": false
+    },
+    {
+      "dtype": "torch.float32",
+      "m": 2,
+      "bytes": 40960,
+      "native_called": false
+    },
+    {
+      "dtype": "torch.float32",
+      "m": 4,
+      "bytes": 81920,
+      "native_called": false
+    },
+    {
+      "dtype": "torch.float32",
+      "m": 8,
+      "bytes": 163840,
+      "native_called": false
+    },
+    {
+      "dtype": "torch.float32",
+      "m": 16,
+      "bytes": 327680,
+      "native_called": false
+    },
+    {
+      "dtype": "torch.float32",
+      "m": 32,
+      "bytes": 655360,
+      "native_called": false
+    },
+    {
+      "dtype": "torch.float32",
+      "m": 64,
+      "bytes": 1310720,
+      "native_called": false
+    },
+    {
+      "dtype": "torch.float32",
+      "m": 256,
+      "bytes": 5242880,
+      "native_called": false
+    },
+    {
+      "dtype": "torch.float32",
+      "m": 1024,
+      "bytes": 20971520,
+      "native_called": false
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "m": 2048,
+      "bytes": 20971520,
+      "native_called": false
+    }
+  ],
+  "fallback": "Unchanged caller RCCL/PyNccl",
+  "fallback_graph_retested": false
+}

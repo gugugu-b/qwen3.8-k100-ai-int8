@@ -1,0 +1,78 @@
+{
+  "run_id": "community-v2-20261016-a",
+  "server": "192.2.111.66",
+  "remote_package": "/data/wangzy/v2/submit",
+  "remote_control": "/data/wangzy/submit1009/result/community-v2-20261016-a",
+  "tp_per_instance": 2,
+  "max_running_requests": 32,
+  "cuda_graph_max_bs": 32,
+  "accuracy_order": "last_after_performance_and_engineering",
+  "official_alignment": "PENDING_TUTORIAL; diagnostic measurements will preserve current client and cannot be labelled official score",
+  "stages": [
+    "asset_and_four_pair_preflight",
+    "random_matrix",
+    "SLA_boundary_diagnostic",
+    "ShareGPT_C64_forensics_and_repro",
+    "engineering_assets_Demo_video",
+    "accuracy_last"
+  ],
+  "parallel_interference": "Four concurrent TP2 instances on the same host; CPU, IO and host PCIe contention must be disclosed",
+  "workers": [
+    {
+      "pair": "0,1",
+      "port": 31100,
+      "matrix": [
+        {
+          "scene": "4k",
+          "c": 1
+        },
+        {
+          "scene": "4k",
+          "c": 16
+        }
+      ]
+    },
+    {
+      "pair": "2,3",
+      "port": 31110,
+      "matrix": [
+        {
+          "scene": "64k",
+          "c": 1
+        },
+        {
+          "scene": "64k",
+          "c": 16
+        }
+      ]
+    },
+    {
+      "pair": "4,5",
+      "port": 31120,
+      "matrix": [
+        {
+          "scene": "4k",
+          "c": 32
+        },
+        {
+          "scene": "4k",
+          "c": 64
+        },
+        {
+          "scene": "4k",
+          "c": 128
+        }
+      ]
+    },
+    {
+      "pair": "6,7",
+      "port": 31130,
+      "matrix": [
+        {
+          "scene": "64k",
+          "c": 32
+        }
+      ]
+    }
+  ]
+}

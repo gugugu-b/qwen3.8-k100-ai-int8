@@ -1,0 +1,41 @@
+{
+  "status": "EXACT_TWO_ANCHOR_EDITS",
+  "vendor_file": "/usr/local/lib/python3.10/dist-packages/flash_attn/flash_attn_triton_mqa_gqa.py",
+  "source_is_runtime_equivalent_to": "patch/sitecustomize.py LongKV _raw transformation",
+  "jit_configuration": {
+    "BLOCK_M": 128,
+    "BLOCK_N": 64,
+    "waves_per_eu": 0,
+    "PRE_LOAD_V": false,
+    "num_stages": 1,
+    "num_warps": 8
+  },
+  "shared_installation_modified": false,
+  "compiled": false,
+  "files": {
+    "vendor/flash_attn_triton_mqa_gqa.py": {
+      "bytes": 57642,
+      "sha256": "f00a1286df85fb923dcf87be251d9ffd7b8e2967a9715937adec4dfbe8f8f307"
+    },
+    "runtime/flash_attn_triton_mqa_gqa.py": {
+      "bytes": 57664,
+      "sha256": "5a107b5d3e03260168820ceb13f0a20ae14527f9332e75760b07317dd89bcf3b"
+    },
+    "longkv-full-source.patch": {
+      "bytes": 884,
+      "sha256": "a48210199b34ac50071b22bf2fe608211d239b731cc3cb1df9c77ae2db05cca2"
+    },
+    "vendor/direct_register_custom_op.py": {
+      "bytes": 1170,
+      "sha256": "9886ea4118ec8eb7203fb857e1d5f9ff7e92ff53d75fd9a9913da9f6f64f4502"
+    },
+    "runtime/direct_register_custom_op.py": {
+      "bytes": 2132,
+      "sha256": "e6ee8f1b25e60d02811658483cdf150b33c79ba5c94f27198167268a44a8b545"
+    },
+    "lightop-full-source.patch": {
+      "bytes": 1481,
+      "sha256": "f04015a438b81bec22338b1a9c04389e5bb318e86559744a8d6ed850b02be778"
+    }
+  }
+}

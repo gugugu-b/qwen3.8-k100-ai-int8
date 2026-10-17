@@ -1,0 +1,11 @@
+{
+  "phase": "changed-graph",
+  "index": 2,
+  "equal": true,
+  "elements": 5242880,
+  "finite_count": 5242880,
+  "nonfinite_count": 0,
+  "mismatch_vs_rccl": 0,
+  "mismatch_vs_explicit_sum": 0,
+  "max_abs": 0.0
+}

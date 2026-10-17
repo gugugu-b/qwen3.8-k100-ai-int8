@@ -1,0 +1,14 @@
+{
+  "status": "FAILED_RUN_EVIDENCE_FROZEN_MEASUREMENTS_AUDITED",
+  "original_run_status": "FAILED",
+  "original_text_integrity_gate": "FAILED",
+  "original_sources_raw_manifests_unchanged": true,
+  "queue_pid_absent": true,
+  "owned_container_stopped": true,
+  "lock_contents_unchanged": true,
+  "union_files": 43,
+  "report_sha256": "d5ddcc2e70e2a6a91c0c3d43f5cac37dfd2701876566c2086e3680545e9f04a7",
+  "accuracy": "NOT_RUN",
+  "root_cause": "UNPROVEN",
+  "gpu_retest_performed": false
+}

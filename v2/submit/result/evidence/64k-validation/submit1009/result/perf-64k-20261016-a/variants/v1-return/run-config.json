@@ -1,0 +1,17 @@
+{
+  "kind": "v1-return",
+  "variant": "baseline-v1",
+  "physical_pair": "4,5",
+  "tp": 2,
+  "input_len": 65536,
+  "output_len": 1024,
+  "concurrency": 8,
+  "seed": 20260912,
+  "warmup_rounds": 1,
+  "warmup_requests": 8,
+  "measure_rounds": 3,
+  "requests_per_round": 16,
+  "site_sha256": "f1789532d58daa66187ba901d3d7513ff142cb33fafc7793ce44f4e821464495",
+  "begin_utc": "2026-10-16T02:57:49.923533+00:00",
+  "profiler_used": false
+}

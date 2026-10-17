@@ -1,0 +1,20 @@
+{
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/server.log": "391edaaca97e4d9893fb3a82421211244791d9a1efee87168edac22d55086262",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/server-info.json": "1f220b23b63afa28a021c719f69730e12266cb68e3e949ed2f3741817817d19e",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/screen-config.json": "88d42d085c532b64a85d911e616daacf7ed7bcf795f4d85060ea02c96c44de62",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/config.json": "cb1bc829f5cc6d525694a1f7d35d6f5e89a0f844ec85429b039cb95eeb11a6cc",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/summary.json": "41ad9a29da78d689cb0331b509c57159551de334a1447df562de8134ce6dbe4f",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/validated_summary.json": "97fbdac4c4f73b8f362325a9ca6786e1616f2a3893b09afd98d835d48418eded",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/progress.json": "e551c48e28f7301e022d5961c347bb515bf41e5a25aa5dcc9731f32518ce354a",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/bench.log": "b8418ebfe47b013a0c94983f7e4f0dfbe9c2cad5e979ff2fe57f1e52e5053621",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/warmup-02/summary.json": "a8a0c6955fddaf9794f303c0c181584d840e5856e5d832448c0a619a5aff4570",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/warmup-02/requests.jsonl": "42f905c8d68114b5ee1b724c3f2193bcb120121f62057be80a6f4c9ad39502d2",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/warmup-01/summary.json": "c9a07379197cb8c6a5dfab39f1e25c29b39a101d831951aaa90bbb8683d791d7",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/warmup-01/requests.jsonl": "d0e8fb222cf7256c74fe65c752c8a8e0fbb1256164c87deb15e541f53a10cbaf",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/round-01/summary.json": "cfee6fc38a7b7fe2e7419b4cdf385b13d4d4fb9e32bf845579ed0229a17b1384",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/round-01/requests.jsonl": "9c234451c6f5fbe99222842f23f3ca80855366f041afacf9fb3efff937e871eb",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/round-03/summary.json": "64beaac18a9754c0c0808553de43cf7b8cd8018f5444c0daa787c22d906fd190",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/round-03/requests.jsonl": "8fc14eafbb1250a91fe35ca3d0ef555c808e178f367be1be8c27c53ed818d679",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/round-02/summary.json": "115dcb0b12a8b6d6d1a04085d6b0df436b2385600e8b5c1b7052f00749508b66",
+  "result/delivery-native-ar-4k1k-20261010-b-v1-return/4k/round-02/requests.jsonl": "8f7754fa4ffaf53f5fd8596578b8fc1fab9596f01f22fdcd348b1f1d610bdfa1"
+}

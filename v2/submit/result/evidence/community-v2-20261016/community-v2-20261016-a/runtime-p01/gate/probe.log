@@ -1,0 +1,80 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+[Gloo] Rank [Gloo] Rank 01 is connected to  is connected to 11 peer ranks.  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : 11
+
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I1016 23:26:30.612727   199 ProcessGroupNCCL.cpp:1697] [PG ID 0 PG GUID 1 Rank 0] HeartbeatMonitor environments: TORCH_NCCL_ENABLE_MONITORING (Whether to kill program when no watchdog heartbeat detected): 1, TORCH_NCCL_DUMP_ON_TIMEOUT: 1, TORCH_NCCL_WAIT_TIMEOUT_DUMP_MILSEC: 15000, TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC: 480, TORCH_NCCL_COORD_CHECK_MILSEC: 1000, TORCH_NCCL_LOG_CPP_STACK_ON_UNCLEAN_SHUTDOWN: 1
+I1016 23:26:30.612792   199 ProcessGroupNCCL.cpp:2028] [PG ID 0 PG GUID 1 Rank 0] PGNCCL Watchdog environments: TORCH_NCCL_RETHROW_CUDA_ERRORS: 1, TORCH_NCCL_PROPAGATE_ERROR: 0, TORCH_NCCL_DESYNC_DEBUG: 0
+I1016 23:26:30.612895   199 ProcessGroupNCCL.cpp:980] [PG ID 0 PG GUID 1 Rank 0] ProcessGroupNCCL initialization options: size: 2, global rank: 0, TIMEOUT(ms): 90000, USE_HIGH_PRIORITY_STREAM: 0, SPLIT_FROM: 0, SPLIT_COLOR: -2, PG Name: 1
+I1016 23:26:30.612903   199 ProcessGroupNCCL.cpp:990] [PG ID 0 PG GUID 1 Rank 0] ProcessGroupNCCL environments: NCCL version: 2.22.3, TORCH_NCCL_ASYNC_ERROR_HANDLING: 1, TORCH_NCCL_ENABLE_TIMING: 0, TORCH_NCCL_BLOCKING_WAIT: 0, TORCH_DISTRIBUTED_DEBUG: OFF, TORCH_NCCL_USE_TENSOR_REGISTER_ALLOCATOR_HOOK: 0, TORCH_NCCL_TRACE_BUFFER_SIZE: 2000, TORCH_NCCL_NAN_CHECK: 0, TORCH_NCCL_CUDA_EVENT_CACHE: 1
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I1016 23:26:30.613404   200 ProcessGroupNCCL.cpp:1697] [PG ID 0 PG GUID 1 Rank 1] HeartbeatMonitor environments: TORCH_NCCL_ENABLE_MONITORING (Whether to kill program when no watchdog heartbeat detected): 1, TORCH_NCCL_DUMP_ON_TIMEOUT: 1, TORCH_NCCL_WAIT_TIMEOUT_DUMP_MILSEC: 15000, TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC: 480, TORCH_NCCL_COORD_CHECK_MILSEC: 1000, TORCH_NCCL_LOG_CPP_STACK_ON_UNCLEAN_SHUTDOWN: 1
+I1016 23:26:30.613521   200 ProcessGroupNCCL.cpp:2028] [PG ID 0 PG GUID 1 Rank 1] PGNCCL Watchdog environments: TORCH_NCCL_RETHROW_CUDA_ERRORS: 1, TORCH_NCCL_PROPAGATE_ERROR: 0, TORCH_NCCL_DESYNC_DEBUG: 0
+I1016 23:26:30.613718   200 ProcessGroupNCCL.cpp:980] [PG ID 0 PG GUID 1 Rank 1] ProcessGroupNCCL initialization options: size: 2, global rank: 1, TIMEOUT(ms): 90000, USE_HIGH_PRIORITY_STREAM: 0, SPLIT_FROM: 0, SPLIT_COLOR: -2, PG Name: 1
+I1016 23:26:30.613731   200 ProcessGroupNCCL.cpp:990] [PG ID 0 PG GUID 1 Rank 1] ProcessGroupNCCL environments: NCCL version: 2.22.3, TORCH_NCCL_ASYNC_ERROR_HANDLING: 1, TORCH_NCCL_ENABLE_TIMING: 0, TORCH_NCCL_BLOCKING_WAIT: 0, TORCH_DISTRIBUTED_DEBUG: OFF, TORCH_NCCL_USE_TENSOR_REGISTER_ALLOCATOR_HOOK: 0, TORCH_NCCL_TRACE_BUFFER_SIZE: 2000, TORCH_NCCL_NAN_CHECK: 0, TORCH_NCCL_CUDA_EVENT_CACHE: 1
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+[Native BF16 AR] Installed BF16/TP2/copy-in guard; unsupported tensors retain RCCL
+[Native BF16 AR] Installed BF16/TP2/copy-in guard; unsupported tensors retain RCCL
+[Native BF16 AR] Eligible rank=1 world_size=2 dtype=torch.bfloat16 bytes=10240 max_size=16777216 one_stage=True full_nvlink=False copy_in=True
+[Native BF16 AR] Eligible rank=0 world_size=2 dtype=torch.bfloat16 bytes=10240 max_size=16777216 one_stage=True full_nvlink=False copy_in=True
+I1016 23:26:36.961481   200 ProcessGroupNCCL.cpp:1058] [PG ID 0 PG GUID 1 Rank 1] Using non-blocking mode: 0
+I1016 23:26:36.961503   199 ProcessGroupNCCL.cpp:1058] [PG ID 0 PG GUID 1 Rank 0] Using non-blocking mode: 0
+I1016 23:26:36.964110   199 ProcessGroupNCCL.cpp:3115] [PG ID 0 PG GUID 1 Rank 0] ProcessGroupNCCL broadcast unique ID through store took 0.068641 ms
+I1016 23:26:36.964141   199 NCCLUtils.cpp:91] Rank 0: creating NCCL communicator with mode: blocking
+I1016 23:26:36.964255   200 ProcessGroupNCCL.cpp:3115] [PG ID 0 PG GUID 1 Rank 1] ProcessGroupNCCL broadcast unique ID through store took 2.71492 ms
+I1016 23:26:36.964347   200 NCCLUtils.cpp:91] Rank 1: creating NCCL communicator with mode: blocking
+I1016 23:26:37.504930   200 ProcessGroupNCCL.cpp:3149] [PG ID 0 PG GUID 1 Rank 1] NCCL_DEBUG: N/A
+I1016 23:26:37.504976   199 ProcessGroupNCCL.cpp:3149] [PG ID 0 PG GUID 1 Rank 0] NCCL_DEBUG: N/A
+{"rank": 1, "dtype": "torch.bfloat16", "m": 1, "status": "PASS"}
+{"rank": 0, "dtype": "torch.bfloat16", "m": 1, "status": "PASS"}
+{"rank": 1, "dtype": "torch.bfloat16", "m": 2, "status": "PASS"}
+{"rank": 0, "dtype": "torch.bfloat16", "m": 2, "status": "PASS"}
+{"rank": 1, "dtype": "torch.bfloat16", "m": 4, "status": "PASS"}
+{"rank": 0, "dtype": "torch.bfloat16", "m": 4, "status": "PASS"}
+{"rank": 1, "dtype": "torch.bfloat16", "m": 8, "status": "PASS"}
+{"rank": 0, "dtype": "torch.bfloat16", "m": 8, "status": "PASS"}
+{"rank": 0, "dtype": "torch.bfloat16", "m": 16, "status": "PASS"}
+{"rank": 1, "dtype": "torch.bfloat16", "m": 16, "status": "PASS"}
+{"rank": 1, "dtype": "torch.bfloat16", "m": 32, "status": "PASS"}
+{"rank": 0, "dtype": "torch.bfloat16", "m": 32, "status": "PASS"}
+{"rank": 0, "dtype": "torch.bfloat16", "m": 64, "status": "PASS"}
+{"rank": 1, "dtype": "torch.bfloat16", "m": 64, "status": "PASS"}
+{"rank": 1, "dtype": "torch.bfloat16", "m": 256, "status": "PASS"}
+{"rank": 0, "dtype": "torch.bfloat16", "m": 256, "status": "PASS"}
+{"rank": 1, "dtype": "torch.bfloat16", "m": 1024, "status": "PASS"}
+/usr/local/lib/python3.10/dist-packages/sglang/srt/distributed/device_communicators/custom_all_reduce_utils.py:411: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  inp.storage().nbytes() - inp.storage_offset() * inp.element_size()
+{"rank": 0, "dtype": "torch.bfloat16", "m": 1024, "status": "PASS"}
+/usr/local/lib/python3.10/dist-packages/sglang/srt/distributed/device_communicators/custom_all_reduce_utils.py:411: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  inp.storage().nbytes() - inp.storage_offset() * inp.element_size()
+I1016 23:26:40.772704   199 ProcessGroupNCCL.cpp:1488] [PG ID 0 PG GUID 1 Rank 0] Starting to destroy process group, flushing operations.
+I1016 23:26:40.772805   200 ProcessGroupNCCL.cpp:1488] [PG ID 0 PG GUID 1 Rank 1] Starting to destroy process group, flushing operations.
+I1016 23:26:40.775430   200 ProcessGroupNCCL.cpp:1515] [PG ID 0 PG GUID 1 Rank 1] Operations flushed, joining watchdog thread.
+I1016 23:26:40.775516   200 ProcessGroupNCCL.cpp:2057] [PG ID 0 PG GUID 1 Rank 1] ProcessGroupNCCL watchdog thread joined.
+I1016 23:26:40.775529   200 ProcessGroupNCCL.cpp:1526] [PG ID 0 PG GUID 1 Rank 1] Watchdog joined, destroying NCCL communicators.
+I1016 23:26:40.775681   199 ProcessGroupNCCL.cpp:1515] [PG ID 0 PG GUID 1 Rank 0] Operations flushed, joining watchdog thread.
+I1016 23:26:40.775808   199 ProcessGroupNCCL.cpp:2057] [PG ID 0 PG GUID 1 Rank 0] ProcessGroupNCCL watchdog thread joined.
+I1016 23:26:40.775821   199 ProcessGroupNCCL.cpp:1526] [PG ID 0 PG GUID 1 Rank 0] Watchdog joined, destroying NCCL communicators.
+I1016 23:26:40.782887   200 ProcessGroupNCCL.cpp:1534] [PG ID 0 PG GUID 1 Rank 1] Destroy complete.
+I1016 23:26:40.783005   200 ProcessGroupNCCL.cpp:1539] [PG ID 0 PG GUID 1 Rank 1] ProcessGroupNCCL destructor entered.
+I1016 23:26:40.783047   200 ProcessGroupNCCL.cpp:1725] [PG ID 0 PG GUID 1 Rank 1] ProcessGroupNCCL heart beat monitor thread joined.
+I1016 23:26:40.783360   199 ProcessGroupNCCL.cpp:1534] [PG ID 0 PG GUID 1 Rank 0] Destroy complete.
+I1016 23:26:40.783504   199 ProcessGroupNCCL.cpp:1539] [PG ID 0 PG GUID 1 Rank 0] ProcessGroupNCCL destructor entered.
+I1016 23:26:40.783543   199 ProcessGroupNCCL.cpp:1725] [PG ID 0 PG GUID 1 Rank 0] ProcessGroupNCCL heart beat monitor thread joined.

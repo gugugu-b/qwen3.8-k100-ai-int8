@@ -1,0 +1,60 @@
+{
+  "status": "COMPLETE",
+  "run": "perf-sharegpt-20261016-a-c32-v1-return",
+  "server_run": "perf-sharegpt-20261016-a-c32-v1-return-server",
+  "kind": "v1-return",
+  "physical_pair": [
+    6,
+    7
+  ],
+  "client_concurrency": 32,
+  "started_utc": "2026-10-16T03:13:33.307384+00:00",
+  "finished_utc": "2026-10-16T03:52:48.119202+00:00",
+  "overlap_start": {
+    "utc": "2026-10-16T03:13:33.307405+00:00",
+    "perf-64k-20261016-a-state.json": {
+      "phase": "benchmarking-64k1k",
+      "pid": 1633240,
+      "utc": "2026-10-16T02:59:43.987560+00:00",
+      "run_id": "perf-64k-20261016-a",
+      "physical_pair": "4,5",
+      "tp": 2,
+      "scene": "64k1k-c8",
+      "quality_evaluation": false,
+      "formal_acceptance": false,
+      "frozen": false,
+      "kind": "v1-return",
+      "begin_utc": "2026-10-16T02:59:43.987536+00:00"
+    },
+    "qwen38-submit1009-perf45-20261016": {
+      "running": true,
+      "pid": 3415479
+    }
+  },
+  "overlap_finish": {
+    "utc": "2026-10-16T03:52:48.086592+00:00",
+    "perf-64k-20261016-a-state.json": {
+      "phase": "performance-validation-complete",
+      "pid": 1633240,
+      "utc": "2026-10-16T03:31:38.734557+00:00",
+      "run_id": "perf-64k-20261016-a",
+      "physical_pair": "4,5",
+      "tp": 2,
+      "scene": "64k1k-c8",
+      "quality_evaluation": false,
+      "formal_acceptance": false,
+      "frozen": false,
+      "error": null,
+      "all_variants_completed": true,
+      "own_container_stopped": true
+    },
+    "qwen38-submit1009-perf45-20261016": {
+      "running": false,
+      "pid": 0
+    }
+  },
+  "native_guard_verified": false,
+  "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-v1-return/sharegpt-c32",
+  "evidence_dir": "result/perf-sharegpt-20261016-a/evidence/c32-v1-return",
+  "accuracy": "NOT_RUN"
+}

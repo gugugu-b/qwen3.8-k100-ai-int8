@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-16T14:39:37.558036+00:00",
+  "source_copy": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "container_state": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 137,
+    "Error": "",
+    "StartedAt": "2026-10-16T13:55:44.89929451Z",
+    "FinishedAt": "2026-10-16T14:32:03.374737175Z"
+  },
+  "queue_pid_absent": true,
+  "lock_was_free": true
+}

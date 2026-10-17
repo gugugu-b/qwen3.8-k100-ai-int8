@@ -1,0 +1,17 @@
+{
+  "kind": "candidate",
+  "variant": "candidate",
+  "physical_pair": "4,5",
+  "tp": 2,
+  "input_len": 65536,
+  "output_len": 1024,
+  "concurrency": 8,
+  "seed": 20260912,
+  "warmup_rounds": 1,
+  "warmup_requests": 8,
+  "measure_rounds": 3,
+  "requests_per_round": 16,
+  "site_sha256": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+  "begin_utc": "2026-10-16T02:25:18.270077+00:00",
+  "profiler_used": false
+}

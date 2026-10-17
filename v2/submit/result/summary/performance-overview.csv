@@ -1,0 +1,8 @@
+﻿scene,date,tp,candidate_tps,historical_v1_tps,historical_change_pct,requests,comparison_scope
+4K/1K C8,2026-10-10,2,238.2423022962118,206.84,15.181929170475627,48,"historical reference, not official or causal A/B"
+64K/1K C8,2026-10-16,2,31.3848536003257,30.39,3.2736215871197905,48,"historical reference, not official or causal A/B"
+ShareGPT C1,2026-10-16,2,54.53587586907246,43.13,26.445341685769662,3000,"historical reference, not official or causal A/B"
+ShareGPT C4,2026-10-16,2,144.59653373188758,133.37,8.41758546291338,3000,"historical reference, not official or causal A/B"
+ShareGPT C16,2026-10-16,2,326.21823703686795,289.32,12.753434618024318,3000,"historical reference, not official or causal A/B"
+ShareGPT C32,2026-10-16,2,419.78774515339853,338.41,24.0470864198453,3000,"historical reference, not official or causal A/B"
+ShareGPT C64,2026-10-16,2,417.09167316715815,417.42,-0.07865622941926054,3000,"historical reference, not official or causal A/B"

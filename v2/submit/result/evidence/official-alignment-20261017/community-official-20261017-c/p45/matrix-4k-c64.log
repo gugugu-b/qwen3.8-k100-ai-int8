@@ -1,0 +1,88 @@
+{"base_url": "http://127.0.0.1:31320", "concurrency": 64, "input_len": 4096, "measure_rounds": 3, "method": "fixed random token IDs; two warmup waves; three measured rounds", "model": "Qwen3.8-27B-Channel-INT8-w8a8", "output_len": 1024, "output_throughput_tps": {"count": 3, "max": 380.51584518634337, "mean": 379.4128017595419, "min": 378.3248892294217, "p50": 379.39767086286065, "p90": 380.29221032164685, "p95": 380.4040277539951, "p99": 380.4934816998737}, "requests_per_round": 128, "rounds": [{"concurrency": 64, "e2e_s": {"count": 128, "max": 218.48595608904725, "mean": 154.635207516023, "min": 83.50039451301564, "p50": 162.69354110147106, "p90": 195.41371897054486, "p95": 204.5158841612312, "p99": 213.73421365723829}, "exact_length": 128, "input_len": 4096, "input_throughput_tps": 1513.2995569176867, "output_len": 1024, "output_throughput_tps": 378.3248892294217, "phase": "measure", "replacement_chars": 2, "request_throughput_rps": 0.3694578996381071, "requested": 128, "round": 1, "status": "PASS", "successful": 128, "total_throughput_tps": 1891.6244461471083, "tpot_ms": {"count": 128, "max": 126.52035946329602, "mean": 75.5351301379183, "min": 40.31287002638265, "p50": 76.32753884015588, "p90": 94.85964079890813, "p95": 103.14782686225826, "p99": 114.97781496750942}, "ttft_s": {"count": 128, "max": 133.24638186901575, "mean": 77.36276938493256, "min": 5.190698533959221, "p50": 88.12545863448759, "p90": 111.02036857979255, "p95": 120.27292389328942, "p99": 127.79309877845517}, "wall_time_s": 346.4535475500161}, {"concurrency": 64, "e2e_s": {"count": 128, "max": 219.65794334502425, "mean": 154.07784830416176, "min": 83.39962425699923, "p50": 163.13860678853234, "p90": 194.95781293020698, "p95": 203.35948745010538, "p99": 214.22156397157642}, "exact_length": 128, "input_len": 4096, "input_throughput_tps": 1517.5906834514426, "output_len": 1024, "output_throughput_tps": 379.39767086286065, "phase": "measure", "replacement_chars": 2, "request_throughput_rps": 0.37050553795201235, "requested": 128, "round": 2, "status": "PASS", "successful": 128, "total_throughput_tps": 1896.9883543143033, "tpot_ms": {"count": 128, "max": 120.03788940666766, "mean": 75.47324219918612, "min": 36.986444646152115, "p50": 75.2010850347285, "p90": 95.17340924719872, "p95": 104.7242127445343, "p99": 113.74477881283141}, "ttft_s": {"count": 128, "max": 133.25989976897836, "mean": 76.86872153439435, "min": 4.063074696983676, "p50": 87.54501146549592, "p90": 110.33392663149861, "p95": 119.8476903560717, "p99": 130.60212426860295}, "wall_time_s": 345.47391843999503}, {"concurrency": 64, "e2e_s": {"count": 128, "max": 214.3998076749849, "mean": 154.0863102159119, "min": 83.42053174600005, "p50": 162.11942039450514, "p90": 196.17735559581197, "p95": 203.75181080488255, "p99": 210.60607607048703}, "exact_length": 128, "input_len": 4096, "input_throughput_tps": 1522.0633807453735, "output_len": 1024, "output_throughput_tps": 380.51584518634337, "phase": "measure", "replacement_chars": 0, "request_throughput_rps": 0.37159750506478845, "requested": 128, "round": 3, "status": "PASS", "successful": 128, "total_throughput_tps": 1902.579225931717, "tpot_ms": {"count": 128, "max": 118.95618945843142, "mean": 75.54069947104593, "min": 39.974696341108164, "p50": 75.53819142424712, "p90": 95.02709814487184, "p95": 102.38379404015186, "p99": 112.80525404429676}, "ttft_s": {"count": 128, "max": 130.76308857899858, "mean": 76.80817465703194, "min": 5.167229374987073, "p50": 87.56346717500128, "p90": 110.9398574229388, "p95": 120.49603600286646, "p99": 127.19292839069735}, "wall_time_s": 344.4587174439803}], "status": "PASS", "successful_rounds": 3, "tpot_p50_ms": {"count": 3, "max": 76.32753884015588, "mean": 75.68893843304383, "min": 75.2010850347285, "p50": 75.53819142424712, "p90": 76.16966935697413, "p95": 76.24860409856501, "p99": 76.3117518918377}, "tpot_p95_ms": {"count": 3, "max": 104.7242127445343, "mean": 103.41861121564814, "min": 102.38379404015186, "p50": 103.14782686225826, "p90": 104.40893556807909, "p95": 104.5665741563067, "p99": 104.69268502688878}, "ttft_p50_s": {"count": 3, "max": 88.12545863448759, "mean": 87.74464575832826, "min": 87.54501146549592, "p50": 87.56346717500128, "p90": 88.01306034259032, "p95": 88.06925948853896, "p99": 88.11421880529787}, "ttft_p95_s": {"count": 3, "max": 120.49603600286646, "mean": 120.20555008407585, "min": 119.8476903560717, "p50": 120.27292389328942, "p90": 120.45141358095105, "p95": 120.47372479190875, "p99": 120.49157376067492}, "warmup_rounds": 2}
+{
+  "status": "PERFORMANCE_MEASUREMENTS_COMPLETE_TEXT_FLAGGED",
+  "performance_status": "PASS",
+  "text_integrity_status": "FLAGGED_UNRESOLVED",
+  "original_strict_text_gate_overridden": false,
+  "quality": "NOT_RUN",
+  "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+  "measured_rounds": 3,
+  "requests": 384,
+  "mean_output_tps": 379.4128017595419,
+  "output_tps_rounds": [
+    378.3248892294217,
+    379.39767086286065,
+    380.51584518634337
+  ],
+  "spread_percent": 0.5774596815819216,
+  "text_flags": [
+    {
+      "phase": "warmup",
+      "round": 2,
+      "index": 40,
+      "replacement_chars": 2
+    },
+    {
+      "phase": "measure",
+      "round": 1,
+      "index": 43,
+      "replacement_chars": 1
+    },
+    {
+      "phase": "measure",
+      "round": 1,
+      "index": 59,
+      "replacement_chars": 1
+    },
+    {
+      "phase": "measure",
+      "round": 2,
+      "index": 17,
+      "replacement_chars": 1
+    },
+    {
+      "phase": "measure",
+      "round": 2,
+      "index": 64,
+      "replacement_chars": 1
+    }
+  ],
+  "raw_sha256": {
+    "warmup-01/requests.jsonl": "7a4286c0d68872ba8d10feeb49a90539eb1753a4f348888bc4430c8067632dc8",
+    "warmup-01/summary.json": "d583fbfc0cafb3d1e68ff3681ad774a00b6a36f04c8f9cec25ac52978f3275ef",
+    "warmup-02/requests.jsonl": "cdf755c2ad36655809db779134263ecac029fec98ca03b61652b44b04b2dd213",
+    "warmup-02/summary.json": "fc15bc58df8a1958bb26a53c963e4a5b0c7792efefc7cab48df8b8b9795e8f31",
+    "round-01/requests.jsonl": "96ec2fba4a4ff98f048d7d4f8d61cd233d4dc9c161b2ffd01667c54b0453ef69",
+    "round-01/summary.json": "be5a21e71b845805d1839e2b11c8e2677c96844988aeb7edfa1b6b21e7204071",
+    "round-02/requests.jsonl": "166b83d6f2c826b80c84652e85129739ac5b274378e255906adb62148a885d50",
+    "round-02/summary.json": "351af90f4933f478091a3becd7cc811f95d14a09ba657d919e829facd6012b07",
+    "round-03/requests.jsonl": "7c76f63b0e4c78fdc334771d0b2a51f87a4ab24367b6f1f6ff112706338f4d44",
+    "round-03/summary.json": "0416b587d2c68782bd6b7fc9533cb5a30adaf49304d67823160a65fe6865067b"
+  },
+  "config": {
+    "base_url": "http://127.0.0.1:31320",
+    "concurrency": 64,
+    "input_len": 4096,
+    "measure_rounds": 3,
+    "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+    "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-20261017-c-p45-matrix-4k-c64/4k-c64",
+    "output_len": 1024,
+    "requests_per_round": 128,
+    "seed": 20260912,
+    "timeout": 3600,
+    "warmup_rounds": 2
+  },
+  "official_final_acceptance": false,
+  "ttft_s_mean_mean_of_rounds": 77.01322185878628,
+  "ttft_s_p50_mean_of_rounds": 87.74464575832826,
+  "ttft_s_p95_mean_of_rounds": 120.20555008407585,
+  "ttft_s_p99_mean_of_rounds": 128.52938381258517,
+  "tpot_ms_mean_mean_of_rounds": 75.51635726938345,
+  "tpot_ms_p50_mean_of_rounds": 75.68893843304383,
+  "tpot_ms_p95_mean_of_rounds": 103.41861121564814,
+  "tpot_ms_p99_mean_of_rounds": 113.84261594154586,
+  "e2e_s_mean_mean_of_rounds": 154.26645534536556,
+  "e2e_s_p50_mean_of_rounds": 162.65052276150286,
+  "e2e_s_p95_mean_of_rounds": 203.87572747207304,
+  "e2e_s_p99_mean_of_rounds": 212.8539512331006
+}

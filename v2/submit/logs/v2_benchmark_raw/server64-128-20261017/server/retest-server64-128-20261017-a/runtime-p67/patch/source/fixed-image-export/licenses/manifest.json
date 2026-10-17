@@ -1,0 +1,26 @@
+{
+  "status": "LICENSES_EXPORTED_WITHOUT_IMPORT_OR_COMPILATION",
+  "searched": [
+    "/usr/local/lib/python3.10/dist-packages/tvm_ffi",
+    "/usr/local/lib/python3.10/dist-packages/apache_tvm_ffi-0.1.9.dist-info"
+  ],
+  "files": {
+    "tvm_ffi/3rdparty/libbacktrace/LICENSE": {
+      "bytes": 1478,
+      "sha256": "ef8a9b3247488f8901ca60de9b17b745d7bd67e5ec1e622f80d62364572200d8",
+      "original_path": "/usr/local/lib/python3.10/dist-packages/tvm_ffi/3rdparty/libbacktrace/LICENSE"
+    },
+    "apache_tvm_ffi-0.1.9.dist-info/licenses/LICENSE": {
+      "bytes": 11833,
+      "sha256": "bb354d8b94589ad8817f2dff029d39a1133d217407f73679d0b0311c980e511f",
+      "original_path": "/usr/local/lib/python3.10/dist-packages/apache_tvm_ffi-0.1.9.dist-info/licenses/LICENSE"
+    },
+    "apache_tvm_ffi-0.1.9.dist-info/licenses/NOTICE": {
+      "bytes": 171,
+      "sha256": "5181189219b74687e08884d813b8f98c874d0e4ba84eb7afc4bb350d22502c24",
+      "original_path": "/usr/local/lib/python3.10/dist-packages/apache_tvm_ffi-0.1.9.dist-info/licenses/NOTICE"
+    }
+  },
+  "gpu_used": false,
+  "compiled": false
+}

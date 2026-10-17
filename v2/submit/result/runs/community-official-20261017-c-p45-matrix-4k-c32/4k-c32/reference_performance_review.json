@@ -1,0 +1,75 @@
+{
+  "status": "PERFORMANCE_MEASUREMENTS_COMPLETE_TEXT_FLAGGED",
+  "performance_status": "PASS",
+  "text_integrity_status": "FLAGGED_UNRESOLVED",
+  "original_strict_text_gate_overridden": false,
+  "quality": "NOT_RUN",
+  "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+  "measured_rounds": 3,
+  "requests": 192,
+  "mean_output_tps": 375.77353992441016,
+  "output_tps_rounds": [
+    373.5504588057276,
+    373.7362083127948,
+    380.03395265470806
+  ],
+  "spread_percent": 1.725372640735871,
+  "text_flags": [
+    {
+      "phase": "measure",
+      "round": 1,
+      "index": 43,
+      "replacement_chars": 1
+    },
+    {
+      "phase": "measure",
+      "round": 1,
+      "index": 59,
+      "replacement_chars": 1
+    },
+    {
+      "phase": "measure",
+      "round": 2,
+      "index": 17,
+      "replacement_chars": 1
+    }
+  ],
+  "raw_sha256": {
+    "warmup-01/requests.jsonl": "2ab4a4f56e29ce0ab6893440bb3318d4bdad1a8fa0d3daf6f8dd96b953dc3256",
+    "warmup-01/summary.json": "4a5044abc371132d4570ef057ae024f76c26a9be09e6e6276153d141294a1a95",
+    "warmup-02/requests.jsonl": "1f73b2027b033e7d8d9e002682a1b09d2fc98a994003e89d5c0afe86a9e1b51c",
+    "warmup-02/summary.json": "871cf1a850ca1ce1a5673b53e719979868ee18493d4aa36661af835c6a685a27",
+    "round-01/requests.jsonl": "a9156d41cdcff1a279782110493a6da01a08983e8d23750e9605541958dfea58",
+    "round-01/summary.json": "007714fa7c7043ab07759c75d19ac037f9f4edfb8bbebdf0e133c76595f2ff98",
+    "round-02/requests.jsonl": "776c48ca9ed24f82d004c02a97081e156a32320fa5efd3e5a708e0050b259290",
+    "round-02/summary.json": "6007f74414a7deaf7a03c3af1676bfcea1221abc212d50e784ab9172d3b3cc42",
+    "round-03/requests.jsonl": "2d47c93fdf9e136a7f88fc9a5373be35a17977286510b09f5692bfc87e3b6a28",
+    "round-03/summary.json": "8e502f6c316d9f4f58c72cec170b3c5ab68085997e9a2ef62a1cf8f9d3cb078d"
+  },
+  "config": {
+    "base_url": "http://127.0.0.1:31320",
+    "concurrency": 32,
+    "input_len": 4096,
+    "measure_rounds": 3,
+    "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+    "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-20261017-c-p45-matrix-4k-c32/4k-c32",
+    "output_len": 1024,
+    "requests_per_round": 64,
+    "seed": 20260912,
+    "timeout": 3600,
+    "warmup_rounds": 2
+  },
+  "official_final_acceptance": false,
+  "ttft_s_mean_mean_of_rounds": 13.886839674354329,
+  "ttft_s_p50_mean_of_rounds": 6.957627135164027,
+  "ttft_s_p95_mean_of_rounds": 40.70323425635191,
+  "ttft_s_p99_mean_of_rounds": 41.14325690483248,
+  "tpot_ms_mean_mean_of_rounds": 69.83367559717625,
+  "tpot_ms_p50_mean_of_rounds": 67.90024500847231,
+  "tpot_ms_p95_mean_of_rounds": 107.4366727707105,
+  "tpot_ms_p99_mean_of_rounds": 115.16674340638713,
+  "e2e_s_mean_mean_of_rounds": 85.32668981026563,
+  "e2e_s_p50_mean_of_rounds": 84.36878107183536,
+  "e2e_s_p95_mean_of_rounds": 122.72558363142016,
+  "e2e_s_p99_mean_of_rounds": 129.21274796053532
+}

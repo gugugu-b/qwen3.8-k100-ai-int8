@@ -1,0 +1,20 @@
+{
+  "result/delivery-native-ar-4k1k-20261010-b-v1/server.log": "3704187f275fdc7672740f7b8940b0b0a588e07295c47b88b4346dcdabbeef0a",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/server-info.json": "83c367c184bc17ca9338e5b0cd451dbbbe2d44386b089c28dc70c83aa0a5ba36",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/screen-config.json": "65a0b33e55c21c7a51b50cfc854efcc8413293cf42c3d93031d97a67502e28ae",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/config.json": "0b27726600a548cb36f2be63b1709b74ac996d0be7c12cfebacd6a90a9c5729d",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/summary.json": "f17f54db5f1164c5ea7071e372eab2a6a21daa619717cdb9234355fe51976852",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/validated_summary.json": "f42b731a1db3fa0aa7a3bd136a28cde1faa38d9239bb7748db94c57ebab52332",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/progress.json": "12defff8179d7e842a74fe85fafaaf154801e9bf1220cfae0fda1986375cee61",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/bench.log": "af07c9c652468d67d262a674bb6a6c571232c6ff0450e8714be7fa49de67587d",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/warmup-02/summary.json": "37cfbb4356c430996ddcb74931d4c5c9e4a7477af6d544657c76a5a3a98f44ee",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/warmup-02/requests.jsonl": "d28ee3d5a00b7966a4e4d0fa64582389086998b25e832219f948e65d6e818de0",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/warmup-01/summary.json": "98b163b87ddb2b80681bc0896e1a9c112766db39ee3e79c2e4630f9431c61495",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/warmup-01/requests.jsonl": "23dc5d7dc667e91443ca2e15ec1309da7fc81736ccaa1443ed7524b0bb0b6ee0",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/round-01/summary.json": "cdf368ac13c033e4163d48b441b3de41c22f233e79a48cab1f309559c75e35cb",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/round-01/requests.jsonl": "c4eb610a4422a7a738c3090ec9413315a4ccd241bf7997aebf329d687a7c01ba",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/round-03/summary.json": "86a00eb2ae5844ed0fa767136f49d2e0b0407e1bc6517f123c3cdad50077ba96",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/round-03/requests.jsonl": "b121b104215be80b467d6092ce1c63a1c434aee19333910e1ed4ea11d4490bc3",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/round-02/summary.json": "ea9445a54c1bbbf557cac33852a3c4386cb26ac1ba804068cd9b52b09149a394",
+  "result/delivery-native-ar-4k1k-20261010-b-v1/4k/round-02/requests.jsonl": "cd95c9648ce8ab1643dc6b02c5bcb63b3d368f35107f315a82c9cea8d067e0fa"
+}

@@ -1,0 +1,8 @@
+{
+  "pid": 3368076,
+  "utc": "2026-10-10T00:05:36.976816+00:00",
+  "run_id": "delivery-native-ar-4k1k-20261010-a",
+  "deadline_shanghai": "2026-10-10T09:02:32+08:00",
+  "gpu45_release": "/data/wangzy/submit1009/result/delivery-native-ar-4k1k-20261010-a-gpu45-release.json",
+  "job_log": "/data/wangzy/submit1009/logs/delivery-native-ar-4k1k-20261010-a-job.log"
+}

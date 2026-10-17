@@ -1,0 +1,68 @@
+--- baseline-v1/sitecustomize.py
++++ sitecustomize.py
+@@ -291,3 +291,65 @@
+         print(f"[Tuning3 Patch] Warning: Failed to hook pack_paged_kv_to_varlen_attention: {e}", flush=True)
+ 
+ print("[Tuning3 Patch] Initialization complete.", flush=True)
++
++
++# The service uses Lightop's private LMSlim copy. Patch both distinct identities.
++import json as _v2_json
++import sys as _v2_sys
++from pathlib import Path as _V2Path
++from lmslim.layers.gemm import int8_utils as _v2_int8_utils
++from lightop._lmslim_native.layers.gemm import int8_utils as _v2_lightop_int8_utils
++
++_v2_tile_rows = _v2_json.loads((_V2Path(__file__).parent / 'triton_tiles.json').read_text())
++_v2_tile_configs = {(r['M'], r['K'], r['N']): r['config'] for r in _v2_tile_rows}
++assert len(_v2_tile_configs) == 18
++assert all(c['SPLIT_K'] == 1 for c in _v2_tile_configs.values())
++_v2_seen_tiles = set()
++_v2_seen_by_backend = set()
++_v2_originals = {
++    'lmslim': _v2_int8_utils.matmul_int8,
++    'lightop-native': _v2_lightop_int8_utils.matmul_int8,
++}
++assert _v2_originals['lmslim'] is not _v2_originals['lightop-native']
++
++def _v2_make_matmul(original, backend):
++    def matmul(a, a_scale, b, b_scale, out_dtype, config):
++        if (out_dtype is torch.bfloat16
++                and a.dtype is torch.int8 and b.dtype is torch.int8
++                and a.ndim == b.ndim == 2 and a.is_cuda and b.is_cuda):
++            m, k = a.shape
++            if (b.shape[0] == k and b.stride() == (1, k)
++                    and a_scale.numel() >= m and b_scale.numel() >= b.shape[1]):
++                key = (m, k, b.shape[1])
++                selected = _v2_tile_configs.get(key)
++                if selected is not None:
++                    previous_config = config
++                    config = selected
++                    _v2_seen_tiles.add(key)
++                    if (backend, key) not in _v2_seen_by_backend:
++                        _v2_seen_by_backend.add((backend, key))
++                        print(f'[v2 Triton] Active MKN={key} backend={backend} previous_config={previous_config} config={config}', flush=True)
++        return original(a, a_scale, b, b_scale, out_dtype, config)
++    return matmul
++
++_v2_wrappers = {name: _v2_make_matmul(fn, name) for name, fn in _v2_originals.items()}
++_v2_alias_originals = {}
++_v2_alias_wrappers = {}
++for _v2_name, _v2_module in list(_v2_sys.modules.items()):
++    if not _v2_name.startswith(('lmslim', 'lightop', 'sglang')) or _v2_module is None:
++        continue
++    _v2_fn = getattr(_v2_module, 'matmul_int8', None)
++    for _v2_backend, _v2_original in _v2_originals.items():
++        if _v2_fn is _v2_original:
++            _v2_alias_originals[_v2_name] = _v2_original
++            _v2_alias_wrappers[_v2_name] = _v2_wrappers[_v2_backend]
++            _v2_module.matmul_int8 = _v2_wrappers[_v2_backend]
++            break
++assert 'lmslim.layers.gemm.int8_utils' in _v2_alias_originals
++assert 'lightop._lmslim_native.layers.gemm.int8_utils' in _v2_alias_originals
++assert 'lightop._lmslim_native.quantize.quant_ops' in _v2_alias_originals
++print(f'[v2 Triton] Loaded {len(_v2_tile_configs)} measured configurations; aliases={list(_v2_alias_originals)}', flush=True)
++
++# Independent communication item; unchanged tile base.
++from native_bf16_ar_guard import install as _native_bf16_ar_install
++_native_bf16_ar_install()

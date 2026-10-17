@@ -1,0 +1,6 @@
+{
+  "max_local_file_bytes_exclusive": 16777216,
+  "large_files_remote_only": true,
+  "manifest_explicit_files_only": true,
+  "note": "Do not download a JSONL/log/tar/tensor/DB file >=16MiB. Keep full raw remotely; sync summary/source/SHA locally."
+}

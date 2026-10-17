@@ -1,0 +1,9 @@
+{
+  "status": "GENERATED_IMPORT_CACHE_REMOVED_MANIFEST_EXACT",
+  "local_files_removed": [
+    "submit1009/result/perf-64k-20261016-a/control/__pycache__/fixed64k_queue.cpython-311.pyc"
+  ],
+  "remote_cache_file_removed": "control/__pycache__/fixed64k_queue.cpython-310.pyc",
+  "reason": "Independent reviewer imports frozen queue for comparison; future invocations use python3 -B to avoid adding non-artifact bytecode",
+  "raw_payloads_modified": false
+}

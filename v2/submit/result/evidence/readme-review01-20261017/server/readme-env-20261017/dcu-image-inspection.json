@@ -1,0 +1,12 @@
+{
+  "reference": "harbor.sourcefind.cn:5443/dcu/admin/base/sglang:0.5.12-ubuntu22.04-dtk2604-py3.10",
+  "command": [
+    "docker",
+    "manifest",
+    "inspect",
+    "--insecure",
+    "harbor.sourcefind.cn:5443/dcu/admin/base/sglang:0.5.12-ubuntu22.04-dtk2604-py3.10"
+  ],
+  "returncode": 1,
+  "stderr": "failed to configure transport: error pinging v2 registry: Get \"https://harbor.sourcefind.cn:5443/v2/\": dial tcp: lookup harbor.sourcefind.cn: Try again\n"
+}

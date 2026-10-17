@@ -1,0 +1,301 @@
+{
+  "status": "MEASUREMENTS_COMPLETE_ORIGINAL_TEXT_INTEGRITY_FAILED",
+  "run": "submit-current-c64-server64-pair01-20261016-a",
+  "physical_pair": [
+    0,
+    1
+  ],
+  "client_concurrency": 64,
+  "server_max_running_requests": 64,
+  "cuda_graph_max_bs": 64,
+  "formal_requests": 3000,
+  "full_warmup_requests": 1000,
+  "short_warmup_per_invocation": 64,
+  "request_errors": 0,
+  "output_tps_rounds": [
+    471.19749113360814,
+    474.66357364838495,
+    475.2241773802106
+  ],
+  "mean_output_tps": 473.69508072073455,
+  "spread_percent": 0.8500587003090287,
+  "three_round_mean_saved_latency_statistics_ms": {
+    "mean_e2e_latency_ms": 25588.57802216864,
+    "median_e2e_latency_ms": 17460.7034411747,
+    "std_e2e_latency_ms": 25971.25872382042,
+    "p90_e2e_latency_ms": 63987.49445051071,
+    "p99_e2e_latency_ms": 103890.99918411985,
+    "mean_ttft_ms": 899.9385185875968,
+    "median_ttft_ms": 476.20424133492634,
+    "std_ttft_ms": 1278.0171248129793,
+    "p99_ttft_ms": 6177.74800704113,
+    "mean_tpot_ms": 146.1575019896471,
+    "median_tpot_ms": 128.71063189547908,
+    "std_tpot_ms": 125.64884057594517,
+    "p99_tpot_ms": 456.18112828374,
+    "mean_itl_ms": 126.94438365816458,
+    "median_itl_ms": 72.49454832829845,
+    "std_itl_ms": 155.96419329711978,
+    "p95_itl_ms": 302.29044970086153,
+    "p99_itl_ms": 516.7021700914481
+  },
+  "historical_report_reference_comparison": {
+    "output_tps": {
+      "historical_reference": 417.42,
+      "latest": 473.69508072073455,
+      "change_percent": 13.481644559612516
+    },
+    "median_ttft_ms": {
+      "historical_reference": 544.56,
+      "latest": 476.20424133492634,
+      "change_percent": -12.552475147839282
+    },
+    "p99_ttft_ms": {
+      "historical_reference": 6098.01,
+      "latest": 6177.74800704113,
+      "change_percent": 1.3076070232933334
+    },
+    "median_tpot_ms": {
+      "historical_reference": 148.43,
+      "latest": 128.71063189547908,
+      "change_percent": -13.285298190743733
+    },
+    "p99_tpot_ms": {
+      "historical_reference": 496.3,
+      "latest": 456.18112828374,
+      "change_percent": -8.083592930940963
+    }
+  },
+  "prior_server32_descriptive_comparison": {
+    "mean_output_tps": 417.09167316715815,
+    "physical_pair": [
+      6,
+      7
+    ],
+    "server_max_running_requests": 32,
+    "cuda_graph_max_bs": 32,
+    "change_percent": 13.570975206424563,
+    "causal_attribution": false
+  },
+  "rows": [
+    {
+      "label": "full-warmup-01",
+      "completed": 1000,
+      "request_errors": 0,
+      "input_tokens": 331978,
+      "output_tokens": 196501,
+      "duration_s": 485.4669206980034,
+      "output_tps": 404.7670224728623,
+      "raw_sha256": "263f37830035082422806ec0329c802509504bf14ceccf012582a90ebb9427b8",
+      "saved_latency_statistics_ms": {
+        "mean_e2e_latency_ms": 30103.593888546166,
+        "median_e2e_latency_ms": 21124.101002991665,
+        "std_e2e_latency_ms": 30762.173410231986,
+        "p90_e2e_latency_ms": 74766.19922480898,
+        "p99_e2e_latency_ms": 126817.62625794916,
+        "mean_ttft_ms": 1376.4573065684526,
+        "median_ttft_ms": 482.579016010277,
+        "std_ttft_ms": 2751.115596447498,
+        "p99_ttft_ms": 13351.218949515023,
+        "mean_tpot_ms": 185.85568397017454,
+        "median_tpot_ms": 139.99532459357073,
+        "std_tpot_ms": 299.35748421961466,
+        "p99_tpot_ms": 1034.0059518233463,
+        "mean_itl_ms": 147.68438894912032,
+        "median_itl_ms": 71.90089201321825,
+        "std_itl_ms": 312.72238709282783,
+        "p95_itl_ms": 309.1510784113777,
+        "p99_itl_ms": 1961.7924395133741
+      },
+      "text_integrity": "FAILED",
+      "replacement_character_requests": [
+        {
+          "index": 24,
+          "characters": 1,
+          "at_string_end": true,
+          "last_60_chars": "(Center):**\n    > \"POV: You finally hit $10K/month online. �",
+          "input_tokens": 20,
+          "output_tokens": 151
+        },
+        {
+          "index": 663,
+          "characters": 1,
+          "at_string_end": true,
+          "last_60_chars": "├── intent_classifier.py\n│   ├── response_generator.py\n│   �",
+          "input_tokens": 5,
+          "output_tokens": 166
+        }
+      ]
+    },
+    {
+      "label": "round-01",
+      "completed": 1000,
+      "request_errors": 0,
+      "input_tokens": 331978,
+      "output_tokens": 196501,
+      "duration_s": 417.0247161699808,
+      "output_tps": 471.19749113360814,
+      "raw_sha256": "12cf90cbc0fdb8f53c6ec3c4526753b3f1d25def02ecfd3e061265672296a0c8",
+      "saved_latency_statistics_ms": {
+        "mean_e2e_latency_ms": 25726.57468335767,
+        "median_e2e_latency_ms": 17618.339806998847,
+        "std_e2e_latency_ms": 26153.369505860566,
+        "p90_e2e_latency_ms": 63531.91129330081,
+        "p99_e2e_latency_ms": 106094.355644632,
+        "mean_ttft_ms": 897.9171908352873,
+        "median_ttft_ms": 482.9063689976465,
+        "std_ttft_ms": 1294.7989880652376,
+        "p99_ttft_ms": 6161.406312182662,
+        "mean_tpot_ms": 146.0376483712497,
+        "median_tpot_ms": 128.55943558450406,
+        "std_tpot_ms": 124.6444733939098,
+        "p99_tpot_ms": 444.96035494890486,
+        "mean_itl_ms": 127.6706162887033,
+        "median_itl_ms": 72.37212048494257,
+        "std_itl_ms": 163.07714273590202,
+        "p95_itl_ms": 302.49294301029283,
+        "p99_itl_ms": 506.4275330479723
+      },
+      "text_integrity": "FAILED",
+      "replacement_character_requests": [
+        {
+          "index": 24,
+          "characters": 1,
+          "at_string_end": true,
+          "last_60_chars": "(Center):**\n    > \"POV: You finally hit $10K/month online. �",
+          "input_tokens": 20,
+          "output_tokens": 151
+        },
+        {
+          "index": 663,
+          "characters": 1,
+          "at_string_end": true,
+          "last_60_chars": "├── intent_classifier.py\n│   ├── response_generator.py\n│   �",
+          "input_tokens": 5,
+          "output_tokens": 166
+        }
+      ]
+    },
+    {
+      "label": "round-02",
+      "completed": 1000,
+      "request_errors": 0,
+      "input_tokens": 331978,
+      "output_tokens": 196501,
+      "duration_s": 413.97952341201017,
+      "output_tps": 474.66357364838495,
+      "raw_sha256": "b74e1fbfba6baf7ca031848c58d475fadf8e6a64e3ded554ae6e26ed5ec5c392",
+      "saved_latency_statistics_ms": {
+        "mean_e2e_latency_ms": 25536.098804459267,
+        "median_e2e_latency_ms": 17425.105367496144,
+        "std_e2e_latency_ms": 25914.238385881952,
+        "p90_e2e_latency_ms": 63918.18086490384,
+        "p99_e2e_latency_ms": 103402.94237747088,
+        "mean_ttft_ms": 903.9909499853966,
+        "median_ttft_ms": 469.9909744958859,
+        "std_ttft_ms": 1289.0804947054514,
+        "p99_ttft_ms": 6200.48327706987,
+        "mean_tpot_ms": 144.40540160427418,
+        "median_tpot_ms": 128.7737629603475,
+        "std_tpot_ms": 122.95609764122325,
+        "p99_tpot_ms": 424.1765476883895,
+        "mean_itl_ms": 126.64854295535716,
+        "median_itl_ms": 73.07967147789896,
+        "std_itl_ms": 146.33065191404802,
+        "p95_itl_ms": 302.3666634981055,
+        "p99_itl_ms": 514.162298443261
+      },
+      "text_integrity": "FAILED",
+      "replacement_character_requests": [
+        {
+          "index": 24,
+          "characters": 1,
+          "at_string_end": true,
+          "last_60_chars": "(Center):**\n    > \"POV: You finally hit $10K/month online. �",
+          "input_tokens": 20,
+          "output_tokens": 151
+        },
+        {
+          "index": 663,
+          "characters": 1,
+          "at_string_end": true,
+          "last_60_chars": "├── intent_classifier.py\n│   ├── response_generator.py\n│   �",
+          "input_tokens": 5,
+          "output_tokens": 166
+        }
+      ]
+    },
+    {
+      "label": "round-03",
+      "completed": 1000,
+      "request_errors": 0,
+      "input_tokens": 331978,
+      "output_tokens": 196501,
+      "duration_s": 413.49116764904466,
+      "output_tps": 475.2241773802106,
+      "raw_sha256": "4ae00f76aea8189b6330124e1bd04275258b35bca6d0105e2a43357e90583fde",
+      "saved_latency_statistics_ms": {
+        "mean_e2e_latency_ms": 25503.06057868898,
+        "median_e2e_latency_ms": 17338.66514902911,
+        "std_e2e_latency_ms": 25846.16827971875,
+        "p90_e2e_latency_ms": 64512.39119332749,
+        "p99_e2e_latency_ms": 102175.69953025666,
+        "mean_ttft_ms": 897.9074149421067,
+        "median_ttft_ms": 475.7153805112466,
+        "std_ttft_ms": 1250.171891668249,
+        "p99_ttft_ms": 6171.354431870859,
+        "mean_tpot_ms": 148.02945599341746,
+        "median_tpot_ms": 128.7986971415857,
+        "std_tpot_ms": 129.34595069270244,
+        "p99_tpot_ms": 499.40648221392564,
+        "mean_itl_ms": 126.51399173043329,
+        "median_itl_ms": 72.03185302205384,
+        "std_itl_ms": 158.4847852414093,
+        "p95_itl_ms": 302.0117425941862,
+        "p99_itl_ms": 529.516678783111
+      },
+      "text_integrity": "FAILED",
+      "replacement_character_requests": [
+        {
+          "index": 24,
+          "characters": 1,
+          "at_string_end": true,
+          "last_60_chars": "(Center):**\n    > \"POV: You finally hit $10K/month online. �",
+          "input_tokens": 20,
+          "output_tokens": 151
+        },
+        {
+          "index": 663,
+          "characters": 1,
+          "at_string_end": true,
+          "last_60_chars": "├── intent_classifier.py\n│   ├── response_generator.py\n│   �",
+          "input_tokens": 5,
+          "output_tokens": 166
+        }
+      ]
+    }
+  ],
+  "original_queue_status": "FAILED",
+  "original_validation_gate_pass": false,
+  "original_failed_state_sha256": "d57c2249409e489233070fdd59a72d2aa955e62eac7f53279a778180b81939d4",
+  "original_artifact_manifest_sha256": "9c4c7b1a7514d84b3586eaefd50b3255af7f31a55dacbe9a4bf7564e87d7d637",
+  "original_control_manifest_sha256": "9da3465b597acb0bbd4d88b7c9da153388d5846d5634648b2e0a8d3188545942",
+  "artifact_count": 38,
+  "control_count": 32,
+  "evidence_exact_size_sha_and_manifest_coverage": true,
+  "original_raw_or_gate_modified": false,
+  "validator_failure": "validate_sharegpt.py line26 rejects U+FFFD in generated_texts; same indices24,663 in all four complete invocations, each one trailing U+FFFD",
+  "root_cause_of_response_character": "UNPROVEN: final token IDs and raw SSE text_chunks were not saved",
+  "accuracy": "NOT_RUN",
+  "frozen": false,
+  "default_patch_changed": false,
+  "formal_acceptance": false,
+  "actual_model_graph_gate": "REVIEW_REQUIRED",
+  "caveats": [
+    "Numeric measurements are complete, but original text integrity gate FAILED. No PASS is fabricated and no assertion is relaxed in the original validator.",
+    "Historical report and previous other-pair server32 comparisons are descriptive, not same-pair contemporaneous causal A/B.",
+    "Throughput and TTFT P99 reconstructed exactly. TPOT/ITL/E2E retain installed benchmark metrics; text_chunks and per-request final latency are absent, preventing exact reconstruction.",
+    "Mean of per-round percentiles is not a pooled percentile; observed spread is not a statistical noise upper bound.",
+    "No model quality/GSM8K evaluation, new GPU test, optimizer change, default promotion or freeze was performed."
+  ]
+}

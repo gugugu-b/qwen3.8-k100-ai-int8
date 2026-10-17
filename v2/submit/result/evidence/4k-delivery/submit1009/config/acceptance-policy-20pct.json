@@ -1,0 +1,17 @@
+{
+  "status": "ACTIVE",
+  "utc": "2026-10-09T13:57:57.836423+00:00",
+  "required_gain_percent": 20,
+  "required_scenes": [
+    "4k",
+    "64k",
+    "sharegpt-c32"
+  ],
+  "baseline": "contemporaneous TP2 v1 with matched workload and same physical pair",
+  "minimum_matched_rounds": 3,
+  "tail_regression_limit_percent": 5,
+  "current_candidate_eligible": false,
+  "priority": "F1 quantization/projection surrounding operator fusion; profile and rapid 4K A/B before 64K/ShareGPT; GSM8K last",
+  "other_quality": "manual by user",
+  "legacy_final_queue_restart_allowed": false
+}

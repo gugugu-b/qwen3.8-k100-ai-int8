@@ -1,0 +1,283 @@
+{
+  "status": "PASS",
+  "gpu_used": false,
+  "shell_scripts": [
+    "scripts/benchmark.sh",
+    "scripts/benchmark_reference.sh",
+    "scripts/benchmark_sharegpt.sh",
+    "scripts/demo.sh",
+    "scripts/run.sh",
+    "scripts/serve.sh",
+    "scripts/start_server.sh"
+  ],
+  "markdown_links": [
+    {
+      "file": "v2/submit/README.md",
+      "target": "docs/提交材料状态-20261017.md"
+    },
+    {
+      "file": "v2/submit/README.md",
+      "target": "patch/README.md"
+    },
+    {
+      "file": "v2/submit/README.md",
+      "target": "docs/本轮性能与SLA结果-20261017.md"
+    },
+    {
+      "file": "v2/submit/README.md",
+      "target": "docs/GSM8K精度验证-20261017.md"
+    },
+    {
+      "file": "v2/submit/README.md",
+      "target": "docs/优化与复现说明.md"
+    },
+    {
+      "file": "v2/submit/README.md",
+      "target": "docs/Demo说明.md"
+    },
+    {
+      "file": "v2/submit/README.md",
+      "target": "docs/demo/demo.mp4"
+    },
+    {
+      "file": "v2/submit/README.md",
+      "target": "patch/README.md"
+    },
+    {
+      "file": "v2/submit/README.md",
+      "target": "docs/官方教程口径对齐-20261017.md"
+    },
+    {
+      "file": "v2/submit/README.md",
+      "target": "docs/demo/demo.mp4"
+    },
+    {
+      "file": "v2/submit/README.md",
+      "target": "docs/Demo说明.md"
+    },
+    {
+      "file": "v2/submit/README.md",
+      "target": "patch/README.md"
+    },
+    {
+      "file": "v2/submit/docs/优化与复现说明.md",
+      "target": "../README.md"
+    },
+    {
+      "file": "v2/submit/docs/优化与复现说明.md",
+      "target": "../patch/README.md"
+    },
+    {
+      "file": "v2/submit/docs/优化与复现说明.md",
+      "target": "history/优化与复现说明-before-review-20261017.md"
+    },
+    {
+      "file": "v2/submit/docs/优化与复现说明.md",
+      "target": "../env_declare.yaml"
+    },
+    {
+      "file": "v2/submit/docs/优化与复现说明.md",
+      "target": "官方教程口径对齐-20261017.md"
+    },
+    {
+      "file": "v2/submit/docs/优化与复现说明.md",
+      "target": "本轮性能与SLA结果-20261017.md"
+    },
+    {
+      "file": "v2/submit/docs/优化与复现说明.md",
+      "target": "../result/summary/community-official-alignment-20261017-d.json"
+    },
+    {
+      "file": "v2/submit/docs/优化与复现说明.md",
+      "target": "demo/demo.mp4"
+    },
+    {
+      "file": "v2/submit/docs/优化与复现说明.md",
+      "target": "Demo说明.md"
+    },
+    {
+      "file": "v2/submit/docs/优化与复现说明.md",
+      "target": "GSM8K精度验证-20261017.md"
+    },
+    {
+      "file": "v2/submit/docs/优化与复现说明.md",
+      "target": "提交材料状态-20261017.md"
+    },
+    {
+      "file": "v2/README.md",
+      "target": "submit/README.md"
+    },
+    {
+      "file": "v2/README.md",
+      "target": "submit/patch/README.md"
+    },
+    {
+      "file": "v2/README.md",
+      "target": "submit/docs/提交材料状态-20261017.md"
+    }
+  ],
+  "results": [
+    {
+      "path": "result/runs/community-official-20261017-c-p01-matrix-4k-c1/4k-c1",
+      "kind": "fixed_random",
+      "every_round_sla_pass": true,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-20261017-c-p01-matrix-4k-c16/4k-c16",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 1
+    },
+    {
+      "path": "result/runs/community-official-20261017-c-p01-matrix-4k-c8/4k-c8",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-20261017-c-p23-matrix-64k-c1/64k-c1",
+      "kind": "fixed_random",
+      "every_round_sla_pass": true,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-20261017-c-p23-matrix-64k-c16/64k-c16",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-20261017-c-p23-matrix-64k-c8/64k-c8",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-20261017-c-p45-matrix-4k-c128/4k-c128",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 6
+    },
+    {
+      "path": "result/runs/community-official-20261017-c-p45-matrix-4k-c32/4k-c32",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 3
+    },
+    {
+      "path": "result/runs/community-official-20261017-c-p45-matrix-4k-c64/4k-c64",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 5
+    },
+    {
+      "path": "result/runs/community-official-20261017-c-p67-matrix-64k-c32/64k-c32",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c2/4k-c2",
+      "kind": "fixed_random",
+      "every_round_sla_pass": true,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c3/4k-c3",
+      "kind": "fixed_random",
+      "every_round_sla_pass": true,
+      "text_flagged_records": 1
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c4/4k-c4",
+      "kind": "fixed_random",
+      "every_round_sla_pass": true,
+      "text_flagged_records": 1
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c5/4k-c5",
+      "kind": "fixed_random",
+      "every_round_sla_pass": true,
+      "text_flagged_records": 1
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c6/4k-c6",
+      "kind": "fixed_random",
+      "every_round_sla_pass": true,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c7/4k-c7",
+      "kind": "fixed_random",
+      "every_round_sla_pass": true,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p01-sla-4k-c8/4k-c8",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p23-clean-runtime-4k-c8/4k-c8",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p23-clean-runtime-64k-c8/64k-c8",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p45-sla-64k-c1/64k-c1",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p45-sla-64k-c2/64k-c2",
+      "kind": "fixed_random",
+      "every_round_sla_pass": false,
+      "text_flagged_records": 0
+    },
+    {
+      "path": "result/evidence/sharegpt-c1/submit1009/experiments/performance-validation-20261016/result/submit-current-c1-pair45-20261016-a-c1-candidate/sharegpt-c1",
+      "kind": "sharegpt"
+    },
+    {
+      "path": "result/evidence/sharegpt-c32/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32",
+      "kind": "sharegpt"
+    },
+    {
+      "path": "result/evidence/sharegpt-c32/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-v1/sharegpt-c32",
+      "kind": "sharegpt"
+    },
+    {
+      "path": "result/evidence/sharegpt-c32/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-v1-return/sharegpt-c32",
+      "kind": "sharegpt"
+    },
+    {
+      "path": "result/evidence/sharegpt-c4-c16-c64/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c16-candidate/sharegpt-c16",
+      "kind": "sharegpt"
+    },
+    {
+      "path": "result/evidence/sharegpt-c4-c16-c64/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c4-candidate/sharegpt-c4",
+      "kind": "sharegpt"
+    },
+    {
+      "path": "result/evidence/sharegpt-c4-c16-c64/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c64-candidate/sharegpt-c64",
+      "kind": "sharegpt"
+    },
+    {
+      "path": "result/runs/community-official-followup-20261017-d-p67-sharegpt-c64-recheck/sharegpt-c64",
+      "kind": "sharegpt"
+    },
+    {
+      "path": "result/evidence/gsm8k-20261017/gsm8k",
+      "kind": "gsm8k"
+    }
+  ]
+}

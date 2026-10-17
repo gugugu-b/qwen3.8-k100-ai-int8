@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-16T03:31:17.219157+00:00",
+  "container": "qwen38-submit1009-perf45-20261016",
+  "owned_verified": true,
+  "stop_returncode": 0,
+  "stop_stdout": "qwen38-submit1009-perf45-20261016\n",
+  "stop_stderr": "",
+  "running": false
+}

@@ -1,0 +1,64 @@
+{
+  "status": "USER_AUTHORIZED_PAIR01_SERVER64_RUNTIME_PREPARED_NO_MODEL",
+  "utc": "2026-10-16T13:54:05.538095+00:00",
+  "files": {
+    "candidate01/build_unified.py": "9a0910d8c23705f3b17863f74f792120ee059a3af02a9b8e17e5c660e4892ccc",
+    "candidate01/k100_int8_gemv_unified.hip": "dd753458416463665a97c5aedc04cffaed7b992a58190a66c9188619d20c8ae2",
+    "candidate01/k100_int8_gemv_unified.so": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d",
+    "candidate01/libtorch_c_dlpack_addon_torch210-rocm.so": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "candidate01/native-ar-manifest.json": "38af7be275156d75ea760c1c4a26e2f83437488f3a716a3757b5a08477a1a013",
+    "candidate01/native_bf16_ar_guard.py": "f9d5ec98c70724dcb80857228681a6c03c619606643cdd6918c9084af51cd7f4",
+    "candidate01/original-native-ar-manifest.json": "ee6324054eadf2707ad9806dc034dbd4082e8649ece3936f5d084d63674834a8",
+    "candidate01/pair-identity.json": "526ad452ef53563125bfca9a95bcfe943773a4a667ebb0c6da0f9962664f7bba",
+    "candidate01/patch_dup_reg_guard.py": "038c207b72052c53ea1626b1408c91002aadf9dc99a543689456c4aed125deac",
+    "candidate01/sitecustomize.py": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+    "candidate01/triton_tiles.json": "4349ae5ebb6c6348323fecb75d35c756970e82b2e2d5d2a9197f1ae839a95758",
+    "review_server64_pair01.py": "1fab6a477bfe285073e42a566831d93afe6db2effff0b9467fb0d3f42386185e",
+    "run_pair01_gate.py": "ea006f1dcd8f2f2016750ae6eb31535d752db2a1f1a949bfca439dfb78433a2d",
+    "run_server64_pair01.py": "bf1427fc8f3afb13c3f3ca2e5eb1960eb760654833cc99396af9bb60b4759938",
+    "runtime-dependencies/aiter/chunk_fwd_o-gfx928.json": "22c2237c2e5c60942dd6f91d81757008a9944d75e354856382fcc720e36c155f",
+    "runtime-dependencies/aiter/chunk_gated_delta_rule_fwd_h-gfx928.json": "28705647a81d1d8ecd550be5f1eda338a0adbf288d4b19ff6c9a1051142a2f48",
+    "runtime-dependencies/aiter/fused_recurrent_gated_delta_rule_packed_decode-gfx928.json": "d855d364daf1b9ad9ae83bfbc7fcf95c9df28898beca291035034d8188bbc27e",
+    "runtime-dependencies/aiter/fused_sigmoid_gating_delta_rule_update-gfx928.json": "75a606995d2f09c36aea086597675b4898b22515200963655987af233f858ec4",
+    "runtime-dependencies/aiter/fused_sigmoid_gating_delta_rule_update_recurrent-gfx928.json": "dbc0f48b9f5c2b49b8b9bd8f04c81fa54b95277ecaadeb23a39082d2cbf6e65d",
+    "runtime-dependencies/direct_register_custom_op.py": "e6ee8f1b25e60d02811658483cdf150b33c79ba5c94f27198167268a44a8b545",
+    "runtime-dependencies/tvm-ffi/libtorch_c_dlpack_addon_torch210-rocm.so": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "scripts/benchmark_sharegpt.sh": "5a469b8ef471ee0f8c1a14ba6a3ae2e8f4b9d6b710367fe5afaaabf25b97f417",
+    "scripts/native_bf16_ar_guard.py": "f9d5ec98c70724dcb80857228681a6c03c619606643cdd6918c9084af51cd7f4",
+    "scripts/probe_native_bf16_ar01.py": "07c8241e2543460594b7eeba892aa06ed3d453cd06be0cb5ae0fef2b7ec58b86",
+    "scripts/serve.sh": "7469ffb7fe8765959df76311997de95843e9722f347ee421969aea4fe926681c",
+    "scripts/start_service.sh": "870aa2be49c4374a92aa292b97bb817028686a51b1814423add599e663d5e86e",
+    "scripts/validate_sharegpt.py": "e0588b52ecd89575897f4f309d51de46b8e051f6623f66472ab40914066459b3",
+    "v1-report-reference.json": "54c5ff586396dd90760eeb3fc3686f741927a5ef065294148ce293919ab4ef2d",
+    "v1-report-source.md": "b36db6ec60fcac45d710fada2bdf74b1b4655ef631567e6c34fc4dc4a20e417d"
+  },
+  "dataset_sha256": "35f0e213ce091ed9b9af2a1f0755e9d39f9ccec34ab281cd4ca60d70f6479ba4",
+  "original_runtime_manifest_sha256": "20ab49ef5f401ac9ca1f7f79a73837fb02fde566b06c3fa0654ec271495687fb",
+  "original_runtime_files_verified": 42,
+  "containers": [
+    {
+      "name": "qwen38-submit1009-perf01-server64-20261016",
+      "id": "a0b207e0d79aa0c6ea0186efb924258effe282869241ac1c90c838dee2565def",
+      "pair": "0,1",
+      "port": "31034",
+      "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad"
+    }
+  ],
+  "baseline_test": false,
+  "accuracy_tests": false,
+  "server_max_running_requests": 64,
+  "cuda_graph_max_bs": 64,
+  "default_patch_changed": false,
+  "gpu_before": {
+    "card0": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card1": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "gpu_used": false,
+  "checks": [
+    {
+      "diff": "0002-v2-triton-tiles.patch",
+      "patch_stdout": "patching file sitecustomize.py\npatching file triton_tiles.json\n"
+    },
+    {
+      "diff": "0003-v2-native-bf16-guard.patch",
+      "patch_stdout": "patching file sitecustomize.py\npatching file native_bf16_ar_guard.py\n"
+    },
+    {
+      "reconstruction": "v1 -> tile -> final candidate",
+      "byte_identical": true
+    },
+    {
+      "diff": "0001-lightop-duplicate-registration.patch",
+      "patch_stdout": "patching file 'lightop/_lmslim_native/vllm_compat/direct_register_custom_op.py'\n",
+      "byte_identical": true
+    },
+    {
+      "diff": "0005-inherited-longkv-full-source.patch",
+      "patch_stdout": "patching file 'flash_attn/flash_attn_triton_mqa_gqa.py'\n",
+      "byte_identical": true
+    }
+  ]
+}

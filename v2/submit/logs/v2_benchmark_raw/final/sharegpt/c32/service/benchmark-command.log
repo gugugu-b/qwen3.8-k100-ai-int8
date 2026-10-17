@@ -1,0 +1,281 @@
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+benchmark_args=Namespace(backend='sglang-oai', base_url='http://127.0.0.1:31014', host='0.0.0.0', port=None, ready_check_timeout_sec=60, dataset_name='sharegpt', dataset_path='/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json', model='/data/model/Qwen3.8-27B-Channel-INT8-w8a8', served_model_name='Qwen3.8-27B-Channel-INT8-w8a8', tokenizer=None, num_prompts=1000, sharegpt_output_len=None, sharegpt_context_len=67584, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, image_count=1, image_resolution='1080p', random_image_count=False, image_format='jpeg', image_content='random', request_rate=inf, use_trace_timestamps=False, max_concurrency=32, output_file='/data/wangzy/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/full-warmup-01.jsonl', output_details=True, print_requests=False, disable_tqdm=True, disable_stream=False, return_logprob=False, top_logprobs_num=0, token_ids_logprob=None, logprob_start_len=-1, return_routed_experts=False, seed=20260912, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, plot_throughput=False, profile_activities=['CPU', 'GPU'], profile_start_step=None, profile_steps=None, profile_num_steps=None, profile_by_stage=False, profile_stages=None, profile_output_dir=None, profile_prefix=None, lora_name=None, lora_request_distribution='uniform', lora_zipf_alpha=1.5, prompt_suffix='', pd_separated=False, profile_prefill_url=None, profile_decode_url=None, flush_cache=False, warmup_requests=64, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256, gsp_range_ratio=1.0, gsp_fast_prepare=False, gsp_send_routing_key=False, gsp_num_turns=1, gsp_ordered=False, mooncake_slowdown_factor=1.0, mooncake_num_rounds=1, mooncake_workload='conversation', fake_prefill=False, tag=None, header=None)
+Waiting up to 60s for http://127.0.0.1:31014/v1/models to become ready...
+Server ready in 0.0s.
+Namespace(backend='sglang-oai', base_url='http://127.0.0.1:31014', host='0.0.0.0', port=30000, ready_check_timeout_sec=60, dataset_name='sharegpt', dataset_path='/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json', model='/data/model/Qwen3.8-27B-Channel-INT8-w8a8', served_model_name='Qwen3.8-27B-Channel-INT8-w8a8', tokenizer=None, num_prompts=1000, sharegpt_output_len=None, sharegpt_context_len=67584, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, image_count=1, image_resolution='1080p', random_image_count=False, image_format='jpeg', image_content='random', request_rate=inf, use_trace_timestamps=False, max_concurrency=32, output_file='/data/wangzy/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/full-warmup-01.jsonl', output_details=True, print_requests=False, disable_tqdm=True, disable_stream=False, return_logprob=False, top_logprobs_num=0, token_ids_logprob=None, logprob_start_len=-1, return_routed_experts=False, seed=20260912, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, plot_throughput=False, profile_activities=['CPU', 'GPU'], profile_start_step=None, profile_steps=None, profile_num_steps=None, profile_by_stage=False, profile_stages=None, profile_output_dir=None, profile_prefix=None, lora_name=None, lora_request_distribution='uniform', lora_zipf_alpha=1.5, prompt_suffix='', pd_separated=False, profile_prefill_url=None, profile_decode_url=None, flush_cache=False, warmup_requests=64, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256, gsp_range_ratio=1.0, gsp_fast_prepare=False, gsp_send_routing_key=False, gsp_num_turns=1, gsp_ordered=False, mooncake_slowdown_factor=1.0, mooncake_num_rounds=1, mooncake_workload='conversation', fake_prefill=False, tag=None, header=None)
+
+#Input tokens: 331978
+#Output tokens: 196501
+Starting warmup with 64 sequences...
+Warmup completed with 64 sequences. Starting main benchmark run...
+
+============ Serving Benchmark Result ============
+Backend:                                 sglang-oai
+Traffic request rate:                    inf       
+Max request concurrency:                 32        
+Successful requests:                     1000      
+Benchmark duration (s):                  470.57    
+Total input tokens:                      331978    
+Total input text tokens:                 331978    
+Total generated tokens:                  196501    
+Total generated tokens (retokenized):    195924    
+Request throughput (req/s):              2.13      
+Input token throughput (tok/s):          705.49    
+Output token throughput (tok/s):         417.58    
+Peak output token throughput (tok/s):    480.00    
+Peak concurrent requests:                38        
+Total token throughput (tok/s):          1123.07   
+Concurrency:                             31.28     
+Accept length:                           1.84      
+----------------End-to-End Latency----------------
+Mean E2E Latency (ms):                   14720.73  
+Median E2E Latency (ms):                 9115.64   
+P90 E2E Latency (ms):                    37323.78  
+P99 E2E Latency (ms):                    60644.19  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          523.18    
+Median TTFT (ms):                        349.80    
+P99 TTFT (ms):                           2822.60   
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          77.17     
+Median TPOT (ms):                        72.61     
+P99 TPOT (ms):                           250.26    
+---------------Inter-Token Latency----------------
+Mean ITL (ms):                           72.76     
+Median ITL (ms):                         38.72     
+P95 ITL (ms):                            151.18    
+P99 ITL (ms):                            289.42    
+Max ITL (ms):                            3930.43   
+==================================================
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+benchmark_args=Namespace(backend='sglang-oai', base_url='http://127.0.0.1:31014', host='0.0.0.0', port=None, ready_check_timeout_sec=60, dataset_name='sharegpt', dataset_path='/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json', model='/data/model/Qwen3.8-27B-Channel-INT8-w8a8', served_model_name='Qwen3.8-27B-Channel-INT8-w8a8', tokenizer=None, num_prompts=1000, sharegpt_output_len=None, sharegpt_context_len=67584, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, image_count=1, image_resolution='1080p', random_image_count=False, image_format='jpeg', image_content='random', request_rate=inf, use_trace_timestamps=False, max_concurrency=32, output_file='/data/wangzy/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-01.jsonl', output_details=True, print_requests=False, disable_tqdm=True, disable_stream=False, return_logprob=False, top_logprobs_num=0, token_ids_logprob=None, logprob_start_len=-1, return_routed_experts=False, seed=20260912, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, plot_throughput=False, profile_activities=['CPU', 'GPU'], profile_start_step=None, profile_steps=None, profile_num_steps=None, profile_by_stage=False, profile_stages=None, profile_output_dir=None, profile_prefix=None, lora_name=None, lora_request_distribution='uniform', lora_zipf_alpha=1.5, prompt_suffix='', pd_separated=False, profile_prefill_url=None, profile_decode_url=None, flush_cache=False, warmup_requests=64, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256, gsp_range_ratio=1.0, gsp_fast_prepare=False, gsp_send_routing_key=False, gsp_num_turns=1, gsp_ordered=False, mooncake_slowdown_factor=1.0, mooncake_num_rounds=1, mooncake_workload='conversation', fake_prefill=False, tag=None, header=None)
+Waiting up to 60s for http://127.0.0.1:31014/v1/models to become ready...
+Server ready in 0.0s.
+Namespace(backend='sglang-oai', base_url='http://127.0.0.1:31014', host='0.0.0.0', port=30000, ready_check_timeout_sec=60, dataset_name='sharegpt', dataset_path='/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json', model='/data/model/Qwen3.8-27B-Channel-INT8-w8a8', served_model_name='Qwen3.8-27B-Channel-INT8-w8a8', tokenizer=None, num_prompts=1000, sharegpt_output_len=None, sharegpt_context_len=67584, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, image_count=1, image_resolution='1080p', random_image_count=False, image_format='jpeg', image_content='random', request_rate=inf, use_trace_timestamps=False, max_concurrency=32, output_file='/data/wangzy/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-01.jsonl', output_details=True, print_requests=False, disable_tqdm=True, disable_stream=False, return_logprob=False, top_logprobs_num=0, token_ids_logprob=None, logprob_start_len=-1, return_routed_experts=False, seed=20260912, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, plot_throughput=False, profile_activities=['CPU', 'GPU'], profile_start_step=None, profile_steps=None, profile_num_steps=None, profile_by_stage=False, profile_stages=None, profile_output_dir=None, profile_prefix=None, lora_name=None, lora_request_distribution='uniform', lora_zipf_alpha=1.5, prompt_suffix='', pd_separated=False, profile_prefill_url=None, profile_decode_url=None, flush_cache=False, warmup_requests=64, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256, gsp_range_ratio=1.0, gsp_fast_prepare=False, gsp_send_routing_key=False, gsp_num_turns=1, gsp_ordered=False, mooncake_slowdown_factor=1.0, mooncake_num_rounds=1, mooncake_workload='conversation', fake_prefill=False, tag=None, header=None)
+
+#Input tokens: 331978
+#Output tokens: 196501
+Starting warmup with 64 sequences...
+Warmup completed with 64 sequences. Starting main benchmark run...
+
+============ Serving Benchmark Result ============
+Backend:                                 sglang-oai
+Traffic request rate:                    inf       
+Max request concurrency:                 32        
+Successful requests:                     1000      
+Benchmark duration (s):                  467.80    
+Total input tokens:                      331978    
+Total input text tokens:                 331978    
+Total generated tokens:                  196501    
+Total generated tokens (retokenized):    195924    
+Request throughput (req/s):              2.14      
+Input token throughput (tok/s):          709.67    
+Output token throughput (tok/s):         420.06    
+Peak output token throughput (tok/s):    479.00    
+Peak concurrent requests:                39        
+Total token throughput (tok/s):          1129.72   
+Concurrency:                             31.27     
+Accept length:                           1.84      
+----------------End-to-End Latency----------------
+Mean E2E Latency (ms):                   14629.62  
+Median E2E Latency (ms):                 9094.06   
+P90 E2E Latency (ms):                    37118.43  
+P99 E2E Latency (ms):                    60062.29  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          516.42    
+Median TTFT (ms):                        347.77    
+P99 TTFT (ms):                           2742.37   
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          76.70     
+Median TPOT (ms):                        72.28     
+P99 TPOT (ms):                           247.52    
+---------------Inter-Token Latency----------------
+Mean ITL (ms):                           72.32     
+Median ITL (ms):                         38.70     
+P95 ITL (ms):                            148.63    
+P99 ITL (ms):                            288.49    
+Max ITL (ms):                            3883.54   
+==================================================
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+benchmark_args=Namespace(backend='sglang-oai', base_url='http://127.0.0.1:31014', host='0.0.0.0', port=None, ready_check_timeout_sec=60, dataset_name='sharegpt', dataset_path='/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json', model='/data/model/Qwen3.8-27B-Channel-INT8-w8a8', served_model_name='Qwen3.8-27B-Channel-INT8-w8a8', tokenizer=None, num_prompts=1000, sharegpt_output_len=None, sharegpt_context_len=67584, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, image_count=1, image_resolution='1080p', random_image_count=False, image_format='jpeg', image_content='random', request_rate=inf, use_trace_timestamps=False, max_concurrency=32, output_file='/data/wangzy/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-02.jsonl', output_details=True, print_requests=False, disable_tqdm=True, disable_stream=False, return_logprob=False, top_logprobs_num=0, token_ids_logprob=None, logprob_start_len=-1, return_routed_experts=False, seed=20260912, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, plot_throughput=False, profile_activities=['CPU', 'GPU'], profile_start_step=None, profile_steps=None, profile_num_steps=None, profile_by_stage=False, profile_stages=None, profile_output_dir=None, profile_prefix=None, lora_name=None, lora_request_distribution='uniform', lora_zipf_alpha=1.5, prompt_suffix='', pd_separated=False, profile_prefill_url=None, profile_decode_url=None, flush_cache=False, warmup_requests=64, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256, gsp_range_ratio=1.0, gsp_fast_prepare=False, gsp_send_routing_key=False, gsp_num_turns=1, gsp_ordered=False, mooncake_slowdown_factor=1.0, mooncake_num_rounds=1, mooncake_workload='conversation', fake_prefill=False, tag=None, header=None)
+Waiting up to 60s for http://127.0.0.1:31014/v1/models to become ready...
+Server ready in 0.0s.
+Namespace(backend='sglang-oai', base_url='http://127.0.0.1:31014', host='0.0.0.0', port=30000, ready_check_timeout_sec=60, dataset_name='sharegpt', dataset_path='/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json', model='/data/model/Qwen3.8-27B-Channel-INT8-w8a8', served_model_name='Qwen3.8-27B-Channel-INT8-w8a8', tokenizer=None, num_prompts=1000, sharegpt_output_len=None, sharegpt_context_len=67584, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, image_count=1, image_resolution='1080p', random_image_count=False, image_format='jpeg', image_content='random', request_rate=inf, use_trace_timestamps=False, max_concurrency=32, output_file='/data/wangzy/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-02.jsonl', output_details=True, print_requests=False, disable_tqdm=True, disable_stream=False, return_logprob=False, top_logprobs_num=0, token_ids_logprob=None, logprob_start_len=-1, return_routed_experts=False, seed=20260912, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, plot_throughput=False, profile_activities=['CPU', 'GPU'], profile_start_step=None, profile_steps=None, profile_num_steps=None, profile_by_stage=False, profile_stages=None, profile_output_dir=None, profile_prefix=None, lora_name=None, lora_request_distribution='uniform', lora_zipf_alpha=1.5, prompt_suffix='', pd_separated=False, profile_prefill_url=None, profile_decode_url=None, flush_cache=False, warmup_requests=64, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256, gsp_range_ratio=1.0, gsp_fast_prepare=False, gsp_send_routing_key=False, gsp_num_turns=1, gsp_ordered=False, mooncake_slowdown_factor=1.0, mooncake_num_rounds=1, mooncake_workload='conversation', fake_prefill=False, tag=None, header=None)
+
+#Input tokens: 331978
+#Output tokens: 196501
+Starting warmup with 64 sequences...
+Warmup completed with 64 sequences. Starting main benchmark run...
+
+============ Serving Benchmark Result ============
+Backend:                                 sglang-oai
+Traffic request rate:                    inf       
+Max request concurrency:                 32        
+Successful requests:                     1000      
+Benchmark duration (s):                  468.10    
+Total input tokens:                      331978    
+Total input text tokens:                 331978    
+Total generated tokens:                  196501    
+Total generated tokens (retokenized):    195924    
+Request throughput (req/s):              2.14      
+Input token throughput (tok/s):          709.21    
+Output token throughput (tok/s):         419.79    
+Peak output token throughput (tok/s):    480.00    
+Peak concurrent requests:                39        
+Total token throughput (tok/s):          1128.99   
+Concurrency:                             31.28     
+Accept length:                           1.84      
+----------------End-to-End Latency----------------
+Mean E2E Latency (ms):                   14640.75  
+Median E2E Latency (ms):                 9091.70   
+P90 E2E Latency (ms):                    37072.04  
+P99 E2E Latency (ms):                    60138.09  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          516.83    
+Median TTFT (ms):                        348.35    
+P99 TTFT (ms):                           2730.86   
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          76.77     
+Median TPOT (ms):                        72.22     
+P99 TPOT (ms):                           245.75    
+---------------Inter-Token Latency----------------
+Mean ITL (ms):                           72.38     
+Median ITL (ms):                         38.68     
+P95 ITL (ms):                            149.30    
+P99 ITL (ms):                            291.23    
+Max ITL (ms):                            3877.41   
+==================================================
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+benchmark_args=Namespace(backend='sglang-oai', base_url='http://127.0.0.1:31014', host='0.0.0.0', port=None, ready_check_timeout_sec=60, dataset_name='sharegpt', dataset_path='/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json', model='/data/model/Qwen3.8-27B-Channel-INT8-w8a8', served_model_name='Qwen3.8-27B-Channel-INT8-w8a8', tokenizer=None, num_prompts=1000, sharegpt_output_len=None, sharegpt_context_len=67584, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, image_count=1, image_resolution='1080p', random_image_count=False, image_format='jpeg', image_content='random', request_rate=inf, use_trace_timestamps=False, max_concurrency=32, output_file='/data/wangzy/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-03.jsonl', output_details=True, print_requests=False, disable_tqdm=True, disable_stream=False, return_logprob=False, top_logprobs_num=0, token_ids_logprob=None, logprob_start_len=-1, return_routed_experts=False, seed=20260912, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, plot_throughput=False, profile_activities=['CPU', 'GPU'], profile_start_step=None, profile_steps=None, profile_num_steps=None, profile_by_stage=False, profile_stages=None, profile_output_dir=None, profile_prefix=None, lora_name=None, lora_request_distribution='uniform', lora_zipf_alpha=1.5, prompt_suffix='', pd_separated=False, profile_prefill_url=None, profile_decode_url=None, flush_cache=False, warmup_requests=64, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256, gsp_range_ratio=1.0, gsp_fast_prepare=False, gsp_send_routing_key=False, gsp_num_turns=1, gsp_ordered=False, mooncake_slowdown_factor=1.0, mooncake_num_rounds=1, mooncake_workload='conversation', fake_prefill=False, tag=None, header=None)
+Waiting up to 60s for http://127.0.0.1:31014/v1/models to become ready...
+Server ready in 0.0s.
+Namespace(backend='sglang-oai', base_url='http://127.0.0.1:31014', host='0.0.0.0', port=30000, ready_check_timeout_sec=60, dataset_name='sharegpt', dataset_path='/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json', model='/data/model/Qwen3.8-27B-Channel-INT8-w8a8', served_model_name='Qwen3.8-27B-Channel-INT8-w8a8', tokenizer=None, num_prompts=1000, sharegpt_output_len=None, sharegpt_context_len=67584, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, image_count=1, image_resolution='1080p', random_image_count=False, image_format='jpeg', image_content='random', request_rate=inf, use_trace_timestamps=False, max_concurrency=32, output_file='/data/wangzy/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-03.jsonl', output_details=True, print_requests=False, disable_tqdm=True, disable_stream=False, return_logprob=False, top_logprobs_num=0, token_ids_logprob=None, logprob_start_len=-1, return_routed_experts=False, seed=20260912, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, plot_throughput=False, profile_activities=['CPU', 'GPU'], profile_start_step=None, profile_steps=None, profile_num_steps=None, profile_by_stage=False, profile_stages=None, profile_output_dir=None, profile_prefix=None, lora_name=None, lora_request_distribution='uniform', lora_zipf_alpha=1.5, prompt_suffix='', pd_separated=False, profile_prefill_url=None, profile_decode_url=None, flush_cache=False, warmup_requests=64, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256, gsp_range_ratio=1.0, gsp_fast_prepare=False, gsp_send_routing_key=False, gsp_num_turns=1, gsp_ordered=False, mooncake_slowdown_factor=1.0, mooncake_num_rounds=1, mooncake_workload='conversation', fake_prefill=False, tag=None, header=None)
+
+#Input tokens: 331978
+#Output tokens: 196501
+Starting warmup with 64 sequences...
+Warmup completed with 64 sequences. Starting main benchmark run...
+
+============ Serving Benchmark Result ============
+Backend:                                 sglang-oai
+Traffic request rate:                    inf       
+Max request concurrency:                 32        
+Successful requests:                     1000      
+Benchmark duration (s):                  468.40    
+Total input tokens:                      331978    
+Total input text tokens:                 331978    
+Total generated tokens:                  196501    
+Total generated tokens (retokenized):    195924    
+Request throughput (req/s):              2.13      
+Input token throughput (tok/s):          708.76    
+Output token throughput (tok/s):         419.52    
+Peak output token throughput (tok/s):    480.00    
+Peak concurrent requests:                39        
+Total token throughput (tok/s):          1128.28   
+Concurrency:                             31.28     
+Accept length:                           1.84      
+----------------End-to-End Latency----------------
+Mean E2E Latency (ms):                   14650.46  
+Median E2E Latency (ms):                 9098.75   
+P90 E2E Latency (ms):                    37157.55  
+P99 E2E Latency (ms):                    60041.69  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          516.97    
+Median TTFT (ms):                        348.12    
+P99 TTFT (ms):                           2730.39   
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          76.81     
+Median TPOT (ms):                        72.31     
+P99 TPOT (ms):                           246.02    
+---------------Inter-Token Latency----------------
+Mean ITL (ms):                           72.43     
+Median ITL (ms):                         38.74     
+P95 ITL (ms):                            150.13    
+P99 ITL (ms):                            289.53    
+Max ITL (ms):                            3875.52   
+==================================================
+{
+  "status": "PASS",
+  "rounds": 3,
+  "requests": 3000,
+  "errors": 0,
+  "full_workload_warmup_rounds": 1,
+  "short_warmup_requests_per_run": 64,
+  "client_concurrency": 32,
+  "output_tps_rounds": [
+    420.0578464582912,
+    419.78596890059896,
+    419.5194201013055
+  ],
+  "mean_output_tps": 419.78774515339853,
+  "spread_percent": 0.12826157104441335,
+  "mean_duration_s": 468.0962132589969,
+  "median_ttft_ms_mean_of_rounds": 348.0810675003643,
+  "median_ttft_ms_range": [
+    347.7669949934352,
+    348.35493950231466
+  ],
+  "p99_ttft_ms_mean_of_rounds": 2734.537610754293,
+  "p99_ttft_ms_range": [
+    2730.3870650249883,
+    2742.369525016402
+  ],
+  "median_tpot_ms_mean_of_rounds": 72.27173874230729,
+  "median_tpot_ms_range": [
+    72.2189578241202,
+    72.31271110814357
+  ],
+  "p99_tpot_ms_mean_of_rounds": 246.42877870607964,
+  "p99_tpot_ms_range": [
+    245.74884811037916,
+    247.5182796595618
+  ],
+  "median_itl_ms_mean_of_rounds": 38.707146828528494,
+  "median_itl_ms_range": [
+    38.68077299557626,
+    38.74005399120506
+  ],
+  "p95_itl_ms_mean_of_rounds": 149.35307068226393,
+  "p95_itl_ms_range": [
+    148.6327480088221,
+    150.12925548944622
+  ],
+  "p99_itl_ms_mean_of_rounds": 289.7499346022959,
+  "p99_itl_ms_range": [
+    288.4941290039568,
+    291.2291464250302
+  ],
+  "p99_e2e_latency_ms_mean_of_rounds": 60080.687322678954,
+  "p99_e2e_latency_ms_range": [
+    60041.68851145456,
+    60138.08819841739
+  ]
+}

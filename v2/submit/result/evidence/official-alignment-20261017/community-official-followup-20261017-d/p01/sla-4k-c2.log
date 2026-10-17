@@ -1,0 +1,57 @@
+{"base_url": "http://127.0.0.1:31200", "concurrency": 2, "input_len": 4096, "measure_rounds": 3, "method": "fixed random token IDs; two warmup waves; three measured rounds", "model": "Qwen3.8-27B-Channel-INT8-w8a8", "output_len": 1024, "output_throughput_tps": {"count": 3, "max": 99.62131887475829, "mean": 99.2054541098787, "min": 98.59904802161361, "p50": 99.39599543326418, "p90": 99.57625418645947, "p95": 99.59878653060888, "p99": 99.6168124059284}, "requests_per_round": 8, "rounds": [{"concurrency": 2, "e2e_s": {"count": 8, "max": 23.04316373699112, "mean": 20.446510955494887, "min": 18.483361168997362, "p50": 19.824903002998326, "p90": 22.500156552676344, "p95": 22.77166014483373, "p99": 22.98886301855964}, "exact_length": 8, "input_len": 4096, "input_throughput_tps": 397.5839817330567, "output_len": 1024, "output_throughput_tps": 99.39599543326418, "phase": "measure", "replacement_chars": 0, "request_throughput_rps": 0.09706640179029705, "requested": 8, "round": 1, "status": "PASS", "successful": 8, "total_throughput_tps": 496.97997716632085, "tpot_ms": {"count": 8, "max": 21.244515701859847, "mean": 18.091307038974783, "min": 16.79438269205067, "p50": 17.438816158848617, "p90": 19.83630536696514, "p95": 20.540410534412494, "p99": 21.103694668370377}, "ttft_s": {"count": 8, "max": 2.5922984429635108, "mean": 1.9391038546236814, "min": 1.3020539589924738, "p50": 1.9278501594963018, "p90": 2.5916728900861927, "p95": 2.5919856665248515, "p99": 2.5922358876757787}, "wall_time_s": 82.41780732001644}, {"concurrency": 2, "e2e_s": {"count": 8, "max": 22.52531130600255, "mean": 20.481651454756502, "min": 18.496346254018135, "p50": 20.5772739725071, "p90": 22.285281980794387, "p95": 22.40529664339847, "p99": 22.501308373481734}, "exact_length": 8, "input_len": 4096, "input_throughput_tps": 398.48527549903315, "output_len": 1024, "output_throughput_tps": 99.62131887475829, "phase": "measure", "replacement_chars": 0, "request_throughput_rps": 0.09728644421363114, "requested": 8, "round": 2, "status": "PASS", "successful": 8, "total_throughput_tps": 498.10659437379144, "tpot_ms": {"count": 8, "max": 20.735640752694604, "mean": 18.43526356451468, "min": 16.801167565968274, "p50": 18.218734294713457, "p90": 20.360152430699014, "p95": 20.54789659169681, "p99": 20.698091920495045}, "ttft_s": {"count": 8, "max": 2.573448740004096, "mean": 1.622376828257984, "min": 1.3044707790249959, "p50": 1.3091273415193427, "p90": 2.5620127265632617, "p95": 2.567730733283679, "p99": 2.572305138660013}, "wall_time_s": 82.23139477102086}, {"concurrency": 2, "e2e_s": {"count": 8, "max": 22.254328351991717, "mean": 20.349162904873083, "min": 19.547343180980533, "p50": 19.932286927010864, "p90": 21.80343098620069, "p95": 22.028879669096206, "p99": 22.209238615412612}, "exact_length": 8, "input_len": 4096, "input_throughput_tps": 394.39619208645445, "output_len": 1024, "output_throughput_tps": 98.59904802161361, "phase": "measure", "replacement_chars": 0, "request_throughput_rps": 0.09628813283360704, "requested": 8, "round": 3, "status": "PASS", "successful": 8, "total_throughput_tps": 492.99524010806806, "tpot_ms": {"count": 8, "max": 19.84869524538845, "mean": 18.304904248298406, "min": 16.763504055731058, "p50": 18.20631363247735, "p90": 19.41915639940848, "p95": 19.633925822398464, "p99": 19.80574136079045}, "ttft_s": {"count": 8, "max": 2.57685345801292, "mean": 1.623245858863811, "min": 1.304974021972157, "p50": 1.3101248040038627, "p90": 2.5592692738806364, "p95": 2.568061365946778, "p99": 2.5750950395996917}, "wall_time_s": 83.08396647201153}], "status": "PASS", "successful_rounds": 3, "tpot_p50_ms": {"count": 3, "max": 18.218734294713457, "mean": 17.954621362013143, "min": 17.438816158848617, "p50": 18.20631363247735, "p90": 18.216250162266235, "p95": 18.217492228489846, "p99": 18.218485881468734}, "tpot_p95_ms": {"count": 3, "max": 20.54789659169681, "mean": 20.240744316169256, "min": 19.633925822398464, "p50": 20.540410534412494, "p90": 20.546399380239947, "p95": 20.547147985968376, "p99": 20.547746870551123}, "ttft_p50_s": {"count": 3, "max": 1.9278501594963018, "mean": 1.5157007683398358, "min": 1.3091273415193427, "p50": 1.3101248040038627, "p90": 1.804305088397814, "p95": 1.8660776239470578, "p99": 1.915495652386453}, "ttft_p95_s": {"count": 3, "max": 2.5919856665248515, "mean": 2.575925921918436, "min": 2.567730733283679, "p50": 2.568061365946778, "p90": 2.587200806409237, "p95": 2.589593236467044, "p99": 2.59150718051329}, "warmup_rounds": 2}
+{
+  "status": "PERFORMANCE_MEASUREMENTS_PASS",
+  "performance_status": "PASS",
+  "text_integrity_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+  "original_strict_text_gate_overridden": false,
+  "quality": "NOT_RUN",
+  "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+  "measured_rounds": 3,
+  "requests": 24,
+  "mean_output_tps": 99.20545410987869,
+  "output_tps_rounds": [
+    99.39599543326418,
+    99.62131887475829,
+    98.59904802161361
+  ],
+  "spread_percent": 1.03045831735463,
+  "text_flags": [],
+  "raw_sha256": {
+    "warmup-01/requests.jsonl": "7decbbe7616fed4a5d4642a5cee58448db3fdfb2afeaddb3eccdbf2882e08137",
+    "warmup-01/summary.json": "b5f698f0d3d3ed142403f0fe17afccbc6bc0b8b30901e173d4a15079b3b7874a",
+    "warmup-02/requests.jsonl": "630c525ad85fb8e393d33886b92f3b16c8d6dc4ec24af6d1d2e80da60a2496b2",
+    "warmup-02/summary.json": "08a1d8a8dbc6ec6754dbc6d5b2aa9fe3d38b728a3489cdb4306078e72e380e60",
+    "round-01/requests.jsonl": "b82e04f9543a8933400a1c3e484841e32f08dfec8493095ba8c0bc7ae7090f3b",
+    "round-01/summary.json": "1e083e05d2bc68be3eddbdc98b4178cdbf1868595858b62e8df1f62ac872eecd",
+    "round-02/requests.jsonl": "6da79113311196a632563a93a12204bea838c8ed2789017d2627dd93ce851413",
+    "round-02/summary.json": "a235a9d6ca0055a92efad52807e1e9f3e3d238c41ba9ddc0bf3eaa2febfb1c55",
+    "round-03/requests.jsonl": "16b6580850349b16f712527008f80b6df22b7c08a493690ad1a0a0d2bdc9f225",
+    "round-03/summary.json": "e67fa6d045b74ecc0d537d870cc69de039be260babbec4570fb95e7bcfc2c440"
+  },
+  "config": {
+    "base_url": "http://127.0.0.1:31200",
+    "concurrency": 2,
+    "input_len": 4096,
+    "measure_rounds": 3,
+    "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+    "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c2/4k-c2",
+    "output_len": 1024,
+    "requests_per_round": 8,
+    "seed": 20260912,
+    "timeout": 3600,
+    "warmup_rounds": 2
+  },
+  "official_final_acceptance": false,
+  "ttft_s_mean_mean_of_rounds": 1.7282421805818255,
+  "ttft_s_p50_mean_of_rounds": 1.5157007683398358,
+  "ttft_s_p95_mean_of_rounds": 2.575925921918436,
+  "ttft_s_p99_mean_of_rounds": 2.5798786886451612,
+  "tpot_ms_mean_mean_of_rounds": 18.27715828392929,
+  "tpot_ms_p50_mean_of_rounds": 17.954621362013143,
+  "tpot_ms_p95_mean_of_rounds": 20.240744316169256,
+  "tpot_ms_p99_mean_of_rounds": 20.53584264988529,
+  "e2e_s_mean_mean_of_rounds": 20.42577510504149,
+  "e2e_s_p50_mean_of_rounds": 20.11148796750543,
+  "e2e_s_p95_mean_of_rounds": 22.401945485776135,
+  "e2e_s_p99_mean_of_rounds": 22.566470002484664
+}

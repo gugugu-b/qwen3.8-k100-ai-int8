@@ -1,0 +1,6 @@
+{
+  "installed_path": "/usr/local/lib/python3.10/dist-packages/lightop/_lmslim_native/vllm_compat/direct_register_custom_op.py",
+  "sha256": "e6ee8f1b25e60d02811658483cdf150b33c79ba5c94f27198167268a44a8b545",
+  "method": "Read-only per-container bind overlay copied from measured container; no shared installation edits",
+  "rollback": "Stop and remove delivery container"
+}

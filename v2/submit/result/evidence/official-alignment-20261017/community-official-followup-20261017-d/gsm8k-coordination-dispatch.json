@@ -1,0 +1,6 @@
+{
+  "pid": 1236075,
+  "utc": "2026-10-16T20:45:14.017564+00:00",
+  "source_sha256": "09417735cf8423850f01991433469aa69995f561cab8e3fb894365a1b53f46ff",
+  "reason": "User requests independent concurrent GSM8K; wait for its pair01 release before SLA"
+}

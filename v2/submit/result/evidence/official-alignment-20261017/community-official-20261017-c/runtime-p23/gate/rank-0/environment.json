@@ -1,0 +1,20 @@
+{
+  "rank": 0,
+  "physical_device": 2,
+  "tp": 2,
+  "backend": "native",
+  "deterministic_one_stage": true,
+  "disabled": false,
+  "full_nvlink": false,
+  "device_properties": "_CudaDeviceProperties(name='K100_AI', major=9, minor=2, gcnArchName='gfx928:sramecc+:xnack-', total_memory=65520MB, multi_processor_count=128, uuid=37313030-6666-6636-6361-396131383431, pci_bus_id=20, pci_device_id=0, pci_domain_id=0, L2_cache_size=8MB)",
+  "torch_version": "2.10.0",
+  "hip_version": "6.3.26113",
+  "source_file": "/usr/local/lib/python3.10/dist-packages/sglang/srt/distributed/device_communicators/custom_all_reduce.py",
+  "source_sha256": "6da396fa2692f34fe28ef5d983176976229e943421362c5c7990c818ef156fb0",
+  "binary_sha256": "8c81c808faa6ea332b1c0c81a9474877b95b01eb4738473c6a1e9854c4d6b230",
+  "max_size": 16777216,
+  "topology_override": false,
+  "quantization": false,
+  "formal_acceptance": false,
+  "actual_model_graph_gate": "REVIEW_REQUIRED"
+}

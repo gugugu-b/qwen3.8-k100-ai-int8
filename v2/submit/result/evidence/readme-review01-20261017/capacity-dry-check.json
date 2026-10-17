@@ -1,0 +1,19 @@
+{
+  "status": "CPU_DRY_CHECK_PASS",
+  "workers": [
+    {
+      "pair": "4,5",
+      "port": 31540,
+      "c": 64
+    },
+    {
+      "pair": "6,7",
+      "port": 31560,
+      "c": 128
+    }
+  ],
+  "gpu_used": false,
+  "containers_started": false,
+  "files_written": false,
+  "source_helper_directory": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/execution/official-alignment-20261017-c"
+}

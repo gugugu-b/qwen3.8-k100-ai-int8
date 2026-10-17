@@ -1,0 +1,82 @@
+{
+  "status": "PAIR45_C1_FINAL_COMPLETE_LOCAL_REMOTE_INDEPENDENT_REVIEW_PASS",
+  "reviewed_at_beijing": "2026-10-16 16:42",
+  "run": "submit-current-c1-pair45-20261016-a",
+  "complete": true,
+  "physical_pair": [
+    4,
+    5
+  ],
+  "tp": 2,
+  "snapshot_files": 62,
+  "snapshot_bytes": 17979775,
+  "max_file_bytes": 3914979,
+  "raw_manifest_files": 40,
+  "control_manifest_files": 41,
+  "raw_manifest_sha256": "b81b791f7f5f954ca87878756fb271543268803030a93e0610e5b32e7a86e499",
+  "control_manifest_sha256": "9ace9b24369ba214d6bc47c67fe9eeb5bde70ebe19b71d6736eb96bdb8c0ab44",
+  "performance_summary_sha256": "53c7aa9de50d63c8f34caa5d411742f109d29ae53565870d054045eb696fd36c",
+  "four_summaries_bytes_identical": true,
+  "all_SHA_size_pass": true,
+  "scenario": {
+    "rounds": 3,
+    "measured_requests": 3000,
+    "full_workload_warmup_requests": 1000,
+    "short_warmup_requests_per_invocation": 64,
+    "benchmark_invocations": 4,
+    "errors": 0,
+    "mean_output_tps": 54.53587586907246,
+    "output_tps_rounds": [
+      54.75779576773182,
+      54.730236178196236,
+      54.11959566128934
+    ],
+    "spread_percent": 1.1702390330626538,
+    "tail_mean": {
+      "p99_ttft_ms": 944.5735280353497,
+      "p99_tpot_ms": 31.418907052963426,
+      "p95_itl_ms": 30.807467132884387,
+      "p99_itl_ms": 32.56872299942188,
+      "p99_e2e_latency_ms": 14104.47208435585
+    },
+    "historical_report_reference_comparison": {
+      "source_user_reference": "v1/综合评测报告-v1.md",
+      "source_sha256": "b36db6ec60fcac45d710fada2bdf74b1b4655ef631567e6c34fc4dc4a20e417d",
+      "reference_output_tps": 43.13,
+      "latest_mean_output_tps": 54.53587586907246,
+      "output_tps_change_percent": 26.445341685769662,
+      "tail_latest_mean": {
+        "median_ttft_ms": 238.0083081613217,
+        "p99_ttft_ms": 944.5735280353497,
+        "median_tpot_ms": 17.14582401065948,
+        "p99_tpot_ms": 31.418907052963426
+      },
+      "tail_reference": {
+        "median_ttft_ms": 242.93,
+        "p99_ttft_ms": 910.57,
+        "median_tpot_ms": 22.1,
+        "p99_tpot_ms": 39.17
+      },
+      "tail_change_percent": {
+        "median_ttft_ms": -2.025971201036636,
+        "p99_ttft_ms": 3.734312357682512,
+        "median_tpot_ms": -22.41708592461774,
+        "p99_tpot_ms": -19.788340431546015
+      },
+      "comparison_scope": "User-selected historical v1 report reference only; not contemporaneous same-pair A/B or acceptance evidence",
+      "formal_acceptance": false
+    }
+  },
+  "all_resources_released": true,
+  "all_card_release_proof_sha256": "a469301507f195c945f719bae7838a19cf77a348c4d51aa96a69997ea19d3077",
+  "accuracy": "NOT_RUN",
+  "default_patch_changed": false,
+  "frozen": false,
+  "caveats": [
+    "Only the latest submit candidate is measured. No new v1 measurements are run. A separate comparison to the user-selected historical report is descriptive, not contemporaneous same-pair A/B or acceptance evidence.",
+    "Three-round spread is observed variability, not a statistical noise upper bound.",
+    "TTFT P99 and output throughput are reconstructed exactly. ITL/TPOT/E2E retain installed benchmark metrics and are independently aggregated; MTP text_chunks and per-request final latency are not serialized, so those exact per-request tails cannot be reconstructed.",
+    "Round percentile means are not pooled-request percentiles; raw chunk ITL and interval-sum reconstructions are approximate diagnostics.",
+    "Workload SHA/seed/input-length sequence are checked; no semantic accuracy evaluation, quality test, patch promotion or freeze is performed."
+  ]
+}

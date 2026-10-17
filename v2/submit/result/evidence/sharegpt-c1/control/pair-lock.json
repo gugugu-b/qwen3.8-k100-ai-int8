@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-16T08:39:44.522593+00:00",
+  "path": "/data/wangzy/submit1009/result/gpu45-owner.lock",
+  "physical_pair": [
+    4,
+    5
+  ],
+  "nonblocking_lock_was_free": true,
+  "cpu_archive_lease_held": true,
+  "existing_lock_contents_sha256": "86a885af6e482875a31b59563ff1b9b03b3098c1239c7773a96fe5a994f6b5e8",
+  "contents_changed": false
+}

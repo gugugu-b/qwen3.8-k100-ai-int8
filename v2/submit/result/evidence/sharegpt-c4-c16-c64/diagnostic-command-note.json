@@ -1,0 +1,10 @@
+{
+  "status": "CPU_TELEMETRY_PATH_LOOKUP_FIXED",
+  "initial_command": "shutil.which(hy-smi) or shutil.which(rocm-smi) returned None; subprocess attempted a None executable",
+  "initial_error": "TypeError: expected str, bytes or os.PathLike object, not NoneType",
+  "gpu_executed_by_failed_command": false,
+  "repair_evidence": "Existing archive_fixed64k.py line46 uses /opt/dtk/bin/rocm-smi; reused absolute installed tool with explicit -d6 7",
+  "shared_library_or_installation_changed": false,
+  "final_telemetry": "pair67-resource-release-proof.json",
+  "model_or_queue_failure": false
+}

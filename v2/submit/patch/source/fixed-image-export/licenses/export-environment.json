@@ -1,0 +1,28 @@
+{
+  "image_id": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+  "devices_mounted": false,
+  "network": "none",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--tmpfs",
+    "/tmp",
+    "--label",
+    "qwen38.readme.license.audit=20261017",
+    "-v",
+    "/data/wangzy/v2/submit:/data/wangzy/v2/submit:ro",
+    "-v",
+    "/data/wangzy/v2/readme-patch-audit-20261017/licenses-export:/review-output",
+    "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+    "python3",
+    "-I",
+    "/data/wangzy/v2/submit/patch/source/export_tvm_licenses.py",
+    "--output",
+    "/review-output/licenses"
+  ],
+  "exit_code": 0
+}

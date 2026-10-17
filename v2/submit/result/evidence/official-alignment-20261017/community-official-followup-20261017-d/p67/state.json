@@ -1,0 +1,97 @@
+{
+  "pair": "6,7",
+  "status": "SHAREGPT_C64_RECHECK_COMPLETE",
+  "mode": "sharegpt-c64-recheck",
+  "pid": 3899729,
+  "utc": "2026-10-16T23:00:32.005077+00:00",
+  "scenes": [
+    {
+      "run_id": "community-official-followup-20261017-d-p67-sharegpt-c64-recheck",
+      "scene": "sharegpt",
+      "c": 64,
+      "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p67-sharegpt-c64-recheck/sharegpt-c64",
+      "validation": {
+        "status": "PASS",
+        "rounds": 3,
+        "requests": 3000,
+        "errors": 0,
+        "full_workload_warmup_rounds": 1,
+        "short_warmup_requests_per_run": 64,
+        "client_concurrency": 64,
+        "output_tps_rounds": [
+          415.814210203474,
+          417.3176350000517,
+          417.4518428008529
+        ],
+        "mean_output_tps": 416.8612293347929,
+        "spread_percent": 0.39284838266013994,
+        "mean_duration_s": 471.3837846953538,
+        "median_ttft_ms_mean_of_rounds": 15132.700946182013,
+        "median_ttft_ms_range": [
+          15102.043545019114,
+          15170.799011015333
+        ],
+        "p99_ttft_ms_mean_of_rounds": 21359.996276011807,
+        "p99_ttft_ms_range": [
+          21306.063685504487,
+          21401.729622745188
+        ],
+        "median_tpot_ms_mean_of_rounds": 72.74713452716519,
+        "median_tpot_ms_range": [
+          72.5468452594789,
+          73.10356436409874
+        ],
+        "p99_tpot_ms_mean_of_rounds": 249.0410259356334,
+        "p99_tpot_ms_range": [
+          248.6791557702236,
+          249.29000674805138
+        ],
+        "median_itl_ms_mean_of_rounds": 38.72458259381043,
+        "median_itl_ms_range": [
+          38.61628525191918,
+          38.83916401537135
+        ],
+        "p95_itl_ms_mean_of_rounds": 149.24665966342823,
+        "p95_itl_ms_range": [
+          148.3096454758197,
+          149.8528880183585
+        ],
+        "p99_itl_ms_mean_of_rounds": 291.9539491667334,
+        "p99_itl_ms_range": [
+          289.9747774936259,
+          293.624033195083
+        ],
+        "p99_e2e_latency_ms_mean_of_rounds": 73258.03882922958,
+        "p99_e2e_latency_ms_range": [
+          73206.29543590301,
+          73318.31266550289
+        ]
+      },
+      "official_SLA_max": null
+    }
+  ],
+  "accuracy": "GSM8K_SEPARATE_TASK_OTHER_THREE_NOT_RUN",
+  "container": "qwen38-community-v2-67-official-followup-20261017-d",
+  "current": {
+    "scene": "sharegpt",
+    "c": 64
+  },
+  "sharegpt": {
+    "run_id": "community-official-followup-20261017-d-p67-sharegpt-c64-recheck",
+    "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p67-sharegpt-c64-recheck/sharegpt-c64"
+  },
+  "gpu_after": {
+    "card6": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card7": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    }
+  },
+  "finished_utc": "2026-10-16T23:37:31.301986+00:00",
+  "lock_released": true
+}

@@ -1,0 +1,173 @@
+[
+    {
+        "Id": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+        "RepoTags": [
+            "qwen38-baseline-zsy:dev-001",
+            "harbor.sourcefind.cn:5443/hcu/admin/base/sglang:0.5.12-ubuntu22.04-dtk2604-py3.10"
+        ],
+        "RepoDigests": [
+            "harbor.sourcefind.cn:5443/hcu/admin/base/sglang@sha256:878d317dfa18efae70516a59cc836efc77b251efbe4ca85de67171bc2c3aca68"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2026-08-17T12:31:01.906182739Z",
+        "Container": "9af5c09664f402d8bd76b8754d5149b80e68f86bcf0d51b5baee2d63957286de",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/dtk/bin:/opt/dtk/llvm/bin:/opt/dtk/hip/bin:/opt/dtk/hip/bin/hipify:/opt/hyhal/bin:/opt/dtk/opencl/bin:/opt/ucx/bin:/opt/mpi/bin:/opt/hwloc/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "TZ=Asia/Shanghai",
+                "SHELL=/bin/bash",
+                "LC_ALL=en_US.UTF-8",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US.UTF-8",
+                "LD_LIBRARY_PATH=/opt/dtk/dcc/gcvm/lib:/opt/dtk/hip/lib:/opt/dtk/llvm/lib:/opt/dtk/lib:/opt/dtk/lib64:/opt/hyhal/lib:/opt/hyhal/lib64:/opt/dtk/dushmem/lib:/opt/dtk/opencl/lib:/opt/ucx/lib:/opt/mpi/lib:/opt/hwloc/lib:",
+                "MANPATH=/opt/mpi/share/man:",
+                "MOFED_VERSION=23.10-4.0.9.1",
+                "OS_VERSION=ubuntu22.04",
+                "PLATFORM=x86_64",
+                "UCX_HOME=/opt/ucx",
+                "ROCM_PATH=/opt/dtk",
+                "DTK_VERSION=2604",
+                "HYHAL_PATH=/opt/hyhal",
+                "AMDGPU_TARGETS=gfx906;gfx926;gfx928;gfx936;gfx938",
+                "HIP_PATH=/opt/dtk/hip",
+                "MIOPEN_FIND_MODE=3",
+                "CMAKE_PREFIX_PATH=/opt/hyhal:",
+                "LIBRARY_PATH=/opt/hyhal/lib:/opt/dtk/opencl/lib:/opt/dtk/dushmem/lib",
+                "C_INCLUDE_PATH=/opt/dtk/dcc/gcvm/include:/opt/dtk/include:/opt/hyhal/include:/opt/dtk/llvm/include:/opt/dtk/opencl/include",
+                "CPLUS_INCLUDE_PATH=/opt/dtk/dcc/gcvm/include:/opt/dtk/include:/opt/hyhal/include:/opt/dtk/llvm/include:/opt/dtk/dushmem/include:/opt/dtk/opencl/include"
+            ],
+            "Cmd": [
+                "/bin/bash",
+                "-c",
+                "rm -rf ~/.pip/pip.conf"
+            ],
+            "Image": "sha256:9fb7fb996ae52b108f4028b31594e99f44588cdb15ebd52198113b3e1903fb0b",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "chenwch1@sugon.com",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            },
+            "Shell": [
+                "/bin/bash",
+                "-c"
+            ]
+        },
+        "DockerVersion": "28.0.0",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/dtk/bin:/opt/dtk/llvm/bin:/opt/dtk/hip/bin:/opt/dtk/hip/bin/hipify:/opt/hyhal/bin:/opt/dtk/opencl/bin:/opt/ucx/bin:/opt/mpi/bin:/opt/hwloc/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "TZ=Asia/Shanghai",
+                "SHELL=/bin/bash",
+                "LC_ALL=en_US.UTF-8",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US.UTF-8",
+                "LD_LIBRARY_PATH=/opt/dtk/dcc/gcvm/lib:/opt/dtk/hip/lib:/opt/dtk/llvm/lib:/opt/dtk/lib:/opt/dtk/lib64:/opt/hyhal/lib:/opt/hyhal/lib64:/opt/dtk/dushmem/lib:/opt/dtk/opencl/lib:/opt/ucx/lib:/opt/mpi/lib:/opt/hwloc/lib:",
+                "MANPATH=/opt/mpi/share/man:",
+                "MOFED_VERSION=23.10-4.0.9.1",
+                "OS_VERSION=ubuntu22.04",
+                "PLATFORM=x86_64",
+                "UCX_HOME=/opt/ucx",
+                "ROCM_PATH=/opt/dtk",
+                "DTK_VERSION=2604",
+                "HYHAL_PATH=/opt/hyhal",
+                "AMDGPU_TARGETS=gfx906;gfx926;gfx928;gfx936;gfx938",
+                "HIP_PATH=/opt/dtk/hip",
+                "MIOPEN_FIND_MODE=3",
+                "CMAKE_PREFIX_PATH=/opt/hyhal:",
+                "LIBRARY_PATH=/opt/hyhal/lib:/opt/dtk/opencl/lib:/opt/dtk/dushmem/lib",
+                "C_INCLUDE_PATH=/opt/dtk/dcc/gcvm/include:/opt/dtk/include:/opt/hyhal/include:/opt/dtk/llvm/include:/opt/dtk/opencl/include",
+                "CPLUS_INCLUDE_PATH=/opt/dtk/dcc/gcvm/include:/opt/dtk/include:/opt/hyhal/include:/opt/dtk/llvm/include:/opt/dtk/dushmem/include:/opt/dtk/opencl/include"
+            ],
+            "Cmd": [
+                "/bin/bash"
+            ],
+            "Image": "sha256:9fb7fb996ae52b108f4028b31594e99f44588cdb15ebd52198113b3e1903fb0b",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "chenwch1@sugon.com",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            },
+            "Shell": [
+                "/bin/bash",
+                "-c"
+            ]
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 34144272363,
+        "VirtualSize": 34144272363,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/6002b74f20fa215de971c1e7d80c1cc5836479bd3a1e4be1c72cd7d7d33b4b3f/diff:/var/lib/docker/overlay2/3537f1da32ce5bf6dd07cac9b30cfb8811ab2e6d59cd7ad8c9548befafd2ac70/diff:/var/lib/docker/overlay2/ed07f8a1d57029c57853f2b131c1b82a1bffc0d234af742a578419bde86d6fdd/diff:/var/lib/docker/overlay2/57a1b59c34da4faf2a3ec0b773483b780498e4291b52e99728de9a37be650ab8/diff:/var/lib/docker/overlay2/2ae16fa76fdfb744014e5a1253a373772663ce8417a5191d5ac102224b3832d0/diff:/var/lib/docker/overlay2/010f2bd694ae17526e99cf14462dcf1b90b8646cf4789d143db36ec4644676b9/diff:/var/lib/docker/overlay2/484a04a5b4dd82eb23ccd845e5e234d674e6dc2fd3ba7a5c2ddd50f7284fcf8d/diff:/var/lib/docker/overlay2/0ea030af7cc8858878d2c51ccc51338e3b55296bc1e5c25f205ed6bf4b85affb/diff:/var/lib/docker/overlay2/c15c15929d0714c3a9b1f444136135e73a1057ae97f7dd605da9cc8a5321dda1/diff:/var/lib/docker/overlay2/ca3fe38e2c2b35e689677fcd1077b2fff94af36e408d128f02d46b94cb489e5e/diff:/var/lib/docker/overlay2/c84b9a0b42db74fefd5f49a13249747bda4f1bde7aa316df9606fc7303707307/diff:/var/lib/docker/overlay2/84feb51b6fe9836b6ac16a3c4d6915f0adbd606e0a7b92f16df51fe1cf4e8d4a/diff:/var/lib/docker/overlay2/15481af5439728c0a22cd374389bd8c2074c7a598b5b158fb2384417009b01c2/diff:/var/lib/docker/overlay2/e9938cd1ea996287d9284c80ae0bdb79753291e3895f284740c4fb44dcd30c28/diff:/var/lib/docker/overlay2/aa8e08c01011c5a8c00e564b5cdbc7816fde05994c8a91122d442cbb65734c06/diff:/var/lib/docker/overlay2/a0f7b6c95e1464b7049fb5e4b3986527453492dbd99dabc694e206dc551e5e5e/diff:/var/lib/docker/overlay2/0815330664c2541bc67e56f2518ca166258f75e0b57f17d4f041b7562bf22c94/diff:/var/lib/docker/overlay2/7e65df174d4647c8c190315aa26b7061fdf77bc7b34bd23bd7085cbcdbfc1657/diff:/var/lib/docker/overlay2/056dc990d0acd653ef0a12588562bb5ac5f85b716964e187cb9745a02d8e59da/diff:/var/lib/docker/overlay2/52fb0ed25f34c1c6a9f9cf51dc1b0d361b146fde163a70a481ff4791772aeb03/diff:/var/lib/docker/overlay2/62dea2a9f0a85b4c166940391085dfc748a493b2f4919d06faf22c1285791ced/diff:/var/lib/docker/overlay2/92dee7c47331748937a96cd8e9f5408dd2a47d53f7c5f46b17d3871fb9727a4f/diff:/var/lib/docker/overlay2/c77fa97f6bcdafbd0b05e7f86cce506c8dfa72a5b562627bd7d3928b5145c3fd/diff:/var/lib/docker/overlay2/16261d1b0b59c6769c1144f2976a501b0df8aec9170e521d1e5b373b56319e83/diff:/var/lib/docker/overlay2/6b6990b97f3d34ba70c1c2c618de191f71010da1c2d4ecdafc6e797e3a6737ad/diff:/var/lib/docker/overlay2/0159caedb9924eb9bc1e16dcc6ca089b6b24035ce97be84463ea99f5a43beefe/diff:/var/lib/docker/overlay2/58d1eea5e31e4886a89956921416c21beb467321ebd96990a6405e64559effb7/diff",
+                "MergedDir": "/var/lib/docker/overlay2/e0d516c855a129b70e87179805d3e4eda92215bae8e496d6c295b265e07438a0/merged",
+                "UpperDir": "/var/lib/docker/overlay2/e0d516c855a129b70e87179805d3e4eda92215bae8e496d6c295b265e07438a0/diff",
+                "WorkDir": "/var/lib/docker/overlay2/e0d516c855a129b70e87179805d3e4eda92215bae8e496d6c295b265e07438a0/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:2573e0d8158209ed54ab25c87bcdcb00bd3d2539246960a3d592a1c599d70465",
+                "sha256:8020791dc13004ddf10bc99cdb885d305b5ea6da0923e5a7edad76023019606f",
+                "sha256:78d878323a4192764b20cbedc4970a3fa85043402dff98dcbbef675e2162bf27",
+                "sha256:44890b6dfe41a40b869bcd48f28b5e6c25940169fda07cdf1ba0cfada07761f4",
+                "sha256:4e31a8f7c76414c7036317b85a5852a928101cba32a052237eb04c38388ec52f",
+                "sha256:a98b7748be46e70ec611edd6f284c54b28e7932fe7f490a1e8e3de201d85a073",
+                "sha256:e61925111006bc97854bf4fcbda98c09538a8def1e9149ea92b9db6111e1356f",
+                "sha256:3727b84491be17172505fd4a5659a8f4fde9fd14cc25cd94113fde0442491a6a",
+                "sha256:383e25c7aec3d40815c04c94c82e55209a5d5bc21b2c2f344eb6645c33566913",
+                "sha256:5799e6509986bfdcedd7ca8b817d3ba4604741040d93349956ca1d9ac7e521bd",
+                "sha256:df83455bc34f7392a279449c14bc660d7f405a173b4574c9bd6af213fcbb7560",
+                "sha256:0655655e1a6715727c7016d032fa3302fdeb820755b05551e77ec9ac9d523fe4",
+                "sha256:0f0b5c18e1f48502e34e996ffe7f038125e3fc939f56876d53731cf5eb6a81df",
+                "sha256:b7a53a4f028553bcff8d39d9f3a36fbca5635e259b3052949ee8e860a3add8e1",
+                "sha256:17d323da9241c31e62a503b8a7665fa4ca7338fc39550533aab8535d03d45b2e",
+                "sha256:72d6d2c45e4d6285591820e59c73026b26a8540277e9f4051ec2e3ff910ac23a",
+                "sha256:00423308bcc9d09b47e70979378589f309921e13d4b148c9062300969dc37904",
+                "sha256:fb30925aa9f9e009217721a38f5f25677b5ef0bbe49f21170b2f896c0dc92282",
+                "sha256:a9e102b2eb2d5aeb2ecb99a2991733f8dddcb131289b32b4c91336d5f93ef576",
+                "sha256:a1ec91f3252790fe136b0a625101d96d760232667284908b56b09dd174d081fc",
+                "sha256:89e0f839e0fc18198028b0655e48e52128961246162266fabc292932697d0e77",
+                "sha256:e05c7cf8f85bd99517de9e0b317830886b3d08e9c945699a9a80a24ae4decc7d",
+                "sha256:96dcb4275e43510be6b1566a8d21171df725f3b29500122caf0ba55edfacb7c0",
+                "sha256:10d242ef6fbd357a036cf6946c8911849d734aa2dd108fb84407df927fc54cc2",
+                "sha256:607627912efc045bbcf7f3803ccb2475aa02cd7031b00a9efa83499592be2a7c",
+                "sha256:f111bd131988b261346a8b5a7c95790f4f5d7e78d422573e28369a509eea8f9b",
+                "sha256:a4ae67dfb9cd8189e7aca4173d98c6f489e515d5a6d84043c036d44e05eeaa3c",
+                "sha256:fa6900a9fbc1cdc399b47681462050bed7a964270cc5fca936577eb177cfc69a"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-01T12:47:16.449042864Z"
+        }
+    }
+]

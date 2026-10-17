@@ -1,0 +1,9 @@
+{
+  "status": "ALL_SMALL_PACKAGE_FILES_SHA_MATCH_REMOTE",
+  "files": 128,
+  "large_library_and_tar_downloaded": false,
+  "full_package_server_sha256": "8d39b5f7d434755b33951155d62bc0bb78c365d3076db59f94fecf03dd5a2cb7",
+  "server_tar": "/data/wangzy/submit1009/delivery/submit1009-4k1k-20261010.tar.gz",
+  "local_recomputation": "84 immutable raw checked and independent review byte identical to remote",
+  "local_mirror_is_full_deployable_package": false
+}

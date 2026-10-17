@@ -1,0 +1,13 @@
+{
+  "base_url": "http://127.0.0.1:31120",
+  "concurrency": 32,
+  "input_len": 4096,
+  "measure_rounds": 3,
+  "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+  "output_dir": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p45-matrix-4k-c32/4k-c32",
+  "output_len": 1024,
+  "requests_per_round": 64,
+  "seed": 20260912,
+  "timeout": 3600,
+  "warmup_rounds": 2
+}

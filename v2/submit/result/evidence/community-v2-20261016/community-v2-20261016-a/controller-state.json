@@ -1,0 +1,400 @@
+{
+  "status": "MATRIX_HAS_FAILURES",
+  "pid": 1322319,
+  "utc": "2026-10-16T17:29:32.779332+00:00",
+  "workers": [
+    {
+      "pair": "4,5",
+      "pid": 1364380,
+      "utc": "2026-10-16T15:43:33.396607+00:00",
+      "stage": "random_matrix",
+      "status": "FAILED",
+      "scenes": [],
+      "accuracy": "NOT_RUN",
+      "parallel_instances": 4,
+      "container": "qwen38-community-v2-45-20261016-a",
+      "current": {
+        "scene": "4k",
+        "c": 32
+      },
+      "error": "CalledProcessError(1, ['docker', 'exec', '-e', 'RUN_ID=community-v2-20261016-a-p45-matrix-4k-c32', 'qwen38-community-v2-45-20261016-a', 'bash', '/data/wangzy/v2/submit/scripts/benchmark.sh', '4k', '32'])",
+      "traceback": "Traceback (most recent call last):\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 146, in worker\n    result=bench(name,pair,item['scene'],item['c'],'matrix');state['scenes'].append(result);write(statepath,state)\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 107, in bench\n    run(['docker','exec','-e','RUN_ID='+run_id,name,'bash',str(PACKAGE/'scripts/benchmark.sh'),scene,str(c)],stdout=f,stderr=subprocess.STDOUT,timeout=8*3600)\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 38, in run\n    def run(cmd,**kw):return subprocess.run(cmd,check=True,timeout=kw.pop('timeout',120),**kw)\n  File \"/usr/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['docker', 'exec', '-e', 'RUN_ID=community-v2-20261016-a-p45-matrix-4k-c32', 'qwen38-community-v2-45-20261016-a', 'bash', '/data/wangzy/v2/submit/scripts/benchmark.sh', '4k', '32']' returned non-zero exit status 1.\n",
+      "gpu_after": {
+        "card4": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "9"
+        },
+        "card5": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "9"
+        }
+      },
+      "finished_utc": "2026-10-16T15:44:05.112295+00:00",
+      "lock_released": true
+    },
+    {
+      "pair": "0,1",
+      "pid": 1364379,
+      "utc": "2026-10-16T15:53:53.432820+00:00",
+      "stage": "random_matrix",
+      "status": "FAILED",
+      "scenes": [
+        {
+          "run_id": "community-v2-20261016-a-p01-matrix-4k-c1",
+          "scene": "4k",
+          "c": 1,
+          "path": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p01-matrix-4k-c1/4k-c1",
+          "validation": {
+            "status": "PASS",
+            "measured_rounds": 3,
+            "requests": 48,
+            "output_tps_rounds": [
+              56.86254710998365,
+              57.24757042316434,
+              57.28870609578077
+            ],
+            "mean_output_tps": 57.13294120964292,
+            "spread_percent": 0.7459076616296951,
+            "mean_wall_s": 286.77300670102704,
+            "ttft_s_p50_mean_of_rounds": 1.303856622330689,
+            "ttft_s_p50_range": [
+              1.3032292839779984,
+              1.304671595513355
+            ],
+            "ttft_s_p95_mean_of_rounds": 1.3276771424183,
+            "ttft_s_p95_range": [
+              1.3082346272276482,
+              1.364053381010308
+            ],
+            "ttft_s_p99_mean_of_rounds": 1.3669867146139343,
+            "ttft_s_p99_range": [
+              1.3099933790246723,
+              1.4784422193857607
+            ],
+            "tpot_ms_p50_mean_of_rounds": 16.05032402883976,
+            "tpot_ms_p50_range": [
+              15.779140677419377,
+              16.186112612432403
+            ],
+            "tpot_ms_p95_mean_of_rounds": 17.247235154205114,
+            "tpot_ms_p95_range": [
+              17.025840079444524,
+              17.449468616044552
+            ],
+            "tpot_ms_p99_mean_of_rounds": 17.60796392703107,
+            "tpot_ms_p99_range": [
+              17.026590911670038,
+              18.51244825773184
+            ]
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31100",
+            "concurrency": 1,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p01-matrix-4k-c1/4k-c1",
+            "output_len": 1024,
+            "requests_per_round": 16,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "provisional_SLA_by_statistic": {
+            "mean": true,
+            "p99": true
+          },
+          "official_SLA_max": null
+        }
+      ],
+      "accuracy": "NOT_RUN",
+      "parallel_instances": 4,
+      "container": "qwen38-community-v2-01-20261016-a",
+      "current": {
+        "scene": "4k",
+        "c": 16
+      },
+      "error": "CalledProcessError(1, ['docker', 'exec', '-e', 'RUN_ID=community-v2-20261016-a-p01-matrix-4k-c16', 'qwen38-community-v2-01-20261016-a', 'bash', '/data/wangzy/v2/submit/scripts/benchmark.sh', '4k', '16'])",
+      "traceback": "Traceback (most recent call last):\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 146, in worker\n    result=bench(name,pair,item['scene'],item['c'],'matrix');state['scenes'].append(result);write(statepath,state)\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 107, in bench\n    run(['docker','exec','-e','RUN_ID='+run_id,name,'bash',str(PACKAGE/'scripts/benchmark.sh'),scene,str(c)],stdout=f,stderr=subprocess.STDOUT,timeout=8*3600)\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 38, in run\n    def run(cmd,**kw):return subprocess.run(cmd,check=True,timeout=kw.pop('timeout',120),**kw)\n  File \"/usr/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['docker', 'exec', '-e', 'RUN_ID=community-v2-20261016-a-p01-matrix-4k-c16', 'qwen38-community-v2-01-20261016-a', 'bash', '/data/wangzy/v2/submit/scripts/benchmark.sh', '4k', '16']' returned non-zero exit status 1.\n",
+      "gpu_after": {
+        "card0": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "7"
+        },
+        "card1": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "7"
+        }
+      },
+      "finished_utc": "2026-10-16T15:54:25.067338+00:00",
+      "lock_released": true
+    },
+    {
+      "pair": "2,3",
+      "pid": 1364381,
+      "utc": "2026-10-16T17:08:41.138823+00:00",
+      "stage": "random_matrix",
+      "status": "MATRIX_COMPLETE",
+      "scenes": [
+        {
+          "run_id": "community-v2-20261016-a-p23-matrix-64k-c1",
+          "scene": "64k",
+          "c": 1,
+          "path": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p23-matrix-64k-c1/64k-c1",
+          "validation": {
+            "status": "PASS",
+            "measured_rounds": 3,
+            "requests": 48,
+            "output_tps_rounds": [
+              22.21362226798351,
+              22.42475849362647,
+              22.41078064779242
+            ],
+            "mean_output_tps": 22.3497204698008,
+            "spread_percent": 0.944692914295057,
+            "mean_wall_s": 733.0877264383598,
+            "ttft_s_p50_mean_of_rounds": 26.37359934449584,
+            "ttft_s_p50_range": [
+              26.367280407983344,
+              26.38039909451618
+            ],
+            "ttft_s_p95_mean_of_rounds": 26.529585830391927,
+            "ttft_s_p95_range": [
+              26.392907763205585,
+              26.792012631485704
+            ],
+            "ttft_s_p99_mean_of_rounds": 26.77372730259279,
+            "ttft_s_p99_range": [
+              26.397227636599563,
+              27.519204141490626
+            ],
+            "tpot_ms_p50_mean_of_rounds": 18.74812540647564,
+            "tpot_ms_p50_range": [
+              18.4743652981228,
+              19.26521346969202
+            ],
+            "tpot_ms_p95_mean_of_rounds": 20.238639258802685,
+            "tpot_ms_p95_range": [
+              19.85993567500937,
+              20.866930539821496
+            ],
+            "tpot_ms_p99_mean_of_rounds": 20.65952596006738,
+            "tpot_ms_p99_range": [
+              20.17266494221701,
+              21.629281261819074
+            ]
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31110",
+            "concurrency": 1,
+            "input_len": 65536,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p23-matrix-64k-c1/64k-c1",
+            "output_len": 1024,
+            "requests_per_round": 16,
+            "seed": 20260912,
+            "timeout": 7200,
+            "warmup_rounds": 1
+          },
+          "provisional_SLA_by_statistic": {
+            "mean": true,
+            "p99": true
+          },
+          "official_SLA_max": null
+        },
+        {
+          "run_id": "community-v2-20261016-a-p23-matrix-64k-c16",
+          "scene": "64k",
+          "c": 16,
+          "path": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p23-matrix-64k-c16/64k-c16",
+          "validation": {
+            "status": "PASS",
+            "measured_rounds": 3,
+            "requests": 96,
+            "output_tps_rounds": [
+              32.53450785828858,
+              32.58522020241043,
+              32.56089167022002
+            ],
+            "mean_output_tps": 32.56020657697301,
+            "spread_percent": 0.15574945448202326,
+            "mean_wall_s": 1006.3822285113274,
+            "ttft_s_p50_mean_of_rounds": 94.15989676649527,
+            "ttft_s_p50_range": [
+              80.83729720697738,
+              107.97267886201735
+            ],
+            "ttft_s_p95_mean_of_rounds": 381.771039062945,
+            "ttft_s_p95_range": [
+              381.6158630512916,
+              382.0485409909452
+            ],
+            "ttft_s_p99_mean_of_rounds": 461.30186288001784,
+            "ttft_s_p99_range": [
+              461.2471684924852,
+              461.335306764393
+            ],
+            "tpot_ms_p50_mean_of_rounds": 341.47091384669807,
+            "tpot_ms_p50_range": [
+              337.15840966862584,
+              348.50642102836395
+            ],
+            "tpot_ms_p95_mean_of_rounds": 603.444440759537,
+            "tpot_ms_p95_range": [
+              583.0115168022091,
+              620.096271724359
+            ],
+            "tpot_ms_p99_mean_of_rounds": 680.3698361821738,
+            "tpot_ms_p99_range": [
+              636.6434289042695,
+              725.0637075813123
+            ]
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31110",
+            "concurrency": 16,
+            "input_len": 65536,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p23-matrix-64k-c16/64k-c16",
+            "output_len": 1024,
+            "requests_per_round": 32,
+            "seed": 20260912,
+            "timeout": 7200,
+            "warmup_rounds": 1
+          },
+          "provisional_SLA_by_statistic": {
+            "mean": false,
+            "p99": false
+          },
+          "official_SLA_max": null
+        }
+      ],
+      "accuracy": "NOT_RUN",
+      "parallel_instances": 4,
+      "container": "qwen38-community-v2-23-20261016-a",
+      "current": {
+        "scene": "64k",
+        "c": 16
+      },
+      "gpu_after": {
+        "card2": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "4"
+        },
+        "card3": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "4"
+        }
+      },
+      "finished_utc": "2026-10-16T17:09:12.818529+00:00",
+      "lock_released": true
+    },
+    {
+      "pair": "6,7",
+      "pid": 1364382,
+      "utc": "2026-10-16T17:29:00.903846+00:00",
+      "stage": "random_matrix",
+      "status": "MATRIX_COMPLETE",
+      "scenes": [
+        {
+          "run_id": "community-v2-20261016-a-p67-matrix-64k-c32",
+          "scene": "64k",
+          "c": 32,
+          "path": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p67-matrix-64k-c32/64k-c32",
+          "validation": {
+            "status": "PASS",
+            "measured_rounds": 3,
+            "requests": 192,
+            "output_tps_rounds": [
+              32.88725808698639,
+              32.84444052055145,
+              32.76262236973469
+            ],
+            "mean_output_tps": 32.83144032575751,
+            "spread_percent": 0.3796230564819843,
+            "mean_wall_s": 1996.140345689666,
+            "ttft_s_p50_mean_of_rounds": 547.2617703795064,
+            "ttft_s_p50_range": [
+              546.4936681240215,
+              547.8631624740083
+            ],
+            "ttft_s_p95_mean_of_rounds": 832.165502942144,
+            "ttft_s_p95_range": [
+              831.9679228735215,
+              832.3270446815092
+            ],
+            "ttft_s_p99_mean_of_rounds": 961.1044932473029,
+            "ttft_s_p99_range": [
+              959.5974342610099,
+              962.9278110610076
+            ],
+            "tpot_ms_p50_mean_of_rounds": 382.7835161412318,
+            "tpot_ms_p50_range": [
+              353.2863130077983,
+              397.6807813650875
+            ],
+            "tpot_ms_p95_mean_of_rounds": 617.5397757703139,
+            "tpot_ms_p95_range": [
+              599.9317887077452,
+              649.3115977080851
+            ],
+            "tpot_ms_p99_mean_of_rounds": 682.1556657623763,
+            "tpot_ms_p99_range": [
+              663.7575406511261,
+              697.6062902144062
+            ]
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31130",
+            "concurrency": 32,
+            "input_len": 65536,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p67-matrix-64k-c32/64k-c32",
+            "output_len": 1024,
+            "requests_per_round": 64,
+            "seed": 20260912,
+            "timeout": 7200,
+            "warmup_rounds": 1
+          },
+          "provisional_SLA_by_statistic": {
+            "mean": false,
+            "p99": false
+          },
+          "official_SLA_max": null
+        }
+      ],
+      "accuracy": "NOT_RUN",
+      "parallel_instances": 4,
+      "container": "qwen38-community-v2-67-20261016-a",
+      "current": {
+        "scene": "64k",
+        "c": 32
+      },
+      "gpu_after": {
+        "card6": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "2"
+        },
+        "card7": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "2"
+        }
+      },
+      "finished_utc": "2026-10-16T17:29:32.768365+00:00",
+      "lock_released": true
+    }
+  ],
+  "accuracy": "NOT_RUN",
+  "next": "CPU review then SLA diagnostics; do not label official scoring"
+}

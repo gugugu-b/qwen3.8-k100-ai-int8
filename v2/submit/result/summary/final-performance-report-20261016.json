@@ -1,0 +1,1675 @@
+{
+  "status": "SEVEN_SCENE_LATEST_SUBMIT_PERFORMANCE_REPORT_COMPLETE",
+  "as_of": "2026-10-16 16:42 Asia/Shanghai",
+  "comparison": "Latest submit absolute performance versus user-selected historical v1 report; no new v1 denominator",
+  "source_inventory_sha256": "113056da42c49378077eab52d4f64d9070a238c2eaaf09773dcb5eedc3a9f357",
+  "source_inventory": {
+    "files": {
+      "files/review_4k.json": {
+        "bytes": 6088,
+        "sha256": "992df2f9d0f300f625fd72263754874630ce5716fb392c0cfb2a04b0441258bd",
+        "original_relative_path": "02-测试与结果/results-4k-v2-delivery-20261010-b/local-integrity-review/review.json"
+      },
+      "files/review_64k.json": {
+        "bytes": 9281,
+        "sha256": "d2478cf98f56373cbff16db5a7a0000d73ae12a13dcf86ef46717c541f329d9f",
+        "original_relative_path": "02-测试与结果/results-64k-v2-validation-20261016-a/local-integrity-review-b/review.json"
+      },
+      "files/review_c32.json": {
+        "bytes": 20756,
+        "sha256": "7104baebc1429811ae55ce18a0b45727ef8f7efdb893e14844e76b633ce49660",
+        "original_relative_path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/local-independent-review/comparison.json"
+      },
+      "files/4k_validated.json": {
+        "bytes": 1038,
+        "sha256": "b245a7407f58649758676dcc6813f8fda772ad45a0fe37532108f1c411d060e4",
+        "original_relative_path": "02-测试与结果/results-4k-v2-delivery-20261010-b/submit1009/result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/validated_summary.json"
+      },
+      "files/4k_round_01.json": {
+        "bytes": 1181,
+        "sha256": "b9fb075b84c2906ab3ad440ef962307402857cf42ab12940d481b540b4535403",
+        "original_relative_path": "02-测试与结果/results-4k-v2-delivery-20261010-b/submit1009/result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-01/summary.json"
+      },
+      "files/4k_round_02.json": {
+        "bytes": 1179,
+        "sha256": "cf1f0cb14af28791aca266ef3a5a9022715348adcae5931ae6d54ac7795a034c",
+        "original_relative_path": "02-测试与结果/results-4k-v2-delivery-20261010-b/submit1009/result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-02/summary.json"
+      },
+      "files/4k_round_03.json": {
+        "bytes": 1179,
+        "sha256": "ee3bfd49d64f3986632fba647cb9c1563a81666c673e095502893d1f29d67624",
+        "original_relative_path": "02-测试与结果/results-4k-v2-delivery-20261010-b/submit1009/result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-03/summary.json"
+      },
+      "files/64k_validated.json": {
+        "bytes": 1038,
+        "sha256": "3d8902cc90a5f21488c033a6a589e31c35d92dc58741752e53015b630d3a6527",
+        "original_relative_path": "02-测试与结果/results-64k-v2-validation-20261016-a/submit1009/result/perf-64k-20261016-a/variants/candidate/64k/validated_summary.json"
+      },
+      "files/64k_round_01.json": {
+        "bytes": 1185,
+        "sha256": "2d9edaff0d813dabfa4bc49a8ae985fd64a4343eeb81ac4d7c9e72d48b8b48d8",
+        "original_relative_path": "02-测试与结果/results-64k-v2-validation-20261016-a/submit1009/result/perf-64k-20261016-a/variants/candidate/64k/round-01/summary.json"
+      },
+      "files/64k_round_02.json": {
+        "bytes": 1182,
+        "sha256": "3ebfc96ce8d8244df9c64bcc03905bab5110358d8c96178c088095a6059b3b84",
+        "original_relative_path": "02-测试与结果/results-64k-v2-validation-20261016-a/submit1009/result/perf-64k-20261016-a/variants/candidate/64k/round-02/summary.json"
+      },
+      "files/64k_round_03.json": {
+        "bytes": 1180,
+        "sha256": "a6d54d86e5410d0128a4da9a5bdec9f178c6351024089772c72c7161829a8ba7",
+        "original_relative_path": "02-测试与结果/results-64k-v2-validation-20261016-a/submit1009/result/perf-64k-20261016-a/variants/candidate/64k/round-03/summary.json"
+      },
+      "files/c32_validated.json": {
+        "bytes": 1438,
+        "sha256": "cb38bf0019a75011adbc0c8a17a7de2104afb507300a83ccb1512900ea8998b8",
+        "original_relative_path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/validated_summary.json"
+      },
+      "files/c32_round_01.jsonl": {
+        "bytes": 3102121,
+        "sha256": "2b4e5cc8dd7ec0bcccf1b3ef11b9f7ab394b8f8b9a4216ef93c3eb8c029fc1f4",
+        "original_relative_path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-01.jsonl"
+      },
+      "files/c32_round_02.jsonl": {
+        "bytes": 3101964,
+        "sha256": "62b7037e34edf305cc7a125c2c09e4d568150d5a04cfbc3adf7b6e305e99ff51",
+        "original_relative_path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-02.jsonl"
+      },
+      "files/c32_round_03.jsonl": {
+        "bytes": 3101551,
+        "sha256": "1a0509c4f37ac618c1b2d00b9c8656646bdbf88905618bec1a5b3d5e0c4a337d",
+        "original_relative_path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-03.jsonl"
+      },
+      "files/existing_scene_map.json": {
+        "bytes": 39736,
+        "sha256": "ff38cacd4afff2809fa59ec95ca3d8847485e9add759aa36cc02d36f550d3ba5",
+        "original_relative_path": "02-测试与结果/results-submit-current-performance-summary-20261016-a/final-existing-scenes-source-map.json"
+      },
+      "files/final45.json": {
+        "bytes": 21148,
+        "sha256": "53c7aa9de50d63c8f34caa5d411742f109d29ae53565870d054045eb696fd36c",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-c1-pair45-final-20261016-a/local-independent-review/performance-summary.json"
+      },
+      "files/final67.json": {
+        "bytes": 196236,
+        "sha256": "421f90f4aa597f7e2e9ddc480f838de9ccf013bf566960a14433c09b344bb382",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/local-independent-review/performance-summary.json"
+      },
+      "files/reference.json": {
+        "bytes": 1583,
+        "sha256": "54c5ff586396dd90760eeb3fc3686f741927a5ef065294148ce293919ab4ef2d",
+        "original_relative_path": "02-测试与结果/performance-validation-20261016/v1-report-reference.json"
+      },
+      "files/reference_report.md": {
+        "bytes": 6455,
+        "sha256": "b36db6ec60fcac45d710fada2bdf74b1b4655ef631567e6c34fc4dc4a20e417d",
+        "original_relative_path": "02-测试与结果/performance-validation-20261016/v1-report-source.md"
+      },
+      "files/release.json": {
+        "bytes": 2422,
+        "sha256": "a469301507f195c945f719bae7838a19cf77a348c4d51aa96a69997ea19d3077",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-c1-pair45-final-20261016-a/all-card-release-proof.json"
+      },
+      "files/c1_round_01.jsonl": {
+        "bytes": 3180852,
+        "sha256": "eeca16141b568a130b2d6c5c0e237119a455aa205bfd30276802fa4f0061557c",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-c1-pair45-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-c1-pair45-20261016-a-c1-candidate/sharegpt-c1/round-01.jsonl"
+      },
+      "files/c1_round_02.jsonl": {
+        "bytes": 3179490,
+        "sha256": "8a87e8a50b5f5b2759fe8e5d9034693a735d37226f098666844ac1ed094e6510",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-c1-pair45-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-c1-pair45-20261016-a-c1-candidate/sharegpt-c1/round-02.jsonl"
+      },
+      "files/c1_round_03.jsonl": {
+        "bytes": 3176419,
+        "sha256": "8884d1608cb4dfb34961f15b322a07da38b0413e4af28b11914f88a4c3f0f23b",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-c1-pair45-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-c1-pair45-20261016-a-c1-candidate/sharegpt-c1/round-03.jsonl"
+      },
+      "files/c4_round_01.jsonl": {
+        "bytes": 3151994,
+        "sha256": "c4ff31902a4557387ad6e1a3bb7a290c8943226f06bfcb8358d976a3131e22ba",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c4-candidate/sharegpt-c4/round-01.jsonl"
+      },
+      "files/c4_round_02.jsonl": {
+        "bytes": 3152062,
+        "sha256": "c053091f43c8f20d1f01db4060c5f1199aedb94f616ed29c51ff57484b48168d",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c4-candidate/sharegpt-c4/round-02.jsonl"
+      },
+      "files/c4_round_03.jsonl": {
+        "bytes": 3151613,
+        "sha256": "3026e6057759c9289bd5b0ce53a4414e7ae5a9b347949458a0cdd53d86cae9cf",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c4-candidate/sharegpt-c4/round-03.jsonl"
+      },
+      "files/c16_round_01.jsonl": {
+        "bytes": 3129151,
+        "sha256": "9d7950dced19b498c7be59ef73c0346753b72398f15117a925d808eac7a1684d",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c16-candidate/sharegpt-c16/round-01.jsonl"
+      },
+      "files/c16_round_02.jsonl": {
+        "bytes": 3134346,
+        "sha256": "f26c17ae4d44678dd89c3d8424445e9cf02d7d645e33bcb0431f3a5b5e633d17",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c16-candidate/sharegpt-c16/round-02.jsonl"
+      },
+      "files/c16_round_03.jsonl": {
+        "bytes": 3128974,
+        "sha256": "890e321878f194622b32a3c7fe324c425c4e55e51502c5284ed86f12e9108289",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c16-candidate/sharegpt-c16/round-03.jsonl"
+      },
+      "files/c64_round_01.jsonl": {
+        "bytes": 3101030,
+        "sha256": "bd3f22075c29840455dd732625ccfa693a284b4c2784fa105c98688072d25201",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c64-candidate/sharegpt-c64/round-01.jsonl"
+      },
+      "files/c64_round_02.jsonl": {
+        "bytes": 3100629,
+        "sha256": "a29b11f6907cfbd7a431ca8943550fff09771815753ee5ca00d8594e197a4c60",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c64-candidate/sharegpt-c64/round-02.jsonl"
+      },
+      "files/c64_round_03.jsonl": {
+        "bytes": 3099068,
+        "sha256": "578dcd20ac977db95998d149f54cf59fc4d30ce4a2a4d0f9e617c90ce3e14770",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c64-candidate/sharegpt-c64/round-03.jsonl"
+      }
+    },
+    "roles": {
+      "review_4k": "files/review_4k.json",
+      "review_64k": "files/review_64k.json",
+      "review_c32": "files/review_c32.json",
+      "4k_validated": "files/4k_validated.json",
+      "4k_round_01": "files/4k_round_01.json",
+      "4k_round_02": "files/4k_round_02.json",
+      "4k_round_03": "files/4k_round_03.json",
+      "64k_validated": "files/64k_validated.json",
+      "64k_round_01": "files/64k_round_01.json",
+      "64k_round_02": "files/64k_round_02.json",
+      "64k_round_03": "files/64k_round_03.json",
+      "c32_validated": "files/c32_validated.json",
+      "c32_round_01": "files/c32_round_01.jsonl",
+      "c32_round_02": "files/c32_round_02.jsonl",
+      "c32_round_03": "files/c32_round_03.jsonl",
+      "existing_scene_map": "files/existing_scene_map.json",
+      "final45": "files/final45.json",
+      "final67": "files/final67.json",
+      "reference": "files/reference.json",
+      "reference_report": "files/reference_report.md",
+      "release": "files/release.json",
+      "c1_round_01": "files/c1_round_01.jsonl",
+      "c1_round_02": "files/c1_round_02.jsonl",
+      "c1_round_03": "files/c1_round_03.jsonl",
+      "c4_round_01": "files/c4_round_01.jsonl",
+      "c4_round_02": "files/c4_round_02.jsonl",
+      "c4_round_03": "files/c4_round_03.jsonl",
+      "c16_round_01": "files/c16_round_01.jsonl",
+      "c16_round_02": "files/c16_round_02.jsonl",
+      "c16_round_03": "files/c16_round_03.jsonl",
+      "c64_round_01": "files/c64_round_01.jsonl",
+      "c64_round_02": "files/c64_round_02.jsonl",
+      "c64_round_03": "files/c64_round_03.jsonl"
+    },
+    "policy": "Pinned existing source bytes only, each less than16MiB; no GPU or remote work"
+  },
+  "historical_v1_report_source_sha256": "b36db6ec60fcac45d710fada2bdf74b1b4655ef631567e6c34fc4dc4a20e417d",
+  "rows": [
+    {
+      "scene": "4k",
+      "label": "4K/1K C8",
+      "measured_date": "2026-10-10",
+      "physical_pair": [
+        6,
+        7
+      ],
+      "tp": 2,
+      "output_tps_rounds": [
+        233.07519377930984,
+        239.81983396554736,
+        241.83187914377817
+      ],
+      "mean_output_tps": 238.2423022962118,
+      "spread_percent": 3.6755375850846796,
+      "historical_v1_report_output_tps": 206.84,
+      "historical_output_tps_change_percent": 15.181929170475627,
+      "historical_round_change_percent": [
+        12.683810568221743,
+        15.944611277096964,
+        16.917365666108175
+      ],
+      "measured_requests": 48,
+      "full_warmup_requests": 16,
+      "short_warmup_requests_total": 0,
+      "source": {
+        "input": "files/review_4k.json",
+        "sha256": "992df2f9d0f300f625fd72263754874630ce5716fb392c0cfb2a04b0441258bd",
+        "json_pointer": "/summaries/native-bf16-ar",
+        "original_relative_path": "02-测试与结果/results-4k-v2-delivery-20261010-b/local-integrity-review/review.json"
+      },
+      "per_round": [
+        {
+          "round": 1,
+          "output_tps": 233.07519377930984,
+          "saved_latency_metrics": {
+            "ttft_s.max": 10.181446613976732,
+            "ttft_s.mean": 4.864791702362709,
+            "ttft_s.min": 1.2942553970497102,
+            "ttft_s.p50": 3.2067025614669546,
+            "ttft_s.p90": 10.161457730981056,
+            "ttft_s.p95": 10.167388016241603,
+            "ttft_s.p99": 10.178634894429706,
+            "tpot_ms.max": 34.72428145169309,
+            "tpot_ms.mean": 28.016717802241402,
+            "tpot_ms.min": 22.776593733214767,
+            "tpot_ms.p50": 27.719971677368072,
+            "tpot_ms.p90": 33.07507719110811,
+            "tpot_ms.p95": 33.66901198022986,
+            "tpot_ms.p99": 34.51322755740044,
+            "e2e_s.max": 45.68315357004758,
+            "e2e_s.mean": 33.525894014055666,
+            "e2e_s.min": 24.597439320059493,
+            "e2e_s.p50": 33.320197403489146,
+            "e2e_s.p90": 40.937178915482946,
+            "e2e_s.p95": 42.87337976825074,
+            "e2e_s.p99": 45.12119880968821
+          },
+          "source": {
+            "input": "files/4k_round_01.json",
+            "sha256": "b9fb075b84c2906ab3ad440ef962307402857cf42ab12940d481b540b4535403",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-4k-v2-delivery-20261010-b/submit1009/result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-01/summary.json"
+          }
+        },
+        {
+          "round": 2,
+          "output_tps": 239.81983396554736,
+          "saved_latency_metrics": {
+            "ttft_s.max": 10.185597850009799,
+            "ttft_s.mean": 4.707249743049033,
+            "ttft_s.min": 1.3018877059221268,
+            "ttft_s.p50": 2.573583632009104,
+            "ttft_s.p90": 10.164860580523964,
+            "ttft_s.p95": 10.170342796802288,
+            "ttft_s.p99": 10.182546839368296,
+            "tpot_ms.max": 36.145607560198435,
+            "tpot_ms.mean": 28.075031945699248,
+            "tpot_ms.min": 21.91427777025608,
+            "tpot_ms.p50": 28.470187146116032,
+            "tpot_ms.p90": 34.399159818731576,
+            "tpot_ms.p95": 35.26876024786476,
+            "tpot_ms.p99": 35.9702380977317,
+            "e2e_s.max": 43.492671637097374,
+            "e2e_s.mean": 33.428007423499366,
+            "e2e_s.min": 23.72528426896315,
+            "e2e_s.p50": 33.01322048145812,
+            "e2e_s.p90": 41.46228020300623,
+            "e2e_s.p95": 42.47532231549849,
+            "e2e_s.p99": 43.289201772777595
+          },
+          "source": {
+            "input": "files/4k_round_02.json",
+            "sha256": "cf1f0cb14af28791aca266ef3a5a9022715348adcae5931ae6d54ac7795a034c",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-4k-v2-delivery-20261010-b/submit1009/result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-02/summary.json"
+          }
+        },
+        {
+          "round": 3,
+          "output_tps": 241.83187914377817,
+          "saved_latency_metrics": {
+            "ttft_s.max": 10.191192070022225,
+            "ttft_s.mean": 4.865341673554212,
+            "ttft_s.min": 1.2974759460194036,
+            "ttft_s.p50": 3.202701245958451,
+            "ttft_s.p90": 10.171749631990679,
+            "ttft_s.p95": 10.177958982181735,
+            "ttft_s.p99": 10.188545452454127,
+            "tpot_ms.max": 32.84519792667327,
+            "tpot_ms.mean": 27.79345344189769,
+            "tpot_ms.min": 21.886450992096016,
+            "tpot_ms.p50": 27.374896734660695,
+            "tpot_ms.p90": 32.226263811342506,
+            "tpot_ms.p95": 32.40008851826097,
+            "tpot_ms.p99": 32.75617604499081,
+            "e2e_s.max": 43.184700315934606,
+            "e2e_s.mean": 33.29804454461555,
+            "e2e_s.min": 23.687315310933627,
+            "e2e_s.p50": 33.19220693898387,
+            "e2e_s.p90": 40.89546996954596,
+            "e2e_s.p95": 42.171154496551026,
+            "e2e_s.p99": 42.98199115205789
+          },
+          "source": {
+            "input": "files/4k_round_03.json",
+            "sha256": "ee3bfd49d64f3986632fba647cb9c1563a81666c673e095502893d1f29d67624",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-4k-v2-delivery-20261010-b/submit1009/result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-03/summary.json"
+          }
+        }
+      ],
+      "three_round_mean_of_saved_latency_statistics": {
+        "e2e_s.max": 44.12017517435985,
+        "e2e_s.mean": 33.41731532739019,
+        "e2e_s.min": 24.003346299985424,
+        "e2e_s.p50": 33.175208274643715,
+        "e2e_s.p90": 41.09830969601171,
+        "e2e_s.p95": 42.50661886010008,
+        "e2e_s.p99": 43.7974639115079,
+        "tpot_ms.max": 34.57169564618827,
+        "tpot_ms.mean": 27.96173439661278,
+        "tpot_ms.min": 22.19244083185562,
+        "tpot_ms.p50": 27.8550185193816,
+        "tpot_ms.p90": 33.233500273727394,
+        "tpot_ms.p95": 33.77928691545186,
+        "tpot_ms.p99": 34.41321390004099,
+        "ttft_s.max": 10.186078844669586,
+        "ttft_s.mean": 4.812461039655318,
+        "ttft_s.min": 1.2978730163304135,
+        "ttft_s.p50": 2.99432914647817,
+        "ttft_s.p90": 10.1660226478319,
+        "ttft_s.p95": 10.171896598408543,
+        "ttft_s.p99": 10.183242395417377
+      },
+      "latency_units": {
+        "ttft_s.max": "s",
+        "ttft_s.mean": "s",
+        "ttft_s.min": "s",
+        "ttft_s.p50": "s",
+        "ttft_s.p90": "s",
+        "ttft_s.p95": "s",
+        "ttft_s.p99": "s",
+        "tpot_ms.max": "ms",
+        "tpot_ms.mean": "ms",
+        "tpot_ms.min": "ms",
+        "tpot_ms.p50": "ms",
+        "tpot_ms.p90": "ms",
+        "tpot_ms.p95": "ms",
+        "tpot_ms.p99": "ms",
+        "e2e_s.max": "s",
+        "e2e_s.mean": "s",
+        "e2e_s.min": "s",
+        "e2e_s.p50": "s",
+        "e2e_s.p90": "s",
+        "e2e_s.p95": "s",
+        "e2e_s.p99": "s"
+      },
+      "historical_latency_changes": {},
+      "absent_saved_metrics": [
+        "ITL distribution"
+      ],
+      "service_max_running_requests": 32,
+      "cuda_graph_max_bs": 32,
+      "actual_64_service_concurrency_test": null
+    },
+    {
+      "scene": "64k",
+      "label": "64K/1K C8",
+      "measured_date": "2026-10-16",
+      "physical_pair": [
+        4,
+        5
+      ],
+      "tp": 2,
+      "output_tps_rounds": [
+        31.14724992925327,
+        31.55445871523553,
+        31.4528521564883
+      ],
+      "mean_output_tps": 31.3848536003257,
+      "spread_percent": 1.2974691268849303,
+      "historical_v1_report_output_tps": 30.39,
+      "historical_output_tps_change_percent": 3.2736215871197905,
+      "historical_round_change_percent": [
+        2.491773376943951,
+        3.8317167332528212,
+        3.4973746511625547
+      ],
+      "measured_requests": 48,
+      "full_warmup_requests": 8,
+      "short_warmup_requests_total": 0,
+      "source": {
+        "input": "files/review_64k.json",
+        "sha256": "d2478cf98f56373cbff16db5a7a0000d73ae12a13dcf86ef46717c541f329d9f",
+        "json_pointer": "/comparison/summaries/candidate",
+        "original_relative_path": "02-测试与结果/results-64k-v2-validation-20261016-a/local-integrity-review-b/review.json"
+      },
+      "per_round": [
+        {
+          "round": 1,
+          "output_tps": 31.14724992925327,
+          "saved_latency_metrics": {
+            "ttft_s.max": 214.36514119399362,
+            "ttft_s.mean": 76.31261204425391,
+            "ttft_s.min": 26.616253569023684,
+            "ttft_s.p50": 40.17903723900963,
+            "ttft_s.p90": 176.46780449351354,
+            "ttft_s.p95": 196.02378619700175,
+            "ttft_s.p99": 210.69687019459525,
+            "tpot_ms.max": 412.4763257517209,
+            "tpot_ms.mean": 180.45471886247486,
+            "tpot_ms.min": 45.66409821895303,
+            "tpot_ms.p50": 187.75036787928423,
+            "tpot_ms.p90": 279.59741637488406,
+            "tpot_ms.p95": 352.65143097166276,
+            "tpot_ms.p99": 400.51134679570924,
+            "e2e_s.max": 451.35942447400885,
+            "e2e_s.mean": 260.9177894405657,
+            "e2e_s.min": 73.33309172600275,
+            "e2e_s.p50": 260.35926768650825,
+            "e2e_s.p90": 409.73997193550167,
+            "e2e_s.p95": 430.20221995450265,
+            "e2e_s.p99": 447.1279835701076
+          },
+          "source": {
+            "input": "files/64k_round_01.json",
+            "sha256": "2d9edaff0d813dabfa4bc49a8ae985fd64a4343eeb81ac4d7c9e72d48b8b48d8",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-64k-v2-validation-20261016-a/submit1009/result/perf-64k-20261016-a/variants/candidate/64k/round-01/summary.json"
+          }
+        },
+        {
+          "round": 2,
+          "output_tps": 31.55445871523553,
+          "saved_latency_metrics": {
+            "ttft_s.max": 212.2125040499959,
+            "ttft_s.mean": 77.45698792525218,
+            "ttft_s.min": 26.588324653013842,
+            "ttft_s.p50": 50.43677528749686,
+            "ttft_s.p90": 175.03616752549715,
+            "ttft_s.p95": 194.26545975000045,
+            "ttft_s.p99": 208.6230951899968,
+            "tpot_ms.max": 355.35920943399367,
+            "tpot_ms.mean": 176.81437940474922,
+            "tpot_ms.min": 44.92896679472015,
+            "tpot_ms.p50": 159.79135309725876,
+            "tpot_ms.p90": 329.50338225707935,
+            "tpot_ms.p95": 354.87556964661604,
+            "tpot_ms.p99": 355.26248147651813,
+            "e2e_s.max": 446.5819682540023,
+            "e2e_s.mean": 258.3380980563106,
+            "e2e_s.min": 72.60285781600396,
+            "e2e_s.p50": 257.45227538151084,
+            "e2e_s.p90": 405.69939961050113,
+            "e2e_s.p95": 426.1200553624949,
+            "e2e_s.p99": 442.48958567570077
+          },
+          "source": {
+            "input": "files/64k_round_02.json",
+            "sha256": "3ebfc96ce8d8244df9c64bcc03905bab5110358d8c96178c088095a6059b3b84",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-64k-v2-validation-20261016-a/submit1009/result/perf-64k-20261016-a/variants/candidate/64k/round-02/summary.json"
+          }
+        },
+        {
+          "round": 3,
+          "output_tps": 31.4528521564883,
+          "saved_latency_metrics": {
+            "ttft_s.max": 212.8043423499912,
+            "ttft_s.mean": 76.17320978781572,
+            "ttft_s.min": 26.62490120899747,
+            "ttft_s.p50": 41.30566099801217,
+            "ttft_s.p90": 175.51837063849962,
+            "ttft_s.p95": 194.8131288347504,
+            "ttft_s.p99": 209.20609964694302,
+            "tpot_ms.max": 330.7904599726126,
+            "tpot_ms.mean": 178.9422991689264,
+            "tpot_ms.min": 43.545851834808666,
+            "tpot_ms.p50": 174.20512778592717,
+            "tpot_ms.p90": 279.88796406989405,
+            "tpot_ms.p95": 330.3632951001854,
+            "tpot_ms.p99": 330.70502699812715,
+            "e2e_s.max": 447.6391291710024,
+            "e2e_s.mean": 259.23118183762745,
+            "e2e_s.min": 71.24989057402126,
+            "e2e_s.p50": 258.01820875750855,
+            "e2e_s.p90": 407.4334732864954,
+            "e2e_s.p95": 427.56087278774066,
+            "e2e_s.p99": 443.62347789435006
+          },
+          "source": {
+            "input": "files/64k_round_03.json",
+            "sha256": "a6d54d86e5410d0128a4da9a5bdec9f178c6351024089772c72c7161829a8ba7",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-64k-v2-validation-20261016-a/submit1009/result/perf-64k-20261016-a/variants/candidate/64k/round-03/summary.json"
+          }
+        }
+      ],
+      "three_round_mean_of_saved_latency_statistics": {
+        "e2e_s.max": 448.5268406330045,
+        "e2e_s.mean": 259.4956897781679,
+        "e2e_s.min": 72.39528003867599,
+        "e2e_s.p50": 258.60991727517586,
+        "e2e_s.p90": 407.6242816108327,
+        "e2e_s.p95": 427.96104936824605,
+        "e2e_s.p99": 444.4136823800528,
+        "tpot_ms.max": 366.2086650527757,
+        "tpot_ms.mean": 178.73713247871683,
+        "tpot_ms.min": 44.71297228282728,
+        "tpot_ms.p50": 173.91561625415673,
+        "tpot_ms.p90": 296.32958756728584,
+        "tpot_ms.p95": 345.9634319061547,
+        "tpot_ms.p99": 362.1596184234515,
+        "ttft_s.max": 213.1273291979936,
+        "ttft_s.mean": 76.6476032524406,
+        "ttft_s.min": 26.609826477011666,
+        "ttft_s.p50": 43.97382450817289,
+        "ttft_s.p90": 175.6741142191701,
+        "ttft_s.p95": 195.03412492725087,
+        "ttft_s.p99": 209.50868834384502
+      },
+      "latency_units": {
+        "ttft_s.max": "s",
+        "ttft_s.mean": "s",
+        "ttft_s.min": "s",
+        "ttft_s.p50": "s",
+        "ttft_s.p90": "s",
+        "ttft_s.p95": "s",
+        "ttft_s.p99": "s",
+        "tpot_ms.max": "ms",
+        "tpot_ms.mean": "ms",
+        "tpot_ms.min": "ms",
+        "tpot_ms.p50": "ms",
+        "tpot_ms.p90": "ms",
+        "tpot_ms.p95": "ms",
+        "tpot_ms.p99": "ms",
+        "e2e_s.max": "s",
+        "e2e_s.mean": "s",
+        "e2e_s.min": "s",
+        "e2e_s.p50": "s",
+        "e2e_s.p90": "s",
+        "e2e_s.p95": "s",
+        "e2e_s.p99": "s"
+      },
+      "historical_latency_changes": {},
+      "absent_saved_metrics": [
+        "ITL distribution"
+      ],
+      "service_max_running_requests": 32,
+      "cuda_graph_max_bs": 32,
+      "actual_64_service_concurrency_test": null
+    },
+    {
+      "scene": "c1",
+      "label": "ShareGPT C1",
+      "measured_date": "2026-10-16",
+      "physical_pair": [
+        4,
+        5
+      ],
+      "tp": 2,
+      "output_tps_rounds": [
+        54.75779576773182,
+        54.730236178196236,
+        54.11959566128934
+      ],
+      "mean_output_tps": 54.53587586907246,
+      "spread_percent": 1.1702390330626538,
+      "historical_v1_report_output_tps": 43.13,
+      "historical_output_tps_change_percent": 26.445341685769662,
+      "historical_round_change_percent": [
+        26.959878895738033,
+        26.895980009729257,
+        25.480166151841722
+      ],
+      "measured_requests": 3000,
+      "full_warmup_requests": 1000,
+      "short_warmup_requests_total": 256,
+      "source": {
+        "input": "files/final45.json",
+        "sha256": "53c7aa9de50d63c8f34caa5d411742f109d29ae53565870d054045eb696fd36c",
+        "json_pointer": "/scenarios/1",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-c1-pair45-final-20261016-a/local-independent-review/performance-summary.json"
+      },
+      "per_round": [
+        {
+          "round": 1,
+          "output_tps": 54.75779576773182,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 3587.8269830235804,
+            "median_e2e_latency_ms": 2317.8937365009915,
+            "std_e2e_latency_ms": 3529.9986562137356,
+            "p90_e2e_latency_ms": 9004.955389583485,
+            "p99_e2e_latency_ms": 13911.058503693785,
+            "mean_ttft_ms": 286.8597490899556,
+            "median_ttft_ms": 238.44588499923702,
+            "std_ttft_ms": 256.90652637257773,
+            "p99_ttft_ms": 941.6845932250725,
+            "mean_tpot_ms": 17.7124875009962,
+            "median_tpot_ms": 17.06878762800662,
+            "std_tpot_ms": 2.7324613822660964,
+            "p99_tpot_ms": 31.42379443539539,
+            "mean_itl_ms": 16.924252852297627,
+            "median_itl_ms": 15.460665512364358,
+            "std_itl_ms": 4.856371259931395,
+            "p95_itl_ms": 30.617423413787037,
+            "p99_itl_ms": 32.528192206518725
+          },
+          "source": {
+            "input": "files/c1_round_01.jsonl",
+            "sha256": "eeca16141b568a130b2d6c5c0e237119a455aa205bfd30276802fa4f0061557c",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-c1-pair45-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-c1-pair45-20261016-a-c1-candidate/sharegpt-c1/round-01.jsonl"
+          }
+        },
+        {
+          "round": 2,
+          "output_tps": 54.730236178196236,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 3589.653444166848,
+            "median_e2e_latency_ms": 2336.8647349852836,
+            "std_e2e_latency_ms": 3535.132659924928,
+            "p90_e2e_latency_ms": 8941.625106701396,
+            "p99_e2e_latency_ms": 14142.81066818483,
+            "mean_ttft_ms": 284.9454961946758,
+            "median_ttft_ms": 237.58672799158376,
+            "std_ttft_ms": 257.312877989055,
+            "p99_ttft_ms": 942.1512191725195,
+            "mean_tpot_ms": 17.7281000966955,
+            "median_tpot_ms": 17.103027330646857,
+            "std_tpot_ms": 2.653198016885371,
+            "p99_tpot_ms": 31.548401922918856,
+            "mean_itl_ms": 16.943425882693635,
+            "median_itl_ms": 15.53148050152231,
+            "std_itl_ms": 4.859163607459732,
+            "p95_itl_ms": 30.802708986448124,
+            "p99_itl_ms": 32.411959897726774
+          },
+          "source": {
+            "input": "files/c1_round_02.jsonl",
+            "sha256": "8a87e8a50b5f5b2759fe8e5d9034693a735d37226f098666844ac1ed094e6510",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-c1-pair45-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-c1-pair45-20261016-a-c1-candidate/sharegpt-c1/round-02.jsonl"
+          }
+        },
+        {
+          "round": 3,
+          "output_tps": 54.11959566128934,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 3630.1737344461435,
+            "median_e2e_latency_ms": 2343.654795506154,
+            "std_e2e_latency_ms": 3571.6661983798476,
+            "p90_e2e_latency_ms": 9110.365813711542,
+            "p99_e2e_latency_ms": 14259.547081188937,
+            "mean_ttft_ms": 286.77356670287554,
+            "median_ttft_ms": 237.99231149314437,
+            "std_ttft_ms": 257.8778662646963,
+            "p99_ttft_ms": 949.8847717084572,
+            "mean_tpot_ms": 17.914479952052993,
+            "median_tpot_ms": 17.26565707332497,
+            "std_tpot_ms": 2.721915557849865,
+            "p99_tpot_ms": 31.284524800576037,
+            "mean_itl_ms": 17.141790474133575,
+            "median_itl_ms": 15.630001507815905,
+            "std_itl_ms": 6.237980472656195,
+            "p95_itl_ms": 31.002268998418003,
+            "p99_itl_ms": 32.76601689402014
+          },
+          "source": {
+            "input": "files/c1_round_03.jsonl",
+            "sha256": "8884d1608cb4dfb34961f15b322a07da38b0413e4af28b11914f88a4c3f0f23b",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-c1-pair45-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-c1-pair45-20261016-a-c1-candidate/sharegpt-c1/round-03.jsonl"
+          }
+        }
+      ],
+      "three_round_mean_of_saved_latency_statistics": {
+        "mean_e2e_latency_ms": 3602.5513872121905,
+        "mean_itl_ms": 17.00315640304161,
+        "mean_tpot_ms": 17.785022516581563,
+        "mean_ttft_ms": 286.19293732916896,
+        "median_e2e_latency_ms": 2332.8044223308098,
+        "median_itl_ms": 15.540715840567524,
+        "median_tpot_ms": 17.14582401065948,
+        "median_ttft_ms": 238.0083081613217,
+        "p90_e2e_latency_ms": 9018.98210333214,
+        "p95_itl_ms": 30.807467132884387,
+        "p99_e2e_latency_ms": 14104.47208435585,
+        "p99_itl_ms": 32.56872299942188,
+        "p99_tpot_ms": 31.418907052963426,
+        "p99_ttft_ms": 944.5735280353497,
+        "std_e2e_latency_ms": 3545.5991715061705,
+        "std_itl_ms": 5.31783844668244,
+        "std_tpot_ms": 2.702524985667111,
+        "std_ttft_ms": 257.365756875443
+      },
+      "latency_units": {
+        "mean_e2e_latency_ms": "ms",
+        "median_e2e_latency_ms": "ms",
+        "std_e2e_latency_ms": "ms",
+        "p90_e2e_latency_ms": "ms",
+        "p99_e2e_latency_ms": "ms",
+        "mean_ttft_ms": "ms",
+        "median_ttft_ms": "ms",
+        "std_ttft_ms": "ms",
+        "p99_ttft_ms": "ms",
+        "mean_tpot_ms": "ms",
+        "median_tpot_ms": "ms",
+        "std_tpot_ms": "ms",
+        "p99_tpot_ms": "ms",
+        "mean_itl_ms": "ms",
+        "median_itl_ms": "ms",
+        "std_itl_ms": "ms",
+        "p95_itl_ms": "ms",
+        "p99_itl_ms": "ms"
+      },
+      "historical_latency_changes": {
+        "median_ttft_ms": {
+          "latest_mean": 238.0083081613217,
+          "reference": 242.93,
+          "change_percent": -2.025971201036636
+        },
+        "p99_ttft_ms": {
+          "latest_mean": 944.5735280353497,
+          "reference": 910.57,
+          "change_percent": 3.734312357682512
+        },
+        "median_tpot_ms": {
+          "latest_mean": 17.14582401065948,
+          "reference": 22.1,
+          "change_percent": -22.41708592461774
+        },
+        "p99_tpot_ms": {
+          "latest_mean": 31.418907052963426,
+          "reference": 39.17,
+          "change_percent": -19.788340431546015
+        }
+      },
+      "absent_saved_metrics": [
+        "TTFT P95",
+        "TPOT P95",
+        "E2E P95"
+      ],
+      "service_max_running_requests": 32,
+      "cuda_graph_max_bs": 32,
+      "actual_64_service_concurrency_test": null
+    },
+    {
+      "scene": "c4",
+      "label": "ShareGPT C4",
+      "measured_date": "2026-10-16",
+      "physical_pair": [
+        6,
+        7
+      ],
+      "tp": 2,
+      "output_tps_rounds": [
+        145.08062208567463,
+        144.55703129048337,
+        144.1519478195047
+      ],
+      "mean_output_tps": 144.59653373188758,
+      "spread_percent": 0.6422520942942468,
+      "historical_v1_report_output_tps": 133.37,
+      "historical_output_tps_change_percent": 8.41758546291338,
+      "historical_round_change_percent": [
+        8.780551912480039,
+        8.387966776998844,
+        8.084237699261232
+      ],
+      "measured_requests": 3000,
+      "full_warmup_requests": 1000,
+      "short_warmup_requests_total": 256,
+      "source": {
+        "input": "files/final67.json",
+        "sha256": "421f90f4aa597f7e2e9ddc480f838de9ccf013bf566960a14433c09b344bb382",
+        "json_pointer": "/scenarios/4",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/local-independent-review/performance-summary.json"
+      },
+      "per_round": [
+        {
+          "round": 1,
+          "output_tps": 145.08062208567463,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 5395.48251690896,
+            "median_e2e_latency_ms": 3509.4044959987514,
+            "std_e2e_latency_ms": 5480.141872736156,
+            "p90_e2e_latency_ms": 13725.621034606596,
+            "p99_e2e_latency_ms": 21660.621065864103,
+            "mean_ttft_ms": 297.2038248467434,
+            "median_ttft_ms": 242.43264200049452,
+            "std_ttft_ms": 260.87172717617517,
+            "p99_ttft_ms": 940.6302789994514,
+            "mean_tpot_ms": 27.359299923422434,
+            "median_tpot_ms": 25.556357164152743,
+            "std_tpot_ms": 6.950758477997067,
+            "p99_tpot_ms": 58.28894844247649,
+            "mean_itl_ms": 26.138694307237465,
+            "median_itl_ms": 20.537673743092455,
+            "std_itl_ms": 27.341699848885035,
+            "p95_itl_ms": 42.038445998332456,
+            "p99_itl_ms": 112.52403006161332
+          },
+          "source": {
+            "input": "files/c4_round_01.jsonl",
+            "sha256": "c4ff31902a4557387ad6e1a3bb7a290c8943226f06bfcb8358d976a3131e22ba",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c4-candidate/sharegpt-c4/round-01.jsonl"
+          }
+        },
+        {
+          "round": 2,
+          "output_tps": 144.55703129048337,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 5415.139518215146,
+            "median_e2e_latency_ms": 3513.0141354893567,
+            "std_e2e_latency_ms": 5504.394173796725,
+            "p90_e2e_latency_ms": 13771.154496513196,
+            "p99_e2e_latency_ms": 22021.57222385984,
+            "mean_ttft_ms": 304.37067457905505,
+            "median_ttft_ms": 244.2602475057356,
+            "std_ttft_ms": 309.7289804496382,
+            "p99_ttft_ms": 949.4896855906699,
+            "mean_tpot_ms": 27.99815493789258,
+            "median_tpot_ms": 25.560024981433518,
+            "std_tpot_ms": 12.43715206001471,
+            "p99_tpot_ms": 63.65879356470351,
+            "mean_itl_ms": 26.205039087231885,
+            "median_itl_ms": 20.540916251775343,
+            "std_itl_ms": 29.44123217573156,
+            "p95_itl_ms": 42.13106451934436,
+            "p99_itl_ms": 113.32449699693825
+          },
+          "source": {
+            "input": "files/c4_round_02.jsonl",
+            "sha256": "c053091f43c8f20d1f01db4060c5f1199aedb94f616ed29c51ff57484b48168d",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c4-candidate/sharegpt-c4/round-02.jsonl"
+          }
+        },
+        {
+          "round": 3,
+          "output_tps": 144.1519478195047,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 5430.094316702161,
+            "median_e2e_latency_ms": 3504.4762610050384,
+            "std_e2e_latency_ms": 5515.207820210897,
+            "p90_e2e_latency_ms": 13920.688729782709,
+            "p99_e2e_latency_ms": 21757.180209386275,
+            "mean_ttft_ms": 300.10953233289183,
+            "median_ttft_ms": 246.145331999287,
+            "std_ttft_ms": 261.2184615042613,
+            "p99_ttft_ms": 946.8716689359279,
+            "mean_tpot_ms": 28.067418572033468,
+            "median_tpot_ms": 25.660945042469482,
+            "std_tpot_ms": 11.78504136085741,
+            "p99_tpot_ms": 63.91664284131888,
+            "mean_itl_ms": 26.30358757975839,
+            "median_itl_ms": 20.661032001953572,
+            "std_itl_ms": 28.210199422620054,
+            "p95_itl_ms": 42.22132149880053,
+            "p99_itl_ms": 114.08848820254185
+          },
+          "source": {
+            "input": "files/c4_round_03.jsonl",
+            "sha256": "3026e6057759c9289bd5b0ce53a4414e7ae5a9b347949458a0cdd53d86cae9cf",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c4-candidate/sharegpt-c4/round-03.jsonl"
+          }
+        }
+      ],
+      "three_round_mean_of_saved_latency_statistics": {
+        "mean_e2e_latency_ms": 5413.572117275423,
+        "mean_itl_ms": 26.215773658075914,
+        "mean_tpot_ms": 27.808291144449495,
+        "mean_ttft_ms": 300.5613439195634,
+        "median_e2e_latency_ms": 3508.9649641643823,
+        "median_itl_ms": 20.579873998940457,
+        "median_tpot_ms": 25.59244239601858,
+        "median_ttft_ms": 244.2794071685057,
+        "p90_e2e_latency_ms": 13805.821420300834,
+        "p95_itl_ms": 42.130277338825785,
+        "p99_e2e_latency_ms": 21813.124499703405,
+        "p99_itl_ms": 113.31233842036447,
+        "p99_tpot_ms": 61.95479494949963,
+        "p99_ttft_ms": 945.6638778420164,
+        "std_e2e_latency_ms": 5499.914622247926,
+        "std_itl_ms": 28.33104381574555,
+        "std_tpot_ms": 10.39098396628973,
+        "std_ttft_ms": 277.27305637669156
+      },
+      "latency_units": {
+        "mean_e2e_latency_ms": "ms",
+        "median_e2e_latency_ms": "ms",
+        "std_e2e_latency_ms": "ms",
+        "p90_e2e_latency_ms": "ms",
+        "p99_e2e_latency_ms": "ms",
+        "mean_ttft_ms": "ms",
+        "median_ttft_ms": "ms",
+        "std_ttft_ms": "ms",
+        "p99_ttft_ms": "ms",
+        "mean_tpot_ms": "ms",
+        "median_tpot_ms": "ms",
+        "std_tpot_ms": "ms",
+        "p99_tpot_ms": "ms",
+        "mean_itl_ms": "ms",
+        "median_itl_ms": "ms",
+        "std_itl_ms": "ms",
+        "p95_itl_ms": "ms",
+        "p99_itl_ms": "ms"
+      },
+      "historical_latency_changes": {
+        "median_ttft_ms": {
+          "latest_mean": 244.2794071685057,
+          "reference": 254.41,
+          "change_percent": -3.9819947452907845
+        },
+        "p99_ttft_ms": {
+          "latest_mean": 945.6638778420164,
+          "reference": 1182.43,
+          "change_percent": -20.02369037980969
+        },
+        "median_tpot_ms": {
+          "latest_mean": 25.59244239601858,
+          "reference": 27.84,
+          "change_percent": -8.07312357751947
+        },
+        "p99_tpot_ms": {
+          "latest_mean": 61.95479494949963,
+          "reference": 65.82,
+          "change_percent": -5.872386889243941
+        }
+      },
+      "absent_saved_metrics": [
+        "TTFT P95",
+        "TPOT P95",
+        "E2E P95"
+      ],
+      "service_max_running_requests": 32,
+      "cuda_graph_max_bs": 32,
+      "actual_64_service_concurrency_test": null
+    },
+    {
+      "scene": "c16",
+      "label": "ShareGPT C16",
+      "measured_date": "2026-10-16",
+      "physical_pair": [
+        6,
+        7
+      ],
+      "tp": 2,
+      "output_tps_rounds": [
+        325.81168606238236,
+        326.8922524561388,
+        325.95077259208267
+      ],
+      "mean_output_tps": 326.21823703686795,
+      "spread_percent": 0.33124033885154014,
+      "historical_v1_report_output_tps": 289.32,
+      "historical_output_tps_change_percent": 12.753434618024318,
+      "historical_round_change_percent": [
+        12.612915132857182,
+        12.986399991752663,
+        12.660988729463106
+      ],
+      "measured_requests": 3000,
+      "full_warmup_requests": 1000,
+      "short_warmup_requests_total": 256,
+      "source": {
+        "input": "files/final67.json",
+        "sha256": "421f90f4aa597f7e2e9ddc480f838de9ccf013bf566960a14433c09b344bb382",
+        "json_pointer": "/scenarios/16",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/local-independent-review/performance-summary.json"
+      },
+      "per_round": [
+        {
+          "round": 1,
+          "output_tps": 325.81168606238236,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 9525.317086836527,
+            "median_e2e_latency_ms": 5994.238263505395,
+            "std_e2e_latency_ms": 9849.207888017118,
+            "p90_e2e_latency_ms": 24275.208825519076,
+            "p99_e2e_latency_ms": 38726.449116070864,
+            "mean_ttft_ms": 333.20383298164234,
+            "median_ttft_ms": 258.7731190142222,
+            "std_ttft_ms": 277.65165581547484,
+            "p99_ttft_ms": 1006.2779284958374,
+            "mean_tpot_ms": 49.34868942286141,
+            "median_tpot_ms": 46.14203408877539,
+            "std_tpot_ms": 24.600135692713902,
+            "p99_tpot_ms": 125.08578106917805,
+            "mean_itl_ms": 47.19477873320259,
+            "median_itl_ms": 27.001513502909802,
+            "std_itl_ms": 60.893257206618486,
+            "p95_itl_ms": 122.0405547297558,
+            "p99_itl_ms": 239.13789460348198
+          },
+          "source": {
+            "input": "files/c16_round_01.jsonl",
+            "sha256": "9d7950dced19b498c7be59ef73c0346753b72398f15117a925d808eac7a1684d",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c16-candidate/sharegpt-c16/round-01.jsonl"
+          }
+        },
+        {
+          "round": 2,
+          "output_tps": 326.8922524561388,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 9494.09269437578,
+            "median_e2e_latency_ms": 5930.076424498111,
+            "std_e2e_latency_ms": 9824.798671140677,
+            "p90_e2e_latency_ms": 24497.634504822785,
+            "p99_e2e_latency_ms": 38437.782788417244,
+            "mean_ttft_ms": 331.72497223093524,
+            "median_ttft_ms": 258.74970949371345,
+            "std_ttft_ms": 274.2342126423508,
+            "p99_ttft_ms": 959.3005488545168,
+            "mean_tpot_ms": 48.563931025309785,
+            "median_tpot_ms": 45.69752815080082,
+            "std_tpot_ms": 25.833678002017663,
+            "p99_tpot_ms": 106.78314359991211,
+            "mean_itl_ms": 47.02738876397983,
+            "median_itl_ms": 27.023773989640176,
+            "std_itl_ms": 60.458154878190456,
+            "p95_itl_ms": 121.93953199312091,
+            "p99_itl_ms": 238.45262238639407
+          },
+          "source": {
+            "input": "files/c16_round_02.jsonl",
+            "sha256": "f26c17ae4d44678dd89c3d8424445e9cf02d7d645e33bcb0431f3a5b5e633d17",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c16-candidate/sharegpt-c16/round-02.jsonl"
+          }
+        },
+        {
+          "round": 3,
+          "output_tps": 325.95077259208267,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 9521.722076871025,
+            "median_e2e_latency_ms": 5998.623914012569,
+            "std_e2e_latency_ms": 9845.85779067413,
+            "p90_e2e_latency_ms": 24303.709115181122,
+            "p99_e2e_latency_ms": 38761.458800770335,
+            "mean_ttft_ms": 332.7213671430072,
+            "median_ttft_ms": 258.21866499609314,
+            "std_ttft_ms": 277.2664221164013,
+            "p99_ttft_ms": 980.0949007688899,
+            "mean_tpot_ms": 49.31426462368975,
+            "median_tpot_ms": 46.09421673984645,
+            "std_tpot_ms": 24.623970334613222,
+            "p99_tpot_ms": 123.32963194365007,
+            "mean_itl_ms": 47.17884928831808,
+            "median_itl_ms": 27.02582899655681,
+            "std_itl_ms": 60.68122392099016,
+            "p95_itl_ms": 121.69692549796308,
+            "p99_itl_ms": 238.3458452828925
+          },
+          "source": {
+            "input": "files/c16_round_03.jsonl",
+            "sha256": "890e321878f194622b32a3c7fe324c425c4e55e51502c5284ed86f12e9108289",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c16-candidate/sharegpt-c16/round-03.jsonl"
+          }
+        }
+      ],
+      "three_round_mean_of_saved_latency_statistics": {
+        "mean_e2e_latency_ms": 9513.71061936111,
+        "mean_itl_ms": 47.133672261833496,
+        "mean_tpot_ms": 49.07562835728698,
+        "mean_ttft_ms": 332.5500574518616,
+        "median_e2e_latency_ms": 5974.312867338692,
+        "median_itl_ms": 27.017038829702262,
+        "median_tpot_ms": 45.97792632647422,
+        "median_ttft_ms": 258.58049783467624,
+        "p90_e2e_latency_ms": 24358.850815174326,
+        "p95_itl_ms": 121.8923374069466,
+        "p99_e2e_latency_ms": 38641.896901752814,
+        "p99_itl_ms": 238.64545409092284,
+        "p99_tpot_ms": 118.39951887091341,
+        "p99_ttft_ms": 981.8911260397481,
+        "std_e2e_latency_ms": 9839.954783277308,
+        "std_itl_ms": 60.677545335266366,
+        "std_tpot_ms": 25.01926134311493,
+        "std_ttft_ms": 276.3840968580757
+      },
+      "latency_units": {
+        "mean_e2e_latency_ms": "ms",
+        "median_e2e_latency_ms": "ms",
+        "std_e2e_latency_ms": "ms",
+        "p90_e2e_latency_ms": "ms",
+        "p99_e2e_latency_ms": "ms",
+        "mean_ttft_ms": "ms",
+        "median_ttft_ms": "ms",
+        "std_ttft_ms": "ms",
+        "p99_ttft_ms": "ms",
+        "mean_tpot_ms": "ms",
+        "median_tpot_ms": "ms",
+        "std_tpot_ms": "ms",
+        "p99_tpot_ms": "ms",
+        "mean_itl_ms": "ms",
+        "median_itl_ms": "ms",
+        "std_itl_ms": "ms",
+        "p95_itl_ms": "ms",
+        "p99_itl_ms": "ms"
+      },
+      "historical_latency_changes": {
+        "median_ttft_ms": {
+          "latest_mean": 258.58049783467624,
+          "reference": 282.25,
+          "change_percent": -8.386006081602748
+        },
+        "p99_ttft_ms": {
+          "latest_mean": 981.8911260397481,
+          "reference": 1487.83,
+          "change_percent": -34.005153408672484
+        },
+        "median_tpot_ms": {
+          "latest_mean": 45.97792632647422,
+          "reference": 51.01,
+          "change_percent": -9.86487683498487
+        },
+        "p99_tpot_ms": {
+          "latest_mean": 118.39951887091341,
+          "reference": 165.77,
+          "change_percent": -28.576027706512996
+        }
+      },
+      "absent_saved_metrics": [
+        "TTFT P95",
+        "TPOT P95",
+        "E2E P95"
+      ],
+      "service_max_running_requests": 32,
+      "cuda_graph_max_bs": 32,
+      "actual_64_service_concurrency_test": null
+    },
+    {
+      "scene": "c32",
+      "label": "ShareGPT C32",
+      "measured_date": "2026-10-16",
+      "physical_pair": [
+        6,
+        7
+      ],
+      "tp": 2,
+      "output_tps_rounds": [
+        420.0578464582912,
+        419.78596890059896,
+        419.5194201013055
+      ],
+      "mean_output_tps": 419.78774515339853,
+      "spread_percent": 0.12826157104441335,
+      "historical_v1_report_output_tps": 338.41,
+      "historical_output_tps_change_percent": 24.0470864198453,
+      "historical_round_change_percent": [
+        24.126901231728116,
+        24.046561537956592,
+        23.96779648985121
+      ],
+      "measured_requests": 3000,
+      "full_warmup_requests": 1000,
+      "short_warmup_requests_total": 256,
+      "source": {
+        "input": "files/review_c32.json",
+        "sha256": "7104baebc1429811ae55ce18a0b45727ef8f7efdb893e14844e76b633ce49660",
+        "json_pointer": "/scenarios/32/variants/candidate",
+        "original_relative_path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/local-independent-review/comparison.json"
+      },
+      "per_round": [
+        {
+          "round": 1,
+          "output_tps": 420.0578464582912,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 14629.623388657928,
+            "median_e2e_latency_ms": 9094.056299494696,
+            "std_e2e_latency_ms": 15049.90992796952,
+            "p90_e2e_latency_ms": 37118.433066789294,
+            "p99_e2e_latency_ms": 60062.28525816492,
+            "mean_ttft_ms": 516.4247608843143,
+            "median_ttft_ms": 347.7669949934352,
+            "std_ttft_ms": 499.57006671197917,
+            "p99_ttft_ms": 2742.369525016402,
+            "mean_tpot_ms": 76.7001737039783,
+            "median_tpot_ms": 72.28354729465812,
+            "std_tpot_ms": 33.075645602333516,
+            "p99_tpot_ms": 247.5182796595618,
+            "mean_itl_ms": 72.32433240592121,
+            "median_itl_ms": 38.70061349880416,
+            "std_itl_ms": 84.65422221626037,
+            "p95_itl_ms": 148.6327480088221,
+            "p99_itl_ms": 288.4941290039568
+          },
+          "source": {
+            "input": "files/c32_round_01.jsonl",
+            "sha256": "2b4e5cc8dd7ec0bcccf1b3ef11b9f7ab394b8f8b9a4216ef93c3eb8c029fc1f4",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-01.jsonl"
+          }
+        },
+        {
+          "round": 2,
+          "output_tps": 419.78596890059896,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 14640.74798675836,
+            "median_e2e_latency_ms": 9091.697465497418,
+            "std_e2e_latency_ms": 15061.952857494693,
+            "p90_e2e_latency_ms": 37072.039425297415,
+            "p99_e2e_latency_ms": 60138.08819841739,
+            "mean_ttft_ms": 516.8315599901252,
+            "median_ttft_ms": 348.35493950231466,
+            "std_ttft_ms": 498.04453115622255,
+            "p99_ttft_ms": 2730.856242221489,
+            "mean_tpot_ms": 76.77424400371487,
+            "median_tpot_ms": 72.2189578241202,
+            "std_tpot_ms": 33.09620466156919,
+            "p99_tpot_ms": 245.74884811037916,
+            "mean_itl_ms": 72.37929656220757,
+            "median_itl_ms": 38.68077299557626,
+            "std_itl_ms": 84.60307809164559,
+            "p95_itl_ms": 149.29720854852349,
+            "p99_itl_ms": 291.2291464250302
+          },
+          "source": {
+            "input": "files/c32_round_02.jsonl",
+            "sha256": "62b7037e34edf305cc7a125c2c09e4d568150d5a04cfbc3adf7b6e305e99ff51",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-02.jsonl"
+          }
+        },
+        {
+          "round": 3,
+          "output_tps": 419.5194201013055,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 14650.455842738447,
+            "median_e2e_latency_ms": 9098.747217503842,
+            "std_e2e_latency_ms": 15071.552205576636,
+            "p90_e2e_latency_ms": 37157.552443104214,
+            "p99_e2e_latency_ms": 60041.68851145456,
+            "mean_ttft_ms": 516.96582432164,
+            "median_ttft_ms": 348.12126800534315,
+            "std_ttft_ms": 497.91074805453525,
+            "p99_ttft_ms": 2730.3870650249883,
+            "mean_tpot_ms": 76.814330720479,
+            "median_tpot_ms": 72.31271110814357,
+            "std_tpot_ms": 33.075865893282746,
+            "p99_tpot_ms": 246.01920834829795,
+            "mean_itl_ms": 72.42826976903964,
+            "median_itl_ms": 38.74005399120506,
+            "std_itl_ms": 84.65316283019045,
+            "p95_itl_ms": 150.12925548944622,
+            "p99_itl_ms": 289.5265283779007
+          },
+          "source": {
+            "input": "files/c32_round_03.jsonl",
+            "sha256": "1a0509c4f37ac618c1b2d00b9c8656646bdbf88905618bec1a5b3d5e0c4a337d",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-03.jsonl"
+          }
+        }
+      ],
+      "three_round_mean_of_saved_latency_statistics": {
+        "mean_e2e_latency_ms": 14640.275739384912,
+        "mean_itl_ms": 72.37729957905614,
+        "mean_tpot_ms": 76.76291614272405,
+        "mean_ttft_ms": 516.7407150653598,
+        "median_e2e_latency_ms": 9094.833660831986,
+        "median_itl_ms": 38.707146828528494,
+        "median_tpot_ms": 72.27173874230729,
+        "median_ttft_ms": 348.0810675003643,
+        "p90_e2e_latency_ms": 37116.00831173031,
+        "p95_itl_ms": 149.35307068226393,
+        "p99_e2e_latency_ms": 60080.687322678954,
+        "p99_itl_ms": 289.7499346022959,
+        "p99_tpot_ms": 246.42877870607964,
+        "p99_ttft_ms": 2734.537610754293,
+        "std_e2e_latency_ms": 15061.13833034695,
+        "std_itl_ms": 84.63682104603214,
+        "std_tpot_ms": 33.08257205239515,
+        "std_ttft_ms": 498.5084486409123
+      },
+      "latency_units": {
+        "mean_e2e_latency_ms": "ms",
+        "median_e2e_latency_ms": "ms",
+        "std_e2e_latency_ms": "ms",
+        "p90_e2e_latency_ms": "ms",
+        "p99_e2e_latency_ms": "ms",
+        "mean_ttft_ms": "ms",
+        "median_ttft_ms": "ms",
+        "std_ttft_ms": "ms",
+        "p99_ttft_ms": "ms",
+        "mean_tpot_ms": "ms",
+        "median_tpot_ms": "ms",
+        "std_tpot_ms": "ms",
+        "p99_tpot_ms": "ms",
+        "mean_itl_ms": "ms",
+        "median_itl_ms": "ms",
+        "std_itl_ms": "ms",
+        "p95_itl_ms": "ms",
+        "p99_itl_ms": "ms"
+      },
+      "historical_latency_changes": {
+        "median_ttft_ms": {
+          "latest_mean": 348.0810675003643,
+          "reference": 380.22,
+          "change_percent": -8.452720135615088
+        },
+        "p99_ttft_ms": {
+          "latest_mean": 2734.537610754293,
+          "reference": 6070.49,
+          "change_percent": -54.95359335483143
+        },
+        "median_tpot_ms": {
+          "latest_mean": 72.27173874230729,
+          "reference": 84.59,
+          "change_percent": -14.562313816872807
+        },
+        "p99_tpot_ms": {
+          "latest_mean": 246.42877870607964,
+          "reference": 290.11,
+          "change_percent": -15.056778909351753
+        }
+      },
+      "absent_saved_metrics": [
+        "TTFT P95",
+        "TPOT P95",
+        "E2E P95"
+      ],
+      "service_max_running_requests": 32,
+      "cuda_graph_max_bs": 32,
+      "actual_64_service_concurrency_test": null
+    },
+    {
+      "scene": "c64",
+      "label": "ShareGPT C64",
+      "measured_date": "2026-10-16",
+      "physical_pair": [
+        6,
+        7
+      ],
+      "tp": 2,
+      "output_tps_rounds": [
+        420.4584381558386,
+        415.8153553979723,
+        415.00122594766356
+      ],
+      "mean_output_tps": 417.09167316715815,
+      "spread_percent": 1.3083963452773064,
+      "historical_v1_report_output_tps": 417.42,
+      "historical_output_tps_change_percent": -0.07865622941926054,
+      "historical_round_change_percent": [
+        0.7279090977525327,
+        -0.3844196737165628,
+        -0.5794581122937181
+      ],
+      "measured_requests": 3000,
+      "full_warmup_requests": 1000,
+      "short_warmup_requests_total": 256,
+      "source": {
+        "input": "files/final67.json",
+        "sha256": "421f90f4aa597f7e2e9ddc480f838de9ccf013bf566960a14433c09b344bb382",
+        "json_pointer": "/scenarios/64",
+        "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/local-independent-review/performance-summary.json"
+      },
+      "per_round": [
+        {
+          "round": 1,
+          "output_tps": 420.4584381558386,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 28819.8807240935,
+            "median_e2e_latency_ms": 23697.83478100726,
+            "std_e2e_latency_ms": 15218.619332324264,
+            "p90_e2e_latency_ms": 51416.79173211742,
+            "p99_e2e_latency_ms": 72779.71125894634,
+            "mean_ttft_ms": 14728.42670786893,
+            "median_ttft_ms": 15007.019650496659,
+            "std_ttft_ms": 3212.361911675214,
+            "p99_ttft_ms": 21211.53532655997,
+            "mean_tpot_ms": 76.60364714350985,
+            "median_tpot_ms": 72.13775026781622,
+            "std_tpot_ms": 33.11381750362262,
+            "p99_tpot_ms": 250.46892394719177,
+            "mean_itl_ms": 72.2129413538409,
+            "median_itl_ms": 38.2555649994174,
+            "std_itl_ms": 84.6800915721813,
+            "p95_itl_ms": 147.4908134987345,
+            "p99_itl_ms": 286.93093360809144
+          },
+          "source": {
+            "input": "files/c64_round_01.jsonl",
+            "sha256": "bd3f22075c29840455dd732625ccfa693a284b4c2784fa105c98688072d25201",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c64-candidate/sharegpt-c64/round-01.jsonl"
+          }
+        },
+        {
+          "round": 2,
+          "output_tps": 415.8153553979723,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 29137.39686666653,
+            "median_e2e_latency_ms": 23977.82829750213,
+            "std_e2e_latency_ms": 15408.150570501233,
+            "p90_e2e_latency_ms": 51941.137795511175,
+            "p99_e2e_latency_ms": 73875.12708732946,
+            "mean_ttft_ms": 14888.270566737076,
+            "median_ttft_ms": 15224.031977006234,
+            "std_ttft_ms": 3269.8538227688564,
+            "p99_ttft_ms": 21407.837341807608,
+            "mean_tpot_ms": 77.3430081213481,
+            "median_tpot_ms": 73.04484288409643,
+            "std_tpot_ms": 33.389586754406125,
+            "p99_tpot_ms": 251.1044315691106,
+            "mean_itl_ms": 73.02098363150395,
+            "median_itl_ms": 38.57095699640922,
+            "std_itl_ms": 86.1860613518928,
+            "p95_itl_ms": 155.23368295398473,
+            "p99_itl_ms": 302.74142478534486
+          },
+          "source": {
+            "input": "files/c64_round_02.jsonl",
+            "sha256": "a29b11f6907cfbd7a431ca8943550fff09771815753ee5ca00d8594e197a4c60",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c64-candidate/sharegpt-c64/round-02.jsonl"
+          }
+        },
+        {
+          "round": 3,
+          "output_tps": 415.00122594766356,
+          "saved_latency_metrics": {
+            "mean_e2e_latency_ms": 29203.642504330317,
+            "median_e2e_latency_ms": 24057.025448506465,
+            "std_e2e_latency_ms": 15409.506101459285,
+            "p90_e2e_latency_ms": 51924.36299538531,
+            "p99_e2e_latency_ms": 73386.0425389526,
+            "mean_ttft_ms": 14926.737698772718,
+            "median_ttft_ms": 15222.188997489866,
+            "std_ttft_ms": 3232.3788561576334,
+            "p99_ttft_ms": 21532.75526625453,
+            "mean_tpot_ms": 77.71911043413537,
+            "median_tpot_ms": 73.0860263057467,
+            "std_tpot_ms": 34.00413472491586,
+            "p99_tpot_ms": 255.48923266760536,
+            "mean_itl_ms": 73.163360668805,
+            "median_itl_ms": 39.00619549676776,
+            "std_itl_ms": 85.78417342089092,
+            "p95_itl_ms": 154.77803399699042,
+            "p99_itl_ms": 298.05216560780536
+          },
+          "source": {
+            "input": "files/c64_round_03.jsonl",
+            "sha256": "578dcd20ac977db95998d149f54cf59fc4d30ce4a2a4d0f9e617c90ce3e14770",
+            "json_pointer": "",
+            "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-pair67-final-20261016-a/submit1009/experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c64-candidate/sharegpt-c64/round-03.jsonl"
+          }
+        }
+      ],
+      "three_round_mean_of_saved_latency_statistics": {
+        "mean_e2e_latency_ms": 29053.64003169678,
+        "mean_itl_ms": 72.79909521804996,
+        "mean_tpot_ms": 77.22192189966444,
+        "mean_ttft_ms": 14847.811657792909,
+        "median_e2e_latency_ms": 23910.89617567195,
+        "median_itl_ms": 38.610905830864795,
+        "median_tpot_ms": 72.75620648588645,
+        "median_ttft_ms": 15151.080208330919,
+        "p90_e2e_latency_ms": 51760.764174337965,
+        "p95_itl_ms": 152.50084348323654,
+        "p99_e2e_latency_ms": 73346.96029507613,
+        "p99_itl_ms": 295.9081746670806,
+        "p99_tpot_ms": 252.3541960613026,
+        "p99_ttft_ms": 21384.042644874036,
+        "std_e2e_latency_ms": 15345.425334761594,
+        "std_itl_ms": 85.55010878165501,
+        "std_tpot_ms": 33.50251299431487,
+        "std_ttft_ms": 3238.1981968672344
+      },
+      "latency_units": {
+        "mean_e2e_latency_ms": "ms",
+        "median_e2e_latency_ms": "ms",
+        "std_e2e_latency_ms": "ms",
+        "p90_e2e_latency_ms": "ms",
+        "p99_e2e_latency_ms": "ms",
+        "mean_ttft_ms": "ms",
+        "median_ttft_ms": "ms",
+        "std_ttft_ms": "ms",
+        "p99_ttft_ms": "ms",
+        "mean_tpot_ms": "ms",
+        "median_tpot_ms": "ms",
+        "std_tpot_ms": "ms",
+        "p99_tpot_ms": "ms",
+        "mean_itl_ms": "ms",
+        "median_itl_ms": "ms",
+        "std_itl_ms": "ms",
+        "p95_itl_ms": "ms",
+        "p99_itl_ms": "ms"
+      },
+      "historical_latency_changes": {
+        "median_ttft_ms": {
+          "latest_mean": 15151.080208330919,
+          "reference": 544.56,
+          "change_percent": 2682.260946145681
+        },
+        "p99_ttft_ms": {
+          "latest_mean": 21384.042644874036,
+          "reference": 6098.01,
+          "change_percent": 250.67247585481223
+        },
+        "median_tpot_ms": {
+          "latest_mean": 72.75620648588645,
+          "reference": 148.43,
+          "change_percent": -50.98281581493873
+        },
+        "p99_tpot_ms": {
+          "latest_mean": 252.3541960613026,
+          "reference": 496.3,
+          "change_percent": -49.15289218994508
+        }
+      },
+      "absent_saved_metrics": [
+        "TTFT P95",
+        "TPOT P95",
+        "E2E P95"
+      ],
+      "service_max_running_requests": 32,
+      "cuda_graph_max_bs": 32,
+      "actual_64_service_concurrency_test": false
+    }
+  ],
+  "resource_release": {
+    "source": {
+      "input": "files/release.json",
+      "sha256": "a469301507f195c945f719bae7838a19cf77a348c4d51aa96a69997ea19d3077",
+      "json_pointer": "",
+      "original_relative_path": "02-测试与结果/results-submit-current-sharegpt-c1-pair45-final-20261016-a/all-card-release-proof.json"
+    },
+    "evidence": {
+      "status": "ALL_SUBMIT_PERFORMANCE_TASK_HCU4_7_RELEASED",
+      "utc": "2026-10-16T08:40:34.975518+00:00",
+      "pairs": {
+        "45": {
+          "run": "submit-current-c1-pair45-20261016-a",
+          "queue_pid": 1621554,
+          "queue_pid_exists": false,
+          "container": "qwen38-submit1009-perf45-20261016",
+          "container_state": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2026-10-16T04:31:45.285043213Z",
+            "FinishedAt": "2026-10-16T08:38:50.271164927Z"
+          },
+          "lock_was_free": true,
+          "physical_pair": [
+            4,
+            5
+          ]
+        },
+        "67": {
+          "run": "submit-current-sharegpt-pair67-20261016-a",
+          "queue_pid": 1621555,
+          "queue_pid_exists": false,
+          "container": "qwen38-submit1009-perf67-20261016",
+          "container_state": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2026-10-16T05:55:20.665375572Z",
+            "FinishedAt": "2026-10-16T07:31:43.059215046Z"
+          },
+          "lock_was_free": true,
+          "physical_pair": [
+            6,
+            7
+          ]
+        }
+      },
+      "accuracy": "NOT_RUN",
+      "default_patch_changed": false,
+      "frozen": false,
+      "gpu": {
+        "card4": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "2"
+        },
+        "card5": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "2"
+        },
+        "card6": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "2"
+        },
+        "card7": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "2"
+        }
+      },
+      "related_process_check": {
+        "rc": 1,
+        "out": "    PID    PPID STAT COMMAND\n",
+        "err": ""
+      },
+      "default_site_sha256": "f1789532d58daa66187ba901d3d7513ff142cb33fafc7793ce44f4e821464495",
+      "stock_dat_sha256": "c3e295b24494507ede49ee2b330a96ddc9fe1654c58e5fd9611b3adf8b227c55",
+      "scope": "Only task-owned20261016 containers/PIDs, explicit HCU4,5,6,7; no others touched"
+    }
+  },
+  "caveats": [
+    "历史报告比较不是同期同卡对因果A/B，不使用本次已停止的v1/return分母，也不作为20%正式验收。",
+    "4K数据为2026-10-10已审核交付；64K和所有ShareGPT数据为2026-10-16。C32复用已完成候选，不重复压测。",
+    "历史ShareGPT每档1000条+64短预热；当前候选每档1000完整预热+三轮1000正式，每次另64短预热，条件不同。",
+    "64K/C32曾与另一卡对任务重叠，C1和C16/C64/C4也有独立卡对重叠；仅保留实际条件，不声称隔离显著性。",
+    "所有延迟统计逐轮保留并计算对应统计的三轮算术均值；P99均值不是合并所有请求的总体P99，std均值也不是总体std。",
+    "MTP原始JSON未保存text_chunks和逐请求最终latency，TPOT/ITL/E2E保留原benchmark统计，不能声称按请求精确重建；缺失P95不补算冒充。",
+    "C64客户端并发64，但服务max_running_requests=32、Graph最大batch=32；这不是服务实际64并发能力验证。",
+    "C64相对历史报告TTFT P99明显增加，保留该回退；不能因吞吐接近而隐藏延迟变化。",
+    "精度/GSM8K未验证，不继承历史报告精度结论；未晋级默认补丁，未冻结，无FROZEN_PASS。"
+  ],
+  "accuracy": "NOT_RUN",
+  "formal_20pct_acceptance": false,
+  "default_patch_changed": false,
+  "frozen": false,
+  "actual_model_graph_gate": "REVIEW_REQUIRED",
+  "all_task_cards_released": true
+}

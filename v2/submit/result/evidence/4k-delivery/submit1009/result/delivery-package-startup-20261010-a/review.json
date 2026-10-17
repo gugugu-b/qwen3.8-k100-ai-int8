@@ -1,0 +1,20 @@
+{
+  "utc_start": "2026-10-10T00:28:49.544261+00:00",
+  "scope": "FRESH_IMAGE_PACKAGED_STARTUP_SMOKE_ONLY",
+  "performance_measured": false,
+  "clean_room_performance_gate": "NOT_RUN",
+  "gsm8k": "NOT_RUN",
+  "start_returncode": 1,
+  "status": "FAILED",
+  "error": "AssertionError('{\"status\": \"PACKAGE_SHA256_PASS\", \"files\": 289}\\n2469a4ca82392f1f2e55326c9822ffc69db08d40499c6be36063b11eeacc803e\\n')",
+  "stop_returncode": 0,
+  "task_container_status": "qwen38-submit1009-diag Exited (137) 6 minutes ago\nqwen38-submit1009-ab Exited (137) 28 minutes ago\n",
+  "utc_end": "2026-10-10T00:33:41.297082+00:00",
+  "gpu45_lock": "FREE",
+  "gpu67_lock": "FREE",
+  "gpu_probe": {
+    "returncode": 0,
+    "stdout": "{\"card4\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card5\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card6\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card7\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}}\n",
+    "stderr": ""
+  }
+}

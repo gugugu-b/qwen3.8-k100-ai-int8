@@ -1,0 +1,19 @@
+{
+  "version": "v2",
+  "updated": "2026-10-17",
+  "track": "K100-AI / SGLang / TP=2",
+  "package": "submit",
+  "package_manifest_sha256": "beee0e95b29b10ac74f3145423cc166431605ce3a6ace268f95e0819a38bac52",
+  "sealed_files": 6192,
+  "snapshot_files": 6656,
+  "snapshot_bytes": 403530278,
+  "copy_status": "ALL_SEALED_FILES_BYTE_IDENTICAL",
+  "library_archive": "../v1/submit1005/config/library_gpu4_int8tuned_stock_clean.tar.gz",
+  "library_archive_sha256": "60c1992063a4101ba7c55450304963485abed405e451fb40c1810485f34a9c6e",
+  "library_files": 162,
+  "default_review_devices": [
+    0,
+    1
+  ],
+  "remaining_admission": "See submit/docs/提交材料状态-20261017.md"
+}

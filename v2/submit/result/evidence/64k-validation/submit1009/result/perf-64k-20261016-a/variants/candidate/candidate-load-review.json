@@ -1,0 +1,5 @@
+{
+  "status": "BOTH_TP_RANKS_NATIVE_ENABLED_ELIGIBLE",
+  "actual_model_graph_gate": "REVIEW_REQUIRED",
+  "enabled_communicators": 2
+}

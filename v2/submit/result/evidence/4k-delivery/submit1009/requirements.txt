@@ -1,0 +1,9 @@
+# This package uses the declared vendor image. Do not replace its torch/triton/sglang builds with PyPI wheels.
+# Already installed, recorded versions:
+# Python 3.10.12
+# torch 2.10.0+das.opt1.dtk2604.2608131652.g28498c
+# triton 3.6.0+das185.dtk2604.torch2100.2608131719.gb796b1
+# sglang 0.5.12+das185.dtk2604.torch2100.2608121934.gcbf025
+# aiter 0.1.5+das185.dtk2604.torch2100.2608131714.gb0979d
+# transformers 5.6.0
+# aiohttp and requests are supplied by the same image; exact runtime versions are in env_declare.yaml.

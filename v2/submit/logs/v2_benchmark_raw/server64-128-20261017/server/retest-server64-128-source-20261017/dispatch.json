@@ -1,0 +1,7 @@
+{
+  "pid": 3402587,
+  "source_sha256": "1f2f2247725832e8af04f666d494902951c38b0b0d30e3a90b78f9adb1c3fb1f",
+  "log": "/data/wangzy/v2/retest-server64-128-source-20261017/launch.log",
+  "control": "/data/wangzy/v2/retest-server64-128-20261017-a",
+  "run": "high-concurrency-20261017-a"
+}

@@ -1,0 +1,52 @@
+{
+  "script_syntax": "PASS",
+  "documentation_links": "PASS",
+  "report_source_SHA": "PASS",
+  "fixed_length_integrity": [
+    {
+      "scene": "4k",
+      "requests": 48,
+      "status": "PASS"
+    },
+    {
+      "scene": "64k",
+      "requests": 48,
+      "status": "PASS"
+    }
+  ],
+  "sharegpt_integrity": [
+    {
+      "concurrency": 1,
+      "requests": 3000,
+      "status": "PASS"
+    },
+    {
+      "concurrency": 4,
+      "requests": 3000,
+      "status": "PASS"
+    },
+    {
+      "concurrency": 16,
+      "requests": 3000,
+      "status": "PASS"
+    },
+    {
+      "concurrency": 32,
+      "requests": 3000,
+      "status": "PASS"
+    },
+    {
+      "concurrency": 64,
+      "requests": 3000,
+      "status": "PASS"
+    }
+  ],
+  "missing_matrix_plan": "10_REFERENCE_PROTOCOL_POINTS_PASS",
+  "summary_arithmetic": "PASS",
+  "runtime_library": "MISSING_LOCALLY_AS_DECLARED",
+  "new_container_GPU_execution": "NOT_RUN",
+  "new_demo_GPU_execution": "NOT_RUN",
+  "accuracy": "NOT_RUN_LAST",
+  "official_scoring": "NOT_VERIFIED",
+  "scope": "CPU validation only; no remote calls, service startup or original evidence writes"
+}

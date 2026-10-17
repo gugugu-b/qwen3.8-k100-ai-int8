@@ -1,0 +1,1222 @@
+[
+  {
+    "pair": "0,1",
+    "status": "SLA_DIAGNOSTIC_COMPLETE",
+    "mode": "sla-4k",
+    "pid": 3899725,
+    "utc": "2026-10-16T23:01:11.257404+00:00",
+    "scenes": [
+      {
+        "run_id": "community-official-20261017-c-p01-matrix-4k-c1",
+        "scene": "4k",
+        "c": 1,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-20261017-c-p01-matrix-4k-c1/4k-c1",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_PASS",
+          "performance_status": "PASS",
+          "text_integrity_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 24,
+          "mean_output_tps": 57.361215836370846,
+          "output_tps_rounds": [
+            57.59404648411567,
+            57.15593681174255,
+            57.333664213254316
+          ],
+          "spread_percent": 0.7637733370625879,
+          "text_flags": [],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "2ce834a39e7f8ea5d9c6a8834c02517c9a631168bc68647bdf6910e2f74057f4",
+            "warmup-01/summary.json": "3a7cc2b8e1c939784217852cbaeba68c2588f295925d0568f3ea5c52ff8e1feb",
+            "warmup-02/requests.jsonl": "2806f671efc5052f0941342cbf725fa446681102b52bdab4f2293be83819871d",
+            "warmup-02/summary.json": "049665aceaeca9714eb8f1151b86ab1ae2de18c9e20b2bcb0188ed50d02c07bd",
+            "round-01/requests.jsonl": "1cf60c78edc2c78ffd4587c2caecd471849dea4d9ff912416cf3c303ed88859c",
+            "round-01/summary.json": "322574e5bcc57c892119eeec0d04e880eaed4ca5410c1c3e3ed300b6b7cab604",
+            "round-02/requests.jsonl": "1e2cd94095920460969df67dee1e29edd7f22ae830d7700d822f0ec46f81e936",
+            "round-02/summary.json": "c8f5b2eabe864e61bde227c870be300e84c57dda940977455f89455b23e73a43",
+            "round-03/requests.jsonl": "12f8ad5fb5cef43ee980ab99cd5d1745a3e0c78359b51c50c723e5331fab7c3a",
+            "round-03/summary.json": "18222b9cbda17efaa63a89ab33b5e5a87c16f5ce6bc94f444c589622de4e3a93"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31300",
+            "concurrency": 1,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-20261017-c-p01-matrix-4k-c1/4k-c1",
+            "output_len": 1024,
+            "requests_per_round": 8,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 1.3027193407954958,
+          "ttft_s_p50_mean_of_rounds": 1.3031331061696012,
+          "ttft_s_p95_mean_of_rounds": 1.308807774516754,
+          "ttft_s_p99_mean_of_rounds": 1.3099162522377448,
+          "tpot_ms_mean_mean_of_rounds": 16.17672366352888,
+          "tpot_ms_p50_mean_of_rounds": 15.931845943963305,
+          "tpot_ms_p95_mean_of_rounds": 17.237019027836425,
+          "tpot_ms_p99_mean_of_rounds": 17.496543602496768,
+          "e2e_s_mean_mean_of_rounds": 17.85150764858554,
+          "e2e_s_p50_mean_of_rounds": 17.603107353827607,
+          "e2e_s_p95_mean_of_rounds": 18.93730976706817,
+          "e2e_s_p99_mean_of_rounds": 19.204813240877314
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31300",
+          "concurrency": 1,
+          "input_len": 4096,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-20261017-c-p01-matrix-4k-c1/4k-c1",
+          "output_len": 1024,
+          "requests_per_round": 8,
+          "seed": 20260912,
+          "timeout": 3600,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": true,
+          "tutorial_p95": true
+        },
+        "official_SLA_max": null,
+        "reused_from_matrix": true
+      },
+      {
+        "run_id": "community-official-followup-20261017-d-p01-sla-4k-c2",
+        "scene": "4k",
+        "c": 2,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c2/4k-c2",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_PASS",
+          "performance_status": "PASS",
+          "text_integrity_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 24,
+          "mean_output_tps": 99.20545410987869,
+          "output_tps_rounds": [
+            99.39599543326418,
+            99.62131887475829,
+            98.59904802161361
+          ],
+          "spread_percent": 1.03045831735463,
+          "text_flags": [],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "7decbbe7616fed4a5d4642a5cee58448db3fdfb2afeaddb3eccdbf2882e08137",
+            "warmup-01/summary.json": "b5f698f0d3d3ed142403f0fe17afccbc6bc0b8b30901e173d4a15079b3b7874a",
+            "warmup-02/requests.jsonl": "630c525ad85fb8e393d33886b92f3b16c8d6dc4ec24af6d1d2e80da60a2496b2",
+            "warmup-02/summary.json": "08a1d8a8dbc6ec6754dbc6d5b2aa9fe3d38b728a3489cdb4306078e72e380e60",
+            "round-01/requests.jsonl": "b82e04f9543a8933400a1c3e484841e32f08dfec8493095ba8c0bc7ae7090f3b",
+            "round-01/summary.json": "1e083e05d2bc68be3eddbdc98b4178cdbf1868595858b62e8df1f62ac872eecd",
+            "round-02/requests.jsonl": "6da79113311196a632563a93a12204bea838c8ed2789017d2627dd93ce851413",
+            "round-02/summary.json": "a235a9d6ca0055a92efad52807e1e9f3e3d238c41ba9ddc0bf3eaa2febfb1c55",
+            "round-03/requests.jsonl": "16b6580850349b16f712527008f80b6df22b7c08a493690ad1a0a0d2bdc9f225",
+            "round-03/summary.json": "e67fa6d045b74ecc0d537d870cc69de039be260babbec4570fb95e7bcfc2c440"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31200",
+            "concurrency": 2,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c2/4k-c2",
+            "output_len": 1024,
+            "requests_per_round": 8,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 1.7282421805818255,
+          "ttft_s_p50_mean_of_rounds": 1.5157007683398358,
+          "ttft_s_p95_mean_of_rounds": 2.575925921918436,
+          "ttft_s_p99_mean_of_rounds": 2.5798786886451612,
+          "tpot_ms_mean_mean_of_rounds": 18.27715828392929,
+          "tpot_ms_p50_mean_of_rounds": 17.954621362013143,
+          "tpot_ms_p95_mean_of_rounds": 20.240744316169256,
+          "tpot_ms_p99_mean_of_rounds": 20.53584264988529,
+          "e2e_s_mean_mean_of_rounds": 20.42577510504149,
+          "e2e_s_p50_mean_of_rounds": 20.11148796750543,
+          "e2e_s_p95_mean_of_rounds": 22.401945485776135,
+          "e2e_s_p99_mean_of_rounds": 22.566470002484664
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31200",
+          "concurrency": 2,
+          "input_len": 4096,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c2/4k-c2",
+          "output_len": 1024,
+          "requests_per_round": 8,
+          "seed": 20260912,
+          "timeout": 3600,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": true,
+          "tutorial_p95": true
+        },
+        "official_SLA_max": null
+      },
+      {
+        "run_id": "community-official-followup-20261017-d-p01-sla-4k-c4",
+        "scene": "4k",
+        "c": 4,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c4/4k-c4",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_COMPLETE_TEXT_FLAGGED",
+          "performance_status": "PASS",
+          "text_integrity_status": "FLAGGED_UNRESOLVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 24,
+          "mean_output_tps": 143.54434315720226,
+          "output_tps_rounds": [
+            142.56468259093052,
+            145.72908282536378,
+            142.33926405531247
+          ],
+          "spread_percent": 2.361513310447179,
+          "text_flags": [
+            {
+              "phase": "warmup",
+              "round": 1,
+              "index": 2,
+              "replacement_chars": 1
+            }
+          ],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "293925871498b349a9a83b9d13248376b14209f49ae3905c423ba48b42923a54",
+            "warmup-01/summary.json": "2fc01e6d32ac549c0e9dbd698051d1aece1d3c572db4b453d0c0e72bef847f69",
+            "warmup-02/requests.jsonl": "29225916f742e86e522af61e8862a2e99c7385f8f8f29908ccd1baf86f5d6b65",
+            "warmup-02/summary.json": "631db5e628952e686e6d038edb35458f9c244ac07b1193fa1ca9bdd24b0ed981",
+            "round-01/requests.jsonl": "2edfee3eee90adbd92f778056db859a7594d406bb07e18e818f35cba75205890",
+            "round-01/summary.json": "c32e99b21e0177a943d3bf04b39691c35b0db64faa0d9f265e58e6dce08dda84",
+            "round-02/requests.jsonl": "6ec83dd61871f350927f063cd5192736cdaaa14477861e93fcac7bc3cd654d44",
+            "round-02/summary.json": "39515b8f638caf536d77f41c783d5e7a010f72f7aae00a1a25d4c095ff6518b1",
+            "round-03/requests.jsonl": "86f6cdcff2352fb5afb55061bdaf103cde8ff024fc8d1823610c2630face1970",
+            "round-03/summary.json": "e4b7b5a2207733cc9e674566be45d94c955bf21d1cb71a5bd9bc4176efb2e987"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31200",
+            "concurrency": 4,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c4/4k-c4",
+            "output_len": 1024,
+            "requests_per_round": 8,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 3.3016295666675433,
+          "ttft_s_p50_mean_of_rounds": 3.0686089730103654,
+          "ttft_s_p95_mean_of_rounds": 5.14514025542303,
+          "ttft_s_p99_mean_of_rounds": 5.151499059348135,
+          "tpot_ms_mean_mean_of_rounds": 24.08625281891707,
+          "tpot_ms_p50_mean_of_rounds": 23.831371116496225,
+          "tpot_ms_p95_mean_of_rounds": 26.963793285968947,
+          "tpot_ms_p99_mean_of_rounds": 27.16939176452267,
+          "e2e_s_mean_mean_of_rounds": 27.941866200419707,
+          "e2e_s_p50_mean_of_rounds": 27.953054669002693,
+          "e2e_s_p95_mean_of_rounds": 31.43300988485959,
+          "e2e_s_p99_mean_of_rounds": 32.242181832963446
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31200",
+          "concurrency": 4,
+          "input_len": 4096,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c4/4k-c4",
+          "output_len": 1024,
+          "requests_per_round": 8,
+          "seed": 20260912,
+          "timeout": 3600,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": true,
+          "tutorial_p95": false
+        },
+        "official_SLA_max": null
+      },
+      {
+        "run_id": "community-official-followup-20261017-d-p01-sla-4k-c8",
+        "scene": "4k",
+        "c": 8,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c8/4k-c8",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_PASS",
+          "performance_status": "PASS",
+          "text_integrity_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 48,
+          "mean_output_tps": 235.96258209512126,
+          "output_tps_rounds": [
+            230.749638236427,
+            237.57800628189412,
+            239.5601017670427
+          ],
+          "spread_percent": 3.733839260609568,
+          "text_flags": [],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "408675b69df11b769c9da3c797a5697788b62ede06d7bc212b43c80fe879654f",
+            "warmup-01/summary.json": "5cd1da2ff4388719b9e18af6c0acb6d4653794a3988fee9df6aeadf2faaef9df",
+            "warmup-02/requests.jsonl": "e562c9bc1f37dbe850790a303ff8b6752e172b4a64af31851093fb9623a4989b",
+            "warmup-02/summary.json": "65fc867cbfbab852b91c44954af4e39765cd6adaf07e2d720e2dff5ef3375e17",
+            "round-01/requests.jsonl": "85cab72a162265d5bc11ce2e3145e6a99acaddc3b7dd15c3243e5d5d8df4bda9",
+            "round-01/summary.json": "3bfcd5956f59e728fa0f51429c8e6192ac88bf855253ce752784dd29e25a9b4d",
+            "round-02/requests.jsonl": "c57dced25c1d9ef3644845031700975df529adef8cda6ce2f323aa0cb55002c2",
+            "round-02/summary.json": "5e379b8713b7c5dbba7d4a92f535c0bbb2b564864ea46ecdd198a3053708b087",
+            "round-03/requests.jsonl": "32ea56c1bd1799255c2b2f55471ffbae6f072d61755949c01a311295c6c11975",
+            "round-03/summary.json": "15dce18d7ffa5ad38a54199a8f5b6c87ad2e24ad9609272a6af0ea8502f44eee"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31200",
+            "concurrency": 8,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c8/4k-c8",
+            "output_len": 1024,
+            "requests_per_round": 16,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 4.853968007378474,
+          "ttft_s_p50_mean_of_rounds": 3.024601807022312,
+          "ttft_s_p95_mean_of_rounds": 10.257742579604383,
+          "ttft_s_p99_mean_of_rounds": 10.268835071389912,
+          "tpot_ms_mean_mean_of_rounds": 28.223848401170024,
+          "tpot_ms_p50_mean_of_rounds": 28.16286886771461,
+          "tpot_ms_p95_mean_of_rounds": 34.32191596693445,
+          "tpot_ms_p99_mean_of_rounds": 35.460851523919295,
+          "e2e_s_mean_mean_of_rounds": 33.72696492177541,
+          "e2e_s_p50_mean_of_rounds": 33.47833226849131,
+          "e2e_s_p95_mean_of_rounds": 42.91680311508632,
+          "e2e_s_p99_mean_of_rounds": 44.21710983770123
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31200",
+          "concurrency": 8,
+          "input_len": 4096,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c8/4k-c8",
+          "output_len": 1024,
+          "requests_per_round": 16,
+          "seed": 20260912,
+          "timeout": 3600,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": false,
+          "tutorial_p95": false
+        },
+        "official_SLA_max": null
+      },
+      {
+        "run_id": "community-official-followup-20261017-d-p01-sla-4k-c3",
+        "scene": "4k",
+        "c": 3,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c3/4k-c3",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_COMPLETE_TEXT_FLAGGED",
+          "performance_status": "PASS",
+          "text_integrity_status": "FLAGGED_UNRESOLVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 24,
+          "mean_output_tps": 109.07463158494019,
+          "output_tps_rounds": [
+            108.0943980848778,
+            109.44282471048197,
+            109.68667195946081
+          ],
+          "spread_percent": 1.459802202809235,
+          "text_flags": [
+            {
+              "phase": "warmup",
+              "round": 1,
+              "index": 2,
+              "replacement_chars": 1
+            }
+          ],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "28abed682f4dd57100317be04d5e91f96e30417ce74aabc596e3c76d9b27b824",
+            "warmup-01/summary.json": "b95627b89f3bc28175f6b945bafd52b364e03f808f10163248c3dfb42e78311c",
+            "warmup-02/requests.jsonl": "c62f6a3755884076bf1db17d3fd6ec38ef666df580f57632478fecfe3731cf26",
+            "warmup-02/summary.json": "08ae6fd2c173e3a8ba3037912328b1e5346c762f8326c0227617b1fe19a00bc5",
+            "round-01/requests.jsonl": "96b93790ff81e9aeba067447a9d3d09c4022c6da455d89f76cc420fa4e9c078c",
+            "round-01/summary.json": "0f2b2d882fb41b49e5692e5f59ada2f38e93c5abf4ba8102a2bbeab3d2983676",
+            "round-02/requests.jsonl": "4d9d31b12d04fdf51eb7c8b69265d958124dac29d8b9f0760b574417e079672c",
+            "round-02/summary.json": "7083da435d2b9598f449af78dab6c6d5eb2955d91d7fc26bca4aa27bf53b9c0e",
+            "round-03/requests.jsonl": "33d092f68c56c1274e5bf017346ab747798882f57827a3632d7d59c6010742b5",
+            "round-03/summary.json": "b032d2546768c7efe10db8b6ea199e75baeadc165cbc1e5cd5353d74d6089604"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31200",
+            "concurrency": 3,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c3/4k-c3",
+            "output_len": 1024,
+            "requests_per_round": 8,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 2.4822833712120578,
+          "ttft_s_p50_mean_of_rounds": 2.169809102662839,
+          "ttft_s_p95_mean_of_rounds": 3.8627825859342315,
+          "ttft_s_p99_mean_of_rounds": 3.8636180249110716,
+          "tpot_ms_mean_mean_of_rounds": 22.835304350357394,
+          "tpot_ms_p50_mean_of_rounds": 23.093516482874044,
+          "tpot_ms_p95_mean_of_rounds": 26.308113563198404,
+          "tpot_ms_p99_mean_of_rounds": 26.572268984151215,
+          "e2e_s_mean_mean_of_rounds": 25.84279972162767,
+          "e2e_s_p50_mean_of_rounds": 26.461371811155306,
+          "e2e_s_p95_mean_of_rounds": 29.851143088237343,
+          "e2e_s_p99_mean_of_rounds": 30.31604565204412
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31200",
+          "concurrency": 3,
+          "input_len": 4096,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c3/4k-c3",
+          "output_len": 1024,
+          "requests_per_round": 8,
+          "seed": 20260912,
+          "timeout": 3600,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": true,
+          "tutorial_p95": false
+        },
+        "official_SLA_max": null
+      },
+      {
+        "run_id": "community-official-followup-20261017-d-p01-sla-4k-c5",
+        "scene": "4k",
+        "c": 5,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c5/4k-c5",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_COMPLETE_TEXT_FLAGGED",
+          "performance_status": "PASS",
+          "text_integrity_status": "FLAGGED_UNRESOLVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 30,
+          "mean_output_tps": 167.56282042612838,
+          "output_tps_rounds": [
+            166.66080837114828,
+            166.82667888305798,
+            169.2009740241789
+          ],
+          "spread_percent": 1.5159482554487487,
+          "text_flags": [
+            {
+              "phase": "warmup",
+              "round": 1,
+              "index": 2,
+              "replacement_chars": 1
+            }
+          ],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "ce6a434148c3885b7012457e047b64d29f167667c51de0773a7d898d3bd8bb3f",
+            "warmup-01/summary.json": "16b9297fd63830d13ea6f9c79beefa0dd0b54f10dba8a212115df87989d30b18",
+            "warmup-02/requests.jsonl": "fb894221d756b4f3c32c05c2a368cb3d7af3e45dfb2e5267bfa2f08613a35ced",
+            "warmup-02/summary.json": "d7a0079c3609ee350ccf04ef59eef1ae081d92ec445ae4ed7672e5b8eca4d8bc",
+            "round-01/requests.jsonl": "bfa2f24a7dbd93f6170cc7f4014e053e32d31c34233616e92bec7392c3e68b65",
+            "round-01/summary.json": "868182d6796d0023cf3e7ef28350a9a0f8936ba58cd62d8e72ccdf87b1096563",
+            "round-02/requests.jsonl": "594bec51803d7ed66bc24a41497202e4107cdd4f1d556e202853546925c02e26",
+            "round-02/summary.json": "bea553f04559ff42958160c4f236b748689f9747789154b0913f90384ee73de9",
+            "round-03/requests.jsonl": "6ff54be1e7a525afd58ae8e24bd242324f7ce530a386b325a345053b4669083a",
+            "round-03/summary.json": "169c50ccaf1dc2344f0fb006efc2226961f6247ab3d3a9280a082b4fe84c5a25"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31200",
+            "concurrency": 5,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c5/4k-c5",
+            "output_len": 1024,
+            "requests_per_round": 10,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 3.7819869469676632,
+          "ttft_s_p50_mean_of_rounds": 3.013503777163957,
+          "ttft_s_p95_mean_of_rounds": 6.429601983976317,
+          "ttft_s_p99_mean_of_rounds": 6.431351821332937,
+          "tpot_ms_mean_mean_of_rounds": 25.52035403450696,
+          "tpot_ms_p50_mean_of_rounds": 25.039559067610067,
+          "tpot_ms_p95_mean_of_rounds": 29.634398839985508,
+          "tpot_ms_p99_mean_of_rounds": 30.043190513650178,
+          "e2e_s_mean_mean_of_rounds": 29.88930912426828,
+          "e2e_s_p50_mean_of_rounds": 29.455922580013674,
+          "e2e_s_p95_mean_of_rounds": 34.80694698453105,
+          "e2e_s_p99_mean_of_rounds": 35.653203963573716
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31200",
+          "concurrency": 5,
+          "input_len": 4096,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c5/4k-c5",
+          "output_len": 1024,
+          "requests_per_round": 10,
+          "seed": 20260912,
+          "timeout": 3600,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": true,
+          "tutorial_p95": false
+        },
+        "official_SLA_max": null
+      },
+      {
+        "run_id": "community-official-followup-20261017-d-p01-sla-4k-c6",
+        "scene": "4k",
+        "c": 6,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c6/4k-c6",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_PASS",
+          "performance_status": "PASS",
+          "text_integrity_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 36,
+          "mean_output_tps": 185.42828984071352,
+          "output_tps_rounds": [
+            184.15187542679874,
+            185.43046297859507,
+            186.7025311167467
+          ],
+          "spread_percent": 1.3755483007145437,
+          "text_flags": [],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "267a0a62f00120d6e0a87a2e63bd428e6df9b39490224af7e46add6ead4d8e40",
+            "warmup-01/summary.json": "870e9063a594940d89459b55a1770ec2613dad250cd6b41ba84e9c47d9f5a5ae",
+            "warmup-02/requests.jsonl": "28232ed310f49c5addfeef25a78b343c8689feb7330dc2abd0006a65034712b7",
+            "warmup-02/summary.json": "6a05e0b5a2f081053aabfc0870ae0303ae4b09b4206cbb261a53c1b706b8d3fb",
+            "round-01/requests.jsonl": "108d8b4798110483cab569073e9e3b6ac231e5d59507b7db9feb9dd06020ca11",
+            "round-01/summary.json": "7264717407ab8567e43f840203d2dbf52d2d96f6d4789bfb011931d6d43d64a5",
+            "round-02/requests.jsonl": "b85f667874e7cfa27f11b3657c1f0ffe0c4f6f8329cc087df8ac7a9732b63676",
+            "round-02/summary.json": "d73955ff4d6e4bad52dfca2948440c136178759374d0cb7b1d8a639878c51ad4",
+            "round-03/requests.jsonl": "bdb36351da65ecebc63c5d17cc9944c735f643d8ddf6df246d80b1ee8501ac6a",
+            "round-03/summary.json": "561e4390e856bf6865e307ec4ed6e899f111c9c69ac62deb11925ca17b8d0063"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31200",
+            "concurrency": 6,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c6/4k-c6",
+            "output_len": 1024,
+            "requests_per_round": 12,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 3.9744727548693644,
+          "ttft_s_p50_mean_of_rounds": 2.5913793471991085,
+          "ttft_s_p95_mean_of_rounds": 7.702408986567753,
+          "ttft_s_p99_mean_of_rounds": 7.710138253311549,
+          "tpot_ms_mean_mean_of_rounds": 27.683137723684645,
+          "tpot_ms_p50_mean_of_rounds": 27.416498719104396,
+          "tpot_ms_p95_mean_of_rounds": 32.24339860336367,
+          "tpot_ms_p99_mean_of_rounds": 32.80962484078548,
+          "e2e_s_mean_mean_of_rounds": 32.29432264619875,
+          "e2e_s_p50_mean_of_rounds": 31.691244588340243,
+          "e2e_s_p95_mean_of_rounds": 38.738774132875065,
+          "e2e_s_p99_mean_of_rounds": 39.49359988924873
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31200",
+          "concurrency": 6,
+          "input_len": 4096,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c6/4k-c6",
+          "output_len": 1024,
+          "requests_per_round": 12,
+          "seed": 20260912,
+          "timeout": 3600,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": true,
+          "tutorial_p95": false
+        },
+        "official_SLA_max": null
+      },
+      {
+        "run_id": "community-official-followup-20261017-d-p01-sla-4k-c7",
+        "scene": "4k",
+        "c": 7,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c7/4k-c7",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_PASS",
+          "performance_status": "PASS",
+          "text_integrity_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 42,
+          "mean_output_tps": 204.39798124346495,
+          "output_tps_rounds": [
+            202.66794019458086,
+            204.4835892975373,
+            206.0424142382767
+          ],
+          "spread_percent": 1.6509331565640062,
+          "text_flags": [],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "8b48e4a9dfeb95a461b1af0acdbb2842e1697846f0c7fc6bfc1a0ae083a5b3dc",
+            "warmup-01/summary.json": "f4dd654ecf589c2054ebb36ff0d49eaecfffa881a53221fa85019bede0b49af1",
+            "warmup-02/requests.jsonl": "7e559c02c69ef34967cf0ecc2fd84517beea6f78ae786578dd45391845f2d0dc",
+            "warmup-02/summary.json": "5ad9d9f2b5e17bbb469efba28e88c493939e22118aac5888c38777c13f72ab5f",
+            "round-01/requests.jsonl": "246ca27f2dd9320619b44980d713c9640054299b989adbefef72a2b85e6ced99",
+            "round-01/summary.json": "403628fcad8f50dc9b68c62c2d95209f41e259725a8c2a1c9429e8f4a3a2ed7c",
+            "round-02/requests.jsonl": "4e6627dc78b4c681b4fe9a9b82588209a9b28f61fd7ec8f5564edd62accf8c12",
+            "round-02/summary.json": "1de8c7f1c7de7e340de05318d23668fe699aaef68b54be96a92721a16b797375",
+            "round-03/requests.jsonl": "e8fb09502aff74bb69a17790997733278efcbbe4e1daa750d14152013c04b76d",
+            "round-03/summary.json": "973c2c7516f85e05f3f8c45c9124e1b993e7733e9fc47daf1279cb2d3666c320"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31200",
+            "concurrency": 7,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c7/4k-c7",
+            "output_len": 1024,
+            "requests_per_round": 14,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 4.478063572335357,
+          "ttft_s_p50_mean_of_rounds": 2.798442024659986,
+          "ttft_s_p95_mean_of_rounds": 8.99207267947301,
+          "ttft_s_p99_mean_of_rounds": 8.993883881776515,
+          "tpot_ms_mean_mean_of_rounds": 29.17650669401164,
+          "tpot_ms_p50_mean_of_rounds": 28.708092295696716,
+          "tpot_ms_p95_mean_of_rounds": 34.291120322429194,
+          "tpot_ms_p99_mean_of_rounds": 35.70116904411162,
+          "e2e_s_mean_mean_of_rounds": 34.32562992030927,
+          "e2e_s_p50_mean_of_rounds": 33.824731183665186,
+          "e2e_s_p95_mean_of_rounds": 42.42392468096029,
+          "e2e_s_p99_mean_of_rounds": 43.68334176473746
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31200",
+          "concurrency": 7,
+          "input_len": 4096,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c7/4k-c7",
+          "output_len": 1024,
+          "requests_per_round": 14,
+          "seed": 20260912,
+          "timeout": 3600,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": true,
+          "tutorial_p95": false
+        },
+        "official_SLA_max": null
+      }
+    ],
+    "accuracy": "GSM8K_SEPARATE_TASK_OTHER_THREE_NOT_RUN",
+    "container": "qwen38-community-v2-01-official-followup-20261017-d",
+    "current": {
+      "scene": "4k",
+      "c": 7
+    },
+    "diagnostic": {
+      "challenge_p95": {
+        "largest_observed_passing_concurrency": 7,
+        "observed_failing_concurrency": [
+          8
+        ],
+        "upper_unexplored": true
+      },
+      "tutorial_p95": {
+        "largest_observed_passing_concurrency": 2,
+        "observed_failing_concurrency": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "upper_unexplored": true
+      }
+    },
+    "observed_max_concurrency_under_selected_SLA": 7,
+    "boundary_scope": "All integer points through first failing power-of-two level, three measured rounds each; higher levels unexplored",
+    "official_SLA_max": null,
+    "official_protocol": "USER_SELECTED_CHALLENGE_THRESHOLDS_TUTORIAL_P95",
+    "gpu_after": {
+      "card0": {
+        "HCU use (%)": "0.0",
+        "vram Total Memory (MiB)": "65520",
+        "vram Total Used Memory (MiB)": "10"
+      },
+      "card1": {
+        "HCU use (%)": "0.0",
+        "vram Total Memory (MiB)": "65520",
+        "vram Total Used Memory (MiB)": "10"
+      }
+    },
+    "finished_utc": "2026-10-16T23:06:26.882155+00:00",
+    "lock_released": true
+  },
+  {
+    "pair": "4,5",
+    "status": "SLA_DIAGNOSTIC_COMPLETE",
+    "mode": "sla-64k",
+    "pid": 3899726,
+    "utc": "2026-10-16T22:54:50.127026+00:00",
+    "scenes": [
+      {
+        "run_id": "community-official-followup-20261017-d-p45-sla-64k-c1",
+        "scene": "64k",
+        "c": 1,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p45-sla-64k-c1/64k-c1",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_PASS",
+          "performance_status": "PASS",
+          "text_integrity_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 24,
+          "mean_output_tps": 22.167505498074377,
+          "output_tps_rounds": [
+            22.25275284646443,
+            22.020278815616013,
+            22.22948483214269
+          ],
+          "spread_percent": 1.0487153408786096,
+          "text_flags": [],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "52e20597f98effdeb6343b97c33690a801e439c5cc5ff20b8d1707f35b19655d",
+            "warmup-01/summary.json": "becbca6526f9ce4cc4c437bac8ad5a40d31450e0b7e06da99d030c8421c1f0e7",
+            "warmup-02/requests.jsonl": "65ee08ab9f977b6df5cb450b4faf6892655837a81239b3aa38ac6ddb78166463",
+            "warmup-02/summary.json": "b1c321759843314a642ae0ee397056580aa5829b72999b6b86c9a3f4d7fe3c4a",
+            "round-01/requests.jsonl": "789480eebff2b1aba57fa46ea3025084be14923adc2b08b4e5ab16ff43a06c6b",
+            "round-01/summary.json": "5cd1a86979221138783b920fc2b233c868872bcac930998ff5c0708cd34a16e2",
+            "round-02/requests.jsonl": "d877b5910acd3da9af62c17bfada7b026675fc4341857c36cbf518baed84f27a",
+            "round-02/summary.json": "6b9f9d18fc5cdea8203c8190781ec09b293cb21533db0c7e71ae3a9ee9031afb",
+            "round-03/requests.jsonl": "b7f1dde84447bdf51c9b2cbbf6a5d46c2f026dfbdd39b3e934cde511ac7db623",
+            "round-03/summary.json": "567f8369f478d95cba5e8a6956c072188b8404d7f2ccbffabdd3bd8ae9006c26"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31220",
+            "concurrency": 1,
+            "input_len": 65536,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p45-sla-64k-c1/64k-c1",
+            "output_len": 1024,
+            "requests_per_round": 8,
+            "seed": 20260912,
+            "timeout": 7200,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 26.8824671423378,
+          "ttft_s_p50_mean_of_rounds": 26.601154976165464,
+          "ttft_s_p95_mean_of_rounds": 28.108693111591858,
+          "ttft_s_p99_mean_of_rounds": 28.73232827993362,
+          "tpot_ms_mean_mean_of_rounds": 18.877632026751595,
+          "tpot_ms_p50_mean_of_rounds": 18.7973109996535,
+          "tpot_ms_p95_mean_of_rounds": 19.946969609847415,
+          "tpot_ms_p99_mean_of_rounds": 20.08027860047042,
+          "e2e_s_mean_mean_of_rounds": 46.19428470570468,
+          "e2e_s_p50_mean_of_rounds": 45.84247481515437,
+          "e2e_s_p95_mean_of_rounds": 48.34893242815063,
+          "e2e_s_p99_mean_of_rounds": 49.0289258656288
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31220",
+          "concurrency": 1,
+          "input_len": 65536,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p45-sla-64k-c1/64k-c1",
+          "output_len": 1024,
+          "requests_per_round": 8,
+          "seed": 20260912,
+          "timeout": 7200,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": false,
+          "tutorial_p95": false
+        },
+        "official_SLA_max": null,
+        "reused_from_matrix": false
+      },
+      {
+        "run_id": "community-official-followup-20261017-d-p45-sla-64k-c2",
+        "scene": "64k",
+        "c": 2,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p45-sla-64k-c2/64k-c2",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_PASS",
+          "performance_status": "PASS",
+          "text_integrity_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 24,
+          "mean_output_tps": 26.59370766132608,
+          "output_tps_rounds": [
+            26.609989899495584,
+            26.564312294069527,
+            26.606820790413128
+          ],
+          "spread_percent": 0.17176095190549134,
+          "text_flags": [],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "5b6ad72b1d52ef3625a1e9c4b684958933b826dd0141dc9ae83796430ac7b75d",
+            "warmup-01/summary.json": "a347719b122041a4da807cd93fa46be24dda75eb1c71c2085e65a16cf86c9ac1",
+            "warmup-02/requests.jsonl": "c23763a9c08ea4ee40749a02ddc0c505951fb86667736cb53b5a42547d7d35cb",
+            "warmup-02/summary.json": "68688b12c4386294337a370dcf5f3254400cb61f1e98b1a7f933c67a8b32a680",
+            "round-01/requests.jsonl": "20e4a8757d0706630830f1663a659f7fe3613ab209f46cd6b39f12848a467cd4",
+            "round-01/summary.json": "f301f122e9ee4acce0e604c06f72aab7b212f02aa25bd243dc86b246eef23dc0",
+            "round-02/requests.jsonl": "f51f59253223172cd57276ba993fc102cd4694ccb3f184ea9bff7e58ee9ffcff",
+            "round-02/summary.json": "09b170f956e9fd6a72b1ecdd0e271a86c84a43f996f6bf44fc1bc141752768f5",
+            "round-03/requests.jsonl": "202a58be2ac56ecc24200333fd34f092533a3a5e8d550266646d5fd19784fe2d",
+            "round-03/summary.json": "694d1da77f9ffd851c7a7ea67517b7f63bab791a1893788b79d93d05cdf423da"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31220",
+            "concurrency": 2,
+            "input_len": 65536,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p45-sla-64k-c2/64k-c2",
+            "output_len": 1024,
+            "requests_per_round": 8,
+            "seed": 20260912,
+            "timeout": 7200,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 30.391158053913387,
+          "ttft_s_p50_mean_of_rounds": 26.873177659494104,
+          "ttft_s_p95_mean_of_rounds": 44.79856268633449,
+          "ttft_s_p99_mean_of_rounds": 51.521837443126316,
+          "tpot_ms_mean_mean_of_rounds": 45.31999029883617,
+          "tpot_ms_p50_mean_of_rounds": 48.3383817776071,
+          "tpot_ms_p95_mean_of_rounds": 65.94445909994496,
+          "tpot_ms_p99_mean_of_rounds": 73.02793442746717,
+          "e2e_s_mean_mean_of_rounds": 76.75350812962279,
+          "e2e_s_p50_mean_of_rounds": 76.259495793153,
+          "e2e_s_p95_mean_of_rounds": 98.48120175961037,
+          "e2e_s_p99_mean_of_rounds": 103.76604937726185
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31220",
+          "concurrency": 2,
+          "input_len": 65536,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p45-sla-64k-c2/64k-c2",
+          "output_len": 1024,
+          "requests_per_round": 8,
+          "seed": 20260912,
+          "timeout": 7200,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": false,
+          "tutorial_p95": false
+        },
+        "official_SLA_max": null
+      }
+    ],
+    "accuracy": "GSM8K_SEPARATE_TASK_OTHER_THREE_NOT_RUN",
+    "container": "qwen38-community-v2-45-official-followup-20261017-d",
+    "current": {
+      "scene": "64k",
+      "c": 2
+    },
+    "diagnostic": {
+      "challenge_p95": {
+        "largest_observed_passing_concurrency": 0,
+        "observed_failing_concurrency": [
+          1,
+          2
+        ],
+        "upper_unexplored": true
+      },
+      "tutorial_p95": {
+        "largest_observed_passing_concurrency": 0,
+        "observed_failing_concurrency": [
+          1,
+          2
+        ],
+        "upper_unexplored": true
+      }
+    },
+    "observed_max_concurrency_under_selected_SLA": 0,
+    "boundary_scope": "All integer points through first failing power-of-two level, three measured rounds each; higher levels unexplored",
+    "official_SLA_max": null,
+    "official_protocol": "USER_SELECTED_CHALLENGE_THRESHOLDS_TUTORIAL_P95",
+    "gpu_after": {
+      "card4": {
+        "HCU use (%)": "0.0",
+        "vram Total Memory (MiB)": "65520",
+        "vram Total Used Memory (MiB)": "7"
+      },
+      "card5": {
+        "HCU use (%)": "0.0",
+        "vram Total Memory (MiB)": "65520",
+        "vram Total Used Memory (MiB)": "7"
+      }
+    },
+    "finished_utc": "2026-10-16T23:13:21.848270+00:00",
+    "lock_released": true
+  },
+  {
+    "pair": "2,3",
+    "status": "CLEAN_RUNTIME_PERFORMANCE_COMPLETE",
+    "mode": "demo-and-clean-runtime",
+    "pid": 3899727,
+    "utc": "2026-10-16T22:53:29.692507+00:00",
+    "scenes": [
+      {
+        "run_id": "community-official-followup-20261017-d-p23-clean-runtime-4k-c8",
+        "scene": "4k",
+        "c": 8,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p23-clean-runtime-4k-c8/4k-c8",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_PASS",
+          "performance_status": "PASS",
+          "text_integrity_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 48,
+          "mean_output_tps": 238.00409695644228,
+          "output_tps_rounds": [
+            232.83067666058287,
+            239.50533410661046,
+            241.67628010213355
+          ],
+          "spread_percent": 3.716576123968797,
+          "text_flags": [],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "a43ef2a82f7905031ceb91d4125ea8eab4aeb2eced09bda80781f1cfc43107d9",
+            "warmup-01/summary.json": "17e0ca79bd76914781a94a5ce7a3cd2d2016bd6e42958d2034f78de5d10e0ead",
+            "warmup-02/requests.jsonl": "cd1d0302330499a0eb0029f00bcb4929e91e7acf77d4098df9f2fe140e7c918f",
+            "warmup-02/summary.json": "4734871b5a5f9e55f824521a1da14c0e4f023e812adf34bfb022aba3a2e88fe0",
+            "round-01/requests.jsonl": "1d42864b5015e2f25565e762979d702598ba8340bc70a1eb664fb0a959c87c17",
+            "round-01/summary.json": "240dbb44e20a00ba9126b81ec6b65dcad39bd9332ead84a82f573f059d4e028e",
+            "round-02/requests.jsonl": "53710c042666256c02f0126207ca7bafebf1de3d8f51075295257178d823919d",
+            "round-02/summary.json": "60efd8ee8a58f8474d1130a3938e396e472117e8c4759ea0d0446a5950eacac6",
+            "round-03/requests.jsonl": "b4199024005e773f9d8b8aa4a6c90d567114d49b7506ea9b8bf298b21089f1de",
+            "round-03/summary.json": "012befe2e962d00dd4e151d8a28ad2cc606968f5d2d190cc94224bb181b26eee"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31210",
+            "concurrency": 8,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p23-clean-runtime-4k-c8/4k-c8",
+            "output_len": 1024,
+            "requests_per_round": 16,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 4.81960183299816,
+          "ttft_s_p50_mean_of_rounds": 2.9985048606758937,
+          "ttft_s_p95_mean_of_rounds": 10.18534673199368,
+          "ttft_s_p99_mean_of_rounds": 10.194670453605552,
+          "tpot_ms_mean_mean_of_rounds": 27.98342326077492,
+          "tpot_ms_p50_mean_of_rounds": 27.648036654127605,
+          "tpot_ms_p95_mean_of_rounds": 34.02712256148642,
+          "tpot_ms_p99_mean_of_rounds": 35.15616490068993,
+          "e2e_s_mean_mean_of_rounds": 33.4466438287709,
+          "e2e_s_p50_mean_of_rounds": 33.19830991683799,
+          "e2e_s_p95_mean_of_rounds": 42.55608465606929,
+          "e2e_s_p99_mean_of_rounds": 43.84521827467833
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31210",
+          "concurrency": 8,
+          "input_len": 4096,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p23-clean-runtime-4k-c8/4k-c8",
+          "output_len": 1024,
+          "requests_per_round": 16,
+          "seed": 20260912,
+          "timeout": 3600,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": false,
+          "tutorial_p95": false
+        },
+        "official_SLA_max": null
+      },
+      {
+        "run_id": "community-official-followup-20261017-d-p23-clean-runtime-64k-c8",
+        "scene": "64k",
+        "c": 8,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p23-clean-runtime-64k-c8/64k-c8",
+        "validation": {
+          "status": "PERFORMANCE_MEASUREMENTS_PASS",
+          "performance_status": "PASS",
+          "text_integrity_status": "NO_REPLACEMENT_CHAR_OBSERVED",
+          "original_strict_text_gate_overridden": false,
+          "quality": "NOT_RUN",
+          "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+          "measured_rounds": 3,
+          "requests": 48,
+          "mean_output_tps": 31.6471218909142,
+          "output_tps_rounds": [
+            31.433707018529365,
+            31.77786788510192,
+            31.729790769111318
+          ],
+          "spread_percent": 1.0874949948335182,
+          "text_flags": [],
+          "raw_sha256": {
+            "warmup-01/requests.jsonl": "e8f9ce93f5da0ca5a3710d40f245bcc983cffa94c2a738275ff83447093edea6",
+            "warmup-01/summary.json": "19cd6398b27a9a96794e95717cfef50c9bc7b6ba4eb4a5ef68ec87381868da16",
+            "warmup-02/requests.jsonl": "ce83f4856c34ea6f9cca23f754398d7df73127497a0c394d37a8a43dfa7ed35d",
+            "warmup-02/summary.json": "6c2760bf3bae1a323ca9fbef239ae7f667ed45632a7fb96babd665ecbb2405b8",
+            "round-01/requests.jsonl": "05cefaec1bba450c58deb9d50663895425cf3463c46549c5281ceb5296ffd3da",
+            "round-01/summary.json": "ed12ed2ece41ebc5e292176f6c359907aa81d4a3c2de4e89b8483202e13965d1",
+            "round-02/requests.jsonl": "64f03d77683da9b337cdc6cccabd464b7ed9fe12654a142e0c310a9c394b5130",
+            "round-02/summary.json": "90f5949c340598cdf6a63c08a04acf060e8efc029926388db43cdd5ee3723bf0",
+            "round-03/requests.jsonl": "76dbdc93369e022e4d05e26908678af78cfc06df19d613613780e6d87fa693b0",
+            "round-03/summary.json": "f152637670360c2e7a2389aeef3ef4ed87f680ccfa76103548549be29a9afbdc"
+          },
+          "config": {
+            "base_url": "http://127.0.0.1:31210",
+            "concurrency": 8,
+            "input_len": 65536,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p23-clean-runtime-64k-c8/64k-c8",
+            "output_len": 1024,
+            "requests_per_round": 16,
+            "seed": 20260912,
+            "timeout": 7200,
+            "warmup_rounds": 2
+          },
+          "official_final_acceptance": false,
+          "ttft_s_mean_mean_of_rounds": 75.89925170958061,
+          "ttft_s_p50_mean_of_rounds": 43.730661155015696,
+          "ttft_s_p95_mean_of_rounds": 192.99870321291868,
+          "ttft_s_p99_mean_of_rounds": 207.3433196199233,
+          "tpot_ms_mean_mean_of_rounds": 177.35191890466956,
+          "tpot_ms_p50_mean_of_rounds": 176.83530336346948,
+          "tpot_ms_p95_mean_of_rounds": 328.0634685062857,
+          "tpot_ms_p99_mean_of_rounds": 349.02775739290036,
+          "e2e_s_mean_mean_of_rounds": 257.33026474905756,
+          "e2e_s_p50_mean_of_rounds": 256.3718515164898,
+          "e2e_s_p95_mean_of_rounds": 424.17425034649204,
+          "e2e_s_p99_mean_of_rounds": 440.4806764045032
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:31210",
+          "concurrency": 8,
+          "input_len": 65536,
+          "measure_rounds": 3,
+          "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+          "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p23-clean-runtime-64k-c8/64k-c8",
+          "output_len": 1024,
+          "requests_per_round": 16,
+          "seed": 20260912,
+          "timeout": 7200,
+          "warmup_rounds": 2
+        },
+        "provisional_SLA_by_statistic": {
+          "challenge_p95": false,
+          "tutorial_p95": false
+        },
+        "official_SLA_max": null
+      }
+    ],
+    "accuracy": "GSM8K_SEPARATE_TASK_OTHER_THREE_NOT_RUN",
+    "container": "qwen38-community-v2-23-official-followup-20261017-d",
+    "demo": {
+      "status": "REAL_DEMO_API_CAPTURED",
+      "path": "/data/wangzy/submit1009/result/community-official-followup-20261017-d/runtime-p23/demo",
+      "video": "NEEDS_RENDER_FROM_ACTUAL_TIMED_EVENTS"
+    },
+    "current": {
+      "scene": "64k",
+      "c": 8
+    },
+    "parallel_host_activity_disclosed": true,
+    "gpu_after": {
+      "card2": {
+        "HCU use (%)": "0.0",
+        "vram Total Memory (MiB)": "65520",
+        "vram Total Used Memory (MiB)": "5"
+      },
+      "card3": {
+        "HCU use (%)": "0.0",
+        "vram Total Memory (MiB)": "65520",
+        "vram Total Used Memory (MiB)": "5"
+      }
+    },
+    "finished_utc": "2026-10-16T23:29:01.435728+00:00",
+    "lock_released": true
+  },
+  {
+    "pair": "6,7",
+    "status": "SHAREGPT_C64_RECHECK_COMPLETE",
+    "mode": "sharegpt-c64-recheck",
+    "pid": 3899729,
+    "utc": "2026-10-16T23:00:32.005077+00:00",
+    "scenes": [
+      {
+        "run_id": "community-official-followup-20261017-d-p67-sharegpt-c64-recheck",
+        "scene": "sharegpt",
+        "c": 64,
+        "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p67-sharegpt-c64-recheck/sharegpt-c64",
+        "validation": {
+          "status": "PASS",
+          "rounds": 3,
+          "requests": 3000,
+          "errors": 0,
+          "full_workload_warmup_rounds": 1,
+          "short_warmup_requests_per_run": 64,
+          "client_concurrency": 64,
+          "output_tps_rounds": [
+            415.814210203474,
+            417.3176350000517,
+            417.4518428008529
+          ],
+          "mean_output_tps": 416.8612293347929,
+          "spread_percent": 0.39284838266013994,
+          "mean_duration_s": 471.3837846953538,
+          "median_ttft_ms_mean_of_rounds": 15132.700946182013,
+          "median_ttft_ms_range": [
+            15102.043545019114,
+            15170.799011015333
+          ],
+          "p99_ttft_ms_mean_of_rounds": 21359.996276011807,
+          "p99_ttft_ms_range": [
+            21306.063685504487,
+            21401.729622745188
+          ],
+          "median_tpot_ms_mean_of_rounds": 72.74713452716519,
+          "median_tpot_ms_range": [
+            72.5468452594789,
+            73.10356436409874
+          ],
+          "p99_tpot_ms_mean_of_rounds": 249.0410259356334,
+          "p99_tpot_ms_range": [
+            248.6791557702236,
+            249.29000674805138
+          ],
+          "median_itl_ms_mean_of_rounds": 38.72458259381043,
+          "median_itl_ms_range": [
+            38.61628525191918,
+            38.83916401537135
+          ],
+          "p95_itl_ms_mean_of_rounds": 149.24665966342823,
+          "p95_itl_ms_range": [
+            148.3096454758197,
+            149.8528880183585
+          ],
+          "p99_itl_ms_mean_of_rounds": 291.9539491667334,
+          "p99_itl_ms_range": [
+            289.9747774936259,
+            293.624033195083
+          ],
+          "p99_e2e_latency_ms_mean_of_rounds": 73258.03882922958,
+          "p99_e2e_latency_ms_range": [
+            73206.29543590301,
+            73318.31266550289
+          ]
+        },
+        "official_SLA_max": null
+      }
+    ],
+    "accuracy": "GSM8K_SEPARATE_TASK_OTHER_THREE_NOT_RUN",
+    "container": "qwen38-community-v2-67-official-followup-20261017-d",
+    "current": {
+      "scene": "sharegpt",
+      "c": 64
+    },
+    "sharegpt": {
+      "run_id": "community-official-followup-20261017-d-p67-sharegpt-c64-recheck",
+      "path": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p67-sharegpt-c64-recheck/sharegpt-c64"
+    },
+    "gpu_after": {
+      "card6": {
+        "HCU use (%)": "0.0",
+        "vram Total Memory (MiB)": "65520",
+        "vram Total Used Memory (MiB)": "2"
+      },
+      "card7": {
+        "HCU use (%)": "0.0",
+        "vram Total Memory (MiB)": "65520",
+        "vram Total Used Memory (MiB)": "2"
+      }
+    },
+    "finished_utc": "2026-10-16T23:37:31.301986+00:00",
+    "lock_released": true
+  }
+]

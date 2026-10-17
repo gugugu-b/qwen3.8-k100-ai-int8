@@ -1,0 +1,113 @@
+{
+  "source": "https://forum.sourcefind.cn/thread/d006a0e2-b624-11f1-93f4-0242ac150003",
+  "published": "2026-09-22 09:27:45",
+  "retrieved": "2026-10-17",
+  "mineru_locator": "doc:a6e0eef/tier:flash/page:1",
+  "fixed": {
+    "warmup_rounds": 2,
+    "measure_rounds": 3,
+    "requests_per_round": "max(8,2*C)",
+    "seed": 20260912,
+    "input_lens": [
+      4096,
+      65536
+    ],
+    "output_len": 1024,
+    "ignore_eos": true,
+    "grid_4k": [
+      1,
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "grid_64k": [
+      1,
+      8,
+      16,
+      32
+    ]
+  },
+  "SLA": {
+    "primary": "LOCAL_COMMUNITY_RULES_EXPLICITLY_SELECTED_BY_USER",
+    "statistic": "p95 from official tutorial; local document does not name a quantile",
+    "4k": {
+      "ttft_s_lt": 10,
+      "tpot_ms_lt": 80
+    },
+    "64k": {
+      "ttft_s_lt": 30,
+      "tpot_ms_lt": 100
+    },
+    "tutorial_alternate": {
+      "4k": [
+        3,
+        50
+      ],
+      "64k": [
+        15,
+        50
+      ]
+    }
+  },
+  "sharegpt": {
+    "grid": [
+      1,
+      4,
+      16,
+      32,
+      64
+    ],
+    "requests": 1000,
+    "rounds": 3,
+    "seed": 20260912,
+    "example_warmup": 64,
+    "prose_warmup": "2*C",
+    "example_context": 131072,
+    "ambiguity": "Warmup example and prose differ for C !=32; K100AI launch refers to separate start_sglang.sh"
+  },
+  "baseline_k100_sglang": {
+    "4k_tps": [
+      9.055,
+      52.48,
+      74.011,
+      142.864,
+      194.387,
+      181.599
+    ],
+    "64k_tps": [
+      7.52,
+      13.929,
+      14.242,
+      "ABORTED"
+    ],
+    "sharegpt_tps": [
+      12.15,
+      20.26,
+      104.905,
+      168.419,
+      242.089
+    ]
+  },
+  "reference_text_policy": "replacement_chars is counted but not a failure condition in provided benchmark.py; original extra text-integrity failures remain preserved, accuracy remains untested",
+  "final_feishu": "https://kcnm6g5dkw5p.feishu.cn/wiki/LR4LwUrK4iX0alkZdF1cENCAnBf",
+  "feishu_access": "LOGIN_REQUIRED",
+  "image_difference": "Tutorial K100AI W8A8 lists custom specialized image; contest doc names generic SGLang 0.5.12. Keep contest image and disclose differing baseline environment.",
+  "accuracy_order": "GSM8K_concurrent_dedicated_TP2_user_update_20261017; other_three_last",
+  "gsm8k_execution": {
+    "run_id": "community-gsm8k-20261017-e",
+    "track": "K100-AI/SGLang/TP2",
+    "pair": "0,1",
+    "port": 31400,
+    "concurrency": 32,
+    "requests": 1319,
+    "protocol": "Frozen EvalScope 1.6.1 4-shot main full set; final official equivalence unverified",
+    "threshold": 0.95,
+    "minimum_correct": 1254,
+    "takeover": "After pair01 current matrix completes and releases flock; fresh owned container; later pair01 SLA waits for GSM8K cleanup",
+    "other_accuracy": "LAST",
+    "result": "result/summary/gsm8k-community-20261017-e.json",
+    "evidence": "result/evidence/gsm8k-20261017"
+  }
+}

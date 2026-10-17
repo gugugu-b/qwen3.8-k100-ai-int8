@@ -1,0 +1,25 @@
+{
+  "run_id": "high-concurrency-20261017-a",
+  "control": "/data/wangzy/v2/retest-server64-128-20261017-a",
+  "package": "/data/wangzy/v2/submit",
+  "workers": [
+    {
+      "pair": "4,5",
+      "port": 31540,
+      "c": 64
+    },
+    {
+      "pair": "6,7",
+      "port": 31560,
+      "c": 128
+    }
+  ],
+  "automatic_downgrade": false,
+  "default_candidate_changed": false,
+  "metrics_sampling": "GET /metrics every 5s; raw gauges, no sum",
+  "same_host_interference": true,
+  "settings": {
+    "control": "/data/wangzy/v2/retest-server64-128-20261017-a",
+    "run_id": "high-concurrency-20261017-a"
+  }
+}

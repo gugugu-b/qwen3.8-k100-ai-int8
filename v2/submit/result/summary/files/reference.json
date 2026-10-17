@@ -1,0 +1,57 @@
+{
+  "source_user_reference": "v1/综合评测报告-v1.md",
+  "source_absolute_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/qwen3.8-k100-ai-int8/v1/综合评测报告-v1.md",
+  "source_sha256": "b36db6ec60fcac45d710fada2bdf74b1b4655ef631567e6c34fc4dc4a20e417d",
+  "kind": "USER_SELECTED_HISTORICAL_V1_REPORT_REFERENCE",
+  "accuracy_evaluation": "NOT_REQUESTED_NOT_RUN",
+  "comparison_scope": "Historical report reference; not a new contemporaneous same-pair A/B acceptance",
+  "fixed": {
+    "4k1k-c8": {
+      "output_tps": 206.84,
+      "ttft_median_ms": 2700,
+      "tpot_median_ms": 32.29
+    },
+    "64k1k-c8": {
+      "output_tps": 30.39,
+      "ttft_median_ms": 40750,
+      "tpot_median_ms": 169.43
+    }
+  },
+  "sharegpt": {
+    "1": {
+      "output_tps": 43.13,
+      "median_ttft_ms": 242.93,
+      "p99_ttft_ms": 910.57,
+      "median_tpot_ms": 22.1,
+      "p99_tpot_ms": 39.17
+    },
+    "4": {
+      "output_tps": 133.37,
+      "median_ttft_ms": 254.41,
+      "p99_ttft_ms": 1182.43,
+      "median_tpot_ms": 27.84,
+      "p99_tpot_ms": 65.82
+    },
+    "16": {
+      "output_tps": 289.32,
+      "median_ttft_ms": 282.25,
+      "p99_ttft_ms": 1487.83,
+      "median_tpot_ms": 51.01,
+      "p99_tpot_ms": 165.77
+    },
+    "32": {
+      "output_tps": 338.41,
+      "median_ttft_ms": 380.22,
+      "p99_ttft_ms": 6070.49,
+      "median_tpot_ms": 84.59,
+      "p99_tpot_ms": 290.11
+    },
+    "64": {
+      "output_tps": 417.42,
+      "median_ttft_ms": 544.56,
+      "p99_ttft_ms": 6098.01,
+      "median_tpot_ms": 148.43,
+      "p99_tpot_ms": 496.3
+    }
+  }
+}

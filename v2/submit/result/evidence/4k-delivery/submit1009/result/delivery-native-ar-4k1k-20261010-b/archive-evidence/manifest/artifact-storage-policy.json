@@ -1,0 +1,31 @@
+{
+  "status": "ACTIVE",
+  "created_at": "2026-10-09T23:56:46.987231+00:00",
+  "authorization": [
+    "释放submit1009里的空间，不要把大文件放到本地电脑",
+    "我电脑本地的工作区空间也帮忙处理释放一下"
+  ],
+  "remote_workspace": "/data/wangzy/submit1009",
+  "large_artifact_compute_location": "SERVER_ONLY",
+  "max_local_single_artifact_bytes": 16777216,
+  "local_sync_allowlist": [
+    "source",
+    "scripts",
+    "configuration",
+    "benchmark JSONL below size limit",
+    "summary",
+    "log below size limit",
+    "SHA manifest",
+    "small CPU analysis/review report"
+  ],
+  "never_local_sync": [
+    "large profile.db",
+    "large tensor .pt",
+    "complete binary audit copies",
+    "large trace",
+    "deployment library tarball"
+  ],
+  "legacy_cleanup_record": "02-测试与结果/server-storage-cleanup-20261010-a/overall-completed.json",
+  "legacy_raw_integrity": "Historical checks remain recorded; explicitly pruned old raw cannot be fully revalidated. Do not report pruning as a new test failure or manufacture FULL_LOCAL_RAW_PASS.",
+  "acceptance_policy_unchanged": "4K/64K/C32 each >=20% matched >=3 rounds + noise/tail/numeric/new actual Graph/cleanroom before final GSM8K"
+}

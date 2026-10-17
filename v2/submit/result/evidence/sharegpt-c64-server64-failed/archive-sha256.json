@@ -1,0 +1,246 @@
+{
+  "README.md": {
+    "bytes": 4431,
+    "sha256": "ff0c9188171b0ebe04bb0e060c42a60dd659feb2672d73bb031954ecf28ed6c6"
+  },
+  "archive-inventory.json": {
+    "bytes": 11480,
+    "sha256": "6b380c5f45aa112e10dbfa9b1d460797d39c6a4affbf846d509f7eadbf6905e7"
+  },
+  "archive-review.json": {
+    "bytes": 489,
+    "sha256": "70b5d2aa68e50108dbd20f5035ef2c8b2c035db8bed94ada7abc1e85ef65c85b"
+  },
+  "control/gpu01-observation.json": {
+    "bytes": 364,
+    "sha256": "af5fceb7724e2d362518d427aaa0723b31f11c85091850aed00ab807e499322c"
+  },
+  "control/owned-container-stopped.json": {
+    "bytes": 579,
+    "sha256": "2adaf58a8af0dfc139aac14c51d9128b0249ad1213f90a11850f6eca9c2d4c02"
+  },
+  "explicit-download.log": {
+    "bytes": 5135,
+    "sha256": "dfaa9e9dc4199a27b73cb76353b3b139a3b16066febe3d34160fcf5f279c9860"
+  },
+  "independent-review.log": {
+    "bytes": 285,
+    "sha256": "06bf59391a74c0ae0b2942c02522ae771cade6c8795ae96bf1b7e7351e3482b4"
+  },
+  "local-independent-review/measurement-report.json": {
+    "bytes": 11317,
+    "sha256": "d5ddcc2e70e2a6a91c0c3d43f5cac37dfd2701876566c2086e3680545e9f04a7"
+  },
+  "local-independent-review.log": {
+    "bytes": 285,
+    "sha256": "06bf59391a74c0ae0b2942c02522ae771cade6c8795ae96bf1b7e7351e3482b4"
+  },
+  "measurement-report.json": {
+    "bytes": 11317,
+    "sha256": "d5ddcc2e70e2a6a91c0c3d43f5cac37dfd2701876566c2086e3680545e9f04a7"
+  },
+  "monitor-closed.json": {
+    "bytes": 739,
+    "sha256": "ec6b2aa5f7fe906f1dfe873f14a67e75edcb4c303f76c2d3e80b3e63d5f8a27f"
+  },
+  "pair01-final-release-proof.json": {
+    "bytes": 1241,
+    "sha256": "8ad1de03c588f707bf44fad0d0e33305b00cc1c87a7bb1b77c19cc965c2925e4"
+  },
+  "remote-independent-review/measurement-report.json": {
+    "bytes": 11317,
+    "sha256": "d5ddcc2e70e2a6a91c0c3d43f5cac37dfd2701876566c2086e3680545e9f04a7"
+  },
+  "source/archive_failed_server64_pair01.py": {
+    "bytes": 5375,
+    "sha256": "1f86698b98fd81515fc7fd25587ddbcd286808de2f65aa0b055b0bf3d8a9bbda"
+  },
+  "source/review_failed_server64_measurements.py": {
+    "bytes": 9983,
+    "sha256": "bbd93ab3971a6a6c39ce193e4db7a825cde60c11d970d9ed78d051a03e288498"
+  },
+  "source-diagnostic/initial-readiness.json": {
+    "bytes": 489,
+    "sha256": "9658b9e9bac1d711475dff418723978e65043d071389952ab1bca678ff979b0e"
+  },
+  "source-diagnostic/source-diagnostic/bench_serving.py": {
+    "bytes": 90836,
+    "sha256": "f2206dcda74932e1b148cdf7b5ef07443bb5d9e0f2729b7a67d602182e3aa050"
+  },
+  "submit1009/experiments/performance-validation-c64-server64-20261016/result/submit-current-c64-server64-pair01-20261016-a-c64-candidate/sharegpt-c64/full-warmup-01.jsonl": {
+    "bytes": 3068647,
+    "sha256": "263f37830035082422806ec0329c802509504bf14ceccf012582a90ebb9427b8"
+  },
+  "submit1009/experiments/performance-validation-c64-server64-20261016/result/submit-current-c64-server64-pair01-20261016-a-c64-candidate/sharegpt-c64/full-warmup-01.log": {
+    "bytes": 7021,
+    "sha256": "9c30399751c34099dac01332714914f738fa99177024c45d89db5d42c8d7bf4d"
+  },
+  "submit1009/experiments/performance-validation-c64-server64-20261016/result/submit-current-c64-server64-pair01-20261016-a-c64-candidate/sharegpt-c64/round-01.jsonl": {
+    "bytes": 3070128,
+    "sha256": "12cf90cbc0fdb8f53c6ec3c4526753b3f1d25def02ecfd3e061265672296a0c8"
+  },
+  "submit1009/experiments/performance-validation-c64-server64-20261016/result/submit-current-c64-server64-pair01-20261016-a-c64-candidate/sharegpt-c64/round-01.log": {
+    "bytes": 7009,
+    "sha256": "a2d1fc79024c689ce7ada018188d9cc7f30e2061b9918af529d9caabbb3034fb"
+  },
+  "submit1009/experiments/performance-validation-c64-server64-20261016/result/submit-current-c64-server64-pair01-20261016-a-c64-candidate/sharegpt-c64/round-02.jsonl": {
+    "bytes": 3072452,
+    "sha256": "b74e1fbfba6baf7ca031848c58d475fadf8e6a64e3ded554ae6e26ed5ec5c392"
+  },
+  "submit1009/experiments/performance-validation-c64-server64-20261016/result/submit-current-c64-server64-pair01-20261016-a-c64-candidate/sharegpt-c64/round-02.log": {
+    "bytes": 7009,
+    "sha256": "97cfc4e16bae84019c4c4c0269f2bce5abc167c2381c63ee93c5c67962003986"
+  },
+  "submit1009/experiments/performance-validation-c64-server64-20261016/result/submit-current-c64-server64-pair01-20261016-a-c64-candidate/sharegpt-c64/round-03.jsonl": {
+    "bytes": 3076883,
+    "sha256": "4ae00f76aea8189b6330124e1bd04275258b35bca6d0105e2a43357e90583fde"
+  },
+  "submit1009/experiments/performance-validation-c64-server64-20261016/result/submit-current-c64-server64-pair01-20261016-a-c64-candidate/sharegpt-c64/round-03.log": {
+    "bytes": 7009,
+    "sha256": "4340f2b2f2a0dc15a03b68e5dc545974ce7638db7be4f4b3bbc3fea86fd45094"
+  },
+  "submit1009/logs/submit-current-c64-server64-pair01-20261016-a-job.log": {
+    "bytes": 23417,
+    "sha256": "068c5ef2f41941a394850f358d37c27068cf14db70a25cf5d10e09a6a50ac2df"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/artifact-sha256.json": {
+    "bytes": 6686,
+    "sha256": "9c4c7b1a7514d84b3586eaefd50b3255af7f31a55dacbe9a4bf7564e87d7d637"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/card-release.json": {
+    "bytes": 194,
+    "sha256": "5bcaee202fb91dcaedb582693fd0938926da78996480c6d7cba523e376428b10"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/control-sha256.json": {
+    "bytes": 5173,
+    "sha256": "9da3465b597acb0bbd4d88b7c9da153388d5846d5634648b2e0a8d3188545942"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/evidence/c64-candidate/benchmark-command.log": {
+    "bytes": 28483,
+    "sha256": "033e939ff20cab51f71db4b434606b6f64747b4849e2977ef8949bad7a95bd93"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/evidence/c64-candidate/container-inspect.json": {
+    "bytes": 16285,
+    "sha256": "e6ec8f90e144d9b6d65402cde1b4b9f58bb7492106c5246f342c02e29b59d7d7"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/evidence/c64-candidate/failure-server.log": {
+    "bytes": 1128048,
+    "sha256": "01e8df29286141cea17488a49eb88c721f8f60151bceafff7f20de99745709d4"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/evidence/c64-candidate/failure-server.pid": {
+    "bytes": 3,
+    "sha256": "7ee29791fc17e986b97128845622b077fb45e349fdb80523fac9dba879b4ad60"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/evidence/c64-candidate/server-info.json": {
+    "bytes": 31197,
+    "sha256": "e70aa158ba28041c23f45510970f9d394e169ea1433b52ae09119f3d022d23ed"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/evidence/c64-candidate/start-service.log": {
+    "bytes": 133,
+    "sha256": "3e0c1a0f3adac0915b1126160456586d355a9650caca5aa8482b98af1976f6a2"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/failed-state.json": {
+    "bytes": 8508,
+    "sha256": "d57c2249409e489233070fdd59a72d2aa955e62eac7f53279a778180b81939d4"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/local-sync-policy.json": {
+    "bytes": 250,
+    "sha256": "e7f3bb7b5bacef8848ce57608d11ddd4b87640154efe55e82d68fc95f7da032f"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/preflight.json": {
+    "bytes": 10340,
+    "sha256": "6f16a4edaf3de316bf37c46d447af8864665638edeb73ef24970ed80e6b0f924"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01/build_unified.py": {
+    "bytes": 998,
+    "sha256": "9a0910d8c23705f3b17863f74f792120ee059a3af02a9b8e17e5c660e4892ccc"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01/k100_int8_gemv_unified.hip": {
+    "bytes": 13293,
+    "sha256": "dd753458416463665a97c5aedc04cffaed7b992a58190a66c9188619d20c8ae2"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01/k100_int8_gemv_unified.so": {
+    "bytes": 704168,
+    "sha256": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01/libtorch_c_dlpack_addon_torch210-rocm.so": {
+    "bytes": 200624,
+    "sha256": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01/native-ar-manifest.json": {
+    "bytes": 1152,
+    "sha256": "38af7be275156d75ea760c1c4a26e2f83437488f3a716a3757b5a08477a1a013"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01/native_bf16_ar_guard.py": {
+    "bytes": 2085,
+    "sha256": "f9d5ec98c70724dcb80857228681a6c03c619606643cdd6918c9084af51cd7f4"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01/original-native-ar-manifest.json": {
+    "bytes": 1032,
+    "sha256": "ee6324054eadf2707ad9806dc034dbd4082e8649ece3936f5d084d63674834a8"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01/pair-identity.json": {
+    "bytes": 369,
+    "sha256": "526ad452ef53563125bfca9a95bcfe943773a4a667ebb0c6da0f9962664f7bba"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01/patch_dup_reg_guard.py": {
+    "bytes": 1964,
+    "sha256": "038c207b72052c53ea1626b1408c91002aadf9dc99a543689456c4aed125deac"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01/sitecustomize.py": {
+    "bytes": 16915,
+    "sha256": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01/triton_tiles.json": {
+    "bytes": 5541,
+    "sha256": "4349ae5ebb6c6348323fecb75d35c756970e82b2e2d5d2a9197f1ae839a95758"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/candidate01-gate.json": {
+    "bytes": 62899,
+    "sha256": "04e6affa98753f765fede159669a2df0006175c5787a44d43f3328cc29603704"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/review_server64_pair01.py": {
+    "bytes": 23116,
+    "sha256": "1fab6a477bfe285073e42a566831d93afe6db2effff0b9467fb0d3f42386185e"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/run_server64_pair01.py": {
+    "bytes": 17800,
+    "sha256": "bf1427fc8f3afb13c3f3ca2e5eb1960eb760654833cc99396af9bb60b4759938"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/runtime-manifest.json": {
+    "bytes": 4469,
+    "sha256": "f6c31065faa94fdd88b0eb921e2d7466e4679e814065f1880d8eba97a298d6e2"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/scripts/benchmark_sharegpt.sh": {
+    "bytes": 1411,
+    "sha256": "5a469b8ef471ee0f8c1a14ba6a3ae2e8f4b9d6b710367fe5afaaabf25b97f417"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/scripts/serve.sh": {
+    "bytes": 1683,
+    "sha256": "7469ffb7fe8765959df76311997de95843e9722f347ee421969aea4fe926681c"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/scripts/start_service.sh": {
+    "bytes": 1848,
+    "sha256": "870aa2be49c4374a92aa292b97bb817028686a51b1814423add599e663d5e86e"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/scripts/validate_sharegpt.py": {
+    "bytes": 2802,
+    "sha256": "e0588b52ecd89575897f4f309d51de46b8e051f6623f66472ab40914066459b3"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/v1-report-reference.json": {
+    "bytes": 1583,
+    "sha256": "54c5ff586396dd90760eeb3fc3686f741927a5ef065294148ce293919ab4ef2d"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a/source/v1-report-source.md": {
+    "bytes": 6455,
+    "sha256": "b36db6ec60fcac45d710fada2bdf74b1b4655ef631567e6c34fc4dc4a20e417d"
+  },
+  "submit1009/result/submit-current-c64-server64-pair01-20261016-a-state.json": {
+    "bytes": 8508,
+    "sha256": "d57c2249409e489233070fdd59a72d2aa955e62eac7f53279a778180b81939d4"
+  },
+  "two-host-integrity.json": {
+    "bytes": 425,
+    "sha256": "226e7231c17323eb418275b1e67d3d4b7af69354734402f6a2cd9d9fe95d4748"
+  }
+}

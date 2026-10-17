@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-16T08:38:55.627255+00:00",
+  "container": "qwen38-submit1009-perf45-20261016",
+  "running": false,
+  "queue_success": true,
+  "physical_pair": [
+    4,
+    5
+  ]
+}

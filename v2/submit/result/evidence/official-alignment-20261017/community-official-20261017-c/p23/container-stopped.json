@@ -1,0 +1,381 @@
+{
+  "Id": "01fbf9f8a0f62844b6f97c15f80602c075f19b8b6111fea30d154374b5f7c275",
+  "Created": "2026-10-16T20:34:21.928045006Z",
+  "Path": "sleep",
+  "Args": [
+    "infinity"
+  ],
+  "State": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 137,
+    "Error": "",
+    "StartedAt": "2026-10-16T20:34:22.083555955Z",
+    "FinishedAt": "2026-10-16T22:42:49.269082745Z"
+  },
+  "Image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+  "ResolvConfPath": "/var/lib/docker/containers/01fbf9f8a0f62844b6f97c15f80602c075f19b8b6111fea30d154374b5f7c275/resolv.conf",
+  "HostnamePath": "/var/lib/docker/containers/01fbf9f8a0f62844b6f97c15f80602c075f19b8b6111fea30d154374b5f7c275/hostname",
+  "HostsPath": "/var/lib/docker/containers/01fbf9f8a0f62844b6f97c15f80602c075f19b8b6111fea30d154374b5f7c275/hosts",
+  "LogPath": "/var/lib/docker/containers/01fbf9f8a0f62844b6f97c15f80602c075f19b8b6111fea30d154374b5f7c275/01fbf9f8a0f62844b6f97c15f80602c075f19b8b6111fea30d154374b5f7c275-json.log",
+  "Name": "/qwen38-community-v2-23-official-20261017-c",
+  "RestartCount": 0,
+  "Driver": "overlay2",
+  "Platform": "linux",
+  "MountLabel": "",
+  "ProcessLabel": "",
+  "AppArmorProfile": "docker-default",
+  "ExecIDs": null,
+  "HostConfig": {
+    "Binds": [
+      "/data/wangzy/v2/submit/config/library_gpu4_int8tuned_stock_clean:/run/qwen38-library:ro",
+      "/data/wangzy/v2/submit/patch/runtime/tvm-ffi:/run/qwen38-tvm-ffi:ro",
+      "/data/wangzy/v2/submit/patch/runtime/direct_register_custom_op.py:/usr/local/lib/python3.10/dist-packages/lightop/_lmslim_native/vllm_compat/direct_register_custom_op.py:ro",
+      "/data/wangzy/v2/submit/config/aiter/fused_recurrent_gated_delta_rule_packed_decode/fused_recurrent_gated_delta_rule_packed_decode-gfx928.json:/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/fused_recurrent_gated_delta_rule_packed_decode/fused_recurrent_gated_delta_rule_packed_decode-gfx928.json:ro",
+      "/data/wangzy/submit1009/result/community-official-20261017-c:/data/wangzy/submit1009/result/community-official-20261017-c",
+      "/data/model/Qwen3.8-27B-Channel-INT8-w8a8:/data/model/Qwen3.8-27B-Channel-INT8-w8a8:ro",
+      "/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json:/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json:ro",
+      "/opt/hyhal:/opt/hyhal:ro",
+      "/data/wangzy/v2/submit/config/aiter/fused_sigmoid_gating_delta_rule_update/fused_sigmoid_gating_delta_rule_update-gfx928.json:/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/fused_sigmoid_gating_delta_rule_update/fused_sigmoid_gating_delta_rule_update-gfx928.json:ro",
+      "/data/wangzy/v2/submit/config/aiter/fused_sigmoid_gating_delta_rule_update_recurrent/fused_sigmoid_gating_delta_rule_update_recurrent-gfx928.json:/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/fused_sigmoid_gating_delta_rule_update_recurrent/fused_sigmoid_gating_delta_rule_update_recurrent-gfx928.json:ro",
+      "/data/wangzy/v2/submit/config/aiter/chunk_fwd_o/chunk_fwd_o-gfx928.json:/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/chunk_fwd_o/chunk_fwd_o-gfx928.json:ro",
+      "/data/wangzy/v2/submit:/data/wangzy/v2/submit",
+      "/data/wangzy/v2/submit/config/aiter/chunk_gated_delta_rule_fwd_h/chunk_gated_delta_rule_fwd_h-gfx928.json:/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/chunk_gated_delta_rule_fwd_h/chunk_gated_delta_rule_fwd_h-gfx928.json:ro"
+    ],
+    "ContainerIDFile": "",
+    "LogConfig": {
+      "Type": "json-file",
+      "Config": {}
+    },
+    "NetworkMode": "host",
+    "PortBindings": {},
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "AutoRemove": false,
+    "VolumeDriver": "",
+    "VolumesFrom": null,
+    "CapAdd": [
+      "SYS_PTRACE"
+    ],
+    "CapDrop": null,
+    "CgroupnsMode": "private",
+    "Dns": [],
+    "DnsOptions": [],
+    "DnsSearch": [],
+    "ExtraHosts": null,
+    "GroupAdd": [
+      "video"
+    ],
+    "IpcMode": "host",
+    "Cgroup": "",
+    "Links": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyRootfs": false,
+    "SecurityOpt": [
+      "seccomp=unconfined",
+      "label=disable"
+    ],
+    "UTSMode": "",
+    "UsernsMode": "",
+    "ShmSize": 67108864,
+    "Runtime": "runc",
+    "ConsoleSize": [
+      0,
+      0
+    ],
+    "Isolation": "",
+    "CpuShares": 0,
+    "Memory": 0,
+    "NanoCpus": 0,
+    "CgroupParent": "",
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": [],
+    "BlkioDeviceReadBps": null,
+    "BlkioDeviceWriteBps": null,
+    "BlkioDeviceReadIOps": null,
+    "BlkioDeviceWriteIOps": null,
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "Devices": [
+      {
+        "PathOnHost": "/dev/kfd",
+        "PathInContainer": "/dev/kfd",
+        "CgroupPermissions": "rwm"
+      },
+      {
+        "PathOnHost": "/dev/mkfd",
+        "PathInContainer": "/dev/mkfd",
+        "CgroupPermissions": "rwm"
+      },
+      {
+        "PathOnHost": "/dev/dri",
+        "PathInContainer": "/dev/dri",
+        "CgroupPermissions": "rwm"
+      }
+    ],
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "KernelMemory": 0,
+    "KernelMemoryTCP": 0,
+    "MemoryReservation": 0,
+    "MemorySwap": 0,
+    "MemorySwappiness": null,
+    "OomKillDisable": null,
+    "PidsLimit": null,
+    "Ulimits": null,
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "IOMaximumIOps": 0,
+    "IOMaximumBandwidth": 0,
+    "MaskedPaths": [
+      "/proc/asound",
+      "/proc/acpi",
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/latency_stats",
+      "/proc/timer_list",
+      "/proc/timer_stats",
+      "/proc/sched_debug",
+      "/proc/scsi",
+      "/sys/firmware"
+    ],
+    "ReadonlyPaths": [
+      "/proc/bus",
+      "/proc/fs",
+      "/proc/irq",
+      "/proc/sys",
+      "/proc/sysrq-trigger"
+    ]
+  },
+  "GraphDriver": {
+    "Data": {
+      "LowerDir": "/var/lib/docker/overlay2/802fe765cb272f394f0482d40bcb7a8ec3daeb9eb59e4476365d06d5f7fe47c5-init/diff:/var/lib/docker/overlay2/e0d516c855a129b70e87179805d3e4eda92215bae8e496d6c295b265e07438a0/diff:/var/lib/docker/overlay2/6002b74f20fa215de971c1e7d80c1cc5836479bd3a1e4be1c72cd7d7d33b4b3f/diff:/var/lib/docker/overlay2/3537f1da32ce5bf6dd07cac9b30cfb8811ab2e6d59cd7ad8c9548befafd2ac70/diff:/var/lib/docker/overlay2/ed07f8a1d57029c57853f2b131c1b82a1bffc0d234af742a578419bde86d6fdd/diff:/var/lib/docker/overlay2/57a1b59c34da4faf2a3ec0b773483b780498e4291b52e99728de9a37be650ab8/diff:/var/lib/docker/overlay2/2ae16fa76fdfb744014e5a1253a373772663ce8417a5191d5ac102224b3832d0/diff:/var/lib/docker/overlay2/010f2bd694ae17526e99cf14462dcf1b90b8646cf4789d143db36ec4644676b9/diff:/var/lib/docker/overlay2/484a04a5b4dd82eb23ccd845e5e234d674e6dc2fd3ba7a5c2ddd50f7284fcf8d/diff:/var/lib/docker/overlay2/0ea030af7cc8858878d2c51ccc51338e3b55296bc1e5c25f205ed6bf4b85affb/diff:/var/lib/docker/overlay2/c15c15929d0714c3a9b1f444136135e73a1057ae97f7dd605da9cc8a5321dda1/diff:/var/lib/docker/overlay2/ca3fe38e2c2b35e689677fcd1077b2fff94af36e408d128f02d46b94cb489e5e/diff:/var/lib/docker/overlay2/c84b9a0b42db74fefd5f49a13249747bda4f1bde7aa316df9606fc7303707307/diff:/var/lib/docker/overlay2/84feb51b6fe9836b6ac16a3c4d6915f0adbd606e0a7b92f16df51fe1cf4e8d4a/diff:/var/lib/docker/overlay2/15481af5439728c0a22cd374389bd8c2074c7a598b5b158fb2384417009b01c2/diff:/var/lib/docker/overlay2/e9938cd1ea996287d9284c80ae0bdb79753291e3895f284740c4fb44dcd30c28/diff:/var/lib/docker/overlay2/aa8e08c01011c5a8c00e564b5cdbc7816fde05994c8a91122d442cbb65734c06/diff:/var/lib/docker/overlay2/a0f7b6c95e1464b7049fb5e4b3986527453492dbd99dabc694e206dc551e5e5e/diff:/var/lib/docker/overlay2/0815330664c2541bc67e56f2518ca166258f75e0b57f17d4f041b7562bf22c94/diff:/var/lib/docker/overlay2/7e65df174d4647c8c190315aa26b7061fdf77bc7b34bd23bd7085cbcdbfc1657/diff:/var/lib/docker/overlay2/056dc990d0acd653ef0a12588562bb5ac5f85b716964e187cb9745a02d8e59da/diff:/var/lib/docker/overlay2/52fb0ed25f34c1c6a9f9cf51dc1b0d361b146fde163a70a481ff4791772aeb03/diff:/var/lib/docker/overlay2/62dea2a9f0a85b4c166940391085dfc748a493b2f4919d06faf22c1285791ced/diff:/var/lib/docker/overlay2/92dee7c47331748937a96cd8e9f5408dd2a47d53f7c5f46b17d3871fb9727a4f/diff:/var/lib/docker/overlay2/c77fa97f6bcdafbd0b05e7f86cce506c8dfa72a5b562627bd7d3928b5145c3fd/diff:/var/lib/docker/overlay2/16261d1b0b59c6769c1144f2976a501b0df8aec9170e521d1e5b373b56319e83/diff:/var/lib/docker/overlay2/6b6990b97f3d34ba70c1c2c618de191f71010da1c2d4ecdafc6e797e3a6737ad/diff:/var/lib/docker/overlay2/0159caedb9924eb9bc1e16dcc6ca089b6b24035ce97be84463ea99f5a43beefe/diff:/var/lib/docker/overlay2/58d1eea5e31e4886a89956921416c21beb467321ebd96990a6405e64559effb7/diff",
+      "MergedDir": "/var/lib/docker/overlay2/802fe765cb272f394f0482d40bcb7a8ec3daeb9eb59e4476365d06d5f7fe47c5/merged",
+      "UpperDir": "/var/lib/docker/overlay2/802fe765cb272f394f0482d40bcb7a8ec3daeb9eb59e4476365d06d5f7fe47c5/diff",
+      "WorkDir": "/var/lib/docker/overlay2/802fe765cb272f394f0482d40bcb7a8ec3daeb9eb59e4476365d06d5f7fe47c5/work"
+    },
+    "Name": "overlay2"
+  },
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Source": "/data/wangzy/v2/submit/config/library_gpu4_int8tuned_stock_clean",
+      "Destination": "/run/qwen38-library",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/data/wangzy/v2/submit/patch/runtime/direct_register_custom_op.py",
+      "Destination": "/usr/local/lib/python3.10/dist-packages/lightop/_lmslim_native/vllm_compat/direct_register_custom_op.py",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/data/wangzy/v2/submit/config/aiter/fused_recurrent_gated_delta_rule_packed_decode/fused_recurrent_gated_delta_rule_packed_decode-gfx928.json",
+      "Destination": "/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/fused_recurrent_gated_delta_rule_packed_decode/fused_recurrent_gated_delta_rule_packed_decode-gfx928.json",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/data/wangzy/submit1009/result/community-official-20261017-c",
+      "Destination": "/data/wangzy/submit1009/result/community-official-20261017-c",
+      "Mode": "",
+      "RW": true,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/data/model/Qwen3.8-27B-Channel-INT8-w8a8",
+      "Destination": "/data/model/Qwen3.8-27B-Channel-INT8-w8a8",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/data/wangzy/v2/submit",
+      "Destination": "/data/wangzy/v2/submit",
+      "Mode": "",
+      "RW": true,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/data/wangzy/v2/submit/config/aiter/chunk_gated_delta_rule_fwd_h/chunk_gated_delta_rule_fwd_h-gfx928.json",
+      "Destination": "/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/chunk_gated_delta_rule_fwd_h/chunk_gated_delta_rule_fwd_h-gfx928.json",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/data/wangzy/v2/submit/patch/runtime/tvm-ffi",
+      "Destination": "/run/qwen38-tvm-ffi",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json",
+      "Destination": "/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/opt/hyhal",
+      "Destination": "/opt/hyhal",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/data/wangzy/v2/submit/config/aiter/fused_sigmoid_gating_delta_rule_update/fused_sigmoid_gating_delta_rule_update-gfx928.json",
+      "Destination": "/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/fused_sigmoid_gating_delta_rule_update/fused_sigmoid_gating_delta_rule_update-gfx928.json",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/data/wangzy/v2/submit/config/aiter/fused_sigmoid_gating_delta_rule_update_recurrent/fused_sigmoid_gating_delta_rule_update_recurrent-gfx928.json",
+      "Destination": "/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/fused_sigmoid_gating_delta_rule_update_recurrent/fused_sigmoid_gating_delta_rule_update_recurrent-gfx928.json",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/data/wangzy/v2/submit/config/aiter/chunk_fwd_o/chunk_fwd_o-gfx928.json",
+      "Destination": "/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/chunk_fwd_o/chunk_fwd_o-gfx928.json",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    }
+  ],
+  "Config": {
+    "Hostname": "test",
+    "Domainname": "",
+    "User": "",
+    "AttachStdin": false,
+    "AttachStdout": false,
+    "AttachStderr": false,
+    "Tty": false,
+    "OpenStdin": false,
+    "StdinOnce": false,
+    "Env": [
+      "MODEL_PATH=/data/model/Qwen3.8-27B-Channel-INT8-w8a8",
+      "VARIANT=candidate",
+      "TVM_FFI_CACHE_DIR=/run/qwen38-tvm-ffi",
+      "HIP_VISIBLE_DEVICES=2,3",
+      "DATASET_PATH=/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json",
+      "NCCL_PORT=31311",
+      "RUN_ID=community-official-20261017-c-p23-server",
+      "Q38_EXTERNAL_PAIR_LOCK=1",
+      "MAX_GATE_WAIT=5",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "GPU_PAIR=2,3",
+      "PHYSICAL_PAIR=2,3",
+      "PORT=31310",
+      "PATCH_DIR=/data/wangzy/submit1009/result/community-official-20261017-c/runtime-p23/patch",
+      "MAX_WAIT=1800",
+      "PATH=/opt/dtk/bin:/opt/dtk/llvm/bin:/opt/dtk/hip/bin:/opt/dtk/hip/bin/hipify:/opt/hyhal/bin:/opt/dtk/opencl/bin:/opt/ucx/bin:/opt/mpi/bin:/opt/hwloc/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "TZ=Asia/Shanghai",
+      "SHELL=/bin/bash",
+      "LC_ALL=en_US.UTF-8",
+      "LANG=en_US.UTF-8",
+      "LANGUAGE=en_US.UTF-8",
+      "LD_LIBRARY_PATH=/opt/dtk/dcc/gcvm/lib:/opt/dtk/hip/lib:/opt/dtk/llvm/lib:/opt/dtk/lib:/opt/dtk/lib64:/opt/hyhal/lib:/opt/hyhal/lib64:/opt/dtk/dushmem/lib:/opt/dtk/opencl/lib:/opt/ucx/lib:/opt/mpi/lib:/opt/hwloc/lib:",
+      "MANPATH=/opt/mpi/share/man:",
+      "MOFED_VERSION=23.10-4.0.9.1",
+      "OS_VERSION=ubuntu22.04",
+      "PLATFORM=x86_64",
+      "UCX_HOME=/opt/ucx",
+      "ROCM_PATH=/opt/dtk",
+      "DTK_VERSION=2604",
+      "HYHAL_PATH=/opt/hyhal",
+      "AMDGPU_TARGETS=gfx906;gfx926;gfx928;gfx936;gfx938",
+      "HIP_PATH=/opt/dtk/hip",
+      "MIOPEN_FIND_MODE=3",
+      "CMAKE_PREFIX_PATH=/opt/hyhal:",
+      "LIBRARY_PATH=/opt/hyhal/lib:/opt/dtk/opencl/lib:/opt/dtk/dushmem/lib",
+      "C_INCLUDE_PATH=/opt/dtk/dcc/gcvm/include:/opt/dtk/include:/opt/hyhal/include:/opt/dtk/llvm/include:/opt/dtk/opencl/include",
+      "CPLUS_INCLUDE_PATH=/opt/dtk/dcc/gcvm/include:/opt/dtk/include:/opt/hyhal/include:/opt/dtk/llvm/include:/opt/dtk/dushmem/include:/opt/dtk/opencl/include"
+    ],
+    "Cmd": [
+      "sleep",
+      "infinity"
+    ],
+    "Image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+    "Volumes": null,
+    "WorkingDir": "",
+    "Entrypoint": null,
+    "OnBuild": null,
+    "Labels": {
+      "maintainer": "chenwch1@sugon.com",
+      "org.opencontainers.image.ref.name": "ubuntu",
+      "org.opencontainers.image.version": "22.04",
+      "qwen38.community.pair": "2,3",
+      "qwen38.community.run": "community-official-20261017-c"
+    }
+  },
+  "NetworkSettings": {
+    "Bridge": "",
+    "SandboxID": "6366d876a1c0a958241d77725a1453c8e1b20b1c3507063ecbb243ead293f3de",
+    "HairpinMode": false,
+    "LinkLocalIPv6Address": "",
+    "LinkLocalIPv6PrefixLen": 0,
+    "Ports": {},
+    "SandboxKey": "/var/run/docker/netns/default",
+    "SecondaryIPAddresses": null,
+    "SecondaryIPv6Addresses": null,
+    "EndpointID": "",
+    "Gateway": "",
+    "GlobalIPv6Address": "",
+    "GlobalIPv6PrefixLen": 0,
+    "IPAddress": "",
+    "IPPrefixLen": 0,
+    "IPv6Gateway": "",
+    "MacAddress": "",
+    "Networks": {
+      "host": {
+        "IPAMConfig": null,
+        "Links": null,
+        "Aliases": null,
+        "NetworkID": "0673b60ebf906d2820b2288adbcee3600eb4c015b4fa213975cde986705b5ab0",
+        "EndpointID": "",
+        "Gateway": "",
+        "IPAddress": "",
+        "IPPrefixLen": 0,
+        "IPv6Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "MacAddress": "",
+        "DriverOpts": null
+      }
+    }
+  }
+}

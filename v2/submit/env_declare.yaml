@@ -1,0 +1,301 @@
+{
+  "image": "harbor.sourcefind.cn:5443/hcu/admin/base/sglang:0.5.12-ubuntu22.04-dtk2604-py3.10",
+  "image_id": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+  "image_digest": "sha256:878d317dfa18efae70516a59cc836efc77b251efbe4ca85de67171bc2c3aca68",
+  "arch": "gfx928",
+  "physical_devices": [
+    0,
+    1
+  ],
+  "tp": 2,
+  "model_path": "/data/model/Qwen3.8-27B-Channel-INT8-w8a8",
+  "model_precision": "Channel INT8 W8A8; original BF16 outputs and scales unchanged",
+  "python": "3.10.12",
+  "versions": {
+    "torch": "2.10.0+das.opt1.dtk2604.2608131652.g28498c",
+    "triton": "3.6.0+das185.dtk2604.torch2100.2608131719.gb796b1",
+    "sglang": "0.5.12+das185.dtk2604.torch2100.2608121934.gcbf025",
+    "aiter": "0.1.5+das185.dtk2604.torch2100.2608131714.gb0979d",
+    "transformers": "5.6.0",
+    "aiohttp": "3.14.3",
+    "requests": "2.34.2"
+  },
+  "runtime_overlay": {
+    "installed_path": "/usr/local/lib/python3.10/dist-packages/lightop/_lmslim_native/vllm_compat/direct_register_custom_op.py",
+    "sha256": "e6ee8f1b25e60d02811658483cdf150b33c79ba5c94f27198167268a44a8b545",
+    "method": "Read-only per-container bind overlay copied from measured container; no shared installation edits",
+    "rollback": "Stop and remove delivery container"
+  },
+  "service": {
+    "port": 31014,
+    "nccl_port": 31015,
+    "context_length": 67584,
+    "mem_fraction_static": 0.85,
+    "max_running_requests": 32,
+    "max_prefill_tokens": 65536,
+    "chunked_prefill_size": 8192,
+    "mamba_scheduler_strategy": "no_buffer",
+    "cuda_graph_max_bs": 32,
+    "speculative_algorithm": "NEXTN (API normalized to EAGLE)",
+    "speculative_num_steps": 1,
+    "speculative_num_draft_tokens": 2,
+    "custom_all_reduce_backend": "native",
+    "one_stage_allreduce": true
+  },
+  "benchmark": {
+    "random": "Exact SourceFind forum reference script scripts/benchmark.reference.py",
+    "sharegpt": "sglang.bench_serving in pinned vendor image",
+    "seed": 20260912,
+    "rounds": 3,
+    "official_tutorial": "https://forum.sourcefind.cn/thread/d006a0e2-b624-11f1-93f4-0242ac150003",
+    "warmup_rounds": 2,
+    "requests_per_round": "max(8,2*C)"
+  },
+  "candidate_site_sha256": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+  "default_task_patch": "Original submit1009 remains v1; v2/submit intentionally selects measured candidate",
+  "delivery_status": "README_PATCH_MATERIALS_UPDATED_PERFORMANCE_ARCHIVED_REMAINING_ADMISSION_PENDING",
+  "runtime_cache": {
+    "source": "Exact cache copied from the stopped, measured qwen38-submit1009-diag container",
+    "file": "patch/runtime/tvm-ffi/libtorch_c_dlpack_addon_torch210-rocm.so",
+    "sha256": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "bytes": 200624,
+    "mount": "/run/qwen38-tvm-ffi:ro",
+    "variable": "TVM_FFI_CACHE_DIR",
+    "reason": "Fresh image has no cached Torch C DLPack addon; Python site import recurses into the optional builder",
+    "no_tvm_disable": true,
+    "shared_installation_modified": false
+  },
+  "track": "K100-AI / SGLang / TP=2",
+  "package_version": "v2/submit-20261017",
+  "submission_status": "REMAINING_ACCURACY_SLA_STABILITY_ASSET_ADMISSION_PENDING",
+  "model_source": {
+    "official_model": "Qwen/Qwen3.8-27B",
+    "deployed_variant": "Qwen3.8-27B-Channel-INT8-w8a8",
+    "quantization_recipe": "Official published Channel-INT8-w8a8 variant per user confirmation; no local re-quantization; on-disk model source and 31-file SHA recorded",
+    "weight_manifest": "result/evidence/official-alignment-20261017/community-official-20261017-c/model-sha256.json",
+    "official_weight_permission": "User confirms official published Channel-INT8-w8a8 weights; final submission protocol admission separate",
+    "deployed_source": "hygon/Qwen3.8-27B-Channel-INT8-w8a8 per on-disk model README"
+  },
+  "dataset": {
+    "filename": "ShareGPT_V3_unfiltered_cleaned_split.json",
+    "sha256": "35f0e213ce091ed9b9af2a1f0755e9d39f9ccec34ab281cd4ca60d70f6479ba4",
+    "official_tutorial_match": "PENDING"
+  },
+  "library": {
+    "sha_manifest": "config/library-sha256.json",
+    "files": 162,
+    "local_included": false,
+    "server_source": "/data/wangzy/submit1009/config/library_gpu4_int8tuned_stock_clean",
+    "strategy": "verified external read-only mount or prepare_assets.py local copy",
+    "server_included": true,
+    "server_directory": "/data/wangzy/v2/submit/config/library_gpu4_int8tuned_stock_clean",
+    "server_full_sha_verified": true
+  },
+  "hardware_details": {
+    "accelerator": "2 x K100-AI, gfx928; review physical HCU0,1; original default6,7; historical matrix uses recorded pairs",
+    "cpu_memory_numa_driver_firmware_topology": "CPU/memory/NUMA/kernel/GPU-before recorded in original evidence; driver supplemented from hycu module sysfs on 2026-10-17; firmware/topology completeness not certified"
+  },
+  "accuracy": {
+    "order": "USER_UPDATE_20261017_GSM8K_CONCURRENT_DEDICATED_TP2_OTHER_THREE_LAST",
+    "status": "GSM8K_LOCAL_RESULT_OTHER_THREE_NOT_RUN",
+    "required": [
+      "GSM8K >=95.0",
+      "LiveCodeBench v6 >=88.3",
+      "RealWorldQA >=83.9",
+      "MathVision Without CI >=88.0"
+    ],
+    "gsm8k_run": "community-gsm8k-20261017-e",
+    "gsm8k_protocol": "Frozen EvalScope 1.6.1 4-shot 1319 main; original scorer reproduced 1319/1319 in pinned image; exact final official protocol equivalence pending",
+    "gsm8k_result": "result/summary/gsm8k-community-20261017-e.json",
+    "gsm8k_accuracy": 0.976497346474602,
+    "gsm8k_threshold_pass": true,
+    "gsm8k_integrity": "1319 raw response re-score and index/prompt SHA PASS",
+    "gsm8k_official_protocol": "NOT_VERIFIED",
+    "gsm8k_resources": "Container stopped, pair01 lock released"
+  },
+  "package_runtime_validation": "Four new containers reached API readiness; see per-pair runtime, benchmark and failure status in execution evidence",
+  "community_execution": {
+    "status": "DIAGNOSTICS_COLLECTED_OFFICIAL_AND_ACCURACY_PENDING",
+    "completed": "2026-10-17T07:40:05.246313+08:00",
+    "video": {
+      "path": "docs/demo/demo.mp4",
+      "bytes": 125545,
+      "sha256": "f8e6d9b4dc94e5fcb2a8ea9ad08c493da60c5fe067c3b645069d7b8516602ad6",
+      "duration_s": 11.854194106999785,
+      "capture_source": "result/evidence/official-alignment-20261017/community-official-followup-20261017-d/runtime-p23/demo/capture.json",
+      "capture_sha256": "bfff5f6599a7275f83f35fad12ee523eb85e24070796a17efa3674da3e2217df",
+      "type": "Actual timed API transcript replay, not a GUI screen recording"
+    },
+    "official_protocol": "USER_SELECTED_LOCAL_THRESHOLDS_TUTORIAL_P95",
+    "accuracy": "GSM8K_SEPARATE_REPORT_OTHER_THREE_NOT_RUN",
+    "gsm8k_report": "docs/GSM8K精度验证-20261017.md",
+    "submission_ready": false,
+    "archive_manifest": "archive-inventory.json"
+  },
+  "SLA": {
+    "primary": "LOCAL_COMMUNITY_RULES_EXPLICITLY_SELECTED_BY_USER",
+    "statistic": "p95 from official tutorial; local document does not name a quantile",
+    "4k": {
+      "ttft_s_lt": 10,
+      "tpot_ms_lt": 80
+    },
+    "64k": {
+      "ttft_s_lt": 30,
+      "tpot_ms_lt": 100
+    },
+    "tutorial_alternate": {
+      "4k": [
+        3,
+        50
+      ],
+      "64k": [
+        15,
+        50
+      ]
+    }
+  },
+  "precision": {
+    "gsm8k": {
+      "status": "LOCAL_PROTOCOL_PASS",
+      "benchmark": "GSM8K",
+      "requests": 1319,
+      "completed": 1319,
+      "correct": 1288.0,
+      "accuracy": 0.976497346474602,
+      "community_threshold": 0.95,
+      "threshold_pass": true,
+      "minimum_correct": 1254,
+      "errors": 0,
+      "error_indices": [],
+      "text_flag_indices": [],
+      "truncated_indices": [],
+      "extraction_failed_indices": [],
+      "old_correct": 1291.0,
+      "old_accuracy": 0.9787717968157695,
+      "delta_percentage_points": -0.22744503411675512,
+      "regressed_indices": [
+        182,
+        590,
+        1192,
+        1059
+      ],
+      "fixed_indices": [
+        652
+      ],
+      "elapsed_s": 1445.1211432149867,
+      "official_precision_admission": "PENDING_EXACT_OFFICIAL_PROTOCOL",
+      "comparison": "Historical v1, identical frozen prompts and original scorer; not a contemporaneous A/B",
+      "worker_status": "GSM8K_COMPLETE",
+      "evidence": "result/evidence/gsm8k-20261017",
+      "collection": "ALL_FILES_SIZE_SHA256_PASS",
+      "collected_time": "2026-10-17T05:32:04.016692+08:00",
+      "submission_ready": false,
+      "remaining_precision": [
+        "LiveCodeBench v6",
+        "RealWorldQA",
+        "MathVision Without CI"
+      ]
+    },
+    "other_three": "NOT_RUN"
+  },
+  "parallel_scheduling": {
+    "source": "execution/official-alignment-20261017-c/after_matrix_parallel.py",
+    "reason": "User authorizes immediate use of every idle GPU pair",
+    "policy": "Own predecessor matrix must finish and pass request review; physical pair must be idle and exclusively locked; do not interrupt active matrix",
+    "jobs": {
+      "0,1": "4k SLA now",
+      "4,5": "64k SLA now, fresh C1 on same pair",
+      "2,3": "After 64k C16: demo and clean runtime C8 checks",
+      "6,7": "After 64k C32: ShareGPT C64 S32/Graph32 recheck"
+    },
+    "mixed_host_activity_disclosed": true,
+    "remaining_precision": "OTHER_THREE_LAST"
+  },
+  "readme_patch_delivery": {
+    "updated": "2026-10-17",
+    "readme": "README.md",
+    "patch_readme": "patch/README.md",
+    "patch_manifest": "patch/bundle-manifest.json",
+    "patch_verifier": "scripts/verify_patch_bundle.py",
+    "assets_verifier": "scripts/check_assets.py",
+    "result_reader": "scripts/show_results.py",
+    "candidate_changed": false,
+    "binaries_replaced": false,
+    "gpu_rebenchmark_this_material_edit": false,
+    "source_scope": "Complete custom HIP/Python/config; actual fixed-image LongKV/Lightop before-and-after sources; vendor native AR kernel unchanged",
+    "rebuild_limits": "Historical HIP/TVM compiler logs not located; bitwise rebuild equivalence not verified; vendor native AR matching full C++/HIP implementation not obtained",
+    "cpu_audit_evidence": "result/evidence/readme-patch-review-20261017",
+    "model_identity_checked_files": 31,
+    "sharegpt_identity": "SHA256_PASS"
+  },
+  "performance_archive": {
+    "directory": "logs/v2_benchmark_raw/final",
+    "manifest": "logs/v2_benchmark_raw/final/manifest.json",
+    "summary": "logs/v2_benchmark_raw/final/summary.json",
+    "report": "docs/性能优化报告.md#4-性能结果",
+    "primary_random": 8,
+    "primary_sharegpt": 5,
+    "all_scenes": 26,
+    "formal_rounds": 78,
+    "aggregation": "Arithmetic mean of three formal rounds; warmups excluded",
+    "verifier": "scripts/verify_benchmark_archive.py",
+    "new_gpu_measurements_this_edit": false,
+    "diagnostic_high_client_concurrency": 2,
+    "display_policy": "4K client C64/C128 retained as queue diagnostics only; service max_running_requests=32; excluded from README expected results and report primary tables"
+  },
+  "review_image": "harbor.sourcefind.cn:5443/dcu/admin/base/sglang:0.5.12-ubuntu22.04-dtk2604-py3.10",
+  "review_image_identity": "NOT_VERIFIED_DNS_LOOKUP_FAILED_20261017; require image ID match",
+  "historical_default_physical_devices": [
+    6,
+    7
+  ],
+  "driver": {
+    "module": "hycu",
+    "version": "6.3.30-V1.4.1a",
+    "source": "/sys/module/hycu/version",
+    "observed_utc": "2026-10-17T07:29:35Z"
+  },
+  "review_entrypoint": "scripts/run_review01.sh",
+  "review_device_adaptation": "scripts/prepare_review01.py: private copy only; physical guard assertion 6,7 -> 0,1, original patch unchanged",
+  "performance_capacity_retest": {
+    "run": "high-concurrency-20261017-a",
+    "status": "COMPLETE_PERFORMANCE_RECHECKED",
+    "raw": "logs/v2_benchmark_raw/server64-128-20261017",
+    "source_files": 591,
+    "formal_rounds": 6,
+    "C64": {
+      "server": 64,
+      "graph": 64,
+      "formal_sampled_running_peak": 64,
+      "tps_mean": 398.9657228595904
+    },
+    "C128": {
+      "server": 128,
+      "graph": 128,
+      "formal_sampled_running_peak": 76,
+      "tps_mean": 378.3502586752575,
+      "role": "QUEUE_DIAGNOSTIC_ACTUAL_128_NOT_VERIFIED"
+    }
+  },
+  "review01_runtime_validation": {
+    "status": "REVIEW01_README_SMOKE_AND_RELEASE_PASS",
+    "run_id": "review01-20261017T073547Z-1208357",
+    "devices": [
+      0,
+      1
+    ],
+    "dependency_check": true,
+    "assets_31_files_and_dataset": "SHA256_PASS",
+    "service_limit": 32,
+    "graph_limit": 32,
+    "native_guard_eligible_ranks": [
+      0,
+      1
+    ],
+    "api_demo": true,
+    "container_stopped": true,
+    "lock_released": true,
+    "evidence": "result/evidence/readme-review01-20261017/runtime-review.json",
+    "new_benchmark_in_this_smoke": false
+  }
+}

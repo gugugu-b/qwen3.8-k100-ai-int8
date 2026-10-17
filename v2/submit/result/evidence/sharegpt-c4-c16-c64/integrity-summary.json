@@ -1,0 +1,90 @@
+{
+  "status": "PAIR67_FINAL_COMPLETE_LOCAL_REMOTE_INDEPENDENT_REVIEW_PASS",
+  "reviewed_at_beijing": "2026-10-16 15:49",
+  "run": "submit-current-sharegpt-pair67-20261016-a",
+  "physical_pair": [
+    6,
+    7
+  ],
+  "scenarios": [
+    "16",
+    "64",
+    "4"
+  ],
+  "complete": true,
+  "snapshot_files": 98,
+  "snapshot_bytes": 45156776,
+  "max_file_bytes": 3152062,
+  "raw_manifest_files": 70,
+  "control_manifest_files": 59,
+  "all_SHA_size_match": true,
+  "four_summaries_byte_identical": true,
+  "summary_sha256": "421f90f4aa597f7e2e9ddc480f838de9ccf013bf566960a14433c09b344bb382",
+  "raw_manifest_sha256": "299018c8c569f917ac2ff2523ad51a2129892b2bd861921658037f28e7245930",
+  "control_manifest_sha256": "4794805da2c75895144f468513d02b9105a80a1edd20148516964ba0c8d03ca8",
+  "formal_requests": 9000,
+  "full_workload_warmup_requests": 3000,
+  "short_warmup_per_invocation": 64,
+  "benchmark_invocations": 12,
+  "errors": 0,
+  "queue_pid_exited": true,
+  "own_container_stopped": true,
+  "gpu67_lock_free": true,
+  "card6_use_percent": 0,
+  "card7_use_percent": 0,
+  "card6_vram_used_mib": 6,
+  "card7_vram_used_mib": 6,
+  "accuracy": "NOT_RUN",
+  "frozen": false,
+  "default_patch_changed": false,
+  "C4": {
+    "mean_output_tps": 144.59653373188758,
+    "output_tps_rounds": [
+      145.08062208567463,
+      144.55703129048337,
+      144.1519478195047
+    ],
+    "spread_percent": 0.6422520942942468,
+    "tail_mean": {
+      "p99_ttft_ms": 945.6638778420164,
+      "p99_tpot_ms": 61.95479494949963,
+      "p95_itl_ms": 42.130277338825785,
+      "p99_itl_ms": 113.31233842036447,
+      "p99_e2e_latency_ms": 21813.124499703405
+    },
+    "historical_report_reference_comparison": {
+      "source_user_reference": "v1/综合评测报告-v1.md",
+      "source_sha256": "b36db6ec60fcac45d710fada2bdf74b1b4655ef631567e6c34fc4dc4a20e417d",
+      "reference_output_tps": 133.37,
+      "latest_mean_output_tps": 144.59653373188758,
+      "output_tps_change_percent": 8.41758546291338,
+      "tail_latest_mean": {
+        "median_ttft_ms": 244.2794071685057,
+        "p99_ttft_ms": 945.6638778420164,
+        "median_tpot_ms": 25.59244239601858,
+        "p99_tpot_ms": 61.95479494949963
+      },
+      "tail_reference": {
+        "median_ttft_ms": 254.41,
+        "p99_ttft_ms": 1182.43,
+        "median_tpot_ms": 27.84,
+        "p99_tpot_ms": 65.82
+      },
+      "tail_change_percent": {
+        "median_ttft_ms": -3.9819947452907845,
+        "p99_ttft_ms": -20.02369037980969,
+        "median_tpot_ms": -8.07312357751947,
+        "p99_tpot_ms": -5.872386889243941
+      },
+      "comparison_scope": "User-selected historical v1 report reference only; not contemporaneous same-pair A/B or acceptance evidence",
+      "formal_acceptance": false
+    }
+  },
+  "caveats": [
+    "Only the latest submit candidate is measured. No new v1 measurements are run. A separate comparison to the user-selected historical report is descriptive, not contemporaneous same-pair A/B or acceptance evidence.",
+    "Three-round spread is observed variability, not a statistical noise upper bound.",
+    "TTFT P99 and output throughput are reconstructed exactly. ITL/TPOT/E2E retain installed benchmark metrics and are independently aggregated; MTP text_chunks and per-request final latency are not serialized, so those exact per-request tails cannot be reconstructed.",
+    "Round percentile means are not pooled-request percentiles; raw chunk ITL and interval-sum reconstructions are approximate diagnostics.",
+    "Workload SHA/seed/input-length sequence are checked; no semantic accuracy evaluation, quality test, patch promotion or freeze is performed."
+  ]
+}

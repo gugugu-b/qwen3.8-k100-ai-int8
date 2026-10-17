@@ -1,0 +1,70 @@
+{
+  "bench.log": {
+    "bytes": 4569,
+    "sha256": "60184136e54b69398a85ce08b11d5410702e05b15b02c90917be427b0a0f9afe"
+  },
+  "command.txt": {
+    "bytes": 393,
+    "sha256": "9da15e723d466b9fc0fdcb2d7235083387e6c5efeae96b42a8c9fa31d3088597"
+  },
+  "config.json": {
+    "bytes": 376,
+    "sha256": "87e0e7df7272bc76b31206e4c14a50d70da4d0792098aaebbcf18b9defd08b26"
+  },
+  "progress.json": {
+    "bytes": 58,
+    "sha256": "25dbf947ad4dbdfe842e2e2d2bb74af843edc946adf850185c4ad3376cda5779"
+  },
+  "reference_performance_review.json": {
+    "bytes": 3792,
+    "sha256": "cbbc13d72c90a9057d73f201f6756ee467bfcdbc70fb50e92b349c9650f6c253"
+  },
+  "round-01/requests.jsonl": {
+    "bytes": 183620,
+    "sha256": "2d4db2ea9ae340b02db7f80bf16957ab36197726f871e383a2b393aadf27f637"
+  },
+  "round-01/summary.json": {
+    "bytes": 1189,
+    "sha256": "9f35b5796c9286267162a64dfaf14e5db4063d2a60be66c1be596ab953787736"
+  },
+  "round-02/requests.jsonl": {
+    "bytes": 185748,
+    "sha256": "26604e8443ae0abe7dc3e01b78f50d5da3e198a3a9279aed86dda6e6f9264e55"
+  },
+  "round-02/summary.json": {
+    "bytes": 1189,
+    "sha256": "98289b80e11ddc20d846cf76889b490b0a8fd01c3deaca7e60f4c45bf9d7d9a2"
+  },
+  "round-03/requests.jsonl": {
+    "bytes": 184673,
+    "sha256": "13e030e307c3c1e3766a4e1e21a20242737c7bf8437b1bc1334dd60b6a75b201"
+  },
+  "round-03/summary.json": {
+    "bytes": 1191,
+    "sha256": "57ce81117f1802ed742c99dade56ea626e551e8e3d30c64b7be8cdd3c57f48b4"
+  },
+  "server-info.json": {
+    "bytes": 25270,
+    "sha256": "6f956dbc53c8e3acdb6c5bf223b0fb8d7be90731cba1c5ad6a7d1af600e1b296"
+  },
+  "summary.json": {
+    "bytes": 5790,
+    "sha256": "7f65b06f3f1fd4268814a5ed5bde0de6ac385b702919f3dc28ee1dbff4e90f5b"
+  },
+  "warmup-01/requests.jsonl": {
+    "bytes": 91283,
+    "sha256": "f5bb8a2b1078d80eb7030b631762294e1bdb14ce97de33d8b53f09889c90dc94"
+  },
+  "warmup-01/summary.json": {
+    "bytes": 1186,
+    "sha256": "5c1f9a463bbe109716191b25750ad1cb0eb7c10479b47d0adf6ddf865e0d1b40"
+  },
+  "warmup-02/requests.jsonl": {
+    "bytes": 90180,
+    "sha256": "63832a9892fd5a79fa79e4ed847ac654dd747f258f79a5fe0b4431065943d304"
+  },
+  "warmup-02/summary.json": {
+    "bytes": 1186,
+    "sha256": "b2f474dc9492c6130079979153dbf6c6a08f1921c30a7fc93f1a26f39f776ef4"
+  }
+}

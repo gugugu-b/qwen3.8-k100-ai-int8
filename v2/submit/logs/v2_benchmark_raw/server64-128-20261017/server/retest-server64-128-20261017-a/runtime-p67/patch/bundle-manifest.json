@@ -1,0 +1,337 @@
+{
+  "format_version": 1,
+  "date": "2026-10-17",
+  "scope": "patch/** except self, verification report, .DS_Store and __pycache__, plus independent verifier",
+  "files": {
+    "patch/README.md": {
+      "bytes": 11818,
+      "sha256": "f7695ab20d38c7d159db3d279443e54de6242e29c2edd7932bee888642c044ec"
+    },
+    "patch/baseline-v1/build_unified.py": {
+      "bytes": 998,
+      "sha256": "9a0910d8c23705f3b17863f74f792120ee059a3af02a9b8e17e5c660e4892ccc"
+    },
+    "patch/baseline-v1/k100_int8_gemv_unified.hip": {
+      "bytes": 13293,
+      "sha256": "dd753458416463665a97c5aedc04cffaed7b992a58190a66c9188619d20c8ae2"
+    },
+    "patch/baseline-v1/k100_int8_gemv_unified.so": {
+      "bytes": 704168,
+      "sha256": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d"
+    },
+    "patch/baseline-v1/libtorch_c_dlpack_addon_torch210-rocm.so": {
+      "bytes": 200624,
+      "sha256": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6"
+    },
+    "patch/baseline-v1/patch_dup_reg_guard.py": {
+      "bytes": 1964,
+      "sha256": "038c207b72052c53ea1626b1408c91002aadf9dc99a543689456c4aed125deac"
+    },
+    "patch/baseline-v1/sitecustomize.py": {
+      "bytes": 13877,
+      "sha256": "f1789532d58daa66187ba901d3d7513ff142cb33fafc7793ce44f4e821464495"
+    },
+    "patch/build_unified.py": {
+      "bytes": 998,
+      "sha256": "9a0910d8c23705f3b17863f74f792120ee059a3af02a9b8e17e5c660e4892ccc"
+    },
+    "patch/diffs/0001-lightop-duplicate-registration.patch": {
+      "bytes": 1481,
+      "sha256": "f04015a438b81bec22338b1a9c04389e5bb318e86559744a8d6ed850b02be778"
+    },
+    "patch/diffs/0002-v2-triton-tiles.patch": {
+      "bytes": 9077,
+      "sha256": "9512b816cf0f4cfccf7c432d78605fadbad7ceb55322f685c31652038e89db2b"
+    },
+    "patch/diffs/0003-v2-native-bf16-guard.patch": {
+      "bytes": 2608,
+      "sha256": "6e96beabfc8b2b8ced157070b5c7ab0a9e158f35b1da710325bbb95e44171316"
+    },
+    "patch/diffs/0004-inherited-longkv-anchor-edits.diff": {
+      "bytes": 386,
+      "sha256": "115de6c7f7666f26a8800a46060d323583a44e269917206095291970897f95ce"
+    },
+    "patch/diffs/0005-inherited-longkv-full-source.patch": {
+      "bytes": 884,
+      "sha256": "a48210199b34ac50071b22bf2fe608211d239b731cc3cb1df9c77ae2db05cca2"
+    },
+    "patch/k100_int8_gemv_unified.hip": {
+      "bytes": 13293,
+      "sha256": "dd753458416463665a97c5aedc04cffaed7b992a58190a66c9188619d20c8ae2"
+    },
+    "patch/k100_int8_gemv_unified.so": {
+      "bytes": 704168,
+      "sha256": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d"
+    },
+    "patch/libtorch_c_dlpack_addon_torch210-rocm.so": {
+      "bytes": 200624,
+      "sha256": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6"
+    },
+    "patch/native-ar-manifest.json": {
+      "bytes": 1032,
+      "sha256": "ee6324054eadf2707ad9806dc034dbd4082e8649ece3936f5d084d63674834a8"
+    },
+    "patch/native_bf16_ar_guard.py": {
+      "bytes": 2085,
+      "sha256": "55485f3994417b012fd76f3cf423b03b33fd90d52e2c73d98d0fc9315ab0b5aa"
+    },
+    "patch/patch_dup_reg_guard.py": {
+      "bytes": 1964,
+      "sha256": "038c207b72052c53ea1626b1408c91002aadf9dc99a543689456c4aed125deac"
+    },
+    "patch/provenance/clean-runtime-startup-review.json": {
+      "bytes": 1101,
+      "sha256": "20df7a597a201bcc9b09e667cd4472029cfa9b1f5f02d0ad0639d7b7b16e318e"
+    },
+    "patch/provenance/repair_runtime_cache.py": {
+      "bytes": 3201,
+      "sha256": "357bd2c3bd46f41ff440f6bbfc827672a5d05b5bd779ad43541596819f0e1375"
+    },
+    "patch/provenance/source-origin.json": {
+      "bytes": 7730,
+      "sha256": "2d62bf69aea4f216f7a206b788c669dfe9e61551569c8d547da28d8abdb296cb"
+    },
+    "patch/provenance/tvm-cache-repair-review.json": {
+      "bytes": 470,
+      "sha256": "9855f0a289f7865c8d9a7f2edc6f32901a8ef33ac30b71798eb0439f2e43a808"
+    },
+    "patch/runtime/direct_register_custom_op.py": {
+      "bytes": 2132,
+      "sha256": "e6ee8f1b25e60d02811658483cdf150b33c79ba5c94f27198167268a44a8b545"
+    },
+    "patch/runtime/tvm-ffi/libtorch_c_dlpack_addon_torch210-rocm.so": {
+      "bytes": 200624,
+      "sha256": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6"
+    },
+    "patch/sitecustomize.py": {
+      "bytes": 16915,
+      "sha256": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610"
+    },
+    "patch/source/export_tvm_licenses.py": {
+      "bytes": 1947,
+      "sha256": "5deac9e6a594fc9d41c4ba1ac6036dca993c9a230bdb5adb3695af2dfcbc5ecb"
+    },
+    "patch/source/fixed-image-export/export-environment.json": {
+      "bytes": 693,
+      "sha256": "d0f707dad62f49cfa7b6f0475a56218e4ba97f8f9c832c66c3bb8713fcc37305"
+    },
+    "patch/source/fixed-image-export/licenses/apache_tvm_ffi-0.1.9.dist-info/licenses/LICENSE": {
+      "bytes": 11833,
+      "sha256": "bb354d8b94589ad8817f2dff029d39a1133d217407f73679d0b0311c980e511f"
+    },
+    "patch/source/fixed-image-export/licenses/apache_tvm_ffi-0.1.9.dist-info/licenses/NOTICE": {
+      "bytes": 171,
+      "sha256": "5181189219b74687e08884d813b8f98c874d0e4ba84eb7afc4bb350d22502c24"
+    },
+    "patch/source/fixed-image-export/licenses/export-environment.json": {
+      "bytes": 724,
+      "sha256": "35642335f5a799f4d9edd10ac011fc5fed7dfe4380ecf55115543c7506326eb1"
+    },
+    "patch/source/fixed-image-export/licenses/export.log": {
+      "bytes": 1102,
+      "sha256": "3f26f9d9d88c831b6e6b415c0da2a06c88013309b094458069dea339ee3649a3"
+    },
+    "patch/source/fixed-image-export/licenses/manifest.json": {
+      "bytes": 1102,
+      "sha256": "3f26f9d9d88c831b6e6b415c0da2a06c88013309b094458069dea339ee3649a3"
+    },
+    "patch/source/fixed-image-export/licenses/tvm_ffi/3rdparty/libbacktrace/LICENSE": {
+      "bytes": 1478,
+      "sha256": "ef8a9b3247488f8901ca60de9b17b745d7bd67e5ec1e622f80d62364572200d8"
+    },
+    "patch/source/fixed-image-export/materialization.log": {
+      "bytes": 1385,
+      "sha256": "999fdba1dc99890200d4cd4458dcaf71a6a62f48f2e3e836210805b1a5ee058b"
+    },
+    "patch/source/fixed-image-export/materialized/lightop-full-source.patch": {
+      "bytes": 1481,
+      "sha256": "f04015a438b81bec22338b1a9c04389e5bb318e86559744a8d6ed850b02be778"
+    },
+    "patch/source/fixed-image-export/materialized/longkv-full-source.patch": {
+      "bytes": 884,
+      "sha256": "a48210199b34ac50071b22bf2fe608211d239b731cc3cb1df9c77ae2db05cca2"
+    },
+    "patch/source/fixed-image-export/materialized/manifest.json": {
+      "bytes": 1385,
+      "sha256": "999fdba1dc99890200d4cd4458dcaf71a6a62f48f2e3e836210805b1a5ee058b"
+    },
+    "patch/source/fixed-image-export/materialized/runtime/direct_register_custom_op.py": {
+      "bytes": 2132,
+      "sha256": "e6ee8f1b25e60d02811658483cdf150b33c79ba5c94f27198167268a44a8b545"
+    },
+    "patch/source/fixed-image-export/materialized/runtime/flash_attn_triton_mqa_gqa.py": {
+      "bytes": 57664,
+      "sha256": "5a107b5d3e03260168820ceb13f0a20ae14527f9332e75760b07317dd89bcf3b"
+    },
+    "patch/source/fixed-image-export/materialized/vendor/direct_register_custom_op.py": {
+      "bytes": 1170,
+      "sha256": "9886ea4118ec8eb7203fb857e1d5f9ff7e92ff53d75fd9a9913da9f6f64f4502"
+    },
+    "patch/source/fixed-image-export/materialized/vendor/flash_attn_triton_mqa_gqa.py": {
+      "bytes": 57642,
+      "sha256": "f00a1286df85fb923dcf87be251d9ffd7b8e2967a9715937adec4dfbe8f8f307"
+    },
+    "patch/source/fixed-image-export/tvm-ffi-source/_optional_torch_c_dlpack.py": {
+      "bytes": 7874,
+      "sha256": "71fa7ff562ab5cb6a714200f31b5caa3d0a1c9cf949fd21c6a2a830580c60a18"
+    },
+    "patch/source/fixed-image-export/tvm-ffi-source/addon.cc": {
+      "bytes": 17384,
+      "sha256": "e7cf41adcf0b4a0477ebf2726fb539c8f2571619077ebfe77301e70b76db9dfe"
+    },
+    "patch/source/fixed-image-export/tvm-ffi-source/include/dlpack/dlpack.h": {
+      "bytes": 23463,
+      "sha256": "62052bef24bd69bb7b52e95428f9e99bd7951783850c36c5f2a41e71fd63c2fc"
+    },
+    "patch/source/fixed-image-export/tvm-ffi-source/libinfo.py": {
+      "bytes": 11012,
+      "sha256": "d7fec22223bb77925a9971d97d6a51e00a5c1c6d6ddaff8b160318354f787158"
+    },
+    "patch/source/fixed-image-export/tvm-ffi-source/manifest.json": {
+      "bytes": 1149,
+      "sha256": "2403a8e5d9a3df240a547a2455cb46780ed06e07f4633bd234cbb3c7b18ebdaf"
+    },
+    "patch/source/fixed-image-export/tvm-ffi-source/utils/_build_optional_torch_c_dlpack.py": {
+      "bytes": 30608,
+      "sha256": "00642488be9a3bdc9560f14fa5d5b73172e096e89b09ffc35a7f18225feae9ce"
+    },
+    "patch/source/fixed-image-export/tvm-ffi-source/utils/lockfile.py": {
+      "bytes": 5606,
+      "sha256": "5e5b941036979eb44566e64e351e7fddadd27360a9efe56c52493313be15f100"
+    },
+    "patch/source/longkv-anchors.json": {
+      "bytes": 385,
+      "sha256": "760d6a28d90813ff90279aac59147a91937a8a5560de04d2f618ddad746e42ad"
+    },
+    "patch/source/materialize_vendor_overlay.py": {
+      "bytes": 3745,
+      "sha256": "a3f8b7519d166c55e572e436a1e79bbb53b6fa070e75847927215cd041e11c91"
+    },
+    "patch/source/reconstructed-stock/lightop/_lmslim_native/vllm_compat/direct_register_custom_op.py": {
+      "bytes": 1170,
+      "sha256": "9886ea4118ec8eb7203fb857e1d5f9ff7e92ff53d75fd9a9913da9f6f64f4502"
+    },
+    "patch/source/vendor-reference/lightop/_lmslim_native/layers/gemm/int8_utils.py": {
+      "bytes": 19391,
+      "sha256": "e1e1ba8ffe63a070cff6920a025d55b8d1fa6d185a7da4bb0fe5f6bf09016114"
+    },
+    "patch/source/vendor-reference/lmslim/layers/gemm/int8_utils.py": {
+      "bytes": 19480,
+      "sha256": "7e79a415bbfb5019b1ddedaa65f7afc19d658f857815c0ca97a2d5b2459fe868"
+    },
+    "patch/source/vendor-reference/sgl_kernel/__init__.py": {
+      "bytes": 7582,
+      "sha256": "44404405d9cf35c75acdf07e39c850883e73e794cabb71029de8bde5f3e214b6"
+    },
+    "patch/source/vendor-reference/sgl_kernel/allreduce.py": {
+      "bytes": 5971,
+      "sha256": "473a99017854014ab39432c04ab9b0dcf021b26afc59c8f7c475a760fe4ec5cc"
+    },
+    "patch/source/vendor-reference/sgl_kernel/binary-identity.json": {
+      "bytes": 210,
+      "sha256": "df45ae9c53873c427dbb0ffda1733483501a7cdbe5519b0f47b8c7fff96f0c24"
+    },
+    "patch/source/vendor-reference/sgl_kernel/source-sha256.json": {
+      "bytes": 461,
+      "sha256": "62b06899f2c7c5ed85dfb535043e53bf92bc4dbd1505000d174b197dd21fe5bf"
+    },
+    "patch/source/vendor-reference/sglang/srt/distributed/device_communicators/custom_all_reduce.py": {
+      "bytes": 19380,
+      "sha256": "6da396fa2692f34fe28ef5d983176976229e943421362c5c7990c818ef156fb0"
+    },
+    "patch/source/vendor-reference/sglang/srt/distributed/device_communicators/custom_all_reduce_ops.py": {
+      "bytes": 5930,
+      "sha256": "a032a7058694a34ec107bafbe4f733cae220f793c20de6d1b1e3e85bc7ef4553"
+    },
+    "patch/triton_tiles.json": {
+      "bytes": 5541,
+      "sha256": "4349ae5ebb6c6348323fecb75d35c756970e82b2e2d5d2a9197f1ae839a95758"
+    },
+    "patch/v2-vs-v1.diff": {
+      "bytes": 3350,
+      "sha256": "1291bf1dcb12372ffe3c676ea6fb7835ffd06045818f1466c45a4e47cdcdfea8"
+    },
+    "scripts/verify_patch_bundle.py": {
+      "bytes": 9872,
+      "sha256": "9672102e1fbec74b7a4cf685752b0ac0fd5a2f8ab8cf8f27d7d668331cbee4f4"
+    }
+  },
+  "upstream_source_gaps": [
+    {
+      "component": "TVM FFI Torch C DLPack cache",
+      "status": "FIXED_IMAGE_SOURCE_AND_RECIPE_EXPORTED_ORIGINAL_CACHE_BUILD_LOG_AND_BITWISE_REBUILD_NOT_VERIFIED",
+      "binary_sha256": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6"
+    },
+    {
+      "component": "Vendor native AR common_ops",
+      "status": "MATCHING_CPP_HIP_SOURCE_AND_BUILD_RECIPE_NOT_ARCHIVED",
+      "binary_sha256": "8c81c808faa6ea332b1c0c81a9474877b95b01eb4738473c6a1e9854c4d6b230"
+    },
+    {
+      "component": "Inherited HIP GEMV build",
+      "status": "FULL_SOURCE_AND_RECIPE_SUPPLIED_ORIGINAL_NINJA_LOG_NOT_ARCHIVED"
+    }
+  ],
+  "not_a_runtime_or_accuracy_gate": true,
+  "runtime_components": [
+    {
+      "component": "INT8 LDS GEMV",
+      "owner_scope": "custom_source_inherited_v1_unchanged",
+      "sources": [
+        "patch/k100_int8_gemv_unified.hip",
+        "patch/build_unified.py"
+      ],
+      "binary": "patch/k100_int8_gemv_unified.so",
+      "rebuild_entry": "scripts/rebuild_kernel.py",
+      "rebuild_this_review": "NOT_RUN"
+    },
+    {
+      "component": "Runtime dispatch and inherited LongKV",
+      "owner_scope": "custom_full_source",
+      "sources": [
+        "patch/sitecustomize.py",
+        "patch/baseline-v1/sitecustomize.py"
+      ],
+      "upstream_dependency": "Fixed image original and transformed complete source exported under patch/source/fixed-image-export/materialized/"
+    },
+    {
+      "component": "18 shape Triton tile dispatch",
+      "owner_scope": "custom_source_and_configuration_v2",
+      "sources": [
+        "patch/sitecustomize.py",
+        "patch/triton_tiles.json"
+      ],
+      "vendor_kernel_snapshot": [
+        "patch/source/vendor-reference/lmslim/layers/gemm/int8_utils.py",
+        "patch/source/vendor-reference/lightop/_lmslim_native/layers/gemm/int8_utils.py"
+      ],
+      "vendor_kernel_modified": false
+    },
+    {
+      "component": "BF16 native AR eligibility",
+      "owner_scope": "custom_python_guard_v2",
+      "sources": [
+        "patch/native_bf16_ar_guard.py"
+      ],
+      "vendor_kernel_modified": false,
+      "vendor_binary": "/usr/local/lib/python3.10/dist-packages/sgl_kernel/common_ops.cpython-310-x86_64-linux-gnu.so"
+    },
+    {
+      "component": "Lightop duplicate registration",
+      "owner_scope": "custom_compatibility_overlay_inherited_v1",
+      "sources": [
+        "patch/runtime/direct_register_custom_op.py",
+        "patch/patch_dup_reg_guard.py"
+      ],
+      "apply_method": "read-only per-container bind overlay"
+    },
+    {
+      "component": "TVM FFI Torch C DLPack cache",
+      "owner_scope": "unchanged_upstream_cache_NOT_custom_kernel",
+      "binary": "patch/runtime/tvm-ffi/libtorch_c_dlpack_addon_torch210-rocm.so",
+      "source_evidence": "patch/provenance/tvm-cache-repair-review.json",
+      "source_export": "patch/source/fixed-image-export/tvm-ffi-source",
+      "rebuild_this_review": "NOT_RUN"
+    }
+  ]
+}

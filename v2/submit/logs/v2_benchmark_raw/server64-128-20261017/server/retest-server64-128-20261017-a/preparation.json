@@ -1,0 +1,15 @@
+{
+  "status": "PACKAGE_LIBRARY_AND_IMAGE_READY",
+  "utc": "2026-10-17T03:34:54.264356+00:00",
+  "existing_model_manifest": "/data/wangzy/v2/submit/result/evidence/official-alignment-20261017/community-official-20261017-c/model-sha256.json",
+  "existing_model_manifest_sha256": "29fe022dbce08d7e976c0793aea41e03d0cc4285d5df4561246a48861286049a",
+  "model_weights_rehashed_this_run": false,
+  "source_sha256": {
+    "execution/official-alignment-20261017-c/controller.py": "fb73df944c616be69f483d1da7694fcc43d2a243f22d02663db161eb1dfa8bbd",
+    "execution/official-alignment-20261017-c/probe_template.py": "07c8241e2543460594b7eeba892aa06ed3d453cd06be0cb5ae0fef2b7ec58b86",
+    "scripts/serve.sh": "1d5e381cc7e0057d2c9f8b27cee1bd5db79b80331b1a758d5ef118206294489b",
+    "scripts/start_server.sh": "e2b28b978ff47010ffa7530152029a7e3bcacf3b5fde2eb83e2bcc703f012417",
+    "scripts/benchmark_reference.sh": "dd0051d9024a573659a71731d8bf1263c78721a3b6124071263cdb3a0b2b467e",
+    "scripts/benchmark.reference.py": "08d7e43d2b347f2a2cfef3a577f7db4ab2472b3139939db8a6731b07369c5fc6"
+  }
+}

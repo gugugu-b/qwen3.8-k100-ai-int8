@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "files": 491,
+  "scenes": 26,
+  "formal_rounds": 78,
+  "primary_random_count": 8,
+  "primary_sharegpt_count": 5,
+  "text_flagged_scenes": 7,
+  "diagnostic_high_client_concurrency_count": 2,
+  "scope": "Archive integrity and saved performance arithmetic; text flags retained",
+  "gpu_used": false
+}

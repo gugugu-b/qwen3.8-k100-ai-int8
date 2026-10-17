@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-16T14:50:03.598734+00:00",
+  "automation_id": "submit1009-64",
+  "delete_status": "deleted",
+  "reason": "All requested GPU measurements terminated and original failed text-integrity evidence archived/reported; no live job or proven safe automatic remedy remains to monitor",
+  "original_queue_status": "FAILED",
+  "original_validation_gate_pass": false,
+  "numeric_measurements_complete": true,
+  "remote_local_numeric_audit_bytes_identical": true,
+  "measurement_report_sha256": "d5ddcc2e70e2a6a91c0c3d43f5cac37dfd2701876566c2086e3680545e9f04a7",
+  "owned_container_stopped": true,
+  "gpu01_lock_free": true,
+  "resource_release_proof": "pair01-final-release-proof.json",
+  "accuracy": "NOT_RUN",
+  "frozen": false
+}

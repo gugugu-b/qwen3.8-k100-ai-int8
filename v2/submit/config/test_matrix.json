@@ -1,0 +1,92 @@
+{
+  "track": "K100-AI/SGLang/TP2",
+  "fixed_random_output_tokens": 1024,
+  "4k": {
+    "input_tokens": 4096,
+    "community_table_concurrency": [
+      1,
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "measured_candidate": [
+      8
+    ],
+    "missing": [
+      1,
+      16,
+      32,
+      64,
+      128
+    ],
+    "current_reference_protocol_run": "community-official-20261017-c"
+  },
+  "64k": {
+    "input_tokens": 65536,
+    "community_table_concurrency": [
+      1,
+      8,
+      16,
+      32
+    ],
+    "measured_candidate": [
+      8
+    ],
+    "missing": [
+      1,
+      16,
+      32
+    ],
+    "note": "Official tutorial confirms C1/8/16/32; K100AI C16=14.242 TPS, C32=ABORTED reference baseline.",
+    "current_reference_protocol_run": "community-official-20261017-c"
+  },
+  "sharegpt": {
+    "proposed_concurrency": [
+      1,
+      4,
+      16,
+      32,
+      64
+    ],
+    "measured_candidate": [
+      1,
+      4,
+      16,
+      32,
+      64
+    ],
+    "official_k100ai_grid": "not specified; follows document example grid"
+  },
+  "sla": {
+    "4k": {
+      "ttft_s_strict_lt": 10,
+      "tpot_ms_strict_lt": 80
+    },
+    "64k": {
+      "ttft_s_strict_lt": 30,
+      "tpot_ms_strict_lt": 100
+    },
+    "official_baseline_max_concurrency": 0,
+    "candidate_max_concurrency": null,
+    "statistic": "P95 from tutorial, local community thresholds explicitly selected by user"
+  },
+  "official_tutorial_status": "RETRIEVED_AND_REFERENCE_CLIENT_ARCHIVED_20261017",
+  "accuracy_order": "GSM8K_concurrent_dedicated_TP2_user_update_20261017; other_three_last",
+  "gsm8k_execution": {
+    "run_id": "community-gsm8k-20261017-e",
+    "track": "K100-AI/SGLang/TP2",
+    "pair": "0,1",
+    "port": 31400,
+    "concurrency": 32,
+    "requests": 1319,
+    "protocol": "Frozen EvalScope 1.6.1 4-shot main full set; final official equivalence unverified",
+    "threshold": 0.95,
+    "minimum_correct": 1254,
+    "takeover": "After pair01 current matrix completes and releases flock; fresh owned container; later pair01 SLA waits for GSM8K cleanup",
+    "other_accuracy": "LAST",
+    "result": "result/summary/gsm8k-community-20261017-e.json",
+    "evidence": "result/evidence/gsm8k-20261017"
+  }
+}

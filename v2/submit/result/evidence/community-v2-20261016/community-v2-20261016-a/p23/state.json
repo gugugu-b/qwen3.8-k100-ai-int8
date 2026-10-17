@@ -1,0 +1,164 @@
+{
+  "pair": "2,3",
+  "pid": 1364381,
+  "utc": "2026-10-16T17:08:41.138823+00:00",
+  "stage": "random_matrix",
+  "status": "MATRIX_COMPLETE",
+  "scenes": [
+    {
+      "run_id": "community-v2-20261016-a-p23-matrix-64k-c1",
+      "scene": "64k",
+      "c": 1,
+      "path": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p23-matrix-64k-c1/64k-c1",
+      "validation": {
+        "status": "PASS",
+        "measured_rounds": 3,
+        "requests": 48,
+        "output_tps_rounds": [
+          22.21362226798351,
+          22.42475849362647,
+          22.41078064779242
+        ],
+        "mean_output_tps": 22.3497204698008,
+        "spread_percent": 0.944692914295057,
+        "mean_wall_s": 733.0877264383598,
+        "ttft_s_p50_mean_of_rounds": 26.37359934449584,
+        "ttft_s_p50_range": [
+          26.367280407983344,
+          26.38039909451618
+        ],
+        "ttft_s_p95_mean_of_rounds": 26.529585830391927,
+        "ttft_s_p95_range": [
+          26.392907763205585,
+          26.792012631485704
+        ],
+        "ttft_s_p99_mean_of_rounds": 26.77372730259279,
+        "ttft_s_p99_range": [
+          26.397227636599563,
+          27.519204141490626
+        ],
+        "tpot_ms_p50_mean_of_rounds": 18.74812540647564,
+        "tpot_ms_p50_range": [
+          18.4743652981228,
+          19.26521346969202
+        ],
+        "tpot_ms_p95_mean_of_rounds": 20.238639258802685,
+        "tpot_ms_p95_range": [
+          19.85993567500937,
+          20.866930539821496
+        ],
+        "tpot_ms_p99_mean_of_rounds": 20.65952596006738,
+        "tpot_ms_p99_range": [
+          20.17266494221701,
+          21.629281261819074
+        ]
+      },
+      "config": {
+        "base_url": "http://127.0.0.1:31110",
+        "concurrency": 1,
+        "input_len": 65536,
+        "measure_rounds": 3,
+        "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+        "output_dir": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p23-matrix-64k-c1/64k-c1",
+        "output_len": 1024,
+        "requests_per_round": 16,
+        "seed": 20260912,
+        "timeout": 7200,
+        "warmup_rounds": 1
+      },
+      "provisional_SLA_by_statistic": {
+        "mean": true,
+        "p99": true
+      },
+      "official_SLA_max": null
+    },
+    {
+      "run_id": "community-v2-20261016-a-p23-matrix-64k-c16",
+      "scene": "64k",
+      "c": 16,
+      "path": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p23-matrix-64k-c16/64k-c16",
+      "validation": {
+        "status": "PASS",
+        "measured_rounds": 3,
+        "requests": 96,
+        "output_tps_rounds": [
+          32.53450785828858,
+          32.58522020241043,
+          32.56089167022002
+        ],
+        "mean_output_tps": 32.56020657697301,
+        "spread_percent": 0.15574945448202326,
+        "mean_wall_s": 1006.3822285113274,
+        "ttft_s_p50_mean_of_rounds": 94.15989676649527,
+        "ttft_s_p50_range": [
+          80.83729720697738,
+          107.97267886201735
+        ],
+        "ttft_s_p95_mean_of_rounds": 381.771039062945,
+        "ttft_s_p95_range": [
+          381.6158630512916,
+          382.0485409909452
+        ],
+        "ttft_s_p99_mean_of_rounds": 461.30186288001784,
+        "ttft_s_p99_range": [
+          461.2471684924852,
+          461.335306764393
+        ],
+        "tpot_ms_p50_mean_of_rounds": 341.47091384669807,
+        "tpot_ms_p50_range": [
+          337.15840966862584,
+          348.50642102836395
+        ],
+        "tpot_ms_p95_mean_of_rounds": 603.444440759537,
+        "tpot_ms_p95_range": [
+          583.0115168022091,
+          620.096271724359
+        ],
+        "tpot_ms_p99_mean_of_rounds": 680.3698361821738,
+        "tpot_ms_p99_range": [
+          636.6434289042695,
+          725.0637075813123
+        ]
+      },
+      "config": {
+        "base_url": "http://127.0.0.1:31110",
+        "concurrency": 16,
+        "input_len": 65536,
+        "measure_rounds": 3,
+        "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+        "output_dir": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p23-matrix-64k-c16/64k-c16",
+        "output_len": 1024,
+        "requests_per_round": 32,
+        "seed": 20260912,
+        "timeout": 7200,
+        "warmup_rounds": 1
+      },
+      "provisional_SLA_by_statistic": {
+        "mean": false,
+        "p99": false
+      },
+      "official_SLA_max": null
+    }
+  ],
+  "accuracy": "NOT_RUN",
+  "parallel_instances": 4,
+  "container": "qwen38-community-v2-23-20261016-a",
+  "current": {
+    "scene": "64k",
+    "c": 16
+  },
+  "gpu_after": {
+    "card2": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "4"
+    },
+    "card3": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "4"
+    }
+  },
+  "finished_utc": "2026-10-16T17:09:12.818529+00:00",
+  "lock_released": true
+}

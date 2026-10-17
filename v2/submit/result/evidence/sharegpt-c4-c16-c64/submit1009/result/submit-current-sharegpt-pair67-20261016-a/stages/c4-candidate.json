@@ -1,0 +1,1405 @@
+{
+  "status": "COMPLETE",
+  "run": "submit-current-sharegpt-pair67-20261016-a-c4-candidate",
+  "server_run": "submit-current-sharegpt-pair67-20261016-a-c4-candidate-server",
+  "kind": "candidate",
+  "physical_pair": [
+    6,
+    7
+  ],
+  "client_concurrency": 4,
+  "started_utc": "2026-10-16T05:55:20.436737+00:00",
+  "finished_utc": "2026-10-16T07:31:43.233078+00:00",
+  "overlap_start": {
+    "utc": "2026-10-16T05:55:20.436764+00:00",
+    "perf-sharegpt-20261016-a-state.json": {
+      "phase": "failed",
+      "pid": 1742606,
+      "utc": "2026-10-16T04:29:25.600355+00:00",
+      "run": "perf-sharegpt-20261016-a",
+      "physical_pair": [
+        6,
+        7
+      ],
+      "elapsed_s": 9363.617284645006,
+      "error": "SystemExit('SIGTERM requested')",
+      "accuracy": "NOT_RUN",
+      "last_stage": {
+        "phase": "benchmarking-sharegpt",
+        "pid": 1742606,
+        "utc": "2026-10-16T03:54:39.688012+00:00",
+        "run": "perf-sharegpt-20261016-a",
+        "physical_pair": [
+          6,
+          7
+        ],
+        "elapsed_s": 7277.704920658027,
+        "command_pid": 704114,
+        "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+        "overlap": {
+          "utc": "2026-10-16T03:54:39.658552+00:00",
+          "perf-64k-20261016-a-state.json": {
+            "phase": "performance-validation-complete",
+            "pid": 1633240,
+            "utc": "2026-10-16T03:31:38.734557+00:00",
+            "run_id": "perf-64k-20261016-a",
+            "physical_pair": "4,5",
+            "tp": 2,
+            "scene": "64k1k-c8",
+            "quality_evaluation": false,
+            "formal_acceptance": false,
+            "frozen": false,
+            "error": null,
+            "all_variants_completed": true,
+            "own_container_stopped": true
+          },
+          "qwen38-submit1009-perf45-20261016": {
+            "running": false,
+            "pid": 0
+          }
+        },
+        "client_concurrency": 16,
+        "kind": "v1",
+        "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+      }
+    },
+    "perf-sharegpt-c1-pair45-20261016-a-state.json": {
+      "phase": "failed",
+      "pid": 1406628,
+      "utc": "2026-10-16T04:29:25.600275+00:00",
+      "run": "perf-sharegpt-c1-pair45-20261016-a",
+      "physical_pair": [
+        4,
+        5
+      ],
+      "elapsed_s": 383.3090668579971,
+      "error": "TimeoutError('Owned C1 pair45 queue interrupted/deadline signal 15')",
+      "accuracy": "NOT_RUN",
+      "last_stage": {
+        "phase": "benchmarking-sharegpt",
+        "pid": 1406628,
+        "utc": "2026-10-16T04:24:50.034763+00:00",
+        "run": "perf-sharegpt-c1-pair45-20261016-a",
+        "physical_pair": [
+          4,
+          5
+        ],
+        "elapsed_s": 107.74353679301566,
+        "command_pid": 1453327,
+        "log": "result/perf-sharegpt-c1-pair45-20261016-a/evidence/c1-v1/benchmark-command.log",
+        "overlap": {
+          "utc": "2026-10-16T04:24:50.008200+00:00",
+          "perf-sharegpt-20261016-a-state.json": {
+            "phase": "benchmarking-sharegpt",
+            "pid": 1742606,
+            "utc": "2026-10-16T03:54:39.688012+00:00",
+            "run": "perf-sharegpt-20261016-a",
+            "physical_pair": [
+              6,
+              7
+            ],
+            "elapsed_s": 7277.704920658027,
+            "command_pid": 704114,
+            "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+            "overlap": {
+              "utc": "2026-10-16T03:54:39.658552+00:00",
+              "perf-64k-20261016-a-state.json": {
+                "phase": "performance-validation-complete",
+                "pid": 1633240,
+                "utc": "2026-10-16T03:31:38.734557+00:00",
+                "run_id": "perf-64k-20261016-a",
+                "physical_pair": "4,5",
+                "tp": 2,
+                "scene": "64k1k-c8",
+                "quality_evaluation": false,
+                "formal_acceptance": false,
+                "frozen": false,
+                "error": null,
+                "all_variants_completed": true,
+                "own_container_stopped": true
+              },
+              "qwen38-submit1009-perf45-20261016": {
+                "running": false,
+                "pid": 0
+              }
+            },
+            "client_concurrency": 16,
+            "kind": "v1",
+            "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+          },
+          "perf-64k-20261016-a-state.json": {
+            "phase": "performance-validation-complete",
+            "pid": 1633240,
+            "utc": "2026-10-16T03:31:38.734557+00:00",
+            "run_id": "perf-64k-20261016-a",
+            "physical_pair": "4,5",
+            "tp": 2,
+            "scene": "64k1k-c8",
+            "quality_evaluation": false,
+            "formal_acceptance": false,
+            "frozen": false,
+            "error": null,
+            "all_variants_completed": true,
+            "own_container_stopped": true
+          },
+          "qwen38-submit1009-perf67-20261016": {
+            "running": true,
+            "pid": 655518
+          }
+        },
+        "client_concurrency": 1,
+        "kind": "v1",
+        "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-c1-pair45-20261016-a-c1-v1/sharegpt-c1"
+      }
+    },
+    "perf-64k-20261016-a-state.json": {
+      "phase": "performance-validation-complete",
+      "pid": 1633240,
+      "utc": "2026-10-16T03:31:38.734557+00:00",
+      "run_id": "perf-64k-20261016-a",
+      "physical_pair": "4,5",
+      "tp": 2,
+      "scene": "64k1k-c8",
+      "quality_evaluation": false,
+      "formal_acceptance": false,
+      "frozen": false,
+      "error": null,
+      "all_variants_completed": true,
+      "own_container_stopped": true
+    },
+    "submit-current-c1-pair45-20261016-a-state.json": {
+      "phase": "benchmarking-sharegpt",
+      "pid": 1621554,
+      "utc": "2026-10-16T04:33:36.503156+00:00",
+      "run": "submit-current-c1-pair45-20261016-a",
+      "physical_pair": [
+        4,
+        5
+      ],
+      "elapsed_s": 112.63879707598244,
+      "command_pid": 1673804,
+      "log": "result/submit-current-c1-pair45-20261016-a/evidence/c1-candidate/benchmark-command.log",
+      "overlap": {
+        "utc": "2026-10-16T04:33:36.475438+00:00",
+        "perf-sharegpt-20261016-a-state.json": {
+          "phase": "failed",
+          "pid": 1742606,
+          "utc": "2026-10-16T04:29:25.600355+00:00",
+          "run": "perf-sharegpt-20261016-a",
+          "physical_pair": [
+            6,
+            7
+          ],
+          "elapsed_s": 9363.617284645006,
+          "error": "SystemExit('SIGTERM requested')",
+          "accuracy": "NOT_RUN",
+          "last_stage": {
+            "phase": "benchmarking-sharegpt",
+            "pid": 1742606,
+            "utc": "2026-10-16T03:54:39.688012+00:00",
+            "run": "perf-sharegpt-20261016-a",
+            "physical_pair": [
+              6,
+              7
+            ],
+            "elapsed_s": 7277.704920658027,
+            "command_pid": 704114,
+            "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+            "overlap": {
+              "utc": "2026-10-16T03:54:39.658552+00:00",
+              "perf-64k-20261016-a-state.json": {
+                "phase": "performance-validation-complete",
+                "pid": 1633240,
+                "utc": "2026-10-16T03:31:38.734557+00:00",
+                "run_id": "perf-64k-20261016-a",
+                "physical_pair": "4,5",
+                "tp": 2,
+                "scene": "64k1k-c8",
+                "quality_evaluation": false,
+                "formal_acceptance": false,
+                "frozen": false,
+                "error": null,
+                "all_variants_completed": true,
+                "own_container_stopped": true
+              },
+              "qwen38-submit1009-perf45-20261016": {
+                "running": false,
+                "pid": 0
+              }
+            },
+            "client_concurrency": 16,
+            "kind": "v1",
+            "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+          }
+        },
+        "perf-sharegpt-c1-pair45-20261016-a-state.json": {
+          "phase": "failed",
+          "pid": 1406628,
+          "utc": "2026-10-16T04:29:25.600275+00:00",
+          "run": "perf-sharegpt-c1-pair45-20261016-a",
+          "physical_pair": [
+            4,
+            5
+          ],
+          "elapsed_s": 383.3090668579971,
+          "error": "TimeoutError('Owned C1 pair45 queue interrupted/deadline signal 15')",
+          "accuracy": "NOT_RUN",
+          "last_stage": {
+            "phase": "benchmarking-sharegpt",
+            "pid": 1406628,
+            "utc": "2026-10-16T04:24:50.034763+00:00",
+            "run": "perf-sharegpt-c1-pair45-20261016-a",
+            "physical_pair": [
+              4,
+              5
+            ],
+            "elapsed_s": 107.74353679301566,
+            "command_pid": 1453327,
+            "log": "result/perf-sharegpt-c1-pair45-20261016-a/evidence/c1-v1/benchmark-command.log",
+            "overlap": {
+              "utc": "2026-10-16T04:24:50.008200+00:00",
+              "perf-sharegpt-20261016-a-state.json": {
+                "phase": "benchmarking-sharegpt",
+                "pid": 1742606,
+                "utc": "2026-10-16T03:54:39.688012+00:00",
+                "run": "perf-sharegpt-20261016-a",
+                "physical_pair": [
+                  6,
+                  7
+                ],
+                "elapsed_s": 7277.704920658027,
+                "command_pid": 704114,
+                "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+                "overlap": {
+                  "utc": "2026-10-16T03:54:39.658552+00:00",
+                  "perf-64k-20261016-a-state.json": {
+                    "phase": "performance-validation-complete",
+                    "pid": 1633240,
+                    "utc": "2026-10-16T03:31:38.734557+00:00",
+                    "run_id": "perf-64k-20261016-a",
+                    "physical_pair": "4,5",
+                    "tp": 2,
+                    "scene": "64k1k-c8",
+                    "quality_evaluation": false,
+                    "formal_acceptance": false,
+                    "frozen": false,
+                    "error": null,
+                    "all_variants_completed": true,
+                    "own_container_stopped": true
+                  },
+                  "qwen38-submit1009-perf45-20261016": {
+                    "running": false,
+                    "pid": 0
+                  }
+                },
+                "client_concurrency": 16,
+                "kind": "v1",
+                "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+              },
+              "perf-64k-20261016-a-state.json": {
+                "phase": "performance-validation-complete",
+                "pid": 1633240,
+                "utc": "2026-10-16T03:31:38.734557+00:00",
+                "run_id": "perf-64k-20261016-a",
+                "physical_pair": "4,5",
+                "tp": 2,
+                "scene": "64k1k-c8",
+                "quality_evaluation": false,
+                "formal_acceptance": false,
+                "frozen": false,
+                "error": null,
+                "all_variants_completed": true,
+                "own_container_stopped": true
+              },
+              "qwen38-submit1009-perf67-20261016": {
+                "running": true,
+                "pid": 655518
+              }
+            },
+            "client_concurrency": 1,
+            "kind": "v1",
+            "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-c1-pair45-20261016-a-c1-v1/sharegpt-c1"
+          }
+        },
+        "perf-64k-20261016-a-state.json": {
+          "phase": "performance-validation-complete",
+          "pid": 1633240,
+          "utc": "2026-10-16T03:31:38.734557+00:00",
+          "run_id": "perf-64k-20261016-a",
+          "physical_pair": "4,5",
+          "tp": 2,
+          "scene": "64k1k-c8",
+          "quality_evaluation": false,
+          "formal_acceptance": false,
+          "frozen": false,
+          "error": null,
+          "all_variants_completed": true,
+          "own_container_stopped": true
+        },
+        "submit-current-sharegpt-pair67-20261016-a-state.json": {
+          "phase": "starting-service",
+          "pid": 1621555,
+          "utc": "2026-10-16T04:31:45.492897+00:00",
+          "run": "submit-current-sharegpt-pair67-20261016-a",
+          "physical_pair": [
+            6,
+            7
+          ],
+          "elapsed_s": 1.6277394350036047,
+          "command_pid": 1622488,
+          "log": "result/submit-current-sharegpt-pair67-20261016-a/evidence/c16-candidate/start-service.log",
+          "overlap": {
+            "utc": "2026-10-16T04:31:45.460147+00:00",
+            "perf-sharegpt-20261016-a-state.json": {
+              "phase": "failed",
+              "pid": 1742606,
+              "utc": "2026-10-16T04:29:25.600355+00:00",
+              "run": "perf-sharegpt-20261016-a",
+              "physical_pair": [
+                6,
+                7
+              ],
+              "elapsed_s": 9363.617284645006,
+              "error": "SystemExit('SIGTERM requested')",
+              "accuracy": "NOT_RUN",
+              "last_stage": {
+                "phase": "benchmarking-sharegpt",
+                "pid": 1742606,
+                "utc": "2026-10-16T03:54:39.688012+00:00",
+                "run": "perf-sharegpt-20261016-a",
+                "physical_pair": [
+                  6,
+                  7
+                ],
+                "elapsed_s": 7277.704920658027,
+                "command_pid": 704114,
+                "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+                "overlap": {
+                  "utc": "2026-10-16T03:54:39.658552+00:00",
+                  "perf-64k-20261016-a-state.json": {
+                    "phase": "performance-validation-complete",
+                    "pid": 1633240,
+                    "utc": "2026-10-16T03:31:38.734557+00:00",
+                    "run_id": "perf-64k-20261016-a",
+                    "physical_pair": "4,5",
+                    "tp": 2,
+                    "scene": "64k1k-c8",
+                    "quality_evaluation": false,
+                    "formal_acceptance": false,
+                    "frozen": false,
+                    "error": null,
+                    "all_variants_completed": true,
+                    "own_container_stopped": true
+                  },
+                  "qwen38-submit1009-perf45-20261016": {
+                    "running": false,
+                    "pid": 0
+                  }
+                },
+                "client_concurrency": 16,
+                "kind": "v1",
+                "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+              }
+            },
+            "perf-sharegpt-c1-pair45-20261016-a-state.json": {
+              "phase": "failed",
+              "pid": 1406628,
+              "utc": "2026-10-16T04:29:25.600275+00:00",
+              "run": "perf-sharegpt-c1-pair45-20261016-a",
+              "physical_pair": [
+                4,
+                5
+              ],
+              "elapsed_s": 383.3090668579971,
+              "error": "TimeoutError('Owned C1 pair45 queue interrupted/deadline signal 15')",
+              "accuracy": "NOT_RUN",
+              "last_stage": {
+                "phase": "benchmarking-sharegpt",
+                "pid": 1406628,
+                "utc": "2026-10-16T04:24:50.034763+00:00",
+                "run": "perf-sharegpt-c1-pair45-20261016-a",
+                "physical_pair": [
+                  4,
+                  5
+                ],
+                "elapsed_s": 107.74353679301566,
+                "command_pid": 1453327,
+                "log": "result/perf-sharegpt-c1-pair45-20261016-a/evidence/c1-v1/benchmark-command.log",
+                "overlap": {
+                  "utc": "2026-10-16T04:24:50.008200+00:00",
+                  "perf-sharegpt-20261016-a-state.json": {
+                    "phase": "benchmarking-sharegpt",
+                    "pid": 1742606,
+                    "utc": "2026-10-16T03:54:39.688012+00:00",
+                    "run": "perf-sharegpt-20261016-a",
+                    "physical_pair": [
+                      6,
+                      7
+                    ],
+                    "elapsed_s": 7277.704920658027,
+                    "command_pid": 704114,
+                    "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+                    "overlap": {
+                      "utc": "2026-10-16T03:54:39.658552+00:00",
+                      "perf-64k-20261016-a-state.json": {
+                        "phase": "performance-validation-complete",
+                        "pid": 1633240,
+                        "utc": "2026-10-16T03:31:38.734557+00:00",
+                        "run_id": "perf-64k-20261016-a",
+                        "physical_pair": "4,5",
+                        "tp": 2,
+                        "scene": "64k1k-c8",
+                        "quality_evaluation": false,
+                        "formal_acceptance": false,
+                        "frozen": false,
+                        "error": null,
+                        "all_variants_completed": true,
+                        "own_container_stopped": true
+                      },
+                      "qwen38-submit1009-perf45-20261016": {
+                        "running": false,
+                        "pid": 0
+                      }
+                    },
+                    "client_concurrency": 16,
+                    "kind": "v1",
+                    "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+                  },
+                  "perf-64k-20261016-a-state.json": {
+                    "phase": "performance-validation-complete",
+                    "pid": 1633240,
+                    "utc": "2026-10-16T03:31:38.734557+00:00",
+                    "run_id": "perf-64k-20261016-a",
+                    "physical_pair": "4,5",
+                    "tp": 2,
+                    "scene": "64k1k-c8",
+                    "quality_evaluation": false,
+                    "formal_acceptance": false,
+                    "frozen": false,
+                    "error": null,
+                    "all_variants_completed": true,
+                    "own_container_stopped": true
+                  },
+                  "qwen38-submit1009-perf67-20261016": {
+                    "running": true,
+                    "pid": 655518
+                  }
+                },
+                "client_concurrency": 1,
+                "kind": "v1",
+                "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-c1-pair45-20261016-a-c1-v1/sharegpt-c1"
+              }
+            },
+            "perf-64k-20261016-a-state.json": {
+              "phase": "performance-validation-complete",
+              "pid": 1633240,
+              "utc": "2026-10-16T03:31:38.734557+00:00",
+              "run_id": "perf-64k-20261016-a",
+              "physical_pair": "4,5",
+              "tp": 2,
+              "scene": "64k1k-c8",
+              "quality_evaluation": false,
+              "formal_acceptance": false,
+              "frozen": false,
+              "error": null,
+              "all_variants_completed": true,
+              "own_container_stopped": true
+            },
+            "submit-current-c1-pair45-20261016-a-state.json": {
+              "phase": "starting-service",
+              "pid": 1621554,
+              "utc": "2026-10-16T04:31:45.321283+00:00",
+              "run": "submit-current-c1-pair45-20261016-a",
+              "physical_pair": [
+                4,
+                5
+              ],
+              "elapsed_s": 1.456902382982662,
+              "command_pid": 1622298,
+              "log": "result/submit-current-c1-pair45-20261016-a/evidence/c1-candidate/start-service.log",
+              "overlap": {
+                "utc": "2026-10-16T04:31:45.292136+00:00",
+                "perf-sharegpt-20261016-a-state.json": {
+                  "phase": "failed",
+                  "pid": 1742606,
+                  "utc": "2026-10-16T04:29:25.600355+00:00",
+                  "run": "perf-sharegpt-20261016-a",
+                  "physical_pair": [
+                    6,
+                    7
+                  ],
+                  "elapsed_s": 9363.617284645006,
+                  "error": "SystemExit('SIGTERM requested')",
+                  "accuracy": "NOT_RUN",
+                  "last_stage": {
+                    "phase": "benchmarking-sharegpt",
+                    "pid": 1742606,
+                    "utc": "2026-10-16T03:54:39.688012+00:00",
+                    "run": "perf-sharegpt-20261016-a",
+                    "physical_pair": [
+                      6,
+                      7
+                    ],
+                    "elapsed_s": 7277.704920658027,
+                    "command_pid": 704114,
+                    "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+                    "overlap": {
+                      "utc": "2026-10-16T03:54:39.658552+00:00",
+                      "perf-64k-20261016-a-state.json": {
+                        "phase": "performance-validation-complete",
+                        "pid": 1633240,
+                        "utc": "2026-10-16T03:31:38.734557+00:00",
+                        "run_id": "perf-64k-20261016-a",
+                        "physical_pair": "4,5",
+                        "tp": 2,
+                        "scene": "64k1k-c8",
+                        "quality_evaluation": false,
+                        "formal_acceptance": false,
+                        "frozen": false,
+                        "error": null,
+                        "all_variants_completed": true,
+                        "own_container_stopped": true
+                      },
+                      "qwen38-submit1009-perf45-20261016": {
+                        "running": false,
+                        "pid": 0
+                      }
+                    },
+                    "client_concurrency": 16,
+                    "kind": "v1",
+                    "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+                  }
+                },
+                "perf-sharegpt-c1-pair45-20261016-a-state.json": {
+                  "phase": "failed",
+                  "pid": 1406628,
+                  "utc": "2026-10-16T04:29:25.600275+00:00",
+                  "run": "perf-sharegpt-c1-pair45-20261016-a",
+                  "physical_pair": [
+                    4,
+                    5
+                  ],
+                  "elapsed_s": 383.3090668579971,
+                  "error": "TimeoutError('Owned C1 pair45 queue interrupted/deadline signal 15')",
+                  "accuracy": "NOT_RUN",
+                  "last_stage": {
+                    "phase": "benchmarking-sharegpt",
+                    "pid": 1406628,
+                    "utc": "2026-10-16T04:24:50.034763+00:00",
+                    "run": "perf-sharegpt-c1-pair45-20261016-a",
+                    "physical_pair": [
+                      4,
+                      5
+                    ],
+                    "elapsed_s": 107.74353679301566,
+                    "command_pid": 1453327,
+                    "log": "result/perf-sharegpt-c1-pair45-20261016-a/evidence/c1-v1/benchmark-command.log",
+                    "overlap": {
+                      "utc": "2026-10-16T04:24:50.008200+00:00",
+                      "perf-sharegpt-20261016-a-state.json": {
+                        "phase": "benchmarking-sharegpt",
+                        "pid": 1742606,
+                        "utc": "2026-10-16T03:54:39.688012+00:00",
+                        "run": "perf-sharegpt-20261016-a",
+                        "physical_pair": [
+                          6,
+                          7
+                        ],
+                        "elapsed_s": 7277.704920658027,
+                        "command_pid": 704114,
+                        "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+                        "overlap": {
+                          "utc": "2026-10-16T03:54:39.658552+00:00",
+                          "perf-64k-20261016-a-state.json": {
+                            "phase": "performance-validation-complete",
+                            "pid": 1633240,
+                            "utc": "2026-10-16T03:31:38.734557+00:00",
+                            "run_id": "perf-64k-20261016-a",
+                            "physical_pair": "4,5",
+                            "tp": 2,
+                            "scene": "64k1k-c8",
+                            "quality_evaluation": false,
+                            "formal_acceptance": false,
+                            "frozen": false,
+                            "error": null,
+                            "all_variants_completed": true,
+                            "own_container_stopped": true
+                          },
+                          "qwen38-submit1009-perf45-20261016": {
+                            "running": false,
+                            "pid": 0
+                          }
+                        },
+                        "client_concurrency": 16,
+                        "kind": "v1",
+                        "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+                      },
+                      "perf-64k-20261016-a-state.json": {
+                        "phase": "performance-validation-complete",
+                        "pid": 1633240,
+                        "utc": "2026-10-16T03:31:38.734557+00:00",
+                        "run_id": "perf-64k-20261016-a",
+                        "physical_pair": "4,5",
+                        "tp": 2,
+                        "scene": "64k1k-c8",
+                        "quality_evaluation": false,
+                        "formal_acceptance": false,
+                        "frozen": false,
+                        "error": null,
+                        "all_variants_completed": true,
+                        "own_container_stopped": true
+                      },
+                      "qwen38-submit1009-perf67-20261016": {
+                        "running": true,
+                        "pid": 655518
+                      }
+                    },
+                    "client_concurrency": 1,
+                    "kind": "v1",
+                    "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-c1-pair45-20261016-a-c1-v1/sharegpt-c1"
+                  }
+                },
+                "perf-64k-20261016-a-state.json": {
+                  "phase": "performance-validation-complete",
+                  "pid": 1633240,
+                  "utc": "2026-10-16T03:31:38.734557+00:00",
+                  "run_id": "perf-64k-20261016-a",
+                  "physical_pair": "4,5",
+                  "tp": 2,
+                  "scene": "64k1k-c8",
+                  "quality_evaluation": false,
+                  "formal_acceptance": false,
+                  "frozen": false,
+                  "error": null,
+                  "all_variants_completed": true,
+                  "own_container_stopped": true
+                },
+                "qwen38-submit1009-perf67-20261016": {
+                  "running": false,
+                  "pid": 0
+                }
+              },
+              "client_concurrency": 1,
+              "kind": "candidate"
+            },
+            "qwen38-submit1009-perf45-20261016": {
+              "running": true,
+              "pid": 1622260
+            }
+          },
+          "client_concurrency": 16,
+          "kind": "candidate"
+        },
+        "qwen38-submit1009-perf67-20261016": {
+          "running": true,
+          "pid": 1622432
+        }
+      },
+      "client_concurrency": 1,
+      "kind": "candidate",
+      "result_dir": "experiments/performance-validation-20261016/result/submit-current-c1-pair45-20261016-a-c1-candidate/sharegpt-c1"
+    },
+    "qwen38-submit1009-perf45-20261016": {
+      "running": true,
+      "pid": 1622260
+    }
+  },
+  "overlap_finish": {
+    "utc": "2026-10-16T07:31:43.202115+00:00",
+    "perf-sharegpt-20261016-a-state.json": {
+      "phase": "failed",
+      "pid": 1742606,
+      "utc": "2026-10-16T04:29:25.600355+00:00",
+      "run": "perf-sharegpt-20261016-a",
+      "physical_pair": [
+        6,
+        7
+      ],
+      "elapsed_s": 9363.617284645006,
+      "error": "SystemExit('SIGTERM requested')",
+      "accuracy": "NOT_RUN",
+      "last_stage": {
+        "phase": "benchmarking-sharegpt",
+        "pid": 1742606,
+        "utc": "2026-10-16T03:54:39.688012+00:00",
+        "run": "perf-sharegpt-20261016-a",
+        "physical_pair": [
+          6,
+          7
+        ],
+        "elapsed_s": 7277.704920658027,
+        "command_pid": 704114,
+        "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+        "overlap": {
+          "utc": "2026-10-16T03:54:39.658552+00:00",
+          "perf-64k-20261016-a-state.json": {
+            "phase": "performance-validation-complete",
+            "pid": 1633240,
+            "utc": "2026-10-16T03:31:38.734557+00:00",
+            "run_id": "perf-64k-20261016-a",
+            "physical_pair": "4,5",
+            "tp": 2,
+            "scene": "64k1k-c8",
+            "quality_evaluation": false,
+            "formal_acceptance": false,
+            "frozen": false,
+            "error": null,
+            "all_variants_completed": true,
+            "own_container_stopped": true
+          },
+          "qwen38-submit1009-perf45-20261016": {
+            "running": false,
+            "pid": 0
+          }
+        },
+        "client_concurrency": 16,
+        "kind": "v1",
+        "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+      }
+    },
+    "perf-sharegpt-c1-pair45-20261016-a-state.json": {
+      "phase": "failed",
+      "pid": 1406628,
+      "utc": "2026-10-16T04:29:25.600275+00:00",
+      "run": "perf-sharegpt-c1-pair45-20261016-a",
+      "physical_pair": [
+        4,
+        5
+      ],
+      "elapsed_s": 383.3090668579971,
+      "error": "TimeoutError('Owned C1 pair45 queue interrupted/deadline signal 15')",
+      "accuracy": "NOT_RUN",
+      "last_stage": {
+        "phase": "benchmarking-sharegpt",
+        "pid": 1406628,
+        "utc": "2026-10-16T04:24:50.034763+00:00",
+        "run": "perf-sharegpt-c1-pair45-20261016-a",
+        "physical_pair": [
+          4,
+          5
+        ],
+        "elapsed_s": 107.74353679301566,
+        "command_pid": 1453327,
+        "log": "result/perf-sharegpt-c1-pair45-20261016-a/evidence/c1-v1/benchmark-command.log",
+        "overlap": {
+          "utc": "2026-10-16T04:24:50.008200+00:00",
+          "perf-sharegpt-20261016-a-state.json": {
+            "phase": "benchmarking-sharegpt",
+            "pid": 1742606,
+            "utc": "2026-10-16T03:54:39.688012+00:00",
+            "run": "perf-sharegpt-20261016-a",
+            "physical_pair": [
+              6,
+              7
+            ],
+            "elapsed_s": 7277.704920658027,
+            "command_pid": 704114,
+            "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+            "overlap": {
+              "utc": "2026-10-16T03:54:39.658552+00:00",
+              "perf-64k-20261016-a-state.json": {
+                "phase": "performance-validation-complete",
+                "pid": 1633240,
+                "utc": "2026-10-16T03:31:38.734557+00:00",
+                "run_id": "perf-64k-20261016-a",
+                "physical_pair": "4,5",
+                "tp": 2,
+                "scene": "64k1k-c8",
+                "quality_evaluation": false,
+                "formal_acceptance": false,
+                "frozen": false,
+                "error": null,
+                "all_variants_completed": true,
+                "own_container_stopped": true
+              },
+              "qwen38-submit1009-perf45-20261016": {
+                "running": false,
+                "pid": 0
+              }
+            },
+            "client_concurrency": 16,
+            "kind": "v1",
+            "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+          },
+          "perf-64k-20261016-a-state.json": {
+            "phase": "performance-validation-complete",
+            "pid": 1633240,
+            "utc": "2026-10-16T03:31:38.734557+00:00",
+            "run_id": "perf-64k-20261016-a",
+            "physical_pair": "4,5",
+            "tp": 2,
+            "scene": "64k1k-c8",
+            "quality_evaluation": false,
+            "formal_acceptance": false,
+            "frozen": false,
+            "error": null,
+            "all_variants_completed": true,
+            "own_container_stopped": true
+          },
+          "qwen38-submit1009-perf67-20261016": {
+            "running": true,
+            "pid": 655518
+          }
+        },
+        "client_concurrency": 1,
+        "kind": "v1",
+        "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-c1-pair45-20261016-a-c1-v1/sharegpt-c1"
+      }
+    },
+    "perf-64k-20261016-a-state.json": {
+      "phase": "performance-validation-complete",
+      "pid": 1633240,
+      "utc": "2026-10-16T03:31:38.734557+00:00",
+      "run_id": "perf-64k-20261016-a",
+      "physical_pair": "4,5",
+      "tp": 2,
+      "scene": "64k1k-c8",
+      "quality_evaluation": false,
+      "formal_acceptance": false,
+      "frozen": false,
+      "error": null,
+      "all_variants_completed": true,
+      "own_container_stopped": true
+    },
+    "submit-current-c1-pair45-20261016-a-state.json": {
+      "phase": "benchmarking-sharegpt",
+      "pid": 1621554,
+      "utc": "2026-10-16T04:33:36.503156+00:00",
+      "run": "submit-current-c1-pair45-20261016-a",
+      "physical_pair": [
+        4,
+        5
+      ],
+      "elapsed_s": 112.63879707598244,
+      "command_pid": 1673804,
+      "log": "result/submit-current-c1-pair45-20261016-a/evidence/c1-candidate/benchmark-command.log",
+      "overlap": {
+        "utc": "2026-10-16T04:33:36.475438+00:00",
+        "perf-sharegpt-20261016-a-state.json": {
+          "phase": "failed",
+          "pid": 1742606,
+          "utc": "2026-10-16T04:29:25.600355+00:00",
+          "run": "perf-sharegpt-20261016-a",
+          "physical_pair": [
+            6,
+            7
+          ],
+          "elapsed_s": 9363.617284645006,
+          "error": "SystemExit('SIGTERM requested')",
+          "accuracy": "NOT_RUN",
+          "last_stage": {
+            "phase": "benchmarking-sharegpt",
+            "pid": 1742606,
+            "utc": "2026-10-16T03:54:39.688012+00:00",
+            "run": "perf-sharegpt-20261016-a",
+            "physical_pair": [
+              6,
+              7
+            ],
+            "elapsed_s": 7277.704920658027,
+            "command_pid": 704114,
+            "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+            "overlap": {
+              "utc": "2026-10-16T03:54:39.658552+00:00",
+              "perf-64k-20261016-a-state.json": {
+                "phase": "performance-validation-complete",
+                "pid": 1633240,
+                "utc": "2026-10-16T03:31:38.734557+00:00",
+                "run_id": "perf-64k-20261016-a",
+                "physical_pair": "4,5",
+                "tp": 2,
+                "scene": "64k1k-c8",
+                "quality_evaluation": false,
+                "formal_acceptance": false,
+                "frozen": false,
+                "error": null,
+                "all_variants_completed": true,
+                "own_container_stopped": true
+              },
+              "qwen38-submit1009-perf45-20261016": {
+                "running": false,
+                "pid": 0
+              }
+            },
+            "client_concurrency": 16,
+            "kind": "v1",
+            "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+          }
+        },
+        "perf-sharegpt-c1-pair45-20261016-a-state.json": {
+          "phase": "failed",
+          "pid": 1406628,
+          "utc": "2026-10-16T04:29:25.600275+00:00",
+          "run": "perf-sharegpt-c1-pair45-20261016-a",
+          "physical_pair": [
+            4,
+            5
+          ],
+          "elapsed_s": 383.3090668579971,
+          "error": "TimeoutError('Owned C1 pair45 queue interrupted/deadline signal 15')",
+          "accuracy": "NOT_RUN",
+          "last_stage": {
+            "phase": "benchmarking-sharegpt",
+            "pid": 1406628,
+            "utc": "2026-10-16T04:24:50.034763+00:00",
+            "run": "perf-sharegpt-c1-pair45-20261016-a",
+            "physical_pair": [
+              4,
+              5
+            ],
+            "elapsed_s": 107.74353679301566,
+            "command_pid": 1453327,
+            "log": "result/perf-sharegpt-c1-pair45-20261016-a/evidence/c1-v1/benchmark-command.log",
+            "overlap": {
+              "utc": "2026-10-16T04:24:50.008200+00:00",
+              "perf-sharegpt-20261016-a-state.json": {
+                "phase": "benchmarking-sharegpt",
+                "pid": 1742606,
+                "utc": "2026-10-16T03:54:39.688012+00:00",
+                "run": "perf-sharegpt-20261016-a",
+                "physical_pair": [
+                  6,
+                  7
+                ],
+                "elapsed_s": 7277.704920658027,
+                "command_pid": 704114,
+                "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+                "overlap": {
+                  "utc": "2026-10-16T03:54:39.658552+00:00",
+                  "perf-64k-20261016-a-state.json": {
+                    "phase": "performance-validation-complete",
+                    "pid": 1633240,
+                    "utc": "2026-10-16T03:31:38.734557+00:00",
+                    "run_id": "perf-64k-20261016-a",
+                    "physical_pair": "4,5",
+                    "tp": 2,
+                    "scene": "64k1k-c8",
+                    "quality_evaluation": false,
+                    "formal_acceptance": false,
+                    "frozen": false,
+                    "error": null,
+                    "all_variants_completed": true,
+                    "own_container_stopped": true
+                  },
+                  "qwen38-submit1009-perf45-20261016": {
+                    "running": false,
+                    "pid": 0
+                  }
+                },
+                "client_concurrency": 16,
+                "kind": "v1",
+                "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+              },
+              "perf-64k-20261016-a-state.json": {
+                "phase": "performance-validation-complete",
+                "pid": 1633240,
+                "utc": "2026-10-16T03:31:38.734557+00:00",
+                "run_id": "perf-64k-20261016-a",
+                "physical_pair": "4,5",
+                "tp": 2,
+                "scene": "64k1k-c8",
+                "quality_evaluation": false,
+                "formal_acceptance": false,
+                "frozen": false,
+                "error": null,
+                "all_variants_completed": true,
+                "own_container_stopped": true
+              },
+              "qwen38-submit1009-perf67-20261016": {
+                "running": true,
+                "pid": 655518
+              }
+            },
+            "client_concurrency": 1,
+            "kind": "v1",
+            "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-c1-pair45-20261016-a-c1-v1/sharegpt-c1"
+          }
+        },
+        "perf-64k-20261016-a-state.json": {
+          "phase": "performance-validation-complete",
+          "pid": 1633240,
+          "utc": "2026-10-16T03:31:38.734557+00:00",
+          "run_id": "perf-64k-20261016-a",
+          "physical_pair": "4,5",
+          "tp": 2,
+          "scene": "64k1k-c8",
+          "quality_evaluation": false,
+          "formal_acceptance": false,
+          "frozen": false,
+          "error": null,
+          "all_variants_completed": true,
+          "own_container_stopped": true
+        },
+        "submit-current-sharegpt-pair67-20261016-a-state.json": {
+          "phase": "starting-service",
+          "pid": 1621555,
+          "utc": "2026-10-16T04:31:45.492897+00:00",
+          "run": "submit-current-sharegpt-pair67-20261016-a",
+          "physical_pair": [
+            6,
+            7
+          ],
+          "elapsed_s": 1.6277394350036047,
+          "command_pid": 1622488,
+          "log": "result/submit-current-sharegpt-pair67-20261016-a/evidence/c16-candidate/start-service.log",
+          "overlap": {
+            "utc": "2026-10-16T04:31:45.460147+00:00",
+            "perf-sharegpt-20261016-a-state.json": {
+              "phase": "failed",
+              "pid": 1742606,
+              "utc": "2026-10-16T04:29:25.600355+00:00",
+              "run": "perf-sharegpt-20261016-a",
+              "physical_pair": [
+                6,
+                7
+              ],
+              "elapsed_s": 9363.617284645006,
+              "error": "SystemExit('SIGTERM requested')",
+              "accuracy": "NOT_RUN",
+              "last_stage": {
+                "phase": "benchmarking-sharegpt",
+                "pid": 1742606,
+                "utc": "2026-10-16T03:54:39.688012+00:00",
+                "run": "perf-sharegpt-20261016-a",
+                "physical_pair": [
+                  6,
+                  7
+                ],
+                "elapsed_s": 7277.704920658027,
+                "command_pid": 704114,
+                "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+                "overlap": {
+                  "utc": "2026-10-16T03:54:39.658552+00:00",
+                  "perf-64k-20261016-a-state.json": {
+                    "phase": "performance-validation-complete",
+                    "pid": 1633240,
+                    "utc": "2026-10-16T03:31:38.734557+00:00",
+                    "run_id": "perf-64k-20261016-a",
+                    "physical_pair": "4,5",
+                    "tp": 2,
+                    "scene": "64k1k-c8",
+                    "quality_evaluation": false,
+                    "formal_acceptance": false,
+                    "frozen": false,
+                    "error": null,
+                    "all_variants_completed": true,
+                    "own_container_stopped": true
+                  },
+                  "qwen38-submit1009-perf45-20261016": {
+                    "running": false,
+                    "pid": 0
+                  }
+                },
+                "client_concurrency": 16,
+                "kind": "v1",
+                "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+              }
+            },
+            "perf-sharegpt-c1-pair45-20261016-a-state.json": {
+              "phase": "failed",
+              "pid": 1406628,
+              "utc": "2026-10-16T04:29:25.600275+00:00",
+              "run": "perf-sharegpt-c1-pair45-20261016-a",
+              "physical_pair": [
+                4,
+                5
+              ],
+              "elapsed_s": 383.3090668579971,
+              "error": "TimeoutError('Owned C1 pair45 queue interrupted/deadline signal 15')",
+              "accuracy": "NOT_RUN",
+              "last_stage": {
+                "phase": "benchmarking-sharegpt",
+                "pid": 1406628,
+                "utc": "2026-10-16T04:24:50.034763+00:00",
+                "run": "perf-sharegpt-c1-pair45-20261016-a",
+                "physical_pair": [
+                  4,
+                  5
+                ],
+                "elapsed_s": 107.74353679301566,
+                "command_pid": 1453327,
+                "log": "result/perf-sharegpt-c1-pair45-20261016-a/evidence/c1-v1/benchmark-command.log",
+                "overlap": {
+                  "utc": "2026-10-16T04:24:50.008200+00:00",
+                  "perf-sharegpt-20261016-a-state.json": {
+                    "phase": "benchmarking-sharegpt",
+                    "pid": 1742606,
+                    "utc": "2026-10-16T03:54:39.688012+00:00",
+                    "run": "perf-sharegpt-20261016-a",
+                    "physical_pair": [
+                      6,
+                      7
+                    ],
+                    "elapsed_s": 7277.704920658027,
+                    "command_pid": 704114,
+                    "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+                    "overlap": {
+                      "utc": "2026-10-16T03:54:39.658552+00:00",
+                      "perf-64k-20261016-a-state.json": {
+                        "phase": "performance-validation-complete",
+                        "pid": 1633240,
+                        "utc": "2026-10-16T03:31:38.734557+00:00",
+                        "run_id": "perf-64k-20261016-a",
+                        "physical_pair": "4,5",
+                        "tp": 2,
+                        "scene": "64k1k-c8",
+                        "quality_evaluation": false,
+                        "formal_acceptance": false,
+                        "frozen": false,
+                        "error": null,
+                        "all_variants_completed": true,
+                        "own_container_stopped": true
+                      },
+                      "qwen38-submit1009-perf45-20261016": {
+                        "running": false,
+                        "pid": 0
+                      }
+                    },
+                    "client_concurrency": 16,
+                    "kind": "v1",
+                    "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+                  },
+                  "perf-64k-20261016-a-state.json": {
+                    "phase": "performance-validation-complete",
+                    "pid": 1633240,
+                    "utc": "2026-10-16T03:31:38.734557+00:00",
+                    "run_id": "perf-64k-20261016-a",
+                    "physical_pair": "4,5",
+                    "tp": 2,
+                    "scene": "64k1k-c8",
+                    "quality_evaluation": false,
+                    "formal_acceptance": false,
+                    "frozen": false,
+                    "error": null,
+                    "all_variants_completed": true,
+                    "own_container_stopped": true
+                  },
+                  "qwen38-submit1009-perf67-20261016": {
+                    "running": true,
+                    "pid": 655518
+                  }
+                },
+                "client_concurrency": 1,
+                "kind": "v1",
+                "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-c1-pair45-20261016-a-c1-v1/sharegpt-c1"
+              }
+            },
+            "perf-64k-20261016-a-state.json": {
+              "phase": "performance-validation-complete",
+              "pid": 1633240,
+              "utc": "2026-10-16T03:31:38.734557+00:00",
+              "run_id": "perf-64k-20261016-a",
+              "physical_pair": "4,5",
+              "tp": 2,
+              "scene": "64k1k-c8",
+              "quality_evaluation": false,
+              "formal_acceptance": false,
+              "frozen": false,
+              "error": null,
+              "all_variants_completed": true,
+              "own_container_stopped": true
+            },
+            "submit-current-c1-pair45-20261016-a-state.json": {
+              "phase": "starting-service",
+              "pid": 1621554,
+              "utc": "2026-10-16T04:31:45.321283+00:00",
+              "run": "submit-current-c1-pair45-20261016-a",
+              "physical_pair": [
+                4,
+                5
+              ],
+              "elapsed_s": 1.456902382982662,
+              "command_pid": 1622298,
+              "log": "result/submit-current-c1-pair45-20261016-a/evidence/c1-candidate/start-service.log",
+              "overlap": {
+                "utc": "2026-10-16T04:31:45.292136+00:00",
+                "perf-sharegpt-20261016-a-state.json": {
+                  "phase": "failed",
+                  "pid": 1742606,
+                  "utc": "2026-10-16T04:29:25.600355+00:00",
+                  "run": "perf-sharegpt-20261016-a",
+                  "physical_pair": [
+                    6,
+                    7
+                  ],
+                  "elapsed_s": 9363.617284645006,
+                  "error": "SystemExit('SIGTERM requested')",
+                  "accuracy": "NOT_RUN",
+                  "last_stage": {
+                    "phase": "benchmarking-sharegpt",
+                    "pid": 1742606,
+                    "utc": "2026-10-16T03:54:39.688012+00:00",
+                    "run": "perf-sharegpt-20261016-a",
+                    "physical_pair": [
+                      6,
+                      7
+                    ],
+                    "elapsed_s": 7277.704920658027,
+                    "command_pid": 704114,
+                    "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+                    "overlap": {
+                      "utc": "2026-10-16T03:54:39.658552+00:00",
+                      "perf-64k-20261016-a-state.json": {
+                        "phase": "performance-validation-complete",
+                        "pid": 1633240,
+                        "utc": "2026-10-16T03:31:38.734557+00:00",
+                        "run_id": "perf-64k-20261016-a",
+                        "physical_pair": "4,5",
+                        "tp": 2,
+                        "scene": "64k1k-c8",
+                        "quality_evaluation": false,
+                        "formal_acceptance": false,
+                        "frozen": false,
+                        "error": null,
+                        "all_variants_completed": true,
+                        "own_container_stopped": true
+                      },
+                      "qwen38-submit1009-perf45-20261016": {
+                        "running": false,
+                        "pid": 0
+                      }
+                    },
+                    "client_concurrency": 16,
+                    "kind": "v1",
+                    "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+                  }
+                },
+                "perf-sharegpt-c1-pair45-20261016-a-state.json": {
+                  "phase": "failed",
+                  "pid": 1406628,
+                  "utc": "2026-10-16T04:29:25.600275+00:00",
+                  "run": "perf-sharegpt-c1-pair45-20261016-a",
+                  "physical_pair": [
+                    4,
+                    5
+                  ],
+                  "elapsed_s": 383.3090668579971,
+                  "error": "TimeoutError('Owned C1 pair45 queue interrupted/deadline signal 15')",
+                  "accuracy": "NOT_RUN",
+                  "last_stage": {
+                    "phase": "benchmarking-sharegpt",
+                    "pid": 1406628,
+                    "utc": "2026-10-16T04:24:50.034763+00:00",
+                    "run": "perf-sharegpt-c1-pair45-20261016-a",
+                    "physical_pair": [
+                      4,
+                      5
+                    ],
+                    "elapsed_s": 107.74353679301566,
+                    "command_pid": 1453327,
+                    "log": "result/perf-sharegpt-c1-pair45-20261016-a/evidence/c1-v1/benchmark-command.log",
+                    "overlap": {
+                      "utc": "2026-10-16T04:24:50.008200+00:00",
+                      "perf-sharegpt-20261016-a-state.json": {
+                        "phase": "benchmarking-sharegpt",
+                        "pid": 1742606,
+                        "utc": "2026-10-16T03:54:39.688012+00:00",
+                        "run": "perf-sharegpt-20261016-a",
+                        "physical_pair": [
+                          6,
+                          7
+                        ],
+                        "elapsed_s": 7277.704920658027,
+                        "command_pid": 704114,
+                        "log": "result/perf-sharegpt-20261016-a/evidence/c16-v1/benchmark-command.log",
+                        "overlap": {
+                          "utc": "2026-10-16T03:54:39.658552+00:00",
+                          "perf-64k-20261016-a-state.json": {
+                            "phase": "performance-validation-complete",
+                            "pid": 1633240,
+                            "utc": "2026-10-16T03:31:38.734557+00:00",
+                            "run_id": "perf-64k-20261016-a",
+                            "physical_pair": "4,5",
+                            "tp": 2,
+                            "scene": "64k1k-c8",
+                            "quality_evaluation": false,
+                            "formal_acceptance": false,
+                            "frozen": false,
+                            "error": null,
+                            "all_variants_completed": true,
+                            "own_container_stopped": true
+                          },
+                          "qwen38-submit1009-perf45-20261016": {
+                            "running": false,
+                            "pid": 0
+                          }
+                        },
+                        "client_concurrency": 16,
+                        "kind": "v1",
+                        "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c16-v1/sharegpt-c16"
+                      },
+                      "perf-64k-20261016-a-state.json": {
+                        "phase": "performance-validation-complete",
+                        "pid": 1633240,
+                        "utc": "2026-10-16T03:31:38.734557+00:00",
+                        "run_id": "perf-64k-20261016-a",
+                        "physical_pair": "4,5",
+                        "tp": 2,
+                        "scene": "64k1k-c8",
+                        "quality_evaluation": false,
+                        "formal_acceptance": false,
+                        "frozen": false,
+                        "error": null,
+                        "all_variants_completed": true,
+                        "own_container_stopped": true
+                      },
+                      "qwen38-submit1009-perf67-20261016": {
+                        "running": true,
+                        "pid": 655518
+                      }
+                    },
+                    "client_concurrency": 1,
+                    "kind": "v1",
+                    "result_dir": "experiments/performance-validation-20261016/result/perf-sharegpt-c1-pair45-20261016-a-c1-v1/sharegpt-c1"
+                  }
+                },
+                "perf-64k-20261016-a-state.json": {
+                  "phase": "performance-validation-complete",
+                  "pid": 1633240,
+                  "utc": "2026-10-16T03:31:38.734557+00:00",
+                  "run_id": "perf-64k-20261016-a",
+                  "physical_pair": "4,5",
+                  "tp": 2,
+                  "scene": "64k1k-c8",
+                  "quality_evaluation": false,
+                  "formal_acceptance": false,
+                  "frozen": false,
+                  "error": null,
+                  "all_variants_completed": true,
+                  "own_container_stopped": true
+                },
+                "qwen38-submit1009-perf67-20261016": {
+                  "running": false,
+                  "pid": 0
+                }
+              },
+              "client_concurrency": 1,
+              "kind": "candidate"
+            },
+            "qwen38-submit1009-perf45-20261016": {
+              "running": true,
+              "pid": 1622260
+            }
+          },
+          "client_concurrency": 16,
+          "kind": "candidate"
+        },
+        "qwen38-submit1009-perf67-20261016": {
+          "running": true,
+          "pid": 1622432
+        }
+      },
+      "client_concurrency": 1,
+      "kind": "candidate",
+      "result_dir": "experiments/performance-validation-20261016/result/submit-current-c1-pair45-20261016-a-c1-candidate/sharegpt-c1"
+    },
+    "qwen38-submit1009-perf45-20261016": {
+      "running": true,
+      "pid": 1622260
+    }
+  },
+  "native_guard_verified": true,
+  "result_dir": "experiments/performance-validation-20261016/result/submit-current-sharegpt-pair67-20261016-a-c4-candidate/sharegpt-c4",
+  "evidence_dir": "result/submit-current-sharegpt-pair67-20261016-a/evidence/c4-candidate",
+  "accuracy": "NOT_RUN"
+}

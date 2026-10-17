@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "dtype": "torch.bfloat16",
+  "m": 32,
+  "hidden": 5120,
+  "bytes": 327680,
+  "input_path": "copy-in",
+  "poisoned_full_write_checks": [
+    {
+      "phase": "poisoned",
+      "index": 0,
+      "equal": true,
+      "elements": 163840,
+      "finite_count": 163840,
+      "nonfinite_count": 0,
+      "mismatch_vs_rccl": 0,
+      "mismatch_vs_explicit_sum": 0,
+      "max_abs": 0.0
+    },
+    {
+      "phase": "poisoned",
+      "index": 1,
+      "equal": true,
+      "elements": 163840,
+      "finite_count": 163840,
+      "nonfinite_count": 0,
+      "mismatch_vs_rccl": 0,
+      "mismatch_vs_explicit_sum": 0,
+      "max_abs": 0.0
+    },
+    {
+      "phase": "poisoned",
+      "index": 2,
+      "equal": true,
+      "elements": 163840,
+      "finite_count": 163840,
+      "nonfinite_count": 0,
+      "mismatch_vs_rccl": 0,
+      "mismatch_vs_explicit_sum": 0,
+      "max_abs": 0.0
+    }
+  ],
+  "public_eager_checks": [
+    {
+      "phase": "public-eager",
+      "index": 0,
+      "equal": true,
+      "elements": 163840,
+      "finite_count": 163840,
+      "nonfinite_count": 0,
+      "mismatch_vs_rccl": 0,
+      "mismatch_vs_explicit_sum": 0,
+      "max_abs": 0.0
+    },
+    {
+      "phase": "public-eager",
+      "index": 1,
+      "equal": true,
+      "elements": 163840,
+      "finite_count": 163840,
+      "nonfinite_count": 0,
+      "mismatch_vs_rccl": 0,
+      "mismatch_vs_explicit_sum": 0,
+      "max_abs": 0.0
+    },
+    {
+      "phase": "public-eager",
+      "index": 2,
+      "equal": true,
+      "elements": 163840,
+      "finite_count": 163840,
+      "nonfinite_count": 0,
+      "mismatch_vs_rccl": 0,
+      "mismatch_vs_explicit_sum": 0,
+      "max_abs": 0.0
+    }
+  ],
+  "changed_input_graph_checks": [
+    {
+      "phase": "changed-graph",
+      "index": 0,
+      "equal": true,
+      "elements": 163840,
+      "finite_count": 163840,
+      "nonfinite_count": 0,
+      "mismatch_vs_rccl": 0,
+      "mismatch_vs_explicit_sum": 0,
+      "max_abs": 0.0
+    },
+    {
+      "phase": "changed-graph",
+      "index": 1,
+      "equal": true,
+      "elements": 163840,
+      "finite_count": 163840,
+      "nonfinite_count": 0,
+      "mismatch_vs_rccl": 0,
+      "mismatch_vs_explicit_sum": 0,
+      "max_abs": 0.0
+    },
+    {
+      "phase": "changed-graph",
+      "index": 2,
+      "equal": true,
+      "elements": 163840,
+      "finite_count": 163840,
+      "nonfinite_count": 0,
+      "mismatch_vs_rccl": 0,
+      "mismatch_vs_explicit_sum": 0,
+      "max_abs": 0.0
+    }
+  ]
+}

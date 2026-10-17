@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "removed_from_main_tables": [
+    "4k-c64",
+    "4k-c128"
+  ],
+  "raw_data_retained": true,
+  "server_configuration_proof": [
+    {
+      "client_concurrency": 64,
+      "max_running_requests": 32,
+      "cuda_graph_max_bs": 32,
+      "evidence": "logs/v2_benchmark_raw/final/random/4k-c64/server-info.json"
+    },
+    {
+      "client_concurrency": 128,
+      "max_running_requests": 32,
+      "cuda_graph_max_bs": 32,
+      "evidence": "logs/v2_benchmark_raw/final/random/4k-c128/server-info.json"
+    }
+  ],
+  "gpu_used": false
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "raw_files_byte_identical_to_source": 489,
+  "links_checked": 96,
+  "bash_blocks": 14,
+  "metrics_checked": 21,
+  "gpu_used": false
+}

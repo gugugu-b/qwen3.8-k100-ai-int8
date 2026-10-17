@@ -1,0 +1,40 @@
+"""Owned eligibility guard for installed deterministic BF16 copy-in AllReduce."""
+import hashlib
+import os
+from pathlib import Path
+
+import torch
+
+SOURCE_SHA = '6da396fa2692f34fe28ef5d983176976229e943421362c5c7990c818ef156fb0'
+BINARY_SHA = '8c81c808faa6ea332b1c0c81a9474877b95b01eb4738473c6a1e9854c4d6b230'
+
+
+def install():
+    assert os.environ['SGLANG_USE_1STAGE_ALLREDUCE'] == '1'
+    assert os.environ['HIP_VISIBLE_DEVICES'] == '4,5'
+    from sglang.srt.distributed.device_communicators import custom_all_reduce as source
+    assert hashlib.sha256(Path(source.__file__).read_bytes()).hexdigest() == SOURCE_SHA
+    binary = Path('/usr/local/lib/python3.10/dist-packages/sgl_kernel/common_ops.cpython-310-x86_64-linux-gnu.so')
+    assert hashlib.sha256(binary.read_bytes()).hexdigest() == BINARY_SHA
+    original = source.CustomAllreduce.should_custom_ar
+    assert not getattr(original, '_q38_bf16_guard', False), 'Refuse duplicate guard installation'
+
+    def should_custom_ar(self, inp):
+        # All other tensors keep the caller's original RCCL/PyNccl fallback.
+        # Strictly less than max_size matches the installed copy-in branch.
+        if (inp.dtype is not torch.bfloat16 or self.world_size != 2
+                or not self.use_amd_deterministic_impl
+                or inp.numel()*inp.element_size() >= self.max_size):
+            return False
+        selected = original(self, inp)
+        if selected and not getattr(self, '_q38_bf16_first_hit', False):
+            self._q38_bf16_first_hit = True
+            print(f'[Native BF16 AR] Eligible rank={self.rank} world_size=2 '
+                  f'dtype={inp.dtype} bytes={inp.numel()*inp.element_size()} '
+                  f'max_size={self.max_size} one_stage={self.use_amd_deterministic_impl} '
+                  f'full_nvlink={self.full_nvlink} copy_in=True', flush=True)
+        return selected
+
+    should_custom_ar._q38_bf16_guard = True
+    source.CustomAllreduce.should_custom_ar = should_custom_ar
+    print('[Native BF16 AR] Installed BF16/TP2/copy-in guard; unsupported tensors retain RCCL', flush=True)

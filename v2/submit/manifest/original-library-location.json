@@ -1,0 +1,6 @@
+{
+  "remote_directory": "/data/wangzy/submit1009/delivery/20261010-4k1k/submit1009/config/library_gpu4_int8tuned_stock_clean",
+  "reason": "Human requested no large local files; use complete server package",
+  "complete_tar": "/data/wangzy/submit1009/delivery/submit1009-4k1k-20261010.tar.gz",
+  "tar_sha256": "8d39b5f7d434755b33951155d62bc0bb78c365d3076db59f94fecf03dd5a2cb7"
+}

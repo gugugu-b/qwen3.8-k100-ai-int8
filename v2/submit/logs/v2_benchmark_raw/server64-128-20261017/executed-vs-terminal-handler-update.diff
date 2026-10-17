@@ -1,0 +1,12 @@
+--- executed/controller.py
++++ terminal-handler-update/controller.py
+@@ -471,6 +471,9 @@
+         if ownership.get('control_created'):
+             core.write(core.CONTROL / 'controller-failure.json', {
+                 'error': repr(error), 'traceback': traceback.format_exc(), 'utc': core.now()})
++            core.write(core.CONTROL / 'controller-state.json', {
++                'status': 'FAILED', 'utc': core.now(), 'error': repr(error), 'pid': os.getpid()})
++            core.write(core.CONTROL / 'finished.json', {'status': 'FAILED', 'utc': core.now()})
+         raise
+ 
+ 

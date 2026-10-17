@@ -1,0 +1,68 @@
+{
+  "utc": "2026-10-16T01:53:22.708679+00:00",
+  "run": "perf-sharegpt-20261016-a",
+  "pid": 1742606,
+  "physical_pair": [
+    6,
+    7
+  ],
+  "candidate_and_baseline_sha256": {
+    "experiments/performance-validation-20261016/candidate67/build_unified.py": "9a0910d8c23705f3b17863f74f792120ee059a3af02a9b8e17e5c660e4892ccc",
+    "experiments/performance-validation-20261016/candidate67/k100_int8_gemv_unified.hip": "dd753458416463665a97c5aedc04cffaed7b992a58190a66c9188619d20c8ae2",
+    "experiments/performance-validation-20261016/candidate67/k100_int8_gemv_unified.so": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d",
+    "experiments/performance-validation-20261016/candidate67/libtorch_c_dlpack_addon_torch210-rocm.so": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "experiments/performance-validation-20261016/candidate67/native-ar-manifest.json": "ee6324054eadf2707ad9806dc034dbd4082e8649ece3936f5d084d63674834a8",
+    "experiments/performance-validation-20261016/candidate67/native_bf16_ar_guard.py": "55485f3994417b012fd76f3cf423b03b33fd90d52e2c73d98d0fc9315ab0b5aa",
+    "experiments/performance-validation-20261016/candidate67/patch_dup_reg_guard.py": "038c207b72052c53ea1626b1408c91002aadf9dc99a543689456c4aed125deac",
+    "experiments/performance-validation-20261016/candidate67/sitecustomize.py": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+    "experiments/performance-validation-20261016/candidate67/triton_tiles.json": "4349ae5ebb6c6348323fecb75d35c756970e82b2e2d5d2a9197f1ae839a95758",
+    "experiments/performance-validation-20261016/baseline-v1/build_unified.py": "9a0910d8c23705f3b17863f74f792120ee059a3af02a9b8e17e5c660e4892ccc",
+    "experiments/performance-validation-20261016/baseline-v1/k100_int8_gemv_unified.hip": "dd753458416463665a97c5aedc04cffaed7b992a58190a66c9188619d20c8ae2",
+    "experiments/performance-validation-20261016/baseline-v1/k100_int8_gemv_unified.so": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d",
+    "experiments/performance-validation-20261016/baseline-v1/libtorch_c_dlpack_addon_torch210-rocm.so": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "experiments/performance-validation-20261016/baseline-v1/patch_dup_reg_guard.py": "038c207b72052c53ea1626b1408c91002aadf9dc99a543689456c4aed125deac",
+    "experiments/performance-validation-20261016/baseline-v1/sitecustomize.py": "f1789532d58daa66187ba901d3d7513ff142cb33fafc7793ce44f4e821464495"
+  },
+  "dataset_path": "/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json",
+  "dataset_sha256": "35f0e213ce091ed9b9af2a1f0755e9d39f9ccec34ab281cd4ca60d70f6479ba4",
+  "scenes": [
+    32,
+    16,
+    64,
+    4,
+    1
+  ],
+  "kinds": [
+    "v1",
+    "candidate",
+    "v1-return"
+  ],
+  "full_warmup_rounds": 1,
+  "measure_rounds": 3,
+  "prompts_per_round": 1000,
+  "short_warmup_per_run": 64,
+  "seed": 20260912,
+  "context": 67584,
+  "accuracy": "NOT_RUN",
+  "overlap": {
+    "utc": "2026-10-16T01:53:23.279999+00:00",
+    "perf-64k-20261016-a-state.json": {
+      "phase": "benchmarking-64k1k",
+      "pid": 1633240,
+      "utc": "2026-10-16T01:53:13.593253+00:00",
+      "run_id": "perf-64k-20261016-a",
+      "physical_pair": "4,5",
+      "tp": 2,
+      "scene": "64k1k-c8",
+      "quality_evaluation": false,
+      "formal_acceptance": false,
+      "frozen": false,
+      "kind": "v1",
+      "begin_utc": "2026-10-16T01:53:13.593229+00:00"
+    },
+    "qwen38-submit1009-perf45-20261016": {
+      "running": true,
+      "pid": 1638133
+    }
+  }
+}

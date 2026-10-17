@@ -1,0 +1,31 @@
+{
+  "pair": "4,5",
+  "pid": 1364380,
+  "utc": "2026-10-16T15:43:33.396607+00:00",
+  "stage": "random_matrix",
+  "status": "FAILED",
+  "scenes": [],
+  "accuracy": "NOT_RUN",
+  "parallel_instances": 4,
+  "container": "qwen38-community-v2-45-20261016-a",
+  "current": {
+    "scene": "4k",
+    "c": 32
+  },
+  "error": "CalledProcessError(1, ['docker', 'exec', '-e', 'RUN_ID=community-v2-20261016-a-p45-matrix-4k-c32', 'qwen38-community-v2-45-20261016-a', 'bash', '/data/wangzy/v2/submit/scripts/benchmark.sh', '4k', '32'])",
+  "traceback": "Traceback (most recent call last):\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 146, in worker\n    result=bench(name,pair,item['scene'],item['c'],'matrix');state['scenes'].append(result);write(statepath,state)\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 107, in bench\n    run(['docker','exec','-e','RUN_ID='+run_id,name,'bash',str(PACKAGE/'scripts/benchmark.sh'),scene,str(c)],stdout=f,stderr=subprocess.STDOUT,timeout=8*3600)\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 38, in run\n    def run(cmd,**kw):return subprocess.run(cmd,check=True,timeout=kw.pop('timeout',120),**kw)\n  File \"/usr/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['docker', 'exec', '-e', 'RUN_ID=community-v2-20261016-a-p45-matrix-4k-c32', 'qwen38-community-v2-45-20261016-a', 'bash', '/data/wangzy/v2/submit/scripts/benchmark.sh', '4k', '32']' returned non-zero exit status 1.\n",
+  "gpu_after": {
+    "card4": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "9"
+    },
+    "card5": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "9"
+    }
+  },
+  "finished_utc": "2026-10-16T15:44:05.112295+00:00",
+  "lock_released": true
+}

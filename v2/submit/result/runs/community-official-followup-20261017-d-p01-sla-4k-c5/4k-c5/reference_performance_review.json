@@ -1,0 +1,63 @@
+{
+  "status": "PERFORMANCE_MEASUREMENTS_COMPLETE_TEXT_FLAGGED",
+  "performance_status": "PASS",
+  "text_integrity_status": "FLAGGED_UNRESOLVED",
+  "original_strict_text_gate_overridden": false,
+  "quality": "NOT_RUN",
+  "protocol": "SourceFind forum reference 2026-09-22, retrieved 2026-10-17; 2 warmup, 3 formal, max(8,2C)",
+  "measured_rounds": 3,
+  "requests": 30,
+  "mean_output_tps": 167.56282042612838,
+  "output_tps_rounds": [
+    166.66080837114828,
+    166.82667888305798,
+    169.2009740241789
+  ],
+  "spread_percent": 1.5159482554487487,
+  "text_flags": [
+    {
+      "phase": "warmup",
+      "round": 1,
+      "index": 2,
+      "replacement_chars": 1
+    }
+  ],
+  "raw_sha256": {
+    "warmup-01/requests.jsonl": "ce6a434148c3885b7012457e047b64d29f167667c51de0773a7d898d3bd8bb3f",
+    "warmup-01/summary.json": "16b9297fd63830d13ea6f9c79beefa0dd0b54f10dba8a212115df87989d30b18",
+    "warmup-02/requests.jsonl": "fb894221d756b4f3c32c05c2a368cb3d7af3e45dfb2e5267bfa2f08613a35ced",
+    "warmup-02/summary.json": "d7a0079c3609ee350ccf04ef59eef1ae081d92ec445ae4ed7672e5b8eca4d8bc",
+    "round-01/requests.jsonl": "bfa2f24a7dbd93f6170cc7f4014e053e32d31c34233616e92bec7392c3e68b65",
+    "round-01/summary.json": "868182d6796d0023cf3e7ef28350a9a0f8936ba58cd62d8e72ccdf87b1096563",
+    "round-02/requests.jsonl": "594bec51803d7ed66bc24a41497202e4107cdd4f1d556e202853546925c02e26",
+    "round-02/summary.json": "bea553f04559ff42958160c4f236b748689f9747789154b0913f90384ee73de9",
+    "round-03/requests.jsonl": "6ff54be1e7a525afd58ae8e24bd242324f7ce530a386b325a345053b4669083a",
+    "round-03/summary.json": "169c50ccaf1dc2344f0fb006efc2226961f6247ab3d3a9280a082b4fe84c5a25"
+  },
+  "config": {
+    "base_url": "http://127.0.0.1:31200",
+    "concurrency": 5,
+    "input_len": 4096,
+    "measure_rounds": 3,
+    "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+    "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p01-sla-4k-c5/4k-c5",
+    "output_len": 1024,
+    "requests_per_round": 10,
+    "seed": 20260912,
+    "timeout": 3600,
+    "warmup_rounds": 2
+  },
+  "official_final_acceptance": false,
+  "ttft_s_mean_mean_of_rounds": 3.7819869469676632,
+  "ttft_s_p50_mean_of_rounds": 3.013503777163957,
+  "ttft_s_p95_mean_of_rounds": 6.429601983976317,
+  "ttft_s_p99_mean_of_rounds": 6.431351821332937,
+  "tpot_ms_mean_mean_of_rounds": 25.52035403450696,
+  "tpot_ms_p50_mean_of_rounds": 25.039559067610067,
+  "tpot_ms_p95_mean_of_rounds": 29.634398839985508,
+  "tpot_ms_p99_mean_of_rounds": 30.043190513650178,
+  "e2e_s_mean_mean_of_rounds": 29.88930912426828,
+  "e2e_s_p50_mean_of_rounds": 29.455922580013674,
+  "e2e_s_p95_mean_of_rounds": 34.80694698453105,
+  "e2e_s_p99_mean_of_rounds": 35.653203963573716
+}

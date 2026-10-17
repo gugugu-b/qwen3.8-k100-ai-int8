@@ -1,0 +1,30 @@
+--- a/lightop/_lmslim_native/vllm_compat/direct_register_custom_op.py
++++ b/lightop/_lmslim_native/vllm_compat/direct_register_custom_op.py
+@@ -32,7 +32,26 @@
+     schema_str = infer_schema(op_func, mutates_args=mutates_args)
+ 
+     my_lib = target_lib
+-    my_lib.define(op_name + schema_str, tags=tags)
++    # DUP_REG_GUARD (generic, idempotent registration):
++    # On gfx928, lmslim/envs.py hardcodes LMSLIM_USE_LIGHTOP=0 (the env-var
++    # branch is only taken for gfx936/gfx938), so lmslim.quantize.quant_ops
++    # registers ops into the same "lmslim" torch library namespace that this
++    # module also registers into. Whichever module is imported second raises
++    # RuntimeError("... Duplicate registration ...") and kills the SGLang
++    # server at import time (sglang .../fp8_utils.py imports lightop.gemm_ops).
++    # Make registration idempotent: if the op is already defined, keep the
++    # existing implementation instead of raising.
++    try:
++        my_lib.define(op_name + schema_str, tags=tags)
++    except RuntimeError as _e:  # DUP_REG_GUARD
++        if op_name in str(_e):
++            print(
++                f"[lightop] DUP_REG_GUARD: {op_name} already registered by "
++                f"another module, keeping existing impl",
++                flush=True,
++            )
++            return
++        raise
+     my_lib.impl(op_name, op_func, dispatch_key=dispatch_key)
+     if fake_impl is not None:
+         my_lib._register_fake(op_name, fake_impl)

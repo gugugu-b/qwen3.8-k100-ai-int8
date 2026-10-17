@@ -1,0 +1,94 @@
+{
+  "status": "ISOLATED_RUNTIMES_PREPARED_NO_MODEL_STARTED",
+  "containers": [
+    {
+      "name": "qwen38-submit1009-perf45-20261016",
+      "id": "d88b4f472b49aba4d6be0cbd4a4c17b2f97a0d2f121ea8fcdddceabff513442e",
+      "pair": "4,5",
+      "port": "31024",
+      "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad"
+    },
+    {
+      "name": "qwen38-submit1009-perf67-20261016",
+      "id": "7f0e970eb49dfc568de4c85569e2777bbdde5f6d84cad62cd49bd0ae85ed7182",
+      "pair": "6,7",
+      "port": "31014",
+      "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad"
+    }
+  ],
+  "files": {
+    "baseline-v1/build_unified.py": "9a0910d8c23705f3b17863f74f792120ee059a3af02a9b8e17e5c660e4892ccc",
+    "baseline-v1/k100_int8_gemv_unified.hip": "dd753458416463665a97c5aedc04cffaed7b992a58190a66c9188619d20c8ae2",
+    "baseline-v1/k100_int8_gemv_unified.so": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d",
+    "baseline-v1/libtorch_c_dlpack_addon_torch210-rocm.so": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "baseline-v1/patch_dup_reg_guard.py": "038c207b72052c53ea1626b1408c91002aadf9dc99a543689456c4aed125deac",
+    "baseline-v1/sitecustomize.py": "f1789532d58daa66187ba901d3d7513ff142cb33fafc7793ce44f4e821464495",
+    "candidate45/build_unified.py": "9a0910d8c23705f3b17863f74f792120ee059a3af02a9b8e17e5c660e4892ccc",
+    "candidate45/k100_int8_gemv_unified.hip": "dd753458416463665a97c5aedc04cffaed7b992a58190a66c9188619d20c8ae2",
+    "candidate45/k100_int8_gemv_unified.so": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d",
+    "candidate45/libtorch_c_dlpack_addon_torch210-rocm.so": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "candidate45/native-ar-manifest.json": "5e7258562a21b3fe541a7c9bf1ed9e348bf8b356bffadbbc8e1764ab83854f4e",
+    "candidate45/native_bf16_ar_guard.py": "836ea4d43b1a4cd6bcc56c3998e09ff1e92d9ebdb5105b4937f6fe7a1f522d12",
+    "candidate45/original-native-ar-manifest.json": "ee6324054eadf2707ad9806dc034dbd4082e8649ece3936f5d084d63674834a8",
+    "candidate45/pair-identity.json": "78754c9f75d7dfafe0759e34cab7eeb9403859246da8082b827e6b1328c13c35",
+    "candidate45/patch_dup_reg_guard.py": "038c207b72052c53ea1626b1408c91002aadf9dc99a543689456c4aed125deac",
+    "candidate45/sitecustomize.py": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+    "candidate45/triton_tiles.json": "4349ae5ebb6c6348323fecb75d35c756970e82b2e2d5d2a9197f1ae839a95758",
+    "candidate67/build_unified.py": "9a0910d8c23705f3b17863f74f792120ee059a3af02a9b8e17e5c660e4892ccc",
+    "candidate67/k100_int8_gemv_unified.hip": "dd753458416463665a97c5aedc04cffaed7b992a58190a66c9188619d20c8ae2",
+    "candidate67/k100_int8_gemv_unified.so": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d",
+    "candidate67/libtorch_c_dlpack_addon_torch210-rocm.so": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "candidate67/native-ar-manifest.json": "ee6324054eadf2707ad9806dc034dbd4082e8649ece3936f5d084d63674834a8",
+    "candidate67/native_bf16_ar_guard.py": "55485f3994417b012fd76f3cf423b03b33fd90d52e2c73d98d0fc9315ab0b5aa",
+    "candidate67/patch_dup_reg_guard.py": "038c207b72052c53ea1626b1408c91002aadf9dc99a543689456c4aed125deac",
+    "candidate67/sitecustomize.py": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+    "candidate67/triton_tiles.json": "4349ae5ebb6c6348323fecb75d35c756970e82b2e2d5d2a9197f1ae839a95758",
+    "runtime-dependencies/aiter/chunk_fwd_o-gfx928.json": "22c2237c2e5c60942dd6f91d81757008a9944d75e354856382fcc720e36c155f",
+    "runtime-dependencies/aiter/chunk_gated_delta_rule_fwd_h-gfx928.json": "28705647a81d1d8ecd550be5f1eda338a0adbf288d4b19ff6c9a1051142a2f48",
+    "runtime-dependencies/aiter/fused_recurrent_gated_delta_rule_packed_decode-gfx928.json": "d855d364daf1b9ad9ae83bfbc7fcf95c9df28898beca291035034d8188bbc27e",
+    "runtime-dependencies/aiter/fused_sigmoid_gating_delta_rule_update-gfx928.json": "75a606995d2f09c36aea086597675b4898b22515200963655987af233f858ec4",
+    "runtime-dependencies/aiter/fused_sigmoid_gating_delta_rule_update_recurrent-gfx928.json": "dbc0f48b9f5c2b49b8b9bd8f04c81fa54b95277ecaadeb23a39082d2cbf6e65d",
+    "runtime-dependencies/direct_register_custom_op.py": "e6ee8f1b25e60d02811658483cdf150b33c79ba5c94f27198167268a44a8b545",
+    "runtime-dependencies/tvm-ffi/libtorch_c_dlpack_addon_torch210-rocm.so": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "scripts/benchmark.py": "1d8eca3e2325d45c1b2ac5004d6e49eb39b1494ece66e74c3e1b237b2b6471b8",
+    "scripts/benchmark.sh": "cbb63ed9d44fc1b8810b771cd841d7ca7039d60ee99a0516c34699393429bbd2",
+    "scripts/benchmark_sharegpt.sh": "5a469b8ef471ee0f8c1a14ba6a3ae2e8f4b9d6b710367fe5afaaabf25b97f417",
+    "scripts/native_bf16_ar_guard.py": "836ea4d43b1a4cd6bcc56c3998e09ff1e92d9ebdb5105b4937f6fe7a1f522d12",
+    "scripts/probe_native_bf16_ar45.py": "164f7adb4d445d80d59a919ba6d08ed8f7e5ae2c30b7101f03f51e0f8240b272",
+    "scripts/serve.sh": "09c870d7fc2494a579b26f7b59e3e6bccbbfb9b140a71fd7251026ed2326a0db",
+    "scripts/start_service.sh": "870aa2be49c4374a92aa292b97bb817028686a51b1814423add599e663d5e86e",
+    "scripts/validate_results.py": "aa1dffe8d2db1e6ef1faef6b2750d7af7427593bf51af83837c19330e3158512",
+    "scripts/validate_sharegpt.py": "e0588b52ecd89575897f4f309d51de46b8e051f6623f66472ab40914066459b3"
+  },
+  "original_measured_aiter_configs": [
+    {
+      "file": "/data/wangzy/submit1009/experiments/performance-validation-20261016/runtime-dependencies/aiter/fused_sigmoid_gating_delta_rule_update_recurrent-gfx928.json",
+      "installed_path": "/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/fused_sigmoid_gating_delta_rule_update_recurrent/fused_sigmoid_gating_delta_rule_update_recurrent-gfx928.json",
+      "sha256": "dbc0f48b9f5c2b49b8b9bd8f04c81fa54b95277ecaadeb23a39082d2cbf6e65d"
+    },
+    {
+      "file": "/data/wangzy/submit1009/experiments/performance-validation-20261016/runtime-dependencies/aiter/fused_sigmoid_gating_delta_rule_update-gfx928.json",
+      "installed_path": "/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/fused_sigmoid_gating_delta_rule_update/fused_sigmoid_gating_delta_rule_update-gfx928.json",
+      "sha256": "75a606995d2f09c36aea086597675b4898b22515200963655987af233f858ec4"
+    },
+    {
+      "file": "/data/wangzy/submit1009/experiments/performance-validation-20261016/runtime-dependencies/aiter/fused_recurrent_gated_delta_rule_packed_decode-gfx928.json",
+      "installed_path": "/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/fused_recurrent_gated_delta_rule_packed_decode/fused_recurrent_gated_delta_rule_packed_decode-gfx928.json",
+      "sha256": "d855d364daf1b9ad9ae83bfbc7fcf95c9df28898beca291035034d8188bbc27e"
+    },
+    {
+      "file": "/data/wangzy/submit1009/experiments/performance-validation-20261016/runtime-dependencies/aiter/chunk_gated_delta_rule_fwd_h-gfx928.json",
+      "installed_path": "/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/chunk_gated_delta_rule_fwd_h/chunk_gated_delta_rule_fwd_h-gfx928.json",
+      "sha256": "28705647a81d1d8ecd550be5f1eda338a0adbf288d4b19ff6c9a1051142a2f48"
+    },
+    {
+      "file": "/data/wangzy/submit1009/experiments/performance-validation-20261016/runtime-dependencies/aiter/chunk_fwd_o-gfx928.json",
+      "installed_path": "/usr/local/lib/python3.10/dist-packages/aiter/ops/triton/configs/chunk_fwd_o/chunk_fwd_o-gfx928.json",
+      "sha256": "22c2237c2e5c60942dd6f91d81757008a9944d75e354856382fcc720e36c155f"
+    }
+  ],
+  "dataset_sha256": "35f0e213ce091ed9b9af2a1f0755e9d39f9ccec34ab281cd4ca60d70f6479ba4",
+  "accuracy_tests": false,
+  "default_patch_unchanged": true,
+  "large_files_local_download": false
+}

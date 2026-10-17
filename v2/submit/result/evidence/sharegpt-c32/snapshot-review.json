@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETED_SCENE_SNAPSHOT_INDEPENDENT_REVIEW_PASS",
+  "utc": "2026-10-16T03:58:46.134314+00:00",
+  "concurrency": 32,
+  "run": "perf-sharegpt-20261016-a",
+  "physical_pair": [
+    6,
+    7
+  ],
+  "tp": 2,
+  "snapshot_manifest_sha256": "b2843070aa4055ca4ac1247e7f7476f803165a65451fe1a0695bbcdf93009698",
+  "producer_manifest_sha256": "b2843070aa4055ca4ac1247e7f7476f803165a65451fe1a0695bbcdf93009698",
+  "producer_comparison_sha256": "7104baebc1429811ae55ce18a0b45727ef8f7efdb893e14844e76b633ce49660",
+  "independent_comparison_sha256": "7104baebc1429811ae55ce18a0b45727ef8f7efdb893e14844e76b633ce49660",
+  "full_report_byte_identical_to_producer": true,
+  "scene_result_identical_to_producer": true,
+  "source_files": 71,
+  "live_queue_modified": false,
+  "accuracy": "NOT_RUN",
+  "formal_acceptance": false,
+  "frozen": false
+}

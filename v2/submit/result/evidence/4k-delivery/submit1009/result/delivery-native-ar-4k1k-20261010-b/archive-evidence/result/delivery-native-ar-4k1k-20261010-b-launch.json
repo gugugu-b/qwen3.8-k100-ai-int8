@@ -1,0 +1,8 @@
+{
+  "pid": 3379907,
+  "utc": "2026-10-10T00:06:03.298208+00:00",
+  "run_id": "delivery-native-ar-4k1k-20261010-b",
+  "deadline_shanghai": "2026-10-10T09:02:32+08:00",
+  "job_log": "/data/wangzy/submit1009/logs/delivery-native-ar-4k1k-20261010-b-job.log",
+  "prior_startup_failed_before_gpu_test": 3368076
+}

@@ -1,0 +1,99 @@
+{
+  "pair": "0,1",
+  "pid": 1364379,
+  "utc": "2026-10-16T15:53:53.432820+00:00",
+  "stage": "random_matrix",
+  "status": "FAILED",
+  "scenes": [
+    {
+      "run_id": "community-v2-20261016-a-p01-matrix-4k-c1",
+      "scene": "4k",
+      "c": 1,
+      "path": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p01-matrix-4k-c1/4k-c1",
+      "validation": {
+        "status": "PASS",
+        "measured_rounds": 3,
+        "requests": 48,
+        "output_tps_rounds": [
+          56.86254710998365,
+          57.24757042316434,
+          57.28870609578077
+        ],
+        "mean_output_tps": 57.13294120964292,
+        "spread_percent": 0.7459076616296951,
+        "mean_wall_s": 286.77300670102704,
+        "ttft_s_p50_mean_of_rounds": 1.303856622330689,
+        "ttft_s_p50_range": [
+          1.3032292839779984,
+          1.304671595513355
+        ],
+        "ttft_s_p95_mean_of_rounds": 1.3276771424183,
+        "ttft_s_p95_range": [
+          1.3082346272276482,
+          1.364053381010308
+        ],
+        "ttft_s_p99_mean_of_rounds": 1.3669867146139343,
+        "ttft_s_p99_range": [
+          1.3099933790246723,
+          1.4784422193857607
+        ],
+        "tpot_ms_p50_mean_of_rounds": 16.05032402883976,
+        "tpot_ms_p50_range": [
+          15.779140677419377,
+          16.186112612432403
+        ],
+        "tpot_ms_p95_mean_of_rounds": 17.247235154205114,
+        "tpot_ms_p95_range": [
+          17.025840079444524,
+          17.449468616044552
+        ],
+        "tpot_ms_p99_mean_of_rounds": 17.60796392703107,
+        "tpot_ms_p99_range": [
+          17.026590911670038,
+          18.51244825773184
+        ]
+      },
+      "config": {
+        "base_url": "http://127.0.0.1:31100",
+        "concurrency": 1,
+        "input_len": 4096,
+        "measure_rounds": 3,
+        "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+        "output_dir": "/data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p01-matrix-4k-c1/4k-c1",
+        "output_len": 1024,
+        "requests_per_round": 16,
+        "seed": 20260912,
+        "timeout": 3600,
+        "warmup_rounds": 2
+      },
+      "provisional_SLA_by_statistic": {
+        "mean": true,
+        "p99": true
+      },
+      "official_SLA_max": null
+    }
+  ],
+  "accuracy": "NOT_RUN",
+  "parallel_instances": 4,
+  "container": "qwen38-community-v2-01-20261016-a",
+  "current": {
+    "scene": "4k",
+    "c": 16
+  },
+  "error": "CalledProcessError(1, ['docker', 'exec', '-e', 'RUN_ID=community-v2-20261016-a-p01-matrix-4k-c16', 'qwen38-community-v2-01-20261016-a', 'bash', '/data/wangzy/v2/submit/scripts/benchmark.sh', '4k', '16'])",
+  "traceback": "Traceback (most recent call last):\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 146, in worker\n    result=bench(name,pair,item['scene'],item['c'],'matrix');state['scenes'].append(result);write(statepath,state)\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 107, in bench\n    run(['docker','exec','-e','RUN_ID='+run_id,name,'bash',str(PACKAGE/'scripts/benchmark.sh'),scene,str(c)],stdout=f,stderr=subprocess.STDOUT,timeout=8*3600)\n  File \"/data/wangzy/v2/submit/execution/community-v2-20261016-a/controller.py\", line 38, in run\n    def run(cmd,**kw):return subprocess.run(cmd,check=True,timeout=kw.pop('timeout',120),**kw)\n  File \"/usr/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['docker', 'exec', '-e', 'RUN_ID=community-v2-20261016-a-p01-matrix-4k-c16', 'qwen38-community-v2-01-20261016-a', 'bash', '/data/wangzy/v2/submit/scripts/benchmark.sh', '4k', '16']' returned non-zero exit status 1.\n",
+  "gpu_after": {
+    "card0": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "7"
+    },
+    "card1": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "7"
+    }
+  },
+  "finished_utc": "2026-10-16T15:54:25.067338+00:00",
+  "lock_released": true
+}

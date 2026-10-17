@@ -1,0 +1,98 @@
+{
+  "run_id": "community-official-20261017-c",
+  "server": "192.2.111.66",
+  "remote_package": "/data/wangzy/v2/submit",
+  "remote_control": "/data/wangzy/submit1009/result/community-official-20261017-c",
+  "tp_per_instance": 2,
+  "max_running_requests": 32,
+  "cuda_graph_max_bs": 32,
+  "accuracy_order": "last_after_performance_and_engineering",
+  "official_alignment": "Exact forum reference client; local challenge SLA thresholds explicitly selected by user, P95 statistic taken from tutorial",
+  "stages": [
+    "asset_and_four_pair_preflight",
+    "random_matrix",
+    "SLA_boundary_diagnostic",
+    "ShareGPT_C64_forensics_and_repro",
+    "engineering_assets_Demo_video",
+    "accuracy_last"
+  ],
+  "parallel_interference": "Four concurrent TP2 instances on the same host; CPU, IO and host PCIe contention must be disclosed",
+  "workers": [
+    {
+      "pair": "0,1",
+      "port": 31300,
+      "matrix": [
+        {
+          "scene": "4k",
+          "c": 1
+        },
+        {
+          "scene": "4k",
+          "c": 8
+        },
+        {
+          "scene": "4k",
+          "c": 16
+        }
+      ]
+    },
+    {
+      "pair": "2,3",
+      "port": 31310,
+      "matrix": [
+        {
+          "scene": "64k",
+          "c": 1
+        },
+        {
+          "scene": "64k",
+          "c": 8
+        },
+        {
+          "scene": "64k",
+          "c": 16
+        }
+      ]
+    },
+    {
+      "pair": "4,5",
+      "port": 31320,
+      "matrix": [
+        {
+          "scene": "4k",
+          "c": 32
+        },
+        {
+          "scene": "4k",
+          "c": 64
+        },
+        {
+          "scene": "4k",
+          "c": 128
+        }
+      ]
+    },
+    {
+      "pair": "6,7",
+      "port": 31330,
+      "matrix": [
+        {
+          "scene": "64k",
+          "c": 32
+        }
+      ]
+    }
+  ],
+  "selected_SLA": {
+    "source": "User explicitly selects local community competition document",
+    "4k": {
+      "ttft_p95_s_lt": 10,
+      "tpot_p95_ms_lt": 80
+    },
+    "64k": {
+      "ttft_p95_s_lt": 30,
+      "tpot_p95_ms_lt": 100
+    }
+  },
+  "perf_text_policy": "Reference client performance criteria: transport/completion/exact tokens; preserve replacement chars as unresolved separate text flags, never rewrite original failed gates"
+}

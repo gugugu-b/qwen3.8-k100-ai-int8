@@ -1,0 +1,15 @@
+{
+  "run_id": "community-gsm8k-20261017-e",
+  "track": "K100-AI/SGLang/TP2",
+  "pair": "0,1",
+  "port": 31400,
+  "concurrency": 32,
+  "requests": 1319,
+  "protocol": "Frozen EvalScope 1.6.1 4-shot main full set; final official equivalence unverified",
+  "threshold": 0.95,
+  "minimum_correct": 1254,
+  "takeover": "After pair01 current matrix completes and releases flock; fresh owned container; later pair01 SLA waits for GSM8K cleanup",
+  "other_accuracy": "LAST",
+  "result": "result/summary/gsm8k-community-20261017-e.json",
+  "evidence": "result/evidence/gsm8k-20261017"
+}

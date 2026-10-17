@@ -1,0 +1,15 @@
+{
+  "phase": "performance-validation-complete",
+  "pid": 1633240,
+  "utc": "2026-10-16T03:31:38.734557+00:00",
+  "run_id": "perf-64k-20261016-a",
+  "physical_pair": "4,5",
+  "tp": 2,
+  "scene": "64k1k-c8",
+  "quality_evaluation": false,
+  "formal_acceptance": false,
+  "frozen": false,
+  "error": null,
+  "all_variants_completed": true,
+  "own_container_stopped": true
+}

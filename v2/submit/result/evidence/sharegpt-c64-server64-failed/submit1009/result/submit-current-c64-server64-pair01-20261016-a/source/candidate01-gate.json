@@ -1,0 +1,2087 @@
+{
+  "status": "NUMERICAL_GRAPH_PASS",
+  "physical_pair": "0,1",
+  "ranks": [
+    {
+      "status": "NUMERICAL_GRAPH_PASS",
+      "rank": 0,
+      "physical_device": 0,
+      "tp": 2,
+      "backend": "native",
+      "deterministic_one_stage": true,
+      "cases": 9,
+      "excluded_routes": 10,
+      "poisoned_full_write_checks": 27,
+      "public_eager_checks": 27,
+      "changed_graph_checks": 27,
+      "rows": [
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 1,
+          "hidden": 5120,
+          "bytes": 10240,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 2,
+          "hidden": 5120,
+          "bytes": 20480,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 4,
+          "hidden": 5120,
+          "bytes": 40960,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 8,
+          "hidden": 5120,
+          "bytes": 81920,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 16,
+          "hidden": 5120,
+          "bytes": 163840,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 32,
+          "hidden": 5120,
+          "bytes": 327680,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 64,
+          "hidden": 5120,
+          "bytes": 655360,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 256,
+          "hidden": 5120,
+          "bytes": 2621440,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 1024,
+          "hidden": 5120,
+          "bytes": 10485760,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        }
+      ],
+      "full_nvlink": false,
+      "topology_override": false,
+      "quantization": false,
+      "formal_acceptance": false,
+      "actual_model_graph_gate": "REVIEW_REQUIRED"
+    },
+    {
+      "status": "NUMERICAL_GRAPH_PASS",
+      "rank": 1,
+      "physical_device": 1,
+      "tp": 2,
+      "backend": "native",
+      "deterministic_one_stage": true,
+      "cases": 9,
+      "excluded_routes": 10,
+      "poisoned_full_write_checks": 27,
+      "public_eager_checks": 27,
+      "changed_graph_checks": 27,
+      "rows": [
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 1,
+          "hidden": 5120,
+          "bytes": 10240,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 5120,
+              "finite_count": 5120,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 2,
+          "hidden": 5120,
+          "bytes": 20480,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 10240,
+              "finite_count": 10240,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 4,
+          "hidden": 5120,
+          "bytes": 40960,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 20480,
+              "finite_count": 20480,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 8,
+          "hidden": 5120,
+          "bytes": 81920,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 40960,
+              "finite_count": 40960,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 16,
+          "hidden": 5120,
+          "bytes": 163840,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 81920,
+              "finite_count": 81920,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 32,
+          "hidden": 5120,
+          "bytes": 327680,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 163840,
+              "finite_count": 163840,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 64,
+          "hidden": 5120,
+          "bytes": 655360,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 327680,
+              "finite_count": 327680,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 256,
+          "hidden": 5120,
+          "bytes": 2621440,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 1310720,
+              "finite_count": 1310720,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        },
+        {
+          "status": "PASS",
+          "dtype": "torch.bfloat16",
+          "m": 1024,
+          "hidden": 5120,
+          "bytes": 10485760,
+          "input_path": "copy-in",
+          "poisoned_full_write_checks": [
+            {
+              "phase": "poisoned",
+              "index": 0,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 1,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "poisoned",
+              "index": 2,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "public_eager_checks": [
+            {
+              "phase": "public-eager",
+              "index": 0,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 1,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "public-eager",
+              "index": 2,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ],
+          "changed_input_graph_checks": [
+            {
+              "phase": "changed-graph",
+              "index": 0,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 1,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            },
+            {
+              "phase": "changed-graph",
+              "index": 2,
+              "equal": true,
+              "elements": 5242880,
+              "finite_count": 5242880,
+              "nonfinite_count": 0,
+              "mismatch_vs_rccl": 0,
+              "mismatch_vs_explicit_sum": 0,
+              "max_abs": 0.0
+            }
+          ]
+        }
+      ],
+      "full_nvlink": false,
+      "topology_override": false,
+      "quantization": false,
+      "formal_acceptance": false,
+      "actual_model_graph_gate": "REVIEW_REQUIRED"
+    }
+  ],
+  "candidate_site_sha256": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+  "guard_sha256": "f9d5ec98c70724dcb80857228681a6c03c619606643cdd6918c9084af51cd7f4",
+  "candidate_guard_sha256": "f9d5ec98c70724dcb80857228681a6c03c619606643cdd6918c9084af51cd7f4",
+  "model_accuracy_test": false,
+  "actual_model_graph_gate": "REVIEW_REQUIRED",
+  "total_checks": 162,
+  "numerical_gate_only": true
+}

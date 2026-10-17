@@ -1,0 +1,1184 @@
+{
+  "workspace_root": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B",
+  "sources": {
+    "review_4k": {
+      "path": "02-测试与结果/results-4k-v2-delivery-20261010-b/local-integrity-review/review.json",
+      "sha256": "992df2f9d0f300f625fd72263754874630ce5716fb392c0cfb2a04b0441258bd",
+      "format": "json"
+    },
+    "review_64k": {
+      "path": "02-测试与结果/results-64k-v2-validation-20261016-a/local-integrity-review-b/review.json",
+      "sha256": "d2478cf98f56373cbff16db5a7a0000d73ae12a13dcf86ef46717c541f329d9f",
+      "format": "json"
+    },
+    "review_c32": {
+      "path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/local-independent-review/comparison.json",
+      "sha256": "7104baebc1429811ae55ce18a0b45727ef8f7efdb893e14844e76b633ce49660",
+      "format": "json"
+    },
+    "4k_validated": {
+      "path": "02-测试与结果/results-4k-v2-delivery-20261010-b/submit1009/result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/validated_summary.json",
+      "sha256": "b245a7407f58649758676dcc6813f8fda772ad45a0fe37532108f1c411d060e4",
+      "format": "json"
+    },
+    "4k_round_01": {
+      "path": "02-测试与结果/results-4k-v2-delivery-20261010-b/submit1009/result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-01/summary.json",
+      "sha256": "b9fb075b84c2906ab3ad440ef962307402857cf42ab12940d481b540b4535403",
+      "format": "json"
+    },
+    "4k_round_02": {
+      "path": "02-测试与结果/results-4k-v2-delivery-20261010-b/submit1009/result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-02/summary.json",
+      "sha256": "cf1f0cb14af28791aca266ef3a5a9022715348adcae5931ae6d54ac7795a034c",
+      "format": "json"
+    },
+    "4k_round_03": {
+      "path": "02-测试与结果/results-4k-v2-delivery-20261010-b/submit1009/result/delivery-native-ar-4k1k-20261010-b-native-bf16-ar/4k/round-03/summary.json",
+      "sha256": "ee3bfd49d64f3986632fba647cb9c1563a81666c673e095502893d1f29d67624",
+      "format": "json"
+    },
+    "64k_validated": {
+      "path": "02-测试与结果/results-64k-v2-validation-20261016-a/submit1009/result/perf-64k-20261016-a/variants/candidate/64k/validated_summary.json",
+      "sha256": "3d8902cc90a5f21488c033a6a589e31c35d92dc58741752e53015b630d3a6527",
+      "format": "json"
+    },
+    "64k_round_01": {
+      "path": "02-测试与结果/results-64k-v2-validation-20261016-a/submit1009/result/perf-64k-20261016-a/variants/candidate/64k/round-01/summary.json",
+      "sha256": "2d9edaff0d813dabfa4bc49a8ae985fd64a4343eeb81ac4d7c9e72d48b8b48d8",
+      "format": "json"
+    },
+    "64k_round_02": {
+      "path": "02-测试与结果/results-64k-v2-validation-20261016-a/submit1009/result/perf-64k-20261016-a/variants/candidate/64k/round-02/summary.json",
+      "sha256": "3ebfc96ce8d8244df9c64bcc03905bab5110358d8c96178c088095a6059b3b84",
+      "format": "json"
+    },
+    "64k_round_03": {
+      "path": "02-测试与结果/results-64k-v2-validation-20261016-a/submit1009/result/perf-64k-20261016-a/variants/candidate/64k/round-03/summary.json",
+      "sha256": "a6d54d86e5410d0128a4da9a5bdec9f178c6351024089772c72c7161829a8ba7",
+      "format": "json"
+    },
+    "c32_validated": {
+      "path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/validated_summary.json",
+      "sha256": "cb38bf0019a75011adbc0c8a17a7de2104afb507300a83ccb1512900ea8998b8",
+      "format": "json"
+    },
+    "c32_round_01": {
+      "path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-01.jsonl",
+      "sha256": "2b4e5cc8dd7ec0bcccf1b3ef11b9f7ab394b8f8b9a4216ef93c3eb8c029fc1f4",
+      "format": "single_json_object_jsonl"
+    },
+    "c32_round_02": {
+      "path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-02.jsonl",
+      "sha256": "62b7037e34edf305cc7a125c2c09e4d568150d5a04cfbc3adf7b6e305e99ff51",
+      "format": "single_json_object_jsonl"
+    },
+    "c32_round_03": {
+      "path": "02-测试与结果/results-sharegpt-v2-validation-20261016-c32-a/submit1009/experiments/performance-validation-20261016/result/perf-sharegpt-20261016-a-c32-candidate/sharegpt-c32/round-03.jsonl",
+      "sha256": "1a0509c4f37ac618c1b2d00b9c8656646bdbf88905618bec1a5b3d5e0c4a337d",
+      "format": "single_json_object_jsonl"
+    }
+  },
+  "scenes": {
+    "4k": {
+      "canonical_candidate_mean_tps": {
+        "source": "review_4k",
+        "json_pointer": "/summaries/native-bf16-ar/mean_output_tps"
+      },
+      "candidate_round_tps": {
+        "source": "review_4k",
+        "json_pointer": "/summaries/native-bf16-ar/output_tps_rounds"
+      },
+      "validated_candidate_mean_tps": {
+        "source": "4k_validated",
+        "json_pointer": "/mean_output_tps"
+      },
+      "aggregate_latency_fields": {
+        "ttft_s_p50_mean_of_rounds": {
+          "source": "4k_validated",
+          "json_pointer": "/ttft_s_p50_mean_of_rounds"
+        },
+        "ttft_s_p50_range": {
+          "source": "4k_validated",
+          "json_pointer": "/ttft_s_p50_range"
+        },
+        "ttft_s_p95_mean_of_rounds": {
+          "source": "4k_validated",
+          "json_pointer": "/ttft_s_p95_mean_of_rounds"
+        },
+        "ttft_s_p95_range": {
+          "source": "4k_validated",
+          "json_pointer": "/ttft_s_p95_range"
+        },
+        "ttft_s_p99_mean_of_rounds": {
+          "source": "4k_validated",
+          "json_pointer": "/ttft_s_p99_mean_of_rounds"
+        },
+        "ttft_s_p99_range": {
+          "source": "4k_validated",
+          "json_pointer": "/ttft_s_p99_range"
+        },
+        "tpot_ms_p50_mean_of_rounds": {
+          "source": "4k_validated",
+          "json_pointer": "/tpot_ms_p50_mean_of_rounds"
+        },
+        "tpot_ms_p50_range": {
+          "source": "4k_validated",
+          "json_pointer": "/tpot_ms_p50_range"
+        },
+        "tpot_ms_p95_mean_of_rounds": {
+          "source": "4k_validated",
+          "json_pointer": "/tpot_ms_p95_mean_of_rounds"
+        },
+        "tpot_ms_p95_range": {
+          "source": "4k_validated",
+          "json_pointer": "/tpot_ms_p95_range"
+        },
+        "tpot_ms_p99_mean_of_rounds": {
+          "source": "4k_validated",
+          "json_pointer": "/tpot_ms_p99_mean_of_rounds"
+        },
+        "tpot_ms_p99_range": {
+          "source": "4k_validated",
+          "json_pointer": "/tpot_ms_p99_range"
+        }
+      },
+      "complete_per_round_metrics": [
+        {
+          "source": "4k_round_01",
+          "output_tps": {
+            "source": "4k_round_01",
+            "json_pointer": "/output_throughput_tps"
+          },
+          "wall_time_s": {
+            "source": "4k_round_01",
+            "json_pointer": "/wall_time_s"
+          },
+          "latency_metrics": {
+            "ttft_s": {
+              "mean": {
+                "source": "4k_round_01",
+                "json_pointer": "/ttft_s/mean"
+              },
+              "min": {
+                "source": "4k_round_01",
+                "json_pointer": "/ttft_s/min"
+              },
+              "max": {
+                "source": "4k_round_01",
+                "json_pointer": "/ttft_s/max"
+              },
+              "p50": {
+                "source": "4k_round_01",
+                "json_pointer": "/ttft_s/p50"
+              },
+              "p90": {
+                "source": "4k_round_01",
+                "json_pointer": "/ttft_s/p90"
+              },
+              "p95": {
+                "source": "4k_round_01",
+                "json_pointer": "/ttft_s/p95"
+              },
+              "p99": {
+                "source": "4k_round_01",
+                "json_pointer": "/ttft_s/p99"
+              }
+            },
+            "tpot_ms": {
+              "mean": {
+                "source": "4k_round_01",
+                "json_pointer": "/tpot_ms/mean"
+              },
+              "min": {
+                "source": "4k_round_01",
+                "json_pointer": "/tpot_ms/min"
+              },
+              "max": {
+                "source": "4k_round_01",
+                "json_pointer": "/tpot_ms/max"
+              },
+              "p50": {
+                "source": "4k_round_01",
+                "json_pointer": "/tpot_ms/p50"
+              },
+              "p90": {
+                "source": "4k_round_01",
+                "json_pointer": "/tpot_ms/p90"
+              },
+              "p95": {
+                "source": "4k_round_01",
+                "json_pointer": "/tpot_ms/p95"
+              },
+              "p99": {
+                "source": "4k_round_01",
+                "json_pointer": "/tpot_ms/p99"
+              }
+            },
+            "e2e_s": {
+              "mean": {
+                "source": "4k_round_01",
+                "json_pointer": "/e2e_s/mean"
+              },
+              "min": {
+                "source": "4k_round_01",
+                "json_pointer": "/e2e_s/min"
+              },
+              "max": {
+                "source": "4k_round_01",
+                "json_pointer": "/e2e_s/max"
+              },
+              "p50": {
+                "source": "4k_round_01",
+                "json_pointer": "/e2e_s/p50"
+              },
+              "p90": {
+                "source": "4k_round_01",
+                "json_pointer": "/e2e_s/p90"
+              },
+              "p95": {
+                "source": "4k_round_01",
+                "json_pointer": "/e2e_s/p95"
+              },
+              "p99": {
+                "source": "4k_round_01",
+                "json_pointer": "/e2e_s/p99"
+              }
+            }
+          }
+        },
+        {
+          "source": "4k_round_02",
+          "output_tps": {
+            "source": "4k_round_02",
+            "json_pointer": "/output_throughput_tps"
+          },
+          "wall_time_s": {
+            "source": "4k_round_02",
+            "json_pointer": "/wall_time_s"
+          },
+          "latency_metrics": {
+            "ttft_s": {
+              "mean": {
+                "source": "4k_round_02",
+                "json_pointer": "/ttft_s/mean"
+              },
+              "min": {
+                "source": "4k_round_02",
+                "json_pointer": "/ttft_s/min"
+              },
+              "max": {
+                "source": "4k_round_02",
+                "json_pointer": "/ttft_s/max"
+              },
+              "p50": {
+                "source": "4k_round_02",
+                "json_pointer": "/ttft_s/p50"
+              },
+              "p90": {
+                "source": "4k_round_02",
+                "json_pointer": "/ttft_s/p90"
+              },
+              "p95": {
+                "source": "4k_round_02",
+                "json_pointer": "/ttft_s/p95"
+              },
+              "p99": {
+                "source": "4k_round_02",
+                "json_pointer": "/ttft_s/p99"
+              }
+            },
+            "tpot_ms": {
+              "mean": {
+                "source": "4k_round_02",
+                "json_pointer": "/tpot_ms/mean"
+              },
+              "min": {
+                "source": "4k_round_02",
+                "json_pointer": "/tpot_ms/min"
+              },
+              "max": {
+                "source": "4k_round_02",
+                "json_pointer": "/tpot_ms/max"
+              },
+              "p50": {
+                "source": "4k_round_02",
+                "json_pointer": "/tpot_ms/p50"
+              },
+              "p90": {
+                "source": "4k_round_02",
+                "json_pointer": "/tpot_ms/p90"
+              },
+              "p95": {
+                "source": "4k_round_02",
+                "json_pointer": "/tpot_ms/p95"
+              },
+              "p99": {
+                "source": "4k_round_02",
+                "json_pointer": "/tpot_ms/p99"
+              }
+            },
+            "e2e_s": {
+              "mean": {
+                "source": "4k_round_02",
+                "json_pointer": "/e2e_s/mean"
+              },
+              "min": {
+                "source": "4k_round_02",
+                "json_pointer": "/e2e_s/min"
+              },
+              "max": {
+                "source": "4k_round_02",
+                "json_pointer": "/e2e_s/max"
+              },
+              "p50": {
+                "source": "4k_round_02",
+                "json_pointer": "/e2e_s/p50"
+              },
+              "p90": {
+                "source": "4k_round_02",
+                "json_pointer": "/e2e_s/p90"
+              },
+              "p95": {
+                "source": "4k_round_02",
+                "json_pointer": "/e2e_s/p95"
+              },
+              "p99": {
+                "source": "4k_round_02",
+                "json_pointer": "/e2e_s/p99"
+              }
+            }
+          }
+        },
+        {
+          "source": "4k_round_03",
+          "output_tps": {
+            "source": "4k_round_03",
+            "json_pointer": "/output_throughput_tps"
+          },
+          "wall_time_s": {
+            "source": "4k_round_03",
+            "json_pointer": "/wall_time_s"
+          },
+          "latency_metrics": {
+            "ttft_s": {
+              "mean": {
+                "source": "4k_round_03",
+                "json_pointer": "/ttft_s/mean"
+              },
+              "min": {
+                "source": "4k_round_03",
+                "json_pointer": "/ttft_s/min"
+              },
+              "max": {
+                "source": "4k_round_03",
+                "json_pointer": "/ttft_s/max"
+              },
+              "p50": {
+                "source": "4k_round_03",
+                "json_pointer": "/ttft_s/p50"
+              },
+              "p90": {
+                "source": "4k_round_03",
+                "json_pointer": "/ttft_s/p90"
+              },
+              "p95": {
+                "source": "4k_round_03",
+                "json_pointer": "/ttft_s/p95"
+              },
+              "p99": {
+                "source": "4k_round_03",
+                "json_pointer": "/ttft_s/p99"
+              }
+            },
+            "tpot_ms": {
+              "mean": {
+                "source": "4k_round_03",
+                "json_pointer": "/tpot_ms/mean"
+              },
+              "min": {
+                "source": "4k_round_03",
+                "json_pointer": "/tpot_ms/min"
+              },
+              "max": {
+                "source": "4k_round_03",
+                "json_pointer": "/tpot_ms/max"
+              },
+              "p50": {
+                "source": "4k_round_03",
+                "json_pointer": "/tpot_ms/p50"
+              },
+              "p90": {
+                "source": "4k_round_03",
+                "json_pointer": "/tpot_ms/p90"
+              },
+              "p95": {
+                "source": "4k_round_03",
+                "json_pointer": "/tpot_ms/p95"
+              },
+              "p99": {
+                "source": "4k_round_03",
+                "json_pointer": "/tpot_ms/p99"
+              }
+            },
+            "e2e_s": {
+              "mean": {
+                "source": "4k_round_03",
+                "json_pointer": "/e2e_s/mean"
+              },
+              "min": {
+                "source": "4k_round_03",
+                "json_pointer": "/e2e_s/min"
+              },
+              "max": {
+                "source": "4k_round_03",
+                "json_pointer": "/e2e_s/max"
+              },
+              "p50": {
+                "source": "4k_round_03",
+                "json_pointer": "/e2e_s/p50"
+              },
+              "p90": {
+                "source": "4k_round_03",
+                "json_pointer": "/e2e_s/p90"
+              },
+              "p95": {
+                "source": "4k_round_03",
+                "json_pointer": "/e2e_s/p95"
+              },
+              "p99": {
+                "source": "4k_round_03",
+                "json_pointer": "/e2e_s/p99"
+              }
+            }
+          }
+        }
+      ],
+      "units": {
+        "ttft_s": "seconds",
+        "tpot_ms": "milliseconds",
+        "e2e_s": "seconds"
+      },
+      "not_serialized": [
+        "inter_token_latency_distribution"
+      ],
+      "aggregation_scope": "Means of corresponding three round metrics; do not label pooled-request percentiles"
+    },
+    "64k": {
+      "canonical_candidate_mean_tps": {
+        "source": "review_64k",
+        "json_pointer": "/comparison/summaries/candidate/mean_output_tps"
+      },
+      "candidate_round_tps": {
+        "source": "review_64k",
+        "json_pointer": "/comparison/summaries/candidate/output_tps_rounds"
+      },
+      "validated_candidate_mean_tps": {
+        "source": "64k_validated",
+        "json_pointer": "/mean_output_tps"
+      },
+      "aggregate_latency_fields": {
+        "ttft_s_p50_mean_of_rounds": {
+          "source": "64k_validated",
+          "json_pointer": "/ttft_s_p50_mean_of_rounds"
+        },
+        "ttft_s_p50_range": {
+          "source": "64k_validated",
+          "json_pointer": "/ttft_s_p50_range"
+        },
+        "ttft_s_p95_mean_of_rounds": {
+          "source": "64k_validated",
+          "json_pointer": "/ttft_s_p95_mean_of_rounds"
+        },
+        "ttft_s_p95_range": {
+          "source": "64k_validated",
+          "json_pointer": "/ttft_s_p95_range"
+        },
+        "ttft_s_p99_mean_of_rounds": {
+          "source": "64k_validated",
+          "json_pointer": "/ttft_s_p99_mean_of_rounds"
+        },
+        "ttft_s_p99_range": {
+          "source": "64k_validated",
+          "json_pointer": "/ttft_s_p99_range"
+        },
+        "tpot_ms_p50_mean_of_rounds": {
+          "source": "64k_validated",
+          "json_pointer": "/tpot_ms_p50_mean_of_rounds"
+        },
+        "tpot_ms_p50_range": {
+          "source": "64k_validated",
+          "json_pointer": "/tpot_ms_p50_range"
+        },
+        "tpot_ms_p95_mean_of_rounds": {
+          "source": "64k_validated",
+          "json_pointer": "/tpot_ms_p95_mean_of_rounds"
+        },
+        "tpot_ms_p95_range": {
+          "source": "64k_validated",
+          "json_pointer": "/tpot_ms_p95_range"
+        },
+        "tpot_ms_p99_mean_of_rounds": {
+          "source": "64k_validated",
+          "json_pointer": "/tpot_ms_p99_mean_of_rounds"
+        },
+        "tpot_ms_p99_range": {
+          "source": "64k_validated",
+          "json_pointer": "/tpot_ms_p99_range"
+        }
+      },
+      "complete_per_round_metrics": [
+        {
+          "source": "64k_round_01",
+          "output_tps": {
+            "source": "64k_round_01",
+            "json_pointer": "/output_throughput_tps"
+          },
+          "wall_time_s": {
+            "source": "64k_round_01",
+            "json_pointer": "/wall_time_s"
+          },
+          "latency_metrics": {
+            "ttft_s": {
+              "mean": {
+                "source": "64k_round_01",
+                "json_pointer": "/ttft_s/mean"
+              },
+              "min": {
+                "source": "64k_round_01",
+                "json_pointer": "/ttft_s/min"
+              },
+              "max": {
+                "source": "64k_round_01",
+                "json_pointer": "/ttft_s/max"
+              },
+              "p50": {
+                "source": "64k_round_01",
+                "json_pointer": "/ttft_s/p50"
+              },
+              "p90": {
+                "source": "64k_round_01",
+                "json_pointer": "/ttft_s/p90"
+              },
+              "p95": {
+                "source": "64k_round_01",
+                "json_pointer": "/ttft_s/p95"
+              },
+              "p99": {
+                "source": "64k_round_01",
+                "json_pointer": "/ttft_s/p99"
+              }
+            },
+            "tpot_ms": {
+              "mean": {
+                "source": "64k_round_01",
+                "json_pointer": "/tpot_ms/mean"
+              },
+              "min": {
+                "source": "64k_round_01",
+                "json_pointer": "/tpot_ms/min"
+              },
+              "max": {
+                "source": "64k_round_01",
+                "json_pointer": "/tpot_ms/max"
+              },
+              "p50": {
+                "source": "64k_round_01",
+                "json_pointer": "/tpot_ms/p50"
+              },
+              "p90": {
+                "source": "64k_round_01",
+                "json_pointer": "/tpot_ms/p90"
+              },
+              "p95": {
+                "source": "64k_round_01",
+                "json_pointer": "/tpot_ms/p95"
+              },
+              "p99": {
+                "source": "64k_round_01",
+                "json_pointer": "/tpot_ms/p99"
+              }
+            },
+            "e2e_s": {
+              "mean": {
+                "source": "64k_round_01",
+                "json_pointer": "/e2e_s/mean"
+              },
+              "min": {
+                "source": "64k_round_01",
+                "json_pointer": "/e2e_s/min"
+              },
+              "max": {
+                "source": "64k_round_01",
+                "json_pointer": "/e2e_s/max"
+              },
+              "p50": {
+                "source": "64k_round_01",
+                "json_pointer": "/e2e_s/p50"
+              },
+              "p90": {
+                "source": "64k_round_01",
+                "json_pointer": "/e2e_s/p90"
+              },
+              "p95": {
+                "source": "64k_round_01",
+                "json_pointer": "/e2e_s/p95"
+              },
+              "p99": {
+                "source": "64k_round_01",
+                "json_pointer": "/e2e_s/p99"
+              }
+            }
+          }
+        },
+        {
+          "source": "64k_round_02",
+          "output_tps": {
+            "source": "64k_round_02",
+            "json_pointer": "/output_throughput_tps"
+          },
+          "wall_time_s": {
+            "source": "64k_round_02",
+            "json_pointer": "/wall_time_s"
+          },
+          "latency_metrics": {
+            "ttft_s": {
+              "mean": {
+                "source": "64k_round_02",
+                "json_pointer": "/ttft_s/mean"
+              },
+              "min": {
+                "source": "64k_round_02",
+                "json_pointer": "/ttft_s/min"
+              },
+              "max": {
+                "source": "64k_round_02",
+                "json_pointer": "/ttft_s/max"
+              },
+              "p50": {
+                "source": "64k_round_02",
+                "json_pointer": "/ttft_s/p50"
+              },
+              "p90": {
+                "source": "64k_round_02",
+                "json_pointer": "/ttft_s/p90"
+              },
+              "p95": {
+                "source": "64k_round_02",
+                "json_pointer": "/ttft_s/p95"
+              },
+              "p99": {
+                "source": "64k_round_02",
+                "json_pointer": "/ttft_s/p99"
+              }
+            },
+            "tpot_ms": {
+              "mean": {
+                "source": "64k_round_02",
+                "json_pointer": "/tpot_ms/mean"
+              },
+              "min": {
+                "source": "64k_round_02",
+                "json_pointer": "/tpot_ms/min"
+              },
+              "max": {
+                "source": "64k_round_02",
+                "json_pointer": "/tpot_ms/max"
+              },
+              "p50": {
+                "source": "64k_round_02",
+                "json_pointer": "/tpot_ms/p50"
+              },
+              "p90": {
+                "source": "64k_round_02",
+                "json_pointer": "/tpot_ms/p90"
+              },
+              "p95": {
+                "source": "64k_round_02",
+                "json_pointer": "/tpot_ms/p95"
+              },
+              "p99": {
+                "source": "64k_round_02",
+                "json_pointer": "/tpot_ms/p99"
+              }
+            },
+            "e2e_s": {
+              "mean": {
+                "source": "64k_round_02",
+                "json_pointer": "/e2e_s/mean"
+              },
+              "min": {
+                "source": "64k_round_02",
+                "json_pointer": "/e2e_s/min"
+              },
+              "max": {
+                "source": "64k_round_02",
+                "json_pointer": "/e2e_s/max"
+              },
+              "p50": {
+                "source": "64k_round_02",
+                "json_pointer": "/e2e_s/p50"
+              },
+              "p90": {
+                "source": "64k_round_02",
+                "json_pointer": "/e2e_s/p90"
+              },
+              "p95": {
+                "source": "64k_round_02",
+                "json_pointer": "/e2e_s/p95"
+              },
+              "p99": {
+                "source": "64k_round_02",
+                "json_pointer": "/e2e_s/p99"
+              }
+            }
+          }
+        },
+        {
+          "source": "64k_round_03",
+          "output_tps": {
+            "source": "64k_round_03",
+            "json_pointer": "/output_throughput_tps"
+          },
+          "wall_time_s": {
+            "source": "64k_round_03",
+            "json_pointer": "/wall_time_s"
+          },
+          "latency_metrics": {
+            "ttft_s": {
+              "mean": {
+                "source": "64k_round_03",
+                "json_pointer": "/ttft_s/mean"
+              },
+              "min": {
+                "source": "64k_round_03",
+                "json_pointer": "/ttft_s/min"
+              },
+              "max": {
+                "source": "64k_round_03",
+                "json_pointer": "/ttft_s/max"
+              },
+              "p50": {
+                "source": "64k_round_03",
+                "json_pointer": "/ttft_s/p50"
+              },
+              "p90": {
+                "source": "64k_round_03",
+                "json_pointer": "/ttft_s/p90"
+              },
+              "p95": {
+                "source": "64k_round_03",
+                "json_pointer": "/ttft_s/p95"
+              },
+              "p99": {
+                "source": "64k_round_03",
+                "json_pointer": "/ttft_s/p99"
+              }
+            },
+            "tpot_ms": {
+              "mean": {
+                "source": "64k_round_03",
+                "json_pointer": "/tpot_ms/mean"
+              },
+              "min": {
+                "source": "64k_round_03",
+                "json_pointer": "/tpot_ms/min"
+              },
+              "max": {
+                "source": "64k_round_03",
+                "json_pointer": "/tpot_ms/max"
+              },
+              "p50": {
+                "source": "64k_round_03",
+                "json_pointer": "/tpot_ms/p50"
+              },
+              "p90": {
+                "source": "64k_round_03",
+                "json_pointer": "/tpot_ms/p90"
+              },
+              "p95": {
+                "source": "64k_round_03",
+                "json_pointer": "/tpot_ms/p95"
+              },
+              "p99": {
+                "source": "64k_round_03",
+                "json_pointer": "/tpot_ms/p99"
+              }
+            },
+            "e2e_s": {
+              "mean": {
+                "source": "64k_round_03",
+                "json_pointer": "/e2e_s/mean"
+              },
+              "min": {
+                "source": "64k_round_03",
+                "json_pointer": "/e2e_s/min"
+              },
+              "max": {
+                "source": "64k_round_03",
+                "json_pointer": "/e2e_s/max"
+              },
+              "p50": {
+                "source": "64k_round_03",
+                "json_pointer": "/e2e_s/p50"
+              },
+              "p90": {
+                "source": "64k_round_03",
+                "json_pointer": "/e2e_s/p90"
+              },
+              "p95": {
+                "source": "64k_round_03",
+                "json_pointer": "/e2e_s/p95"
+              },
+              "p99": {
+                "source": "64k_round_03",
+                "json_pointer": "/e2e_s/p99"
+              }
+            }
+          }
+        }
+      ],
+      "units": {
+        "ttft_s": "seconds",
+        "tpot_ms": "milliseconds",
+        "e2e_s": "seconds"
+      },
+      "not_serialized": [
+        "inter_token_latency_distribution"
+      ],
+      "aggregation_scope": "Means of corresponding three round metrics; do not label pooled-request percentiles"
+    },
+    "c32": {
+      "canonical_candidate_mean_tps": {
+        "source": "review_c32",
+        "json_pointer": "/scenarios/32/variants/candidate/mean_output_tps"
+      },
+      "candidate_round_tps": {
+        "source": "review_c32",
+        "json_pointer": "/scenarios/32/variants/candidate/output_tps_rounds"
+      },
+      "validated_candidate_mean_tps": {
+        "source": "c32_validated",
+        "json_pointer": "/mean_output_tps"
+      },
+      "aggregate_latency_fields": {
+        "median_ttft_ms_mean_of_rounds": {
+          "source": "c32_validated",
+          "json_pointer": "/median_ttft_ms_mean_of_rounds"
+        },
+        "median_ttft_ms_range": {
+          "source": "c32_validated",
+          "json_pointer": "/median_ttft_ms_range"
+        },
+        "p99_ttft_ms_mean_of_rounds": {
+          "source": "c32_validated",
+          "json_pointer": "/p99_ttft_ms_mean_of_rounds"
+        },
+        "p99_ttft_ms_range": {
+          "source": "c32_validated",
+          "json_pointer": "/p99_ttft_ms_range"
+        },
+        "median_tpot_ms_mean_of_rounds": {
+          "source": "c32_validated",
+          "json_pointer": "/median_tpot_ms_mean_of_rounds"
+        },
+        "median_tpot_ms_range": {
+          "source": "c32_validated",
+          "json_pointer": "/median_tpot_ms_range"
+        },
+        "p99_tpot_ms_mean_of_rounds": {
+          "source": "c32_validated",
+          "json_pointer": "/p99_tpot_ms_mean_of_rounds"
+        },
+        "p99_tpot_ms_range": {
+          "source": "c32_validated",
+          "json_pointer": "/p99_tpot_ms_range"
+        },
+        "median_itl_ms_mean_of_rounds": {
+          "source": "c32_validated",
+          "json_pointer": "/median_itl_ms_mean_of_rounds"
+        },
+        "median_itl_ms_range": {
+          "source": "c32_validated",
+          "json_pointer": "/median_itl_ms_range"
+        },
+        "p95_itl_ms_mean_of_rounds": {
+          "source": "c32_validated",
+          "json_pointer": "/p95_itl_ms_mean_of_rounds"
+        },
+        "p95_itl_ms_range": {
+          "source": "c32_validated",
+          "json_pointer": "/p95_itl_ms_range"
+        },
+        "p99_itl_ms_mean_of_rounds": {
+          "source": "c32_validated",
+          "json_pointer": "/p99_itl_ms_mean_of_rounds"
+        },
+        "p99_itl_ms_range": {
+          "source": "c32_validated",
+          "json_pointer": "/p99_itl_ms_range"
+        },
+        "p99_e2e_latency_ms_mean_of_rounds": {
+          "source": "c32_validated",
+          "json_pointer": "/p99_e2e_latency_ms_mean_of_rounds"
+        },
+        "p99_e2e_latency_ms_range": {
+          "source": "c32_validated",
+          "json_pointer": "/p99_e2e_latency_ms_range"
+        }
+      },
+      "complete_per_round_metrics": [
+        {
+          "source": "c32_round_01",
+          "output_tps": {
+            "source": "c32_round_01",
+            "json_pointer": "/output_throughput"
+          },
+          "latency_metrics": {
+            "mean_e2e_latency_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/mean_e2e_latency_ms"
+            },
+            "median_e2e_latency_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/median_e2e_latency_ms"
+            },
+            "std_e2e_latency_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/std_e2e_latency_ms"
+            },
+            "p90_e2e_latency_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/p90_e2e_latency_ms"
+            },
+            "p99_e2e_latency_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/p99_e2e_latency_ms"
+            },
+            "mean_ttft_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/mean_ttft_ms"
+            },
+            "median_ttft_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/median_ttft_ms"
+            },
+            "std_ttft_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/std_ttft_ms"
+            },
+            "p99_ttft_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/p99_ttft_ms"
+            },
+            "mean_tpot_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/mean_tpot_ms"
+            },
+            "median_tpot_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/median_tpot_ms"
+            },
+            "std_tpot_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/std_tpot_ms"
+            },
+            "p99_tpot_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/p99_tpot_ms"
+            },
+            "mean_itl_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/mean_itl_ms"
+            },
+            "median_itl_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/median_itl_ms"
+            },
+            "std_itl_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/std_itl_ms"
+            },
+            "p95_itl_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/p95_itl_ms"
+            },
+            "p99_itl_ms": {
+              "source": "c32_round_01",
+              "json_pointer": "/p99_itl_ms"
+            }
+          }
+        },
+        {
+          "source": "c32_round_02",
+          "output_tps": {
+            "source": "c32_round_02",
+            "json_pointer": "/output_throughput"
+          },
+          "latency_metrics": {
+            "mean_e2e_latency_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/mean_e2e_latency_ms"
+            },
+            "median_e2e_latency_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/median_e2e_latency_ms"
+            },
+            "std_e2e_latency_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/std_e2e_latency_ms"
+            },
+            "p90_e2e_latency_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/p90_e2e_latency_ms"
+            },
+            "p99_e2e_latency_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/p99_e2e_latency_ms"
+            },
+            "mean_ttft_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/mean_ttft_ms"
+            },
+            "median_ttft_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/median_ttft_ms"
+            },
+            "std_ttft_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/std_ttft_ms"
+            },
+            "p99_ttft_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/p99_ttft_ms"
+            },
+            "mean_tpot_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/mean_tpot_ms"
+            },
+            "median_tpot_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/median_tpot_ms"
+            },
+            "std_tpot_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/std_tpot_ms"
+            },
+            "p99_tpot_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/p99_tpot_ms"
+            },
+            "mean_itl_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/mean_itl_ms"
+            },
+            "median_itl_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/median_itl_ms"
+            },
+            "std_itl_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/std_itl_ms"
+            },
+            "p95_itl_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/p95_itl_ms"
+            },
+            "p99_itl_ms": {
+              "source": "c32_round_02",
+              "json_pointer": "/p99_itl_ms"
+            }
+          }
+        },
+        {
+          "source": "c32_round_03",
+          "output_tps": {
+            "source": "c32_round_03",
+            "json_pointer": "/output_throughput"
+          },
+          "latency_metrics": {
+            "mean_e2e_latency_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/mean_e2e_latency_ms"
+            },
+            "median_e2e_latency_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/median_e2e_latency_ms"
+            },
+            "std_e2e_latency_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/std_e2e_latency_ms"
+            },
+            "p90_e2e_latency_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/p90_e2e_latency_ms"
+            },
+            "p99_e2e_latency_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/p99_e2e_latency_ms"
+            },
+            "mean_ttft_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/mean_ttft_ms"
+            },
+            "median_ttft_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/median_ttft_ms"
+            },
+            "std_ttft_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/std_ttft_ms"
+            },
+            "p99_ttft_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/p99_ttft_ms"
+            },
+            "mean_tpot_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/mean_tpot_ms"
+            },
+            "median_tpot_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/median_tpot_ms"
+            },
+            "std_tpot_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/std_tpot_ms"
+            },
+            "p99_tpot_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/p99_tpot_ms"
+            },
+            "mean_itl_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/mean_itl_ms"
+            },
+            "median_itl_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/median_itl_ms"
+            },
+            "std_itl_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/std_itl_ms"
+            },
+            "p95_itl_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/p95_itl_ms"
+            },
+            "p99_itl_ms": {
+              "source": "c32_round_03",
+              "json_pointer": "/p99_itl_ms"
+            }
+          }
+        }
+      ],
+      "units": "All saved latency scalar metrics are milliseconds",
+      "not_serialized_scalar_metrics": [
+        "p95_ttft_ms",
+        "p95_tpot_ms",
+        "p95_e2e_latency_ms"
+      ],
+      "aggregation_scope": "Means of corresponding three round benchmark metrics; do not label pooled-request percentiles",
+      "source_limit": "TTFT quantiles reconstruct from saved ttfts. MTP text_chunks and final per-request latency are absent; retain benchmark ITL/TPOT/E2E scalars, not an exact per-request reconstruction."
+    }
+  },
+  "scope": "Read-only existing-source location map. No review/test rerun and no accuracy claim."
+}

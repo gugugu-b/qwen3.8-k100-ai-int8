@@ -1,0 +1,786 @@
+{
+  "run_id": "high-concurrency-20261017-a",
+  "status": "COMPLETE_PERFORMANCE_RECHECKED",
+  "review_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/independent-review.json",
+  "review_sha256": "3e80f323b660dd451c265bb18f2b95c2cf54a47c4b29e1dda21c974f6eb53fe5",
+  "source_trace": {
+    "files": [
+      {
+        "role": "实际执行controller完整副本",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/controller-source.py",
+        "available": true,
+        "bytes": 25334,
+        "sha256": "1f2f2247725832e8af04f666d494902951c38b0b0d30e3a90b78f9adb1c3fb1f"
+      },
+      {
+        "role": "物理卡对45实际私有serve.sh",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/scripts/serve.sh",
+        "available": true,
+        "bytes": 2359,
+        "sha256": "480e9e6d3f2929fb339fd78156f22f0864733b53f2f31a2bed566439ee307af8"
+      },
+      {
+        "role": "物理卡对45实际私有start_server.sh",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/scripts/start_server.sh",
+        "available": true,
+        "bytes": 2061,
+        "sha256": "ad433ef11cb34373a4ed7a19000e974c65406b7d01ccc9f5648551603056d867"
+      },
+      {
+        "role": "物理卡对67实际私有serve.sh",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/scripts/serve.sh",
+        "available": true,
+        "bytes": 2361,
+        "sha256": "5154d84ef236c11b1ddd0532e1ea64430f8f6054cc528415f6b34ee91a925f47"
+      },
+      {
+        "role": "物理卡对67实际私有start_server.sh",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/scripts/start_server.sh",
+        "available": true,
+        "bytes": 2061,
+        "sha256": "ad433ef11cb34373a4ed7a19000e974c65406b7d01ccc9f5648551603056d867"
+      },
+      {
+        "role": "准备阶段辅助源码身份记录",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/preparation.json",
+        "available": true,
+        "bytes": 1080,
+        "sha256": "3fdf8cc5f58588eea6bdf27efd13cbbf177db48b94d34dc671af400b142fd26b"
+      },
+      {
+        "role": "固定官方协议辅助controller源码",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/execution/official-alignment-20261017-c/controller.py",
+        "available": true,
+        "bytes": 13849,
+        "sha256": "fb73df944c616be69f483d1da7694fcc43d2a243f22d02663db161eb1dfa8bbd"
+      },
+      {
+        "role": "固定数值Graph门禁模板源码",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/execution/official-alignment-20261017-c/probe_template.py",
+        "available": true,
+        "bytes": 9755,
+        "sha256": "07c8241e2543460594b7eeba892aa06ed3d453cd06be0cb5ae0fef2b7ec58b86"
+      },
+      {
+        "role": "固定随机协议命令入口",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/scripts/benchmark_reference.sh",
+        "available": true,
+        "bytes": 1217,
+        "sha256": "dd0051d9024a573659a71731d8bf1263c78721a3b6124071263cdb3a0b2b467e"
+      },
+      {
+        "role": "固定论坛benchmark完整源码",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/scripts/benchmark.reference.py",
+        "available": true,
+        "bytes": 12221,
+        "sha256": "08d7e43d2b347f2a2cfef3a577f7db4ab2472b3139939db8a6731b07369c5fc6"
+      },
+      {
+        "role": "派发时执行源码副本",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/source-executed/controller.py",
+        "available": true,
+        "bytes": 25334,
+        "sha256": "1f2f2247725832e8af04f666d494902951c38b0b0d30e3a90b78f9adb1c3fb1f"
+      },
+      {
+        "role": "派发记录与执行SHA",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/source-executed/dispatch.json",
+        "available": true,
+        "bytes": 286,
+        "sha256": "9b75c5bf2ae0012afa2a8b415775ecc37ec0e0379c521ba2153a91e02b25981e"
+      },
+      {
+        "role": "实际执行版与后续终态处理修改的Diff",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/executed-vs-terminal-handler-update.diff",
+        "available": true,
+        "bytes": 580,
+        "sha256": "6e13485cfb6645f64b2ba2a0fd3a26244a4ecdecf20c556e0b432ff6e906e86f"
+      },
+      {
+        "role": "本次CPU独立复核源码",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/performance-server64-128-20261017/review_results.py",
+        "available": true,
+        "bytes": 30417,
+        "sha256": "e74a8b135bb69e11f3d5b155e98c56390809106e7b0726d76360a393a1fae3df"
+      },
+      {
+        "role": "原始采集源码",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/performance-server64-128-20261017/collect.py",
+        "available": true,
+        "bytes": 2964,
+        "sha256": "3db619dc59f038afbbec645b9a88180d433cc5dd839441df6c47e2c1a82b8c12"
+      },
+      {
+        "role": "本报告生成源码",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/performance-server64-128-20261017/draft_report.py",
+        "available": true,
+        "bytes": 24456,
+        "sha256": "edfa5b8e66ca4e5bcd7ce1ba430fd6c89a59b528df3a7fbbca7d59866c942cea"
+      }
+    ],
+    "actual_executed_controller_sha256": "1f2f2247725832e8af04f666d494902951c38b0b0d30e3a90b78f9adb1c3fb1f",
+    "dispatch_source_sha256": "1f2f2247725832e8af04f666d494902951c38b0b0d30e3a90b78f9adb1c3fb1f",
+    "dispatch_matches_actual_executed_copy": true,
+    "source_diff_is_provenance_only_execution_identity_comes_from_collected_source": true
+  },
+  "workers": [
+    {
+      "pair": "4,5",
+      "client_concurrency": 64,
+      "worker_status": "BENCHMARK_COMPLETE",
+      "review_status": "COMPLETE_PERFORMANCE_RECHECKED",
+      "api_server_limit": 64,
+      "api_graph_limit": 64,
+      "api_evidence": {
+        "status": "ACTUAL_API_CAPACITY_VERIFIED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/server-info.json",
+        "sha256": "7cde9ef30d06f7a5b168ed3ff8f1aaceab0ea2fa193122e3d0e61b6e58a030c8"
+      },
+      "running_metric_name": "sglang:num_running_reqs",
+      "running_series": [
+        {
+          "metric_name": "sglang:num_running_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "running_requests",
+          "peak_value": 64.0,
+          "observations": 192,
+          "peak_sample": 90,
+          "peak_utc": "2026-10-17T03:48:00.358905+00:00",
+          "original_peak_line": "sglang:num_running_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 64.0"
+        }
+      ],
+      "peak_scope": "三正式轮窗口内部（前后各向内5秒）",
+      "formal_windows_used": true,
+      "formal_window_evidence": {
+        "status": "ALL_THREE_FORMAL_WINDOWS_RECORDED",
+        "observer": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/progress-observer.jsonl",
+        "windows": [
+          {
+            "round": 1,
+            "started_at_epoch": 1792208789.6861532,
+            "wall_time_s": 329.7085386220133,
+            "ended_at_epoch": 1792209119.3946917,
+            "safe_start_epoch": 1792208794.6861532,
+            "safe_end_epoch": 1792209114.3946917,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-01/summary.json",
+            "summary_sha256": "abc20801b3239e130f6d1e49bb4fb5081ec8a096cf631c6fa71e01fc1e10578d"
+          },
+          {
+            "round": 2,
+            "started_at_epoch": 1792209119.8020635,
+            "wall_time_s": 327.65073177596787,
+            "ended_at_epoch": 1792209447.4527953,
+            "safe_start_epoch": 1792209124.8020635,
+            "safe_end_epoch": 1792209442.4527953,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-02/summary.json",
+            "summary_sha256": "333510bb8f08a355709482fe83c98be2af0800ae5305bc6b4a27121fd14bd09f"
+          },
+          {
+            "round": 3,
+            "started_at_epoch": 1792209447.8749018,
+            "wall_time_s": 328.23599413299235,
+            "ended_at_epoch": 1792209776.1108959,
+            "safe_start_epoch": 1792209452.8749018,
+            "safe_end_epoch": 1792209771.1108959,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-03/summary.json",
+            "summary_sha256": "0ed9bf572639552c545a1065d5a3c148c60f96bf9e17ca61ec9c8333c5868273"
+          }
+        ],
+        "inward_margin_s": 5,
+        "required_rounds": [
+          1,
+          2,
+          3
+        ],
+        "clock_basis": "Benchmark started_at epoch and sampler UTC on the same server",
+        "sample_timestamp": "UTC recorded before HTTP GET; 4s configured timeout",
+        "observer_sha256": "0d73935c9e67a1ce5762a280a2ef051bfec7c809c449f5a69bb46bced8d13805",
+        "observed_rounds": [
+          1,
+          2,
+          3
+        ],
+        "formal_progress_snapshots": 165,
+        "parse_errors": 0
+      },
+      "metrics_evidence": {
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/running-metrics.jsonl",
+        "sha256": "792986b9e9e65c096fc4bd5b73bdac820f0bad0a8e8325f35397d71c9fb8bc28",
+        "raw_samples": 269,
+        "http_success_samples": 192,
+        "error_samples": 0,
+        "parse_errors": 0,
+        "scope": "FORMAL_ROUND_WINDOW_INTERIORS; PRE_GET_UTC; FIVE_SECOND_INWARD_MARGIN",
+        "selection_windows": [
+          {
+            "round": 1,
+            "started_at_epoch": 1792208789.6861532,
+            "wall_time_s": 329.7085386220133,
+            "ended_at_epoch": 1792209119.3946917,
+            "safe_start_epoch": 1792208794.6861532,
+            "safe_end_epoch": 1792209114.3946917,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-01/summary.json",
+            "summary_sha256": "abc20801b3239e130f6d1e49bb4fb5081ec8a096cf631c6fa71e01fc1e10578d"
+          },
+          {
+            "round": 2,
+            "started_at_epoch": 1792209119.8020635,
+            "wall_time_s": 327.65073177596787,
+            "ended_at_epoch": 1792209447.4527953,
+            "safe_start_epoch": 1792209124.8020635,
+            "safe_end_epoch": 1792209442.4527953,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-02/summary.json",
+            "summary_sha256": "333510bb8f08a355709482fe83c98be2af0800ae5305bc6b4a27121fd14bd09f"
+          },
+          {
+            "round": 3,
+            "started_at_epoch": 1792209447.8749018,
+            "wall_time_s": 328.23599413299235,
+            "ended_at_epoch": 1792209776.1108959,
+            "safe_start_epoch": 1792209452.8749018,
+            "safe_end_epoch": 1792209771.1108959,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-03/summary.json",
+            "summary_sha256": "0ed9bf572639552c545a1065d5a3c148c60f96bf9e17ca61ec9c8333c5868273"
+          }
+        ]
+      },
+      "queue_series": [
+        {
+          "metric_name": "sglang:num_decode_prealloc_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 192,
+          "peak_sample": 73,
+          "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+          "original_peak_line": "sglang:num_decode_prealloc_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        },
+        {
+          "metric_name": "sglang:num_decode_transfer_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 192,
+          "peak_sample": 73,
+          "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+          "original_peak_line": "sglang:num_decode_transfer_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        },
+        {
+          "metric_name": "sglang:num_grammar_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 192,
+          "peak_sample": 73,
+          "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+          "original_peak_line": "sglang:num_grammar_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        },
+        {
+          "metric_name": "sglang:num_prefill_bootstrap_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 192,
+          "peak_sample": 73,
+          "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+          "original_peak_line": "sglang:num_prefill_bootstrap_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        },
+        {
+          "metric_name": "sglang:num_prefill_inflight_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 192,
+          "peak_sample": 73,
+          "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+          "original_peak_line": "sglang:num_prefill_inflight_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        },
+        {
+          "metric_name": "sglang:num_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 61.0,
+          "observations": 192,
+          "peak_sample": 139,
+          "peak_utc": "2026-10-17T03:52:05.365007+00:00",
+          "original_peak_line": "sglang:num_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 61.0"
+        },
+        {
+          "metric_name": "sglang:pending_prealloc_token_usage",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 192,
+          "peak_sample": 73,
+          "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+          "original_peak_line": "sglang:pending_prealloc_token_usage{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        }
+      ],
+      "gauge_aggregation": "NONE; every original label series is separate",
+      "capacity_interpretation": "所列原标签系列在正式窗口内观测到请求数达到配置C；不将采样峰值等同完整容量／准入通过",
+      "cache_evidence": {
+        "scheduler_budget_records": [
+          {
+            "tokens": 784512,
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/server-final/server.log",
+            "sha256": "ef19e6f62937dafd0d5dc202e2de9359088f37c3e77d68f058e9628ae7586592",
+            "line_number": 479,
+            "original_line": "[2026-10-17 11:39:27 TP0] max_total_num_tokens=784512, chunked_prefill_size=8192, max_prefill_tokens=65536, max_running_requests=64, context_len=67584, available_gpu_mem=5.65 GB"
+          }
+        ],
+        "api_budget_records": [
+          {
+            "json_pointer": "/max_total_num_tokens",
+            "tokens": 784512,
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/server-info.json",
+            "sha256": "7cde9ef30d06f7a5b168ed3ff8f1aaceab0ea2fa193122e3d0e61b6e58a030c8"
+          },
+          {
+            "json_pointer": "/internal_states/0/memory_usage/token_capacity",
+            "tokens": 784512,
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/server-info.json",
+            "sha256": "7cde9ef30d06f7a5b168ed3ff8f1aaceab0ea2fa193122e3d0e61b6e58a030c8"
+          }
+        ],
+        "kv_allocations": [
+          {
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/server-final/server.log",
+            "sha256": "ef19e6f62937dafd0d5dc202e2de9359088f37c3e77d68f058e9628ae7586592",
+            "line_number": 335,
+            "tokens": 784512,
+            "k_size": 11.97,
+            "k_unit": "GB",
+            "v_size": 11.97,
+            "v_unit": "GB",
+            "original_line": "[2026-10-17 11:38:37 TP1] KV Cache is allocated. #tokens: 784512, K size: 11.97 GB, V size: 11.97 GB"
+          },
+          {
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/server-final/server.log",
+            "sha256": "ef19e6f62937dafd0d5dc202e2de9359088f37c3e77d68f058e9628ae7586592",
+            "line_number": 337,
+            "tokens": 784512,
+            "k_size": 11.97,
+            "k_unit": "GB",
+            "v_size": 11.97,
+            "v_unit": "GB",
+            "original_line": "[2026-10-17 11:38:37 TP0] KV Cache is allocated. #tokens: 784512, K size: 11.97 GB, V size: 11.97 GB"
+          },
+          {
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/server-final/server.log",
+            "sha256": "ef19e6f62937dafd0d5dc202e2de9359088f37c3e77d68f058e9628ae7586592",
+            "line_number": 464,
+            "tokens": 784512,
+            "k_size": 0.75,
+            "k_unit": "GB",
+            "v_size": 0.75,
+            "v_unit": "GB",
+            "original_line": "[2026-10-17 11:39:26 TP1] KV Cache is allocated. #tokens: 784512, K size: 0.75 GB, V size: 0.75 GB"
+          },
+          {
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/server-final/server.log",
+            "sha256": "ef19e6f62937dafd0d5dc202e2de9359088f37c3e77d68f058e9628ae7586592",
+            "line_number": 466,
+            "tokens": 784512,
+            "k_size": 0.75,
+            "k_unit": "GB",
+            "v_size": 0.75,
+            "v_unit": "GB",
+            "original_line": "[2026-10-17 11:39:26 TP0] KV Cache is allocated. #tokens: 784512, K size: 0.75 GB, V size: 0.75 GB"
+          }
+        ],
+        "source_log": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p45/server-final/server.log",
+        "does_not_convert_token_budget_into_verified_request_concurrency": true
+      },
+      "formal_rounds_complete": true,
+      "formal_requests_expected": 384,
+      "warmup_requests_expected": 128,
+      "formal_requests_per_round": 128,
+      "warmup_requests_per_round": 64,
+      "output_tps_rounds": [
+        397.53899170401667,
+        400.03573100401576,
+        399.3224458707389
+      ],
+      "three_round_mean": {
+        "output_tps": 398.9657228595904,
+        "ttft_s_mean": 25.618354300241815,
+        "ttft_s_p95": 77.27599134893585,
+        "ttft_s_p99": 82.16694474427864,
+        "tpot_ms_mean": 133.05002895041198,
+        "tpot_ms_p95": 200.59999438763754,
+        "tpot_ms_p99": 219.52646996118756,
+        "e2e_s_mean": 161.72853391651324,
+        "e2e_s_p95": 238.73529317605136,
+        "e2e_s_p99": 249.80135241903753
+      },
+      "flags_formal_count": 3,
+      "flags_warmup_count": 0,
+      "original_text_integrity_status": "FLAGGED_UNRESOLVED",
+      "scene_directory": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64",
+      "original_review_sha256": "a27964b08685cd1ea93cc50433e1d85e93ff3a14a0bd73f1adb4b764c475714f",
+      "resource_release_status": "REPORTED_LOCK_RELEASE_AND_OWNED_STOP_VERIFIED",
+      "lock_released_reported": true,
+      "gpu_after_snapshot_idle": true,
+      "container_stopped": {
+        "status": "OWNED_IDENTITY_VERIFIED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/p45/container-stopped.json",
+        "sha256": "a2b65e9c185398f6b6b9e488d279f5c17f3a8ec6560b488870b0738a72dea1ef",
+        "container_id": "50504d5c9063fbdc650d4da8820f543765b795e49468b995b16601d59a901985",
+        "running": false,
+        "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+        "run_label": "high-concurrency-20261017-a",
+        "physical_pair": "4,5"
+      },
+      "failure": {
+        "error": null,
+        "issues": [],
+        "capacity_evidence": {
+          "oom_marker_observed": false,
+          "log_markers": [],
+          "interpretation": "Observed log text; no automatic downgrade or unproven root-cause inference"
+        }
+      },
+      "previous_S32_source_and_conditions_only": {
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/result/runs/community-official-20261017-c-p45-matrix-4k-c64/4k-c64/reference_performance_review.json",
+        "sha256": "6586e71803c18fd5c8a2a72a36aa4770c80530996db865e5e48770607e043013",
+        "physical_pair": "4,5",
+        "client_concurrency": 64,
+        "server_max_running_requests": 32,
+        "cuda_graph_max_bs": 32
+      }
+    },
+    {
+      "pair": "6,7",
+      "client_concurrency": 128,
+      "worker_status": "BENCHMARK_COMPLETE",
+      "review_status": "COMPLETE_PERFORMANCE_RECHECKED",
+      "api_server_limit": 128,
+      "api_graph_limit": 128,
+      "api_evidence": {
+        "status": "ACTUAL_API_CAPACITY_VERIFIED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/server-info.json",
+        "sha256": "b59b8d68ca1523f102768abefcdabd6e24936ec39dc3dfe0a0e75fe0064dec9f"
+      },
+      "running_metric_name": "sglang:num_running_reqs",
+      "running_series": [
+        {
+          "metric_name": "sglang:num_running_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "running_requests",
+          "peak_value": 76.0,
+          "observations": 410,
+          "peak_sample": 230,
+          "peak_utc": "2026-10-17T03:59:55.408303+00:00",
+          "original_peak_line": "sglang:num_running_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 76.0"
+        }
+      ],
+      "peak_scope": "三正式轮窗口内部（前后各向内5秒）",
+      "formal_windows_used": true,
+      "formal_window_evidence": {
+        "status": "ALL_THREE_FORMAL_WINDOWS_RECORDED",
+        "observer": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/progress-observer.jsonl",
+        "windows": [
+          {
+            "round": 1,
+            "started_at_epoch": 1792209159.2905626,
+            "wall_time_s": 693.5850717369467,
+            "ended_at_epoch": 1792209852.8756344,
+            "safe_start_epoch": 1792209164.2905626,
+            "safe_end_epoch": 1792209847.8756344,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-01/summary.json",
+            "summary_sha256": "9f35b5796c9286267162a64dfaf14e5db4063d2a60be66c1be596ab953787736"
+          },
+          {
+            "round": 2,
+            "started_at_epoch": 1792209853.7047837,
+            "wall_time_s": 693.8082225139951,
+            "ended_at_epoch": 1792210547.5130062,
+            "safe_start_epoch": 1792209858.7047837,
+            "safe_end_epoch": 1792210542.5130062,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-02/summary.json",
+            "summary_sha256": "98289b80e11ddc20d846cf76889b490b0a8fd01c3deaca7e60f4c45bf9d7d9a2"
+          },
+          {
+            "round": 3,
+            "started_at_epoch": 1792210548.3518226,
+            "wall_time_s": 691.1946732199867,
+            "ended_at_epoch": 1792211239.546496,
+            "safe_start_epoch": 1792210553.3518226,
+            "safe_end_epoch": 1792211234.546496,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-03/summary.json",
+            "summary_sha256": "57ce81117f1802ed742c99dade56ea626e551e8e3d30c64b7be8cdd3c57f48b4"
+          }
+        ],
+        "inward_margin_s": 5,
+        "required_rounds": [
+          1,
+          2,
+          3
+        ],
+        "clock_basis": "Benchmark started_at epoch and sampler UTC on the same server",
+        "sample_timestamp": "UTC recorded before HTTP GET; 4s configured timeout",
+        "observer_sha256": "0d73935c9e67a1ce5762a280a2ef051bfec7c809c449f5a69bb46bced8d13805",
+        "observed_rounds": [
+          1,
+          2,
+          3
+        ],
+        "formal_progress_snapshots": 381,
+        "parse_errors": 0
+      },
+      "metrics_evidence": {
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/running-metrics.jsonl",
+        "sha256": "1e403964ff636979e54b2892a4317fc644d1405b4101952d007dcb82badf9841",
+        "raw_samples": 558,
+        "http_success_samples": 410,
+        "error_samples": 0,
+        "parse_errors": 0,
+        "scope": "FORMAL_ROUND_WINDOW_INTERIORS; PRE_GET_UTC; FIVE_SECOND_INWARD_MARGIN",
+        "selection_windows": [
+          {
+            "round": 1,
+            "started_at_epoch": 1792209159.2905626,
+            "wall_time_s": 693.5850717369467,
+            "ended_at_epoch": 1792209852.8756344,
+            "safe_start_epoch": 1792209164.2905626,
+            "safe_end_epoch": 1792209847.8756344,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-01/summary.json",
+            "summary_sha256": "9f35b5796c9286267162a64dfaf14e5db4063d2a60be66c1be596ab953787736"
+          },
+          {
+            "round": 2,
+            "started_at_epoch": 1792209853.7047837,
+            "wall_time_s": 693.8082225139951,
+            "ended_at_epoch": 1792210547.5130062,
+            "safe_start_epoch": 1792209858.7047837,
+            "safe_end_epoch": 1792210542.5130062,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-02/summary.json",
+            "summary_sha256": "98289b80e11ddc20d846cf76889b490b0a8fd01c3deaca7e60f4c45bf9d7d9a2"
+          },
+          {
+            "round": 3,
+            "started_at_epoch": 1792210548.3518226,
+            "wall_time_s": 691.1946732199867,
+            "ended_at_epoch": 1792211239.546496,
+            "safe_start_epoch": 1792210553.3518226,
+            "safe_end_epoch": 1792211234.546496,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-03/summary.json",
+            "summary_sha256": "57ce81117f1802ed742c99dade56ea626e551e8e3d30c64b7be8cdd3c57f48b4"
+          }
+        ]
+      },
+      "queue_series": [
+        {
+          "metric_name": "sglang:num_decode_prealloc_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 410,
+          "peak_sample": 144,
+          "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+          "original_peak_line": "sglang:num_decode_prealloc_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        },
+        {
+          "metric_name": "sglang:num_decode_transfer_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 410,
+          "peak_sample": 144,
+          "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+          "original_peak_line": "sglang:num_decode_transfer_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        },
+        {
+          "metric_name": "sglang:num_grammar_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 410,
+          "peak_sample": 144,
+          "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+          "original_peak_line": "sglang:num_grammar_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        },
+        {
+          "metric_name": "sglang:num_prefill_bootstrap_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 410,
+          "peak_sample": 144,
+          "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+          "original_peak_line": "sglang:num_prefill_bootstrap_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        },
+        {
+          "metric_name": "sglang:num_prefill_inflight_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 410,
+          "peak_sample": 144,
+          "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+          "original_peak_line": "sglang:num_prefill_inflight_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        },
+        {
+          "metric_name": "sglang:num_queue_reqs",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 124.0,
+          "observations": 410,
+          "peak_sample": 144,
+          "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+          "original_peak_line": "sglang:num_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 124.0"
+        },
+        {
+          "metric_name": "sglang:pending_prealloc_token_usage",
+          "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+          "category": "queue_gauge",
+          "peak_value": 0.0,
+          "observations": 410,
+          "peak_sample": 144,
+          "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+          "original_peak_line": "sglang:pending_prealloc_token_usage{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+        }
+      ],
+      "gauge_aggregation": "NONE; every original label series is separate",
+      "capacity_interpretation": "所列原标签系列峰值未达到配置C，不能称实际并发C已验证；保留KV预算与排队证据",
+      "cache_evidence": {
+        "scheduler_budget_records": [
+          {
+            "tokens": 333504,
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/server-final/server.log",
+            "sha256": "db6fef9650d7a7fc355c45ee85a0e650938f74e3f83ec14541c799eb1a4aa231",
+            "line_number": 495,
+            "original_line": "[2026-10-17 11:39:38 TP0] max_total_num_tokens=333504, chunked_prefill_size=8192, max_prefill_tokens=65536, max_running_requests=128, context_len=67584, available_gpu_mem=6.24 GB"
+          }
+        ],
+        "api_budget_records": [
+          {
+            "json_pointer": "/max_total_num_tokens",
+            "tokens": 333504,
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/server-info.json",
+            "sha256": "b59b8d68ca1523f102768abefcdabd6e24936ec39dc3dfe0a0e75fe0064dec9f"
+          },
+          {
+            "json_pointer": "/internal_states/0/memory_usage/token_capacity",
+            "tokens": 333504,
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/server-info.json",
+            "sha256": "b59b8d68ca1523f102768abefcdabd6e24936ec39dc3dfe0a0e75fe0064dec9f"
+          }
+        ],
+        "kv_allocations": [
+          {
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/server-final/server.log",
+            "sha256": "db6fef9650d7a7fc355c45ee85a0e650938f74e3f83ec14541c799eb1a4aa231",
+            "line_number": 335,
+            "tokens": 333504,
+            "k_size": 5.09,
+            "k_unit": "GB",
+            "v_size": 5.09,
+            "v_unit": "GB",
+            "original_line": "[2026-10-17 11:38:38 TP1] KV Cache is allocated. #tokens: 333504, K size: 5.09 GB, V size: 5.09 GB"
+          },
+          {
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/server-final/server.log",
+            "sha256": "db6fef9650d7a7fc355c45ee85a0e650938f74e3f83ec14541c799eb1a4aa231",
+            "line_number": 337,
+            "tokens": 333504,
+            "k_size": 5.09,
+            "k_unit": "GB",
+            "v_size": 5.09,
+            "v_unit": "GB",
+            "original_line": "[2026-10-17 11:38:38 TP0] KV Cache is allocated. #tokens: 333504, K size: 5.09 GB, V size: 5.09 GB"
+          },
+          {
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/server-final/server.log",
+            "sha256": "db6fef9650d7a7fc355c45ee85a0e650938f74e3f83ec14541c799eb1a4aa231",
+            "line_number": 480,
+            "tokens": 333504,
+            "k_size": 0.32,
+            "k_unit": "GB",
+            "v_size": 0.32,
+            "v_unit": "GB",
+            "original_line": "[2026-10-17 11:39:37 TP0] KV Cache is allocated. #tokens: 333504, K size: 0.32 GB, V size: 0.32 GB"
+          },
+          {
+            "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/server-final/server.log",
+            "sha256": "db6fef9650d7a7fc355c45ee85a0e650938f74e3f83ec14541c799eb1a4aa231",
+            "line_number": 482,
+            "tokens": 333504,
+            "k_size": 0.32,
+            "k_unit": "GB",
+            "v_size": 0.32,
+            "v_unit": "GB",
+            "original_line": "[2026-10-17 11:39:37 TP1] KV Cache is allocated. #tokens: 333504, K size: 0.32 GB, V size: 0.32 GB"
+          }
+        ],
+        "source_log": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/runtime-p67/server-final/server.log",
+        "does_not_convert_token_budget_into_verified_request_concurrency": true
+      },
+      "formal_rounds_complete": true,
+      "formal_requests_expected": 768,
+      "warmup_requests_expected": 256,
+      "formal_requests_per_round": 256,
+      "warmup_requests_per_round": 128,
+      "output_tps_rounds": [
+        377.9550781615184,
+        377.8335157950829,
+        379.26218206917133
+      ],
+      "three_round_mean": {
+        "output_tps": 378.3502586752575,
+        "ttft_s_mean": 151.09697649278232,
+        "ttft_s_p95": 247.07284248732321,
+        "ttft_s_p99": 262.299103639334,
+        "tpot_ms_mean": 160.26154915108816,
+        "tpot_ms_p95": 226.1500514221223,
+        "tpot_ms_p99": 244.99778888250717,
+        "e2e_s_mean": 315.0445412743455,
+        "e2e_s_p95": 437.13984064642864,
+        "e2e_s_p99": 449.6498440988992
+      },
+      "flags_formal_count": 5,
+      "flags_warmup_count": 6,
+      "original_text_integrity_status": "FLAGGED_UNRESOLVED",
+      "scene_directory": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128",
+      "original_review_sha256": "cbbc13d72c90a9057d73f201f6756ee467bfcdbc70fb50e92b349c9650f6c253",
+      "resource_release_status": "REPORTED_LOCK_RELEASE_AND_OWNED_STOP_VERIFIED",
+      "lock_released_reported": true,
+      "gpu_after_snapshot_idle": true,
+      "container_stopped": {
+        "status": "OWNED_IDENTITY_VERIFIED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/02-测试与结果/results-server64-128-20261017-a/server/retest-server64-128-20261017-a/p67/container-stopped.json",
+        "sha256": "b330b7c8bbd3b0d2321bede69229ecce434113c31156d7d2a6b753a8e24dfb51",
+        "container_id": "36c0416d495383aef31d615c2c0ae671d07f6899f362d92daf5d2b375792e272",
+        "running": false,
+        "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+        "run_label": "high-concurrency-20261017-a",
+        "physical_pair": "6,7"
+      },
+      "failure": {
+        "error": null,
+        "issues": [],
+        "capacity_evidence": {
+          "oom_marker_observed": false,
+          "log_markers": [],
+          "interpretation": "Observed log text; no automatic downgrade or unproven root-cause inference"
+        }
+      },
+      "previous_S32_source_and_conditions_only": {
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/result/runs/community-official-20261017-c-p45-matrix-4k-c128/4k-c128/reference_performance_review.json",
+        "sha256": "671553ba7e757567f493b5cdea7f381f574524ba3ad6ccbc2dea9c2a615994a5",
+        "physical_pair": "4,5",
+        "client_concurrency": 128,
+        "server_max_running_requests": 32,
+        "cuda_graph_max_bs": 32
+      }
+    }
+  ],
+  "gpu_used": false,
+  "ssh_used": false,
+  "original_files_modified": false,
+  "default_submission_documents_modified": false,
+  "old_S32_throughput_values_not_repeated": true,
+  "official_acceptance": "NOT_ESTABLISHED",
+  "accuracy": "NOT_EVALUATED",
+  "comparison": "Different conditions, side-by-side evidence only"
+}

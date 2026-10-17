@@ -1,0 +1,51 @@
+{
+  "status": "PAIR67_FINAL_QUEUE_EXITED_CONTAINER_STOPPED_LOCK_FREE",
+  "utc": "2026-10-16T07:47:39.537023+00:00",
+  "physical_pair": [
+    6,
+    7
+  ],
+  "queue_pid": 1621555,
+  "queue_pid_exists": false,
+  "own_container": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 137,
+    "Error": "",
+    "StartedAt": "2026-10-16T05:55:20.665375572Z",
+    "FinishedAt": "2026-10-16T07:31:43.059215046Z"
+  },
+  "gpu67_lock_was_free": true,
+  "original_related_process_check": {
+    "rc": 1,
+    "out": "    PID    PPID STAT COMMAND\n",
+    "err": ""
+  },
+  "gpu": {
+    "card6": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "6"
+    },
+    "card7": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "6"
+    }
+  },
+  "pair45_current": {
+    "phase": "benchmarking-sharegpt",
+    "pid": 1621554,
+    "client_concurrency": 1,
+    "kind": "candidate"
+  },
+  "default_site_sha256": "f1789532d58daa66187ba901d3d7513ff142cb33fafc7793ce44f4e821464495",
+  "stock_dat_sha256": "c3e295b24494507ede49ee2b330a96ddc9fe1654c58e5fd9611b3adf8b227c55",
+  "accuracy": "NOT_RUN",
+  "scope": "Only explicit physical6,7 telemetry and owned processes; pair45 untouched"
+}

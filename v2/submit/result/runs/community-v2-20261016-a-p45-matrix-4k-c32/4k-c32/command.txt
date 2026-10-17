@@ -1,0 +1,1 @@
+python3 -u /data/wangzy/v2/submit/scripts/benchmark.py --base-url http://127.0.0.1:31120 --model Qwen3.8-27B-Channel-INT8-w8a8 --output-dir /data/wangzy/v2/submit/result/runs/community-v2-20261016-a-p45-matrix-4k-c32/4k-c32 --input-len 4096 --output-len 1024 --concurrency 32 --seed 20260912 --warmup-rounds 2 --measure-rounds 3 --requests-per-round 64 --timeout 3600 

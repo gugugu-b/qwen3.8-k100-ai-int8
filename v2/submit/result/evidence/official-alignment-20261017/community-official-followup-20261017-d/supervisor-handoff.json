@@ -1,0 +1,10 @@
+{
+  "previous_pid": 875999,
+  "previous_state": {
+    "status": "WAITING_FOR_MATRIX",
+    "pid": 875999,
+    "utc": "2026-10-16T20:32:53.064909+00:00",
+    "accuracy": "NOT_RUN"
+  },
+  "reason": "User-authorized concurrent GSM8K on pair01; pause only waiting CPU supervisor, no active GPU worker"
+}

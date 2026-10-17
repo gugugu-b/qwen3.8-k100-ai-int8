@@ -1,0 +1,6 @@
+{
+  "_old_start": "            start_m = MAX_SEQLENS_Q // BLOCK_M -1 - tl.program_id(0)\n",
+  "_new_start": "            start_m = (MAX_SEQLENS_Q + BLOCK_M - 1) // BLOCK_M - 1 - tl.program_id(0)\n",
+  "_old_guard": "            if start_m * BLOCK_M > seqlen_q:\n                return\n",
+  "_new_guard": "            if start_m * BLOCK_M > seqlen_q:\n                start_m = 0\n"
+}

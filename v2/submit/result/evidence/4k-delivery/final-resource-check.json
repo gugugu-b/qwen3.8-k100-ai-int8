@@ -1,0 +1,12 @@
+{
+  "status": "FINAL_DEFAULT_UNCHANGED_ALL_TASK_CARDS_RELEASED",
+  "active_task_containers": [],
+  "gpu45_lock": "FREE",
+  "gpu67_lock": "FREE",
+  "delivery_port_31014": "NOT_LISTENING",
+  "default_patch": "v1 unchanged",
+  "frozen": false,
+  "local_finder_cache_removed": [
+    ".DS_Store"
+  ]
+}

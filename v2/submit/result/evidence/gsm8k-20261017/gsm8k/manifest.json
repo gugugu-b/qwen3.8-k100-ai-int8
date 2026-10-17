@@ -1,0 +1,21 @@
+{
+  "protocol": "Frozen archived EvalScope 1.6.1 full GSM8K main, 4-shot",
+  "reference_sha256": "b676b0128b716b38d3200ae07f21f51a9f8e5b116eda760a3cc28ea5e060fed2",
+  "scorer_sha256": "809d4d47631ccb3b7da8c751f08d3ee94df5273a1ef1aeb252ec2f6b260f8b87",
+  "reference_scorer_reproduction": "1319/1319 PASS",
+  "old_correct": 1291.0,
+  "old_accuracy": 0.9787717968157695,
+  "base_url": "http://127.0.0.1:31400",
+  "concurrency": 32,
+  "temperature": 0.0,
+  "max_tokens": "OMITTED, matching archived EvalScope GenerateConfig",
+  "scoring_field": "message.content only, reasoning excluded as in original EvalScope completion parser",
+  "requests": 1319,
+  "threshold_accuracy": 0.95,
+  "minimum_correct": 1254,
+  "errors_in_denominator": true,
+  "final_official_precision_protocol": "NOT_VERIFIED; official exact data revision/subset/script not supplied",
+  "dedicated_instance": true,
+  "simultaneous_other_TP2_performance_instances": true,
+  "baseline_comparison": "Archived v1 4-shot outputs, reproduced scorer; historical comparison only"
+}

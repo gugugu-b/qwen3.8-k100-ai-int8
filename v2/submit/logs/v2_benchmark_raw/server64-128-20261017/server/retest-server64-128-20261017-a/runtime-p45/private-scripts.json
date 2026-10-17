@@ -1,0 +1,19 @@
+{
+  "package_root": "/data/wangzy/v2/submit",
+  "server_max_running_requests": 64,
+  "cuda_graph_max_bs": 64,
+  "source_sha256": {
+    "serve.sh": "1d5e381cc7e0057d2c9f8b27cee1bd5db79b80331b1a758d5ef118206294489b",
+    "start_server.sh": "e2b28b978ff47010ffa7530152029a7e3bcacf3b5fde2eb83e2bcc703f012417"
+  },
+  "private_sha256": {
+    "serve.sh": "480e9e6d3f2929fb339fd78156f22f0864733b53f2f31a2bed566439ee307af8",
+    "start_server.sh": "ad433ef11cb34373a4ed7a19000e974c65406b7d01ccc9f5648551603056d867"
+  },
+  "only_changes": [
+    "PACKAGE_DIR remains actual submit root",
+    "max-running-requests 32 -> requested concurrency",
+    "cuda-graph-max-bs 32 -> requested concurrency"
+  ],
+  "automatic_downgrade": false
+}

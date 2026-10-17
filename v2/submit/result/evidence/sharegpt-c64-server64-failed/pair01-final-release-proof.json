@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-16T14:45:04.051918+00:00",
+  "status": "OWN_PAIR01_TASK_RELEASED",
+  "queue_status": "FAILED_TEXT_INTEGRITY_CHECK",
+  "container": "qwen38-submit1009-perf01-server64-20261016",
+  "container_state": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 137,
+    "Error": "",
+    "StartedAt": "2026-10-16T13:55:44.89929451Z",
+    "FinishedAt": "2026-10-16T14:32:03.374737175Z"
+  },
+  "related_pids_absent": [
+    3224259,
+    3229909,
+    3243415,
+    3243416,
+    3243417,
+    3327623,
+    3327704,
+    3759753
+  ],
+  "process_check": "    PID    PPID STAT COMMAND\n",
+  "gpu01_lock_free": true,
+  "gpu": {
+    "card0": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    },
+    "card1": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "2"
+    }
+  },
+  "default_site_sha256": "f1789532d58daa66187ba901d3d7513ff142cb33fafc7793ce44f4e821464495",
+  "stock_dat_sha256": "c3e295b24494507ede49ee2b330a96ddc9fe1654c58e5fd9611b3adf8b227c55",
+  "other_cards_or_containers_touched": false
+}

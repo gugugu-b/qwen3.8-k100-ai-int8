@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-10T00:27:49.067481+00:00",
+  "status": "ALL_TASK_CONTAINERS_STOPPED_LOCKS_FREE",
+  "physical_devices": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "containers": {
+    "qwen38-submit1009-ab": {
+      "exists": true,
+      "running": false,
+      "pid": 0,
+      "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+      "finished_at": "2026-10-10T00:05:36.656417744Z",
+      "intentional_stop": true
+    },
+    "qwen38-submit1009-diag": {
+      "exists": true,
+      "running": false,
+      "pid": 0,
+      "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+      "finished_at": "2026-10-10T00:27:20.028099761Z",
+      "intentional_stop": true
+    },
+    "qwen38-submit1009-final": {
+      "exists": false
+    },
+    "Qwen3.8-27B-sglang0.5.12-tuning1": {
+      "exists": true,
+      "running": false,
+      "pid": 0,
+      "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+      "finished_at": "2026-10-05T14:37:10.909883Z",
+      "intentional_stop": true
+    }
+  },
+  "host_queue_pid": 3379907,
+  "host_queue_alive": false,
+  "gpu45_lock": "FREE",
+  "gpu67_lock": "FREE",
+  "gpu_memory_probe_returncode": 0,
+  "gpu_memory_probe_stdout": "{\"card4\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card5\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card6\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card7\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}}\n",
+  "gpu_memory_probe_stderr": "",
+  "reason": "Human timed delivery and release request; no final serving endpoint remains active"
+}

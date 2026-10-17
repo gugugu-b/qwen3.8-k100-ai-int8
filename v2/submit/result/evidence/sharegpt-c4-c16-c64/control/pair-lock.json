@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-16T07:46:13.418422+00:00",
+  "path": "/data/wangzy/submit1009/result/gpu67-owner.lock",
+  "physical_pair": [
+    6,
+    7
+  ],
+  "nonblocking_lock_was_free": true,
+  "cpu_archive_lease_held": true,
+  "existing_lock_contents_sha256": "624d113fa6bcd4a065051896cb70a61025d312dd5e619790a20f2307865844e6",
+  "contents_changed": false
+}

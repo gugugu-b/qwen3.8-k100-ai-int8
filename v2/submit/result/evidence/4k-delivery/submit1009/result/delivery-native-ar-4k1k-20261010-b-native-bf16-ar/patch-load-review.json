@@ -1,0 +1,8 @@
+{
+  "status": "SERVICE_GUARD_AND_BACKEND_LOADED_REVIEW_PENDING",
+  "actual_model_profile_graph_gate": "REVIEW_REQUIRED",
+  "formal_operator_selection": false,
+  "native_enabled_communicators": 2,
+  "installed_marker_count": 5,
+  "warning": "First activation/loading logs do not prove actual Graph replay association"
+}

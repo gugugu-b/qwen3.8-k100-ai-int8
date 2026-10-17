@@ -1,0 +1,15 @@
+{
+  "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+  "messages": [
+    {
+      "role": "user",
+      "content": "请用中文简短解释张量并行，再写一个将列表元素求和的Python函数。"
+    }
+  ],
+  "max_tokens": 512,
+  "temperature": 0,
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  }
+}

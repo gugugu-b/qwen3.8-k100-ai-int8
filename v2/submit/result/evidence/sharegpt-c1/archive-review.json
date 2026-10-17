@@ -1,0 +1,30 @@
+{
+  "status": "LATEST_SUBMIT_FINAL_ARCHIVE_INDEPENDENT_REVIEW_PASS",
+  "utc": "2026-10-16T08:39:45.155261+00:00",
+  "run": "submit-current-c1-pair45-20261016-a",
+  "physical_pair": [
+    4,
+    5
+  ],
+  "scenes": [
+    1
+  ],
+  "complete": true,
+  "queue_pid_absent": true,
+  "owned_container_stopped": true,
+  "nonblocking_pair_lock_verified_free": true,
+  "artifact_sha256": "b81b791f7f5f954ca87878756fb271543268803030a93e0610e5b32e7a86e499",
+  "control_sha256": "9ace9b24369ba214d6bc47c67fe9eeb5bde70ebe19b71d6736eb96bdb8c0ab44",
+  "producer_summary_sha256": "53c7aa9de50d63c8f34caa5d411742f109d29ae53565870d054045eb696fd36c",
+  "independent_summary_sha256": "53c7aa9de50d63c8f34caa5d411742f109d29ae53565870d054045eb696fd36c",
+  "summaries_byte_identical": true,
+  "source_union_files": 51,
+  "original_queue_sources_results_manifests_unchanged": true,
+  "container_mutated": false,
+  "lock_contents_changed": false,
+  "accuracy": "NOT_RUN",
+  "formal_acceptance": false,
+  "default_patch_changed": false,
+  "frozen": false,
+  "caveat": "Historical v1 report comparison only. No new v1 run, accuracy test, promotion or freeze."
+}

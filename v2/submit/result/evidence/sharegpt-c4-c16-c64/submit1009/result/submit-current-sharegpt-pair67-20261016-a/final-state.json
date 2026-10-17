@@ -1,0 +1,14 @@
+{
+  "phase": "submit-candidate-performance-complete",
+  "pid": 1621555,
+  "utc": "2026-10-16T07:31:53.702868+00:00",
+  "run": "submit-current-sharegpt-pair67-20261016-a",
+  "physical_pair": [
+    6,
+    7
+  ],
+  "elapsed_s": 10809.837702457007,
+  "accuracy": "NOT_RUN",
+  "default_patch_changed": false,
+  "frozen": false
+}

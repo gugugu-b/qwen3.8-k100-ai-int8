@@ -1,0 +1,14 @@
+{
+  "status": "LOCAL_DOCUMENT_AND_SOURCE_REVIEW_PASS",
+  "final_links_checked": 123,
+  "final_bash_blocks_checked": 14,
+  "independent_numeric_checks": 216,
+  "source_byte_identity_files": 489,
+  "archive_file_entries": 491,
+  "archive_scenes": 26,
+  "formal_rounds": 78,
+  "candidate_changed": false,
+  "new_gpu_measurements": false,
+  "archive_manifest_sha256": "6ab82765ad93fd39931a5b6ffa1d3bb33f6f598c886f775f7667348b7c91705b",
+  "remaining_admission": "See docs/提交材料状态-20261017.md"
+}

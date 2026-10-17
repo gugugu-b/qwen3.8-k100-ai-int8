@@ -1,0 +1,11 @@
+{
+  "status": "INDEPENDENT_REVIEW_B_PASS_RAW_UNCHANGED",
+  "original_review": "initial-review-failed",
+  "initial_failure": "Byte comparison incorrectly appended a trailing newline absent from benchmark atomic_json",
+  "fix": "Only benchmark_json serialization drops the artificial newline; validated_summary serialization keeps its existing newline",
+  "reviewer_a_sha256": "af4aa2cca764eb3450777e241e44245923479f828b44c8507078eb1ac1544750",
+  "reviewer_b_sha256": "d9fa394fc76cc42381a0db6b4927257631333afdb0bcd5c1520cd5c77bb5dabf",
+  "gpu_rerun": false,
+  "raw_modified": false,
+  "model_failure": false
+}

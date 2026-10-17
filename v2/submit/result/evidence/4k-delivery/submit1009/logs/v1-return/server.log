@@ -1,0 +1,589 @@
+RUN: python3 -u -m sglang.launch_server --model-path /data/model/Qwen3.8-27B-Channel-INT8-w8a8 --tp-size 2 --pp-size 1 --attention-backend fa3 --mm-attention-backend fa3 --page-size 64 --served-model-name Qwen3.8-27B-Channel-INT8-w8a8 --host 0.0.0.0 --port 31014 --nccl-port 31015 --context-length 67584 --disable-radix-cache --mem-fraction-static 0.85 --max-running-requests 32 --max-prefill-tokens 65536 --chunked-prefill-size 8192 --mamba-scheduler-strategy no_buffer --cuda-graph-max-bs 32 --disable-custom-all-reduce --tool-call-parser qwen3_coder --reasoning-parser qwen3 --enable-metrics --speculative-algorithm NEXTN --speculative-num-steps 1 --speculative-eagle-topk 1 --speculative-num-draft-tokens 2
+[Tuning3 Patch] Initializing Qwen3.8-27B optimizations on K100-AI...
+[Tuning3 Patch] Loaded Unified Multi-M LDS-x from /data/wangzy/submit1009/patch/k100_int8_gemv_unified.so
+[Tuning3 Patch] Patched lmslim.quantize.quant_ops.triton_scaled_mm
+[lightop] DUP_REG_GUARD: gptq_gemm1 already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_tn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_nn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_channelwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_blockwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_fp16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_bf16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_rms_norm_dynamic_per_token_quant already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_lm_fuse_silu_mul_quant already registered by another module, keeping existing impl
+[Tuning3 Patch] Patched lightop.gemm_ops.triton_scaled_mm
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+INFO 10-10 08:20:25 [__init__.py:44] Available plugins for group vllm.platform_plugins:
+INFO 10-10 08:20:25 [__init__.py:46] - hcu -> vllm_hcu:hcu_platform_plugin
+INFO 10-10 08:20:25 [__init__.py:49] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-10 08:20:25 [__init__.py:238] Platform plugin hcu is activated
+[aiter] WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+WARNING:aiter:WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+INFO:sglang.srt.layers.quantization.slimquant_w4a8_marlin:[slimquant_w4a8_marlin] requested_backend=auto, resolved_backend=lightop
+[Tuning3 Patch] Patched sglang compressed_tensors quant_ops.triton_scaled_mm
+[Tuning3 Patch] Patched sglang compressed_tensors quant_ops.blaslt_scaled_mm
+[Tuning3 Patch] Compiled and loaded Triton Long-KV GQA (BM128/BN64/w8)
+[Tuning3 Patch] Patched try_pack_paged_kv_to_varlen_attention with Triton Long-KV
+[Tuning3 Patch] Initialization complete.
+/usr/local/lib/python3.10/dist-packages/sglang/launch_server.py:54: UserWarning: 'python -m sglang.launch_server' is still supported, but 'sglang serve' is the recommended entrypoint.
+  Example: sglang serve --model-path <model> [options]
+  warnings.warn(
+[2026-10-10 08:20:29] Spec v2 is enabled by default for eagle/eagle3/standalone speculative decoding.
+[2026-10-10 08:20:29] --disable-custom-all-reduce overrides --custom-all-reduce-backend=auto to 'off'.
+[transformers] `BaseImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `BaseImageProcessor` instead.
+[2026-10-10 08:20:30] server_args=ServerArgs(model_path='/data/model/Qwen3.8-27B-Channel-INT8-w8a8', tokenizer_path='/data/model/Qwen3.8-27B-Channel-INT8-w8a8', tokenizer_mode='auto', tokenizer_backend='huggingface', tokenizer_worker_num=1, detokenizer_worker_num=1, skip_tokenizer_init=False, load_format='auto', model_loader_extra_config='{}', trust_remote_code=False, context_length=67584, is_embedding=False, prefill_only_disable_kv_cache=False, enable_multimodal=None, revision=None, model_impl='auto', model_config_parser='auto', host='0.0.0.0', port=31014, fastapi_root_path='', grpc_mode=False, skip_server_warmup=False, warmups=None, nccl_port=31015, checkpoint_engine_wait_weights_before_ready=False, ssl_keyfile=None, ssl_certfile=None, ssl_ca_certs=None, ssl_keyfile_password=None, enable_ssl_refresh=False, enable_http2=False, dtype='auto', quantization=None, quantization_param_path=None, kv_cache_dtype='auto', enable_fp32_lm_head=False, modelopt_quant=None, modelopt_checkpoint_restore_path=None, modelopt_checkpoint_save_path=None, modelopt_export_path=None, quantize_and_serve=False, rl_quant_profile=None, mem_fraction_static=0.85, max_running_requests=32, max_queued_requests=None, max_total_tokens=None, chunked_prefill_size=8192, enable_dynamic_chunking=False, max_prefill_tokens=65536, prefill_max_requests=None, schedule_policy='fcfs', enable_priority_scheduling=False, disable_priority_preemption=False, default_priority_value=None, abort_on_priority_when_disabled=False, schedule_low_priority_values_first=False, priority_scheduling_preemption_threshold=10, schedule_conservativeness=1.0, page_size=64, swa_full_tokens_ratio=0.8, disable_hybrid_swa_memory=False, radix_eviction_policy='lru', enable_prefill_delayer=False, prefill_delayer_max_delay_passes=30, prefill_delayer_token_usage_low_watermark=None, prefill_delayer_forward_passes_buckets=None, prefill_delayer_wait_seconds_buckets=None, prefill_delayer_queue_min_ratio=None, prefill_delayer_max_delay_ms=None, device='cuda', tp_size=2, pp_size=1, pp_max_micro_batch_size=None, pp_async_batch_depth=0, stream_interval=1, batch_notify_size=16, stream_response_default_include_usage=False, incremental_streaming_output=False, enable_streaming_session=False, random_seed=417484424, constrained_json_whitespace_pattern=None, constrained_json_disable_any_whitespace=False, watchdog_timeout=300, soft_watchdog_timeout=None, dist_timeout=None, download_dir=None, model_checksum=None, base_gpu_id=0, gpu_id_step=1, sleep_on_idle=False, use_ray=False, custom_sigquit_handler=None, log_level='info', log_level_http=None, log_requests=False, log_requests_level=2, log_requests_format='text', log_requests_target=None, uvicorn_access_log_exclude_prefixes=[], crash_dump_folder=None, show_time_cost=False, enable_metrics=True, grpc_http_sidecar_port=None, enable_mfu_metrics=False, enable_metrics_for_all_schedulers=False, tokenizer_metrics_custom_labels_header='x-custom-labels', tokenizer_metrics_allowed_custom_labels=None, extra_metric_labels=None, bucket_time_to_first_token=None, bucket_inter_token_latency=None, bucket_e2e_request_latency=None, prompt_tokens_buckets=None, generation_tokens_buckets=None, gc_warning_threshold_secs=0.0, decode_log_interval=40, enable_request_time_stats_logging=False, kv_events_config=None, enable_forward_pass_metrics=False, forward_pass_metrics_worker_id='', forward_pass_metrics_ipc_name=None, enable_trace=False, otlp_traces_endpoint='localhost:4317', export_metrics_to_file=False, export_metrics_to_file_dir=None, api_key=None, admin_api_key=None, served_model_name='Qwen3.8-27B-Channel-INT8-w8a8', weight_version='default', chat_template=None, hf_chat_template_name=None, completion_template=None, file_storage_path='sglang_storage', enable_cache_report=False, reasoning_parser='qwen3', strip_thinking_cache=False, enable_strict_thinking=False, tool_call_parser='qwen3_coder', tool_server=None, sampling_defaults='model', dp_size=1, load_balance_method='round_robin', attn_cp_size=1, moe_dp_size=1, dist_init_addr=None, nnodes=1, node_rank=0, json_model_override_args='{}', preferred_sampling_params=None, enable_lora=None, enable_lora_overlap_loading=None, max_lora_rank=None, lora_target_modules=None, lora_paths=None, max_loaded_loras=None, max_loras_per_batch=8, lora_eviction_policy='lru', lora_backend='csgmv', max_lora_chunk_size=16, experts_shared_outer_loras=None, lora_use_virtual_experts=False, lora_strict_loading=False, lora_drain_wait_threshold=0.0, attention_backend='fa3', decode_attention_backend=None, prefill_attention_backend=None, sampling_backend='pytorch', grammar_backend='xgrammar', mm_attention_backend='fa3', fp8_gemm_runner_backend='auto', fp4_gemm_runner_backend='auto', nsa_prefill_backend=None, nsa_decode_backend=None, disable_flashinfer_autotune=False, pack_paged_kv_to_varlen='auto', pack_paged_kv_to_varlen_min_kv_tokens=16384, pack_paged_kv_to_varlen_min_q_tokens=8192, mamba_backend='triton', speculative_algorithm='EAGLE', speculative_draft_model_path=None, speculative_draft_model_revision=None, speculative_draft_load_format=None, speculative_num_steps=1, speculative_eagle_topk=1, speculative_num_draft_tokens=2, speculative_dflash_block_size=None, speculative_accept_threshold_single=1.0, speculative_accept_threshold_acc=1.0, speculative_token_map=None, speculative_attention_mode='prefill', speculative_draft_attention_backend=None, speculative_draft_window_size=None, speculative_moe_runner_backend='auto', speculative_moe_a2a_backend=None, speculative_draft_model_quantization=None, speculative_adaptive=False, speculative_adaptive_config=None, speculative_skip_dp_mlp_sync=False, speculative_ngram_min_bfs_breadth=1, speculative_ngram_max_bfs_breadth=10, speculative_ngram_match_type='BFS', speculative_ngram_max_trie_depth=18, speculative_ngram_capacity=10000000, speculative_ngram_external_corpus_path=None, speculative_ngram_external_sam_budget=0, speculative_ngram_external_corpus_max_tokens=10000000, enable_multi_layer_eagle=False, ep_size=1, moe_a2a_backend='none', moe_runner_backend='auto', record_nolora_graph=True, flashinfer_mxfp4_moe_precision='default', enable_flashinfer_allreduce_fusion=False, enforce_disable_flashinfer_allreduce_fusion=False, enable_aiter_allreduce_fusion=False, deepep_mode='auto', ep_num_redundant_experts=0, ep_dispatch_algorithm=None, init_expert_location='trivial', enable_eplb=False, eplb_algorithm='auto', eplb_rebalance_num_iterations=1000, eplb_rebalance_layers_per_chunk=None, eplb_min_rebalancing_utilization_threshold=1.0, expert_distribution_recorder_mode=None, expert_distribution_recorder_buffer_size=1000, enable_expert_distribution_metrics=False, deepep_config=None, moe_dense_tp_size=None, elastic_ep_backend=None, enable_elastic_expert_backup=False, mooncake_ib_device=None, enable_deepep_waterfill=False, elastic_ep_rejoin=False, max_mamba_cache_size=None, mamba_ssm_dtype=None, mamba_full_memory_ratio=0.9, mamba_scheduler_strategy='no_buffer', mamba_track_interval=256, linear_attn_backend='triton', linear_attn_decode_backend=None, linear_attn_prefill_backend=None, enable_hierarchical_cache=False, hicache_ratio=2.0, hicache_size=0, hicache_write_policy='write_through', hicache_io_backend='kernel', hicache_mem_layout='layer_first', hicache_storage_backend=None, hicache_storage_prefetch_policy='timeout', hicache_storage_backend_extra_config=None, enable_hisparse=False, hisparse_config=None, enable_lmcache=False, kt_weight_path=None, kt_method='AMXINT4', kt_cpuinfer=None, kt_threadpool_count=2, kt_num_gpu_experts=None, kt_max_deferred_experts_per_token=None, dllm_algorithm=None, dllm_algorithm_config=None, cpu_offload_gb=0, offload_group_size=-1, offload_num_in_group=1, offload_prefetch_step=1, offload_mode='cpu', enable_mis=False, disable_radix_cache=True, cuda_graph_max_bs=32, cuda_graph_bs=[1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32], disable_cuda_graph=False, disable_cuda_graph_padding=False, enable_breakable_cuda_graph=False, enable_profile_cuda_graph=False, enable_cudagraph_gc=False, debug_cuda_graph=False, enable_layerwise_nvtx_marker=False, enable_nccl_nvls=False, enable_symm_mem=False, disable_flashinfer_cutlass_moe_fp4_allgather=False, enable_tokenizer_batch_encode=False, disable_tokenizer_batch_decode=False, disable_outlines_disk_cache=False, disable_custom_all_reduce=True, custom_all_reduce_backend='off', enable_mscclpp=False, enable_torch_symm_mem=False, pre_warm_nccl=False, disable_overlap_schedule=False, enable_mixed_chunk=False, enable_dp_attention=False, enable_dp_attention_local_control_broadcast=False, enable_dp_lm_head=False, enable_two_batch_overlap=False, enable_single_batch_overlap=False, tbo_token_distribution_threshold=0.48, enable_torch_compile=False, disable_piecewise_cuda_graph=True, enforce_piecewise_cuda_graph=False, enable_torch_compile_debug_mode=False, torch_compile_max_bs=32, piecewise_cuda_graph_max_tokens=8192, piecewise_cuda_graph_tokens=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 288, 320, 352, 384, 416, 448, 480, 512, 576, 640, 704, 768, 832, 896, 960, 1024, 1280, 1536, 1792, 2048, 2304, 2560, 2816, 3072, 3328, 3584, 3840, 4096, 4608, 5120, 5632, 6144, 6656, 7168, 7680, 8192], piecewise_cuda_graph_compiler='eager', torchao_config='', enable_nan_detection=False, enable_p2p_check=False, triton_attention_reduce_in_fp32=False, triton_attention_num_kv_splits=16, triton_attention_split_tile_size=None, num_continuous_decode_steps=1, delete_ckpt_after_loading=False, enable_memory_saver=False, enable_weights_cpu_backup=False, enable_draft_weights_cpu_backup=False, allow_auto_truncate=False, enable_custom_logit_processor=False, flashinfer_mla_disable_ragged=False, disable_shared_experts_fusion=False, enforce_shared_experts_fusion=False, disable_chunked_prefix_cache=False, disable_fast_image_processor=False, keep_mm_feature_on_device=False, enable_return_hidden_states=False, enable_return_routed_experts=False, enable_return_indexer_topk=False, scheduler_recv_interval=1, numa_node=None, enable_deterministic_inference=False, rl_on_policy_target=None, enable_attn_tp_input_scattered=False, minimax_opt=False, gc_threshold=None, enable_nsa_prefill_context_parallel=False, nsa_prefill_cp_mode='round-robin-split', enable_fused_qk_norm_rope=False, enable_precise_embedding_interpolation=False, enable_fused_moe_sum_all_reduce=False, enable_prefill_context_parallel=False, prefill_cp_mode='in-seq-split', enable_dynamic_batch_tokenizer=False, dynamic_batch_tokenizer_batch_size=32, dynamic_batch_tokenizer_batch_timeout=0.002, debug_tensor_dump_output_folder=None, debug_tensor_dump_layers=None, debug_tensor_dump_input_file=None, debug_tensor_dump_inject=False, disaggregation_mode='null', disaggregation_transfer_backend='mooncake', disaggregation_bootstrap_port=8998, disaggregation_ib_device=None, disaggregation_decode_enable_radix_cache=False, disaggregation_decode_enable_offload_kvcache=False, num_reserved_decode_tokens=512, disaggregation_decode_polling_interval=1, encoder_only=False, language_only=False, encoder_transfer_backend='zmq_to_scheduler', encoder_urls=[], enable_adaptive_dispatch_to_encoder=False, custom_weight_loader=[], weight_loader_disable_mmap=False, weight_loader_prefetch_checkpoints=False, weight_loader_prefetch_num_threads=4, weight_loader_drop_cache_after_load=False, remote_instance_weight_loader_seed_instance_ip=None, remote_instance_weight_loader_seed_instance_service_port=None, remote_instance_weight_loader_send_weights_group_ports=None, remote_instance_weight_loader_backend='nccl', remote_instance_weight_loader_start_seed_via_transfer_engine=False, engine_info_bootstrap_port=6789, modelexpress_config=None, enable_pdmux=False, pdmux_config_path=None, sm_group_num=8, enable_broadcast_mm_inputs_process=False, enable_prefix_mm_cache=False, mm_enable_dp_encoder=False, mm_process_config={}, limit_mm_data_per_request=None, enable_mm_global_cache=False, decrypted_config_file=None, decrypted_draft_config_file=None, forward_hooks=None, enable_quant_communications=False, msprobe_dump_config=None)
+[2026-10-10 08:20:30] Ignore import error when loading sglang.srt.multimodal.processors.midashenglm: Could not load this library: /usr/local/lib/python3.10/dist-packages/torchaudio/lib/_torchaudio.abi3.so
+[2026-10-10 08:20:31] Ignore import error when loading sglang.srt.multimodal.processors.mimo_v2: No module named 'torchcodec'
+[transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+[2026-10-10 08:20:32] Ignore import error when loading sglang.srt.models.midashenglm: Could not load this library: /usr/local/lib/python3.10/dist-packages/torchaudio/lib/_torchaudio.abi3.so
+[Tuning3 Patch] Initializing Qwen3.8-27B optimizations on K100-AI...
+[Tuning3 Patch] Loaded Unified Multi-M LDS-x from /data/wangzy/submit1009/patch/k100_int8_gemv_unified.so
+[2026-10-10 08:20:32] Using default HuggingFace chat template with detected content format: openai
+[2026-10-10 08:20:32] Detected reasoning config 'ReasoningToggleConfig(toggle_param='enable_thinking', default_enabled=True, special_case=None)' from template rule 'enable_thinking_default_true'.
+[Tuning3 Patch] Initializing Qwen3.8-27B optimizations on K100-AI...
+[Tuning3 Patch] Loaded Unified Multi-M LDS-x from /data/wangzy/submit1009/patch/k100_int8_gemv_unified.so
+[Tuning3 Patch] Initializing Qwen3.8-27B optimizations on K100-AI...
+[Tuning3 Patch] Loaded Unified Multi-M LDS-x from /data/wangzy/submit1009/patch/k100_int8_gemv_unified.so
+[Tuning3 Patch] Initializing Qwen3.8-27B optimizations on K100-AI...
+[Tuning3 Patch] Loaded Unified Multi-M LDS-x from /data/wangzy/submit1009/patch/k100_int8_gemv_unified.so
+[2026-10-10 08:20:32] Detected reasoning parser 'qwen3' from template rule 'qwen3'.
+[2026-10-10 08:20:32] Detected tool-call parser 'qwen' from template rule 'qwen'.
+[2026-10-10 08:20:32] Auto-detected reasoning parser: qwen3
+[2026-10-10 08:20:32] Auto-detected tool-call parser: qwen
+[Tuning3 Patch] Patched lmslim.quantize.quant_ops.triton_scaled_mm
+[lightop] DUP_REG_GUARD: gptq_gemm1 already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_tn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_nn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_channelwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_blockwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_fp16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_bf16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_rms_norm_dynamic_per_token_quant already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_lm_fuse_silu_mul_quant already registered by another module, keeping existing impl
+[Tuning3 Patch] Patched lightop.gemm_ops.triton_scaled_mm
+[Tuning3 Patch] Patched lmslim.quantize.quant_ops.triton_scaled_mm
+[lightop] DUP_REG_GUARD: gptq_gemm1 already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_tn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_nn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_channelwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_blockwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_fp16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_bf16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_rms_norm_dynamic_per_token_quant already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_lm_fuse_silu_mul_quant already registered by another module, keeping existing impl
+[Tuning3 Patch] Patched lightop.gemm_ops.triton_scaled_mm
+[Tuning3 Patch] Patched lmslim.quantize.quant_ops.triton_scaled_mm
+[Tuning3 Patch] Patched lmslim.quantize.quant_ops.triton_scaled_mm
+[lightop] DUP_REG_GUARD: gptq_gemm1 already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_tn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_nn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_channelwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: gptq_gemm1 already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_tn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: _rocblas_scaled_mm_nn already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_channelwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_blockwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_fp16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_bf16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_rms_norm_dynamic_per_token_quant already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_lm_fuse_silu_mul_quant already registered by another module, keeping existing impl
+[Tuning3 Patch] Patched lightop.gemm_ops.triton_scaled_mm
+[lightop] DUP_REG_GUARD: hipblaslt_gemm_blockwise already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_fp16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: blaslt_w8a8_bf16_gemm already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_rms_norm_dynamic_per_token_quant already registered by another module, keeping existing impl
+[lightop] DUP_REG_GUARD: lo_lm_fuse_silu_mul_quant already registered by another module, keeping existing impl
+[Tuning3 Patch] Patched lightop.gemm_ops.triton_scaled_mm
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr/local/lib/python3.10/dist-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+INFO 10-10 08:20:56 [__init__.py:44] Available plugins for group vllm.platform_plugins:
+INFO 10-10 08:20:56 [__init__.py:46] - hcu -> vllm_hcu:hcu_platform_plugin
+INFO 10-10 08:20:56 [__init__.py:49] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-10 08:20:56 [__init__.py:238] Platform plugin hcu is activated
+INFO 10-10 08:20:56 [__init__.py:44] Available plugins for group vllm.platform_plugins:
+INFO 10-10 08:20:56 [__init__.py:46] - hcu -> vllm_hcu:hcu_platform_plugin
+INFO 10-10 08:20:56 [__init__.py:49] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-10 08:20:56 [__init__.py:238] Platform plugin hcu is activated
+INFO 10-10 08:20:56 [__init__.py:44] Available plugins for group vllm.platform_plugins:
+INFO 10-10 08:20:56 [__init__.py:46] - hcu -> vllm_hcu:hcu_platform_plugin
+INFO 10-10 08:20:56 [__init__.py:49] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-10 08:20:56 [__init__.py:238] Platform plugin hcu is activated
+INFO 10-10 08:20:56 [__init__.py:44] Available plugins for group vllm.platform_plugins:
+INFO 10-10 08:20:56 [__init__.py:46] - hcu -> vllm_hcu:hcu_platform_plugin
+INFO 10-10 08:20:56 [__init__.py:49] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-10 08:20:56 [__init__.py:238] Platform plugin hcu is activated
+[aiter] WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+WARNING:aiter:WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+[aiter] WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+WARNING:aiter:WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+INFO:sglang.srt.layers.quantization.slimquant_w4a8_marlin:[slimquant_w4a8_marlin] requested_backend=auto, resolved_backend=lightop
+[Tuning3 Patch] Patched sglang compressed_tensors quant_ops.triton_scaled_mm
+[Tuning3 Patch] Patched sglang compressed_tensors quant_ops.blaslt_scaled_mm
+[Tuning3 Patch] Compiled and loaded Triton Long-KV GQA (BM128/BN64/w8)
+[Tuning3 Patch] Patched try_pack_paged_kv_to_varlen_attention with Triton Long-KV
+[Tuning3 Patch] Initialization complete.
+[aiter] WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+WARNING:aiter:WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+INFO:sglang.srt.layers.quantization.slimquant_w4a8_marlin:[slimquant_w4a8_marlin] requested_backend=auto, resolved_backend=lightop
+[Tuning3 Patch] Patched sglang compressed_tensors quant_ops.triton_scaled_mm
+[Tuning3 Patch] Patched sglang compressed_tensors quant_ops.blaslt_scaled_mm
+[Tuning3 Patch] Compiled and loaded Triton Long-KV GQA (BM128/BN64/w8)
+[transformers] `BaseImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `BaseImageProcessor` instead.
+[Tuning3 Patch] Patched try_pack_paged_kv_to_varlen_attention with Triton Long-KV
+[Tuning3 Patch] Initialization complete.
+[aiter] WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+WARNING:aiter:WARNING: NUMA balancing is enabled, which may cause errors. It is recommended to disable NUMA balancing by running "sudo sh -c 'echo 0 > /proc/sys/kernel/numa_balancing'" 
+INFO:sglang.srt.layers.quantization.slimquant_w4a8_marlin:[slimquant_w4a8_marlin] requested_backend=auto, resolved_backend=lightop
+[Tuning3 Patch] Patched sglang compressed_tensors quant_ops.triton_scaled_mm
+[Tuning3 Patch] Patched sglang compressed_tensors quant_ops.blaslt_scaled_mm
+[Tuning3 Patch] Compiled and loaded Triton Long-KV GQA (BM128/BN64/w8)
+[Tuning3 Patch] Patched try_pack_paged_kv_to_varlen_attention with Triton Long-KV
+[Tuning3 Patch] Initialization complete.
+[transformers] `BaseImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `BaseImageProcessor` instead.
+INFO:sglang.srt.layers.quantization.slimquant_w4a8_marlin:[slimquant_w4a8_marlin] requested_backend=auto, resolved_backend=lightop
+[Tuning3 Patch] Patched sglang compressed_tensors quant_ops.triton_scaled_mm
+[Tuning3 Patch] Patched sglang compressed_tensors quant_ops.blaslt_scaled_mm
+[Tuning3 Patch] Compiled and loaded Triton Long-KV GQA (BM128/BN64/w8)
+[transformers] `BaseImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `BaseImageProcessor` instead.
+[Tuning3 Patch] Patched try_pack_paged_kv_to_varlen_attention with Triton Long-KV
+[Tuning3 Patch] Initialization complete.
+[transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+[transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+[2026-10-10 08:21:01 TP1] Ignore import error when loading sglang.srt.multimodal.processors.midashenglm: Could not load this library: /usr/local/lib/python3.10/dist-packages/torchaudio/lib/_torchaudio.abi3.so
+[2026-10-10 08:21:01 TP1] Ignore import error when loading sglang.srt.multimodal.processors.mimo_v2: No module named 'torchcodec'
+[2026-10-10 08:21:01 TP1] Init torch distributed begin.
+[2026-10-10 08:21:02 TP0] Ignore import error when loading sglang.srt.multimodal.processors.midashenglm: Could not load this library: /usr/local/lib/python3.10/dist-packages/torchaudio/lib/_torchaudio.abi3.so
+[2026-10-10 08:21:02 TP0] Ignore import error when loading sglang.srt.multimodal.processors.mimo_v2: No module named 'torchcodec'
+[2026-10-10 08:21:02 TP0] Init torch distributed begin.
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank 0 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[2026-10-10 08:21:03 TP0] [AR] All-reduce call path: NCCL (custom AR disabled, backend=off)
+[2026-10-10 08:21:03 TP1] [AR] All-reduce call path: NCCL (custom AR disabled, backend=off)
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank 0 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[2026-10-10 08:21:03 TP0] sglang is using nccl==2.22.3
+[2026-10-10 08:21:03 TP1] [AR] All-reduce call path: NCCL (custom AR disabled, backend=off)
+[2026-10-10 08:21:03 TP0] [AR] All-reduce call path: NCCL (custom AR disabled, backend=off)
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[2026-10-10 08:21:03 TP0] Init torch distributed ends. elapsed=1.54 s, mem usage=0.39 GB
+[2026-10-10 08:21:03 TP1] Init torch distributed ends. elapsed=2.07 s, mem usage=0.39 GB
+[2026-10-10 08:21:04 TP0] Ignore import error when loading sglang.srt.models.midashenglm: Could not load this library: /usr/local/lib/python3.10/dist-packages/torchaudio/lib/_torchaudio.abi3.so
+[2026-10-10 08:21:04 TP1] Ignore import error when loading sglang.srt.models.midashenglm: Could not load this library: /usr/local/lib/python3.10/dist-packages/torchaudio/lib/_torchaudio.abi3.so
+[2026-10-10 08:21:04 TP0] Load weight begin. avail mem=61.60 GB
+[2026-10-10 08:21:04 TP1] Load weight begin. avail mem=61.60 GB
+/usr/local/lib/python3.10/dist-packages/compressed_tensors/quantization/quant_args.py:368: UserWarning: No observer is used for dynamic quant., setting to None
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/compressed_tensors/quantization/quant_args.py:368: UserWarning: No observer is used for dynamic quant., setting to None
+  warnings.warn(
+[2026-10-10 08:21:04 TP0] Using fa3 as multimodal attention backend.
+[2026-10-10 08:21:04 TP1] Using fa3 as multimodal attention backend.
+[2026-10-10 08:21:04 TP0] Acceleration for non-quantized schemes is not supported by Compressed Tensors. Falling back to UnquantizedLinearMethod
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-10 08:21:04 TP1] Acceleration for non-quantized schemes is not supported by Compressed Tensors. Falling back to UnquantizedLinearMethod
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-10 08:21:04 TP0] using attn output gate!
+[2026-10-10 08:21:04 TP1] using attn output gate!
+Multi-thread loading shards:   0% Completed | 0/18 [00:00<?, ?it/s]Multi-thread loading shards:   6% Completed | 1/18 [00:00<00:10,  1.68it/s]Multi-thread loading shards:  11% Completed | 2/18 [00:01<00:07,  2.01it/s]Multi-thread loading shards:  17% Completed | 3/18 [00:01<00:06,  2.40it/s]Multi-thread loading shards:  22% Completed | 4/18 [00:01<00:06,  2.21it/s]Multi-thread loading shards:  28% Completed | 5/18 [00:02<00:05,  2.48it/s]Multi-thread loading shards:  33% Completed | 6/18 [00:02<00:05,  2.33it/s]Multi-thread loading shards:  39% Completed | 7/18 [00:02<00:04,  2.53it/s]Multi-thread loading shards:  44% Completed | 8/18 [00:03<00:04,  2.37it/s]Multi-thread loading shards:  50% Completed | 9/18 [00:03<00:03,  2.56it/s]Multi-thread loading shards:  56% Completed | 10/18 [00:04<00:03,  2.35it/s]Multi-thread loading shards:  61% Completed | 11/18 [00:04<00:02,  2.57it/s]Multi-thread loading shards:  67% Completed | 12/18 [00:05<00:02,  2.44it/s]Multi-thread loading shards:  72% Completed | 13/18 [00:05<00:01,  2.63it/s]Multi-thread loading shards:  78% Completed | 14/18 [00:05<00:01,  2.48it/s]Multi-thread loading shards:  83% Completed | 15/18 [00:06<00:01,  2.67it/s]Multi-thread loading shards:  89% Completed | 16/18 [00:06<00:00,  2.49it/s]Multi-thread loading shards:  94% Completed | 17/18 [00:06<00:00,  2.66it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:07<00:00,  2.83it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:07<00:00,  2.50it/s]
+[2026-10-10 08:21:12 TP0] Load weight end. elapsed=8.69 s, type=Qwen3_5ForConditionalGeneration, quant=compressed-tensors, avail mem=46.99 GB, mem usage=14.61 GB.
+[2026-10-10 08:21:14 TP1] Load weight end. elapsed=10.81 s, type=Qwen3_5ForConditionalGeneration, quant=compressed-tensors, avail mem=46.99 GB, mem usage=14.61 GB.
+[2026-10-10 08:21:14 TP0] Using KV cache dtype: torch.bfloat16
+[2026-10-10 08:21:14 TP1] Mamba Cache is allocated. max_mamba_cache_size: 32, conv_state size: 0.05GB, ssm_state size: 2.32GB intermediate_ssm_state_cache size: 4.64GB intermediate_conv_window_cache size: 0.09GB 
+[2026-10-10 08:21:14 TP0] Mamba Cache is allocated. max_mamba_cache_size: 32, conv_state size: 0.05GB, ssm_state size: 2.32GB intermediate_ssm_state_cache size: 4.64GB intermediate_conv_window_cache size: 0.09GB 
+[2026-10-10 08:21:15 TP1] KV Cache is allocated. #tokens: 1011392, K size: 15.43 GB, V size: 15.43 GB
+[2026-10-10 08:21:15 TP1] Memory pool end. avail mem=9.01 GB
+[2026-10-10 08:21:15 TP0] KV Cache is allocated. #tokens: 1011392, K size: 15.43 GB, V size: 15.43 GB
+[2026-10-10 08:21:15 TP0] Memory pool end. avail mem=9.01 GB
+[2026-10-10 08:21:18 TP1] Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.
+[2026-10-10 08:21:18 TP1] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-10 08:21:18 TP1] Attention backend created: backend=fa3, full_backend_cls=FlashAttentionBackend, wrapped_backend_cls=HybridLinearAttnBackend
+[2026-10-10 08:21:18 TP1] Capture cuda graph begin. This can take up to several minutes. avail mem=8.37 GB
+[2026-10-10 08:21:18 TP0] Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.
+[2026-10-10 08:21:18 TP0] Linear attention kernel backend: decode=triton, prefill=triton
+[2026-10-10 08:21:18 TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-10 08:21:18 TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-10 08:21:18 TP0] Attention backend created: backend=fa3, full_backend_cls=FlashAttentionBackend, wrapped_backend_cls=HybridLinearAttnBackend
+[2026-10-10 08:21:18 TP0] Capture cuda graph begin. This can take up to several minutes. avail mem=8.37 GB
+[2026-10-10 08:21:18 TP0] Capture cuda graph bs [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32]
+  0%|          | 0/20 [00:00<?, ?it/s]Capturing batches (bs=32 avail_mem=8.31 GB):   0%|          | 0/20 [00:00<?, ?it/s]Capturing batches (bs=32 avail_mem=8.31 GB):   5%|▌         | 1/20 [00:01<00:32,  1.72s/it]Capturing batches (bs=30 avail_mem=7.74 GB):   5%|▌         | 1/20 [00:01<00:32,  1.72s/it]Capturing batches (bs=30 avail_mem=7.74 GB):  10%|█         | 2/20 [00:02<00:20,  1.11s/it]Capturing batches (bs=28 avail_mem=7.73 GB):  10%|█         | 2/20 [00:02<00:20,  1.11s/it]Capturing batches (bs=28 avail_mem=7.73 GB):  15%|█▌        | 3/20 [00:02<00:13,  1.22it/s]Capturing batches (bs=26 avail_mem=7.72 GB):  15%|█▌        | 3/20 [00:02<00:13,  1.22it/s]Capturing batches (bs=26 avail_mem=7.72 GB):  20%|██        | 4/20 [00:03<00:10,  1.48it/s]Capturing batches (bs=24 avail_mem=7.72 GB):  20%|██        | 4/20 [00:03<00:10,  1.48it/s]Capturing batches (bs=24 avail_mem=7.72 GB):  25%|██▌       | 5/20 [00:03<00:09,  1.66it/s]Capturing batches (bs=22 avail_mem=7.72 GB):  25%|██▌       | 5/20 [00:03<00:09,  1.66it/s]Capturing batches (bs=22 avail_mem=7.72 GB):  30%|███       | 6/20 [00:04<00:07,  1.79it/s]Capturing batches (bs=20 avail_mem=7.71 GB):  30%|███       | 6/20 [00:04<00:07,  1.79it/s]Capturing batches (bs=20 avail_mem=7.71 GB):  35%|███▌      | 7/20 [00:04<00:06,  1.92it/s]Capturing batches (bs=18 avail_mem=7.71 GB):  35%|███▌      | 7/20 [00:04<00:06,  1.92it/s]Capturing batches (bs=18 avail_mem=7.71 GB):  40%|████      | 8/20 [00:05<00:05,  2.02it/s]Capturing batches (bs=16 avail_mem=7.71 GB):  40%|████      | 8/20 [00:05<00:05,  2.02it/s]Capturing batches (bs=16 avail_mem=7.71 GB):  45%|████▌     | 9/20 [00:05<00:05,  1.98it/s]Capturing batches (bs=14 avail_mem=7.71 GB):  45%|████▌     | 9/20 [00:05<00:05,  1.98it/s]Capturing batches (bs=14 avail_mem=7.71 GB):  50%|█████     | 10/20 [00:06<00:05,  1.97it/s]Capturing batches (bs=12 avail_mem=7.70 GB):  50%|█████     | 10/20 [00:06<00:05,  1.97it/s]Capturing batches (bs=12 avail_mem=7.70 GB):  55%|█████▌    | 11/20 [00:06<00:04,  2.01it/s]Capturing batches (bs=10 avail_mem=7.70 GB):  55%|█████▌    | 11/20 [00:06<00:04,  2.01it/s]Capturing batches (bs=10 avail_mem=7.70 GB):  60%|██████    | 12/20 [00:07<00:03,  2.02it/s]Capturing batches (bs=8 avail_mem=7.69 GB):  60%|██████    | 12/20 [00:07<00:03,  2.02it/s] Capturing batches (bs=8 avail_mem=7.69 GB):  65%|██████▌   | 13/20 [00:07<00:03,  2.03it/s]Capturing batches (bs=7 avail_mem=7.69 GB):  65%|██████▌   | 13/20 [00:07<00:03,  2.03it/s]Capturing batches (bs=7 avail_mem=7.69 GB):  70%|███████   | 14/20 [00:08<00:02,  2.10it/s]Capturing batches (bs=6 avail_mem=7.69 GB):  70%|███████   | 14/20 [00:08<00:02,  2.10it/s]Capturing batches (bs=6 avail_mem=7.69 GB):  75%|███████▌  | 15/20 [00:08<00:02,  2.12it/s]Capturing batches (bs=5 avail_mem=7.69 GB):  75%|███████▌  | 15/20 [00:08<00:02,  2.12it/s]Capturing batches (bs=5 avail_mem=7.69 GB):  80%|████████  | 16/20 [00:09<00:01,  2.12it/s]Capturing batches (bs=4 avail_mem=7.68 GB):  80%|████████  | 16/20 [00:09<00:01,  2.12it/s]Capturing batches (bs=4 avail_mem=7.68 GB):  85%|████████▌ | 17/20 [00:09<00:01,  2.13it/s]Capturing batches (bs=3 avail_mem=7.68 GB):  85%|████████▌ | 17/20 [00:09<00:01,  2.13it/s]Capturing batches (bs=3 avail_mem=7.68 GB):  90%|█████████ | 18/20 [00:09<00:00,  2.17it/s]Capturing batches (bs=2 avail_mem=7.68 GB):  90%|█████████ | 18/20 [00:09<00:00,  2.17it/s][Tuning3 Patch] Active K5120 Unified LDS-x for M=4 K=5120->N=8192
+[Tuning3 Patch] Active K5120 Unified LDS-x for M=4 K=5120->N=8192
+[Tuning3 Patch] Active TP2 Row Unified LDS-x for M=4 K=3072->N=5120
+[Tuning3 Patch] Active K5120 Unified LDS-x for M=4 K=5120->N=17408
+[Tuning3 Patch] Active TP2 Row Unified LDS-x for M=4 K=8704->N=5120
+[Tuning3 Patch] Active TP2 Row Unified LDS-x for M=4 K=3072->N=5120
+[Tuning3 Patch] Active K5120 Unified LDS-x for M=4 K=5120->N=17408
+[Tuning3 Patch] Active TP2 Row Unified LDS-x for M=4 K=8704->N=5120
+Capturing batches (bs=2 avail_mem=7.68 GB):  95%|█████████▌| 19/20 [00:10<00:00,  2.27it/s]Capturing batches (bs=1 avail_mem=7.67 GB):  95%|█████████▌| 19/20 [00:10<00:00,  2.27it/s]Capturing batches (bs=1 avail_mem=7.67 GB): 100%|██████████| 20/20 [00:10<00:00,  2.31it/s]Capturing batches (bs=1 avail_mem=7.67 GB): 100%|██████████| 20/20 [00:10<00:00,  1.86it/s]
+[2026-10-10 08:21:30 TP1] Capture cuda graph end. Time elapsed: 12.55 s. mem usage=0.70 GB. avail mem=7.67 GB.
+[2026-10-10 08:21:30 TP1] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+[2026-10-10 08:21:31 TP0] Capture cuda graph end. Time elapsed: 12.35 s. mem usage=0.70 GB. avail mem=7.67 GB.
+[2026-10-10 08:21:31 TP0] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+[2026-10-10 08:21:31 TP1] Init torch distributed begin.
+[2026-10-10 08:21:32 TP0] Init torch distributed begin.
+[2026-10-10 08:21:32 TP1] Init torch distributed ends. elapsed=0.01 s, mem usage=0.00 GB
+[2026-10-10 08:21:32 TP0] Init torch distributed ends. elapsed=0.00 s, mem usage=0.00 GB
+[2026-10-10 08:21:32 TP1] Load weight begin. avail mem=7.67 GB
+[2026-10-10 08:21:32 TP0] Load weight begin. avail mem=7.67 GB
+Multi-thread loading shards:   0% Completed | 0/18 [00:00<?, ?it/s]Multi-thread loading shards:  44% Completed | 8/18 [00:00<00:00, 78.28it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:00<00:00, 85.15it/s]Multi-thread loading shards: 100% Completed | 18/18 [00:00<00:00, 84.02it/s]
+[2026-10-10 08:21:32 TP0] Load weight end. elapsed=0.26 s, type=Qwen3_5ForCausalLMMTP, quant=compressed-tensors, avail mem=5.02 GB, mem usage=2.65 GB.
+[2026-10-10 08:21:32 TP1] Load weight end. elapsed=0.31 s, type=Qwen3_5ForCausalLMMTP, quant=compressed-tensors, avail mem=5.02 GB, mem usage=2.65 GB.
+[2026-10-10 08:21:32 TP0] Using KV cache dtype: torch.bfloat16
+[2026-10-10 08:21:32 TP0] KV Cache is allocated. #tokens: 1011392, K size: 0.96 GB, V size: 0.96 GB
+[2026-10-10 08:21:32 TP1] KV Cache is allocated. #tokens: 1011392, K size: 0.96 GB, V size: 0.96 GB
+[2026-10-10 08:21:32 TP0] Memory pool end. avail mem=3.09 GB
+[2026-10-10 08:21:32 TP1] Memory pool end. avail mem=3.09 GB
+[2026-10-10 08:21:32 TP0] Linear attention kernel backend: decode=triton, prefill=triton
+[2026-10-10 08:21:32 TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-10 08:21:32 TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-10-10 08:21:32 TP0] Attention backend created: backend=fa3, full_backend_cls=FlashAttentionBackend, wrapped_backend_cls=HybridLinearAttnBackend
+[2026-10-10 08:21:32 TP0] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+[2026-10-10 08:21:32 TP1] Using hybrid linear attention backend for hybrid GDN models.
+[2026-10-10 08:21:32 TP1] Attention backend created: backend=fa3, full_backend_cls=FlashAttentionBackend, wrapped_backend_cls=HybridLinearAttnBackend
+[2026-10-10 08:21:32 TP1] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+[2026-10-10 08:21:33 TP0] Skip draft extend cuda graph capture because the attention backend is not supported yet: FlashAttentionBackend. device=cuda, target_device=cuda, is_cuda=False, is_hcu=True, is_musa=False, is_npu=False, is_hip=True, is_cuda_draft_extend_device=True, is_nsa_draft_extend_backend=False, speculative_attention_mode=prefill.
+[Gloo] Rank 0 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[2026-10-10 08:21:33 TP0] max_total_num_tokens=1011392, chunked_prefill_size=8192, max_prefill_tokens=65536, max_running_requests=32, context_len=67584, available_gpu_mem=5.46 GB
+[2026-10-10 08:21:34] INFO:     Started server process [30]
+[2026-10-10 08:21:34] INFO:     Waiting for application startup.
+[2026-10-10 08:21:34] Using default chat sampling params from model generation config: {'temperature': 1.0, 'top_k': 20, 'top_p': 0.95}
+[2026-10-10 08:21:34] INFO:     Application startup complete.
+[2026-10-10 08:21:34] INFO:     Uvicorn running on http://0.0.0.0:31014 (Press CTRL+C to quit)
+[2026-10-10 08:21:35] INFO:     127.0.0.1:50798 - "GET /health HTTP/1.1" 503 Service Unavailable
+[2026-10-10 08:21:35] INFO:     127.0.0.1:50810 - "GET /model_info HTTP/1.1" 200 OK
+/usr/local/lib/python3.10/dist-packages/pydantic/_internal/_generate_schema.py:2274: UnsupportedFieldAttributeWarning: The 'deprecated' attribute with value 'max_tokens is deprecated in favor of the max_completion_tokens field' was provided to the `Field()` function, which has no effect in the context it was used. 'deprecated' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+[2026-10-10 08:21:39 TP0] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, full token usage: 0.00, mamba usage: 0.03, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 3.31
+[2026-10-10 08:21:39] INFO:     127.0.0.1:50814 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-10-10 08:21:39] The server is fired up and ready to roll!
+[2026-10-10 08:21:41 TP0] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 32.03
+[2026-10-10 08:21:41] INFO:     127.0.0.1:49638 - "GET /health HTTP/1.1" 200 OK
+[2026-10-10 08:21:41] Endpoint '/get_server_info' is deprecated and will be removed in a future version. Please use '/server_info' instead.
+[2026-10-10 08:21:41] INFO:     127.0.0.1:49650 - "GET /get_server_info HTTP/1.1" 200 OK
+[2026-10-10 08:21:42 TP0] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 72.83
+[2026-10-10 08:21:42] INFO:     127.0.0.1:49662 - "GET /health HTTP/1.1" 200 OK
+Please make sure aiter is installed on your HCU device.
+[Tuning3 Patch] Active Triton Long-KV hit=1 layer=3 max_q=4096 max_k=4096 B=2
+Please make sure aiter is installed on your HCU device.
+[Tuning3 Patch] Active Triton Long-KV hit=1 layer=3 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=2 layer=7 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=2 layer=7 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=3 layer=11 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=3 layer=11 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=4 layer=15 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=4 layer=15 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=32 layer=59 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=32 layer=59 max_q=4096 max_k=4096 B=2
+[2026-10-10 08:21:48 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.02, mamba usage: 0.12, #running-req: 0, #queue-req: 4, #pending-token: 0, cuda graph: False, input throughput (token/s): 1303.52
+[2026-10-10 08:21:48] INFO:     127.0.0.1:49666 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:21:48] INFO:     127.0.0.1:49670 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:21:50 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.02, mamba usage: 0.19, #running-req: 2, #queue-req: 2, #pending-token: 16384, cuda graph: False, input throughput (token/s): 3138.62
+[2026-10-10 08:21:50] INFO:     127.0.0.1:49682 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:21:50] INFO:     127.0.0.1:49698 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=64 layer=51 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=64 layer=51 max_q=4096 max_k=4096 B=2
+[2026-10-10 08:21:53 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 4, #queue-req: 0, #pending-token: 8192, cuda graph: False, input throughput (token/s): 3132.53
+[2026-10-10 08:21:53] INFO:     127.0.0.1:49714 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:21:53] INFO:     127.0.0.1:49728 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:21:53 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 6, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 270765.17
+[2026-10-10 08:21:53] INFO:     127.0.0.1:49734 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:21:53] INFO:     127.0.0.1:49738 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:21:55 TP0] Decode batch, #running-req: 8, #full token: 33408, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.77, accept rate: 0.77, cuda graph: True, gen throughput (token/s): 8.75, #queue-req: 0
+[2026-10-10 08:21:57 TP0] Decode batch, #running-req: 8, #full token: 34304, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 304.38, #queue-req: 0
+[2026-10-10 08:21:59 TP0] Decode batch, #running-req: 8, #full token: 34816, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 300.99, #queue-req: 0
+[2026-10-10 08:22:01 TP0] Decode batch, #running-req: 8, #full token: 35328, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 302.71, #queue-req: 0
+[2026-10-10 08:22:03 TP0] Decode batch, #running-req: 8, #full token: 35968, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 300.85, #queue-req: 0
+[2026-10-10 08:22:05 TP0] Decode batch, #running-req: 8, #full token: 36736, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 300.90, #queue-req: 0
+[2026-10-10 08:22:07 TP0] Decode batch, #running-req: 8, #full token: 37248, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 301.89, #queue-req: 0
+[2026-10-10 08:22:09 TP0] Decode batch, #running-req: 8, #full token: 37824, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 301.85, #queue-req: 0
+[2026-10-10 08:22:11 TP0] Decode batch, #running-req: 8, #full token: 38528, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.98, accept rate: 0.97, cuda graph: True, gen throughput (token/s): 302.43, #queue-req: 0
+[2026-10-10 08:22:14 TP0] Decode batch, #running-req: 8, #full token: 39296, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 297.22, #queue-req: 0
+[2026-10-10 08:22:16 TP0] Decode batch, #running-req: 8, #full token: 39808, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 299.62, #queue-req: 0
+[2026-10-10 08:22:18 TP0] Decode batch, #running-req: 8, #full token: 40320, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.97, accept rate: 0.97, cuda graph: True, gen throughput (token/s): 300.75, #queue-req: 0
+[2026-10-10 08:22:20 TP0] Decode batch, #running-req: 8, #full token: 35776, full token usage: 0.04, mamba num: 7, mamba usage: 0.22, accept len: 1.97, accept rate: 0.97, cuda graph: True, gen throughput (token/s): 301.06, #queue-req: 0
+[2026-10-10 08:22:21 TP0] Decode batch, #running-req: 2, #full token: 10304, full token usage: 0.01, mamba num: 2, mamba usage: 0.06, accept len: 1.91, accept rate: 0.91, cuda graph: True, gen throughput (token/s): 134.04, #queue-req: 0
+[Tuning3 Patch] Active Triton Long-KV hit=96 layer=43 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=96 layer=43 max_q=4096 max_k=4096 B=2
+[2026-10-10 08:22:25 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.01, mamba usage: 0.09, #running-req: 0, #queue-req: 5, #pending-token: 0, cuda graph: False, input throughput (token/s): 126.76
+[2026-10-10 08:22:25] INFO:     127.0.0.1:51104 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:22:28 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.02, mamba usage: 0.16, #running-req: 1, #queue-req: 3, #pending-token: 20480, cuda graph: False, input throughput (token/s): 3130.58
+[2026-10-10 08:22:28] INFO:     127.0.0.1:51098 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:22:28] INFO:     127.0.0.1:51114 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=128 layer=35 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=128 layer=35 max_q=4096 max_k=4096 B=2
+[2026-10-10 08:22:31 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.22, #running-req: 3, #queue-req: 1, #pending-token: 12288, cuda graph: False, input throughput (token/s): 3128.25
+[2026-10-10 08:22:31] INFO:     127.0.0.1:51128 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:22:31] INFO:     127.0.0.1:51140 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:22:32 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 5, #queue-req: 0, #pending-token: 4096, cuda graph: False, input throughput (token/s): 6071.56
+[2026-10-10 08:22:32] INFO:     127.0.0.1:51152 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:22:32] INFO:     127.0.0.1:51162 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:22:32 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 183636.80
+[2026-10-10 08:22:32] INFO:     127.0.0.1:51164 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:22:34 TP0] Decode batch, #running-req: 8, #full token: 33536, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.79, accept rate: 0.79, cuda graph: True, gen throughput (token/s): 40.91, #queue-req: 0
+[2026-10-10 08:22:36 TP0] Decode batch, #running-req: 8, #full token: 34240, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.90, accept rate: 0.90, cuda graph: True, gen throughput (token/s): 294.64, #queue-req: 0
+[2026-10-10 08:22:38 TP0] Decode batch, #running-req: 8, #full token: 34816, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.89, accept rate: 0.89, cuda graph: True, gen throughput (token/s): 292.43, #queue-req: 0
+[2026-10-10 08:22:40 TP0] Decode batch, #running-req: 8, #full token: 35328, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.92, accept rate: 0.92, cuda graph: True, gen throughput (token/s): 297.48, #queue-req: 0
+[2026-10-10 08:22:42 TP0] Decode batch, #running-req: 8, #full token: 36032, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 297.74, #queue-req: 0
+[2026-10-10 08:22:44 TP0] Decode batch, #running-req: 8, #full token: 36672, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.91, accept rate: 0.91, cuda graph: True, gen throughput (token/s): 295.57, #queue-req: 0
+[2026-10-10 08:22:46 TP0] Decode batch, #running-req: 8, #full token: 37184, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.92, accept rate: 0.92, cuda graph: True, gen throughput (token/s): 296.14, #queue-req: 0
+[2026-10-10 08:22:48 TP0] Decode batch, #running-req: 8, #full token: 37824, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 297.83, #queue-req: 0
+[2026-10-10 08:22:50 TP0] Decode batch, #running-req: 8, #full token: 38464, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.87, accept rate: 0.87, cuda graph: True, gen throughput (token/s): 286.58, #queue-req: 0
+[2026-10-10 08:22:53 TP0] Decode batch, #running-req: 8, #full token: 39168, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 296.80, #queue-req: 0
+[2026-10-10 08:22:55 TP0] Decode batch, #running-req: 8, #full token: 39680, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 296.27, #queue-req: 0
+[2026-10-10 08:22:57 TP0] Decode batch, #running-req: 8, #full token: 40192, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.92, accept rate: 0.92, cuda graph: True, gen throughput (token/s): 295.34, #queue-req: 0
+[2026-10-10 08:22:59 TP0] Decode batch, #running-req: 6, #full token: 25344, full token usage: 0.03, mamba num: 5, mamba usage: 0.16, accept len: 1.92, accept rate: 0.92, cuda graph: True, gen throughput (token/s): 288.53, #queue-req: 0
+[2026-10-10 08:23:00 TP0] Decode batch, #running-req: 2, #full token: 10176, full token usage: 0.01, mamba num: 2, mamba usage: 0.06, accept len: 1.85, accept rate: 0.85, cuda graph: True, gen throughput (token/s): 147.98, #queue-req: 0
+[2026-10-10 08:23:02 TP0] Decode batch, #running-req: 1, #full token: 5120, full token usage: 0.01, mamba num: 1, mamba usage: 0.03, accept len: 1.69, accept rate: 0.69, cuda graph: True, gen throughput (token/s): 60.27, #queue-req: 0
+[Tuning3 Patch] Active Triton Long-KV hit=160 layer=27 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=160 layer=27 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:23:06 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.01, mamba usage: 0.09, #running-req: 0, #queue-req: 5, #pending-token: 0, cuda graph: False, input throughput (token/s): 119.29
+[2026-10-10 08:23:06] INFO:     127.0.0.1:51814 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=192 layer=19 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=192 layer=19 max_q=4096 max_k=4096 B=2
+[2026-10-10 08:23:09 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.02, mamba usage: 0.16, #running-req: 1, #queue-req: 3, #pending-token: 20480, cuda graph: False, input throughput (token/s): 3125.82
+[2026-10-10 08:23:09] INFO:     127.0.0.1:51816 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:09] INFO:     127.0.0.1:51830 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:12 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.22, #running-req: 3, #queue-req: 1, #pending-token: 12288, cuda graph: False, input throughput (token/s): 3124.33
+[2026-10-10 08:23:12] INFO:     127.0.0.1:51842 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:12] INFO:     127.0.0.1:51832 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=224 layer=11 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=224 layer=11 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:23:13 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 5, #queue-req: 0, #pending-token: 4096, cuda graph: False, input throughput (token/s): 6070.46
+[2026-10-10 08:23:13] INFO:     127.0.0.1:51844 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:13] INFO:     127.0.0.1:51852 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:13 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 183746.69
+[2026-10-10 08:23:13] INFO:     127.0.0.1:51864 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:14 TP0] Decode batch, #running-req: 8, #full token: 33280, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.75, accept rate: 0.75, cuda graph: True, gen throughput (token/s): 24.76, #queue-req: 0
+[2026-10-10 08:23:16 TP0] Decode batch, #running-req: 8, #full token: 33792, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.89, accept rate: 0.89, cuda graph: True, gen throughput (token/s): 293.09, #queue-req: 0
+[2026-10-10 08:23:18 TP0] Decode batch, #running-req: 8, #full token: 34624, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.88, accept rate: 0.88, cuda graph: True, gen throughput (token/s): 291.13, #queue-req: 0
+[2026-10-10 08:23:20 TP0] Decode batch, #running-req: 8, #full token: 35136, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 299.45, #queue-req: 0
+[2026-10-10 08:23:22 TP0] Decode batch, #running-req: 8, #full token: 35776, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 299.38, #queue-req: 0
+[2026-10-10 08:23:24 TP0] Decode batch, #running-req: 8, #full token: 36288, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 299.35, #queue-req: 0
+[2026-10-10 08:23:26 TP0] Decode batch, #running-req: 8, #full token: 37120, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 297.29, #queue-req: 0
+[2026-10-10 08:23:28 TP0] Decode batch, #running-req: 8, #full token: 37632, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 298.00, #queue-req: 0
+[2026-10-10 08:23:31 TP0] Decode batch, #running-req: 8, #full token: 38144, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 299.21, #queue-req: 0
+[2026-10-10 08:23:33 TP0] Decode batch, #running-req: 8, #full token: 38720, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.92, accept rate: 0.92, cuda graph: True, gen throughput (token/s): 295.31, #queue-req: 0
+[2026-10-10 08:23:35 TP0] Decode batch, #running-req: 8, #full token: 39552, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.89, accept rate: 0.89, cuda graph: True, gen throughput (token/s): 290.71, #queue-req: 0
+[2026-10-10 08:23:37 TP0] Decode batch, #running-req: 8, #full token: 40128, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.91, accept rate: 0.91, cuda graph: True, gen throughput (token/s): 293.94, #queue-req: 0
+[2026-10-10 08:23:39 TP0] Decode batch, #running-req: 8, #full token: 40704, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 298.22, #queue-req: 0
+[2026-10-10 08:23:41 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.19, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 146.34
+[2026-10-10 08:23:41] INFO:     127.0.0.1:34408 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=256 layer=3 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=256 layer=3 max_q=4096 max_k=4096 B=2
+[2026-10-10 08:23:44 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.22, #running-req: 6, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 3073.67
+[2026-10-10 08:23:44] INFO:     127.0.0.1:34430 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:44] INFO:     127.0.0.1:34420 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=288 layer=63 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=288 layer=63 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:23:45 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.04, mamba usage: 0.25, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2942.75
+[2026-10-10 08:23:45] INFO:     127.0.0.1:34440 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:47 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.04, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2403.99
+[2026-10-10 08:23:47] INFO:     127.0.0.1:34442 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:48 TP0] Decode batch, #running-req: 8, #full token: 36160, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.81, accept rate: 0.81, cuda graph: True, gen throughput (token/s): 65.91, #queue-req: 0
+[Tuning3 Patch] Active Triton Long-KV hit=320 layer=55 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=320 layer=55 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:23:49 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1797.32
+[2026-10-10 08:23:49] INFO:     127.0.0.1:34454 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:51 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1842.90
+[2026-10-10 08:23:51] INFO:     127.0.0.1:53086 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:52 TP0] Decode batch, #running-req: 8, #full token: 34624, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.80, accept rate: 0.80, cuda graph: True, gen throughput (token/s): 120.97, #queue-req: 0
+[Tuning3 Patch] Active Triton Long-KV hit=352 layer=47 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=352 layer=47 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:23:56 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 949.69
+[2026-10-10 08:23:56] INFO:     127.0.0.1:53102 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:23:56 TP0] Decode batch, #running-req: 8, #full token: 34176, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.87, accept rate: 0.87, cuda graph: True, gen throughput (token/s): 174.78, #queue-req: 0
+[2026-10-10 08:23:58 TP0] Decode batch, #running-req: 8, #full token: 34880, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.85, accept rate: 0.85, cuda graph: True, gen throughput (token/s): 286.48, #queue-req: 0
+[2026-10-10 08:24:00 TP0] Decode batch, #running-req: 8, #full token: 35520, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.88, accept rate: 0.88, cuda graph: True, gen throughput (token/s): 290.11, #queue-req: 0
+[2026-10-10 08:24:02 TP0] Decode batch, #running-req: 8, #full token: 36096, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.86, accept rate: 0.86, cuda graph: True, gen throughput (token/s): 287.26, #queue-req: 0
+[2026-10-10 08:24:04 TP0] Decode batch, #running-req: 8, #full token: 36608, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.88, accept rate: 0.88, cuda graph: True, gen throughput (token/s): 288.39, #queue-req: 0
+[2026-10-10 08:24:06 TP0] Decode batch, #running-req: 8, #full token: 37120, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 296.96, #queue-req: 0
+[2026-10-10 08:24:08 TP0] Decode batch, #running-req: 8, #full token: 37888, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.91, accept rate: 0.91, cuda graph: True, gen throughput (token/s): 292.81, #queue-req: 0
+[2026-10-10 08:24:10 TP0] Decode batch, #running-req: 8, #full token: 38592, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.92, accept rate: 0.92, cuda graph: True, gen throughput (token/s): 294.68, #queue-req: 0
+[2026-10-10 08:24:12 TP0] Decode batch, #running-req: 8, #full token: 39104, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.91, accept rate: 0.91, cuda graph: True, gen throughput (token/s): 292.40, #queue-req: 0
+[2026-10-10 08:24:14 TP0] Decode batch, #running-req: 8, #full token: 39680, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.89, accept rate: 0.89, cuda graph: True, gen throughput (token/s): 289.37, #queue-req: 0
+[2026-10-10 08:24:17 TP0] Decode batch, #running-req: 8, #full token: 40256, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 295.44, #queue-req: 0
+[2026-10-10 08:24:19 TP0] Decode batch, #running-req: 6, #full token: 30528, full token usage: 0.03, mamba num: 6, mamba usage: 0.19, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 287.37, #queue-req: 0
+[2026-10-10 08:24:20 TP0] Decode batch, #running-req: 1, #full token: 4992, full token usage: 0.00, mamba num: 1, mamba usage: 0.03, accept len: 1.92, accept rate: 0.92, cuda graph: True, gen throughput (token/s): 131.46, #queue-req: 0
+[2026-10-10 08:24:21 TP0] Decode batch, #running-req: 1, #full token: 5056, full token usage: 0.00, mamba num: 1, mamba usage: 0.03, accept len: 1.80, accept rate: 0.80, cuda graph: True, gen throughput (token/s): 57.13, #queue-req: 0
+[2026-10-10 08:24:23 TP0] Decode batch, #running-req: 1, #full token: 5120, full token usage: 0.01, mamba num: 1, mamba usage: 0.03, accept len: 1.85, accept rate: 0.85, cuda graph: True, gen throughput (token/s): 58.51, #queue-req: 0
+[Tuning3 Patch] Active Triton Long-KV hit=384 layer=39 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=384 layer=39 max_q=4096 max_k=4096 B=2
+[2026-10-10 08:24:27 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.01, mamba usage: 0.09, #running-req: 0, #queue-req: 5, #pending-token: 0, cuda graph: False, input throughput (token/s): 131.30
+[2026-10-10 08:24:27] INFO:     127.0.0.1:53382 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:24:29 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.02, mamba usage: 0.16, #running-req: 1, #queue-req: 3, #pending-token: 20480, cuda graph: False, input throughput (token/s): 3123.95
+[2026-10-10 08:24:29] INFO:     127.0.0.1:53412 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:24:29] INFO:     127.0.0.1:53396 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=416 layer=31 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=416 layer=31 max_q=4096 max_k=4096 B=2
+[2026-10-10 08:24:32 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.22, #running-req: 3, #queue-req: 1, #pending-token: 12288, cuda graph: False, input throughput (token/s): 3123.53
+[2026-10-10 08:24:32] INFO:     127.0.0.1:53428 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:24:32] INFO:     127.0.0.1:53434 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:24:33 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 5, #queue-req: 0, #pending-token: 4096, cuda graph: False, input throughput (token/s): 6074.61
+[2026-10-10 08:24:33] INFO:     127.0.0.1:53448 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:24:33] INFO:     127.0.0.1:53410 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:24:33 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 175751.92
+[2026-10-10 08:24:33] INFO:     127.0.0.1:53454 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:24:35 TP0] Decode batch, #running-req: 8, #full token: 33664, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.75, accept rate: 0.75, cuda graph: True, gen throughput (token/s): 41.43, #queue-req: 0
+[2026-10-10 08:24:37 TP0] Decode batch, #running-req: 8, #full token: 34304, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.83, accept rate: 0.83, cuda graph: True, gen throughput (token/s): 283.54, #queue-req: 0
+[2026-10-10 08:24:39 TP0] Decode batch, #running-req: 8, #full token: 34816, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.92, accept rate: 0.92, cuda graph: True, gen throughput (token/s): 297.29, #queue-req: 0
+[2026-10-10 08:24:41 TP0] Decode batch, #running-req: 8, #full token: 35328, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.91, accept rate: 0.91, cuda graph: True, gen throughput (token/s): 294.70, #queue-req: 0
+[2026-10-10 08:24:44 TP0] Decode batch, #running-req: 8, #full token: 35968, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 300.11, #queue-req: 0
+[2026-10-10 08:24:46 TP0] Decode batch, #running-req: 8, #full token: 36608, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 302.18, #queue-req: 0
+[2026-10-10 08:24:48 TP0] Decode batch, #running-req: 8, #full token: 37248, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 298.39, #queue-req: 0
+[2026-10-10 08:24:50 TP0] Decode batch, #running-req: 8, #full token: 37888, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.92, accept rate: 0.92, cuda graph: True, gen throughput (token/s): 294.71, #queue-req: 0
+[2026-10-10 08:24:52 TP0] Decode batch, #running-req: 8, #full token: 38528, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.92, accept rate: 0.92, cuda graph: True, gen throughput (token/s): 294.19, #queue-req: 0
+[2026-10-10 08:24:54 TP0] Decode batch, #running-req: 8, #full token: 39104, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 298.45, #queue-req: 0
+[2026-10-10 08:24:56 TP0] Decode batch, #running-req: 8, #full token: 39744, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 298.73, #queue-req: 0
+[2026-10-10 08:24:58 TP0] Decode batch, #running-req: 8, #full token: 40256, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 298.24, #queue-req: 0
+[Tuning3 Patch] Active Triton Long-KV hit=448 layer=23 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=448 layer=23 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:25:01 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.04, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 145.57
+[2026-10-10 08:25:01] INFO:     127.0.0.1:59084 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:25:02 TP0] Decode batch, #running-req: 8, #full token: 34688, full token usage: 0.03, mamba num: 7, mamba usage: 0.22, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 179.51, #queue-req: 0
+[2026-10-10 08:25:03 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.04, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2828.48
+[2026-10-10 08:25:03] INFO:     127.0.0.1:59086 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=480 layer=15 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=480 layer=15 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:25:04 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.04, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2644.54
+[2026-10-10 08:25:04] INFO:     127.0.0.1:59090 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:25:06 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.22, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2398.01
+[2026-10-10 08:25:06] INFO:     127.0.0.1:59102 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=512 layer=7 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=512 layer=7 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:25:08 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.04, mamba usage: 0.25, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2952.66
+[2026-10-10 08:25:08] INFO:     127.0.0.1:59106 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=544 layer=0 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=544 layer=0 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:25:10 TP0] Decode batch, #running-req: 8, #full token: 35328, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.83, accept rate: 0.83, cuda graph: True, gen throughput (token/s): 67.14, #queue-req: 0
+[2026-10-10 08:25:10 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.04, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1494.11
+[2026-10-10 08:25:10] INFO:     127.0.0.1:45172 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:25:12 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2831.19
+[2026-10-10 08:25:12] INFO:     127.0.0.1:45174 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=576 layer=59 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=576 layer=59 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:25:13 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2834.28
+[2026-10-10 08:25:13] INFO:     127.0.0.1:45178 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:25:15 TP0] Decode batch, #running-req: 8, #full token: 34048, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.82, accept rate: 0.82, cuda graph: True, gen throughput (token/s): 121.64, #queue-req: 0
+[2026-10-10 08:25:17 TP0] Decode batch, #running-req: 8, #full token: 34624, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.90, accept rate: 0.90, cuda graph: True, gen throughput (token/s): 295.73, #queue-req: 0
+[2026-10-10 08:25:19 TP0] Decode batch, #running-req: 8, #full token: 35136, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 299.36, #queue-req: 0
+[2026-10-10 08:25:21 TP0] Decode batch, #running-req: 8, #full token: 35712, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 300.49, #queue-req: 0
+[2026-10-10 08:25:23 TP0] Decode batch, #running-req: 8, #full token: 36416, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 299.42, #queue-req: 0
+[2026-10-10 08:25:25 TP0] Decode batch, #running-req: 8, #full token: 36992, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 300.36, #queue-req: 0
+[2026-10-10 08:25:27 TP0] Decode batch, #running-req: 8, #full token: 37632, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 301.34, #queue-req: 0
+[2026-10-10 08:25:30 TP0] Decode batch, #running-req: 8, #full token: 38272, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 301.91, #queue-req: 0
+[2026-10-10 08:25:32 TP0] Decode batch, #running-req: 8, #full token: 38976, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 297.82, #queue-req: 0
+[2026-10-10 08:25:34 TP0] Decode batch, #running-req: 8, #full token: 39552, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 297.50, #queue-req: 0
+[2026-10-10 08:25:36 TP0] Decode batch, #running-req: 8, #full token: 40064, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 300.82, #queue-req: 0
+[2026-10-10 08:25:38 TP0] Decode batch, #running-req: 7, #full token: 35456, full token usage: 0.04, mamba num: 7, mamba usage: 0.22, accept len: 1.97, accept rate: 0.97, cuda graph: True, gen throughput (token/s): 300.10, #queue-req: 0
+[2026-10-10 08:25:40 TP0] Decode batch, #running-req: 2, #full token: 10240, full token usage: 0.01, mamba num: 2, mamba usage: 0.06, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 227.81, #queue-req: 0
+[Tuning3 Patch] Active Triton Long-KV hit=608 layer=51 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=608 layer=51 max_q=4096 max_k=4096 B=2
+[2026-10-10 08:25:45 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.01, mamba usage: 0.09, #running-req: 0, #queue-req: 5, #pending-token: 0, cuda graph: False, input throughput (token/s): 129.97
+[2026-10-10 08:25:45] INFO:     127.0.0.1:44416 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:25:47 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.02, mamba usage: 0.16, #running-req: 1, #queue-req: 3, #pending-token: 20480, cuda graph: False, input throughput (token/s): 3119.82
+[2026-10-10 08:25:47] INFO:     127.0.0.1:44432 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:25:47] INFO:     127.0.0.1:44430 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=640 layer=43 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=640 layer=43 max_q=4096 max_k=4096 B=2
+[2026-10-10 08:25:50 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.22, #running-req: 3, #queue-req: 1, #pending-token: 12288, cuda graph: False, input throughput (token/s): 3126.83
+[2026-10-10 08:25:50] INFO:     127.0.0.1:44456 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:25:50] INFO:     127.0.0.1:44442 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:25:51 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 5, #queue-req: 0, #pending-token: 4096, cuda graph: False, input throughput (token/s): 6067.93
+[2026-10-10 08:25:51] INFO:     127.0.0.1:44466 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:25:51] INFO:     127.0.0.1:44482 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:25:51 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 189091.04
+[2026-10-10 08:25:51] INFO:     127.0.0.1:44492 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:25:52 TP0] Decode batch, #running-req: 8, #full token: 33280, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.68, accept rate: 0.68, cuda graph: True, gen throughput (token/s): 14.20, #queue-req: 0
+[2026-10-10 08:25:54 TP0] Decode batch, #running-req: 8, #full token: 33792, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.90, accept rate: 0.90, cuda graph: True, gen throughput (token/s): 293.97, #queue-req: 0
+[2026-10-10 08:25:56 TP0] Decode batch, #running-req: 8, #full token: 34304, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 301.16, #queue-req: 0
+[2026-10-10 08:25:58 TP0] Decode batch, #running-req: 8, #full token: 34944, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 298.96, #queue-req: 0
+[2026-10-10 08:26:00 TP0] Decode batch, #running-req: 8, #full token: 35648, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 301.37, #queue-req: 0
+[2026-10-10 08:26:02 TP0] Decode batch, #running-req: 8, #full token: 36288, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 299.99, #queue-req: 0
+[2026-10-10 08:26:04 TP0] Decode batch, #running-req: 8, #full token: 36864, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 301.58, #queue-req: 0
+[2026-10-10 08:26:06 TP0] Decode batch, #running-req: 8, #full token: 37504, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 300.17, #queue-req: 0
+[2026-10-10 08:26:08 TP0] Decode batch, #running-req: 8, #full token: 38208, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 298.57, #queue-req: 0
+[2026-10-10 08:26:10 TP0] Decode batch, #running-req: 8, #full token: 38720, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 299.92, #queue-req: 0
+[2026-10-10 08:26:13 TP0] Decode batch, #running-req: 8, #full token: 39296, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 296.40, #queue-req: 0
+[2026-10-10 08:26:15 TP0] Decode batch, #running-req: 8, #full token: 39936, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 298.37, #queue-req: 0
+[2026-10-10 08:26:17 TP0] Decode batch, #running-req: 8, #full token: 40704, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 298.27, #queue-req: 0
+[Tuning3 Patch] Active Triton Long-KV hit=672 layer=35 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=672 layer=35 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:26:19 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.04, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 146.10
+[2026-10-10 08:26:19] INFO:     127.0.0.1:49390 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:26:21 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.04, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2831.27
+[2026-10-10 08:26:21] INFO:     127.0.0.1:55616 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=704 layer=27 max_q=4096 max_k=4096 B=2
+[Tuning3 Patch] Active Triton Long-KV hit=704 layer=27 max_q=4096 max_k=4096 B=2
+[2026-10-10 08:26:24 TP0] Prefill batch, #new-seq: 2, #new-token: 8192, #cached-token: 0, full token usage: 0.04, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 3002.34
+[2026-10-10 08:26:24] INFO:     127.0.0.1:55624 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:26:24] INFO:     127.0.0.1:55622 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:26:25 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.04, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2261.81
+[2026-10-10 08:26:25] INFO:     127.0.0.1:55642 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:26:25 TP0] Decode batch, #running-req: 8, #full token: 36160, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.91, accept rate: 0.91, cuda graph: True, gen throughput (token/s): 70.01, #queue-req: 0
+[Tuning3 Patch] Active Triton Long-KV hit=736 layer=19 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=736 layer=19 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:26:27 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2080.53
+[2026-10-10 08:26:27] INFO:     127.0.0.1:55656 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:26:29 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1980.26
+[2026-10-10 08:26:29] INFO:     127.0.0.1:55664 - "POST /v1/completions HTTP/1.1" 200 OK
+[Tuning3 Patch] Active Triton Long-KV hit=768 layer=11 max_q=4096 max_k=4096 B=1
+[Tuning3 Patch] Active Triton Long-KV hit=768 layer=11 max_q=4096 max_k=4096 B=1
+[2026-10-10 08:26:31 TP0] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.03, mamba usage: 0.25, #running-req: 8, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2835.65
+[2026-10-10 08:26:31] INFO:     127.0.0.1:35822 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 08:26:32 TP0] Decode batch, #running-req: 8, #full token: 33600, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.85, accept rate: 0.85, cuda graph: True, gen throughput (token/s): 97.01, #queue-req: 0
+[2026-10-10 08:26:34 TP0] Decode batch, #running-req: 8, #full token: 34176, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.89, accept rate: 0.89, cuda graph: True, gen throughput (token/s): 293.33, #queue-req: 0
+[2026-10-10 08:26:36 TP0] Decode batch, #running-req: 8, #full token: 34816, full token usage: 0.03, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 301.18, #queue-req: 0
+[2026-10-10 08:26:38 TP0] Decode batch, #running-req: 8, #full token: 35520, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 300.90, #queue-req: 0
+[2026-10-10 08:26:40 TP0] Decode batch, #running-req: 8, #full token: 36032, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.92, accept rate: 0.92, cuda graph: True, gen throughput (token/s): 295.00, #queue-req: 0
+[2026-10-10 08:26:42 TP0] Decode batch, #running-req: 8, #full token: 36672, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 297.99, #queue-req: 0
+[2026-10-10 08:26:44 TP0] Decode batch, #running-req: 8, #full token: 37376, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 296.52, #queue-req: 0
+[2026-10-10 08:26:46 TP0] Decode batch, #running-req: 8, #full token: 37952, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.96, accept rate: 0.96, cuda graph: True, gen throughput (token/s): 300.16, #queue-req: 0
+[2026-10-10 08:26:48 TP0] Decode batch, #running-req: 8, #full token: 38592, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.95, accept rate: 0.95, cuda graph: True, gen throughput (token/s): 299.99, #queue-req: 0
+[2026-10-10 08:26:50 TP0] Decode batch, #running-req: 8, #full token: 39168, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 298.28, #queue-req: 0
+[2026-10-10 08:26:52 TP0] Decode batch, #running-req: 8, #full token: 39808, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 298.14, #queue-req: 0
+[2026-10-10 08:26:54 TP0] Decode batch, #running-req: 8, #full token: 40384, full token usage: 0.04, mamba num: 8, mamba usage: 0.25, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 297.56, #queue-req: 0
+[2026-10-10 08:26:56 TP0] Decode batch, #running-req: 6, #full token: 30656, full token usage: 0.03, mamba num: 6, mamba usage: 0.19, accept len: 1.94, accept rate: 0.94, cuda graph: True, gen throughput (token/s): 276.36, #queue-req: 0
+[2026-10-10 08:26:58 TP0] Decode batch, #running-req: 1, #full token: 0, full token usage: 0.00, mamba num: 0, mamba usage: 0.00, accept len: 1.93, accept rate: 0.93, cuda graph: True, gen throughput (token/s): 157.47, #queue-req: 0

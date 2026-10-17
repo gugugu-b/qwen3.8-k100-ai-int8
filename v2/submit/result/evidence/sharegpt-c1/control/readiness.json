@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-16T08:39:44.522697+00:00",
+  "run": "submit-current-c1-pair45-20261016-a",
+  "physical_pair": [
+    4,
+    5
+  ],
+  "original_queue_pid": 1621554,
+  "queue_pid_absent": true,
+  "final_phase": "submit-candidate-performance-complete",
+  "artifact_count": 40,
+  "control_count": 41,
+  "union_files": 51,
+  "artifact_keys_relative_to": "ROOT",
+  "control_keys_relative_to": "ROOT",
+  "artifact_exact_coverage": true,
+  "control_exact_coverage": true,
+  "source_manifests_unchanged": true
+}

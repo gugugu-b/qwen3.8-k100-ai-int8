@@ -29,3 +29,7 @@ tmp/
 temp/
 *.swp
 *.swo
+
+# v2: prepare the full library from the already tracked v1 archive.
+/v2/submit/config/library_gpu4_int8tuned_stock_clean/
+/v2/submit/config/.library-stage-*/

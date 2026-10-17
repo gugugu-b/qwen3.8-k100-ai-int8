@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-16T07:46:13.418532+00:00",
+  "run": "submit-current-sharegpt-pair67-20261016-a",
+  "physical_pair": [
+    6,
+    7
+  ],
+  "original_queue_pid": 1621555,
+  "queue_pid_absent": true,
+  "final_phase": "submit-candidate-performance-complete",
+  "artifact_count": 70,
+  "control_count": 59,
+  "union_files": 87,
+  "artifact_keys_relative_to": "ROOT",
+  "control_keys_relative_to": "ROOT",
+  "artifact_exact_coverage": true,
+  "control_exact_coverage": true,
+  "source_manifests_unchanged": true
+}

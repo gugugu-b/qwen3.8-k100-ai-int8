@@ -1,0 +1,29 @@
+{
+  "status": "FINAL_SMALL_PACKAGE_FILES_SHA_MATCH_REMOTE",
+  "files": 154,
+  "newly_synced": 31,
+  "server_tar_sha256": "3f68ea3f71b25eab0d67c35ed4db52ffcedc73517671e17cdce155744716d7b0",
+  "server_tar_bytes": 121315142,
+  "complete_library_or_tar_downloaded": false,
+  "local_mirror_is_complete_deployable_package": false,
+  "package_startup_smoke": {
+    "utc_start": "2026-10-10T00:34:50.428654+00:00",
+    "scope": "FRESH_IMAGE_PACKAGED_STARTUP_SMOKE_ONLY",
+    "performance_measured": false,
+    "clean_room_performance_gate": "NOT_RUN",
+    "gsm8k": "NOT_RUN",
+    "start_returncode": 0,
+    "status": "FRESH_IMAGE_PACKAGED_STARTUP_SMOKE_PASS",
+    "stop_returncode": 0,
+    "task_container_status": "qwen38-submit1009-diag Exited (137) 11 minutes ago\nqwen38-submit1009-ab Exited (137) 33 minutes ago\n",
+    "utc_end": "2026-10-10T00:38:40.172613+00:00",
+    "gpu45_lock": "FREE",
+    "gpu67_lock": "FREE",
+    "gpu_probe": {
+      "returncode": 0,
+      "stdout": "{\"card4\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card5\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card6\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card7\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}}\n",
+      "stderr": ""
+    }
+  },
+  "storage": "All complete deployable libraries and archives remain server-only"
+}

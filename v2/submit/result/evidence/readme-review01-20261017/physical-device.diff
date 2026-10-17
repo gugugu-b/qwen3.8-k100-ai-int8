@@ -1,0 +1,11 @@
+--- patch/native_bf16_ar_guard.py
++++ review01/native_bf16_ar_guard.py
+@@ -11,7 +11,7 @@
+ 
+ def install():
+     assert os.environ['SGLANG_USE_1STAGE_ALLREDUCE'] == '1'
+-    assert os.environ['HIP_VISIBLE_DEVICES'] == '6,7'
++    assert os.environ['HIP_VISIBLE_DEVICES'] == '0,1'
+     from sglang.srt.distributed.device_communicators import custom_all_reduce as source
+     assert hashlib.sha256(Path(source.__file__).read_bytes()).hexdigest() == SOURCE_SHA
+     binary = Path('/usr/local/lib/python3.10/dist-packages/sgl_kernel/common_ops.cpython-310-x86_64-linux-gnu.so')

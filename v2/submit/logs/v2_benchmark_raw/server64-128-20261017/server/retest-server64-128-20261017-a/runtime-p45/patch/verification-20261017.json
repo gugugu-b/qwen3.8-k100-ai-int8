@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scope": "Offline source/manifest/diff consistency only",
+  "checks": 109,
+  "files": 63,
+  "gpu_used": false,
+  "rebuild_executed": false,
+  "remaining_source_gaps": [
+    {
+      "component": "TVM FFI Torch C DLPack cache",
+      "status": "FIXED_IMAGE_SOURCE_AND_RECIPE_EXPORTED_ORIGINAL_CACHE_BUILD_LOG_AND_BITWISE_REBUILD_NOT_VERIFIED",
+      "binary_sha256": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6"
+    },
+    {
+      "component": "Vendor native AR common_ops",
+      "status": "MATCHING_CPP_HIP_SOURCE_AND_BUILD_RECIPE_NOT_ARCHIVED",
+      "binary_sha256": "8c81c808faa6ea332b1c0c81a9474877b95b01eb4738473c6a1e9854c4d6b230"
+    },
+    {
+      "component": "Inherited HIP GEMV build",
+      "status": "FULL_SOURCE_AND_RECIPE_SUPPLIED_ORIGINAL_NINJA_LOG_NOT_ARCHIVED"
+    }
+  ],
+  "runtime_or_accuracy_certification": false
+}

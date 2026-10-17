@@ -1,0 +1,13 @@
+{
+  "base_url": "http://127.0.0.1:31210",
+  "concurrency": 8,
+  "input_len": 65536,
+  "measure_rounds": 3,
+  "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+  "output_dir": "/data/wangzy/v2/submit/result/runs/community-official-followup-20261017-d-p23-clean-runtime-64k-c8/64k-c8",
+  "output_len": 1024,
+  "requests_per_round": 16,
+  "seed": 20260912,
+  "timeout": 7200,
+  "warmup_rounds": 2
+}

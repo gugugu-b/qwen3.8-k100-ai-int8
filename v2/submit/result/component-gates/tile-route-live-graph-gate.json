@@ -1,0 +1,170 @@
+{
+  "status": "PASS",
+  "evidence_type": "model-service-profile-graph-replay",
+  "utc": "2026-10-09T09:37:41.601173+00:00",
+  "reviewer": "Codex independent review of original trace ranges, Graph launches, capture records, compiler metadata and binaries",
+  "candidate_site_sha256": "8b8557ac4f43d78322f4988b8c2398c15087ed231bfd1c7a3384b19878147a19",
+  "physical_pair": "6,7",
+  "tp": 2,
+  "trace_sha256": {
+    "result/tile-route-parallel67-v1-20261009-a-graph-retry3/model-graph/trace/model-graph-v1-1791537870.5801911-TP-0.trace.json.gz": "04ae1f75bd7b10bfb5d97c1ddc9931c310df8ee677e9e808b8214553e96a9158",
+    "result/tile-route-parallel67-v1-20261009-a-graph-retry3/model-graph/trace/model-graph-v1-1791537870.5801911-TP-1.trace.json.gz": "469bf44d628f7b99848f2a1526852e15faa170890d7f6698da9d8371fa43d209",
+    "result/tile-route-parallel67-20261009-b/model-graph/trace/model-graph-candidate-1791538070.2620616-TP-0.trace.json.gz": "669ab72238071ca58bce187b16994e77a231de50b85cff0cc1112653a664cb6a",
+    "result/tile-route-parallel67-20261009-b/model-graph/trace/model-graph-candidate-1791538070.2620616-TP-1.trace.json.gz": "71cd98470f46eed29d9463ca393548b58c0c5ce77fa1ab2a5ef7bb5146c21fcf"
+  },
+  "observer_artifact_sha256": {
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/disable.json": "680b33bc739b6c5fca8703de592e605833b23aa63a412a181cd3d789eb44ae34",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1461/capture-records.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1461/observer-report.json": "defab9ab00c268be5aefe3d35f828de3e51c405f0737b1e7659c351fb2e33167",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/capture-records.jsonl": "74017651fb5dc3b060c538489747171479748a68bda3d55f9d78dff6eb2de790",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/17b4b2c5469f49e26c91f56a755840b61ec750422c8b838f77550ca28265675a.hsaco": "f9226237c83f4f21861dc030b46f7c8d1674a55d94938871fcc958927658c664",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/17b4b2c5469f49e26c91f56a755840b61ec750422c8b838f77550ca28265675a.json": "959be397695f45ad4f2fceaefbb6c9585b78d4cc391c6e311d71e16c7bdf0dd8",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/22070f25b1c7f4decdcbd7cc2e1ebb3f4c52548142883b13f6841c408be0b120.hsaco": "f9226237c83f4f21861dc030b46f7c8d1674a55d94938871fcc958927658c664",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/22070f25b1c7f4decdcbd7cc2e1ebb3f4c52548142883b13f6841c408be0b120.json": "adbf437f8815448e52f62776d869957f6a1691c8ba04bc9aa4de39c3eddc13bb",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/33334f6c8f6fe60896ba48b1825940931a7ec806369a0b266648f50b5f75ce22.hsaco": "14a4ba9641f5caee78c0970a3ecdc20b211f46ca224234b9a65fd5154b4808fd",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/33334f6c8f6fe60896ba48b1825940931a7ec806369a0b266648f50b5f75ce22.json": "6c80cc1b99fcc42d44bb86fb88716f6adfe38b2bc165f5a949e428c24b40b155",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/563c384f04bc9425b6e4011cde1b738c5dbdcb93724c4ef2abdfa9ce7e2b4bf4.hsaco": "18957a9600edca5647300b4ff719fee3c19eb853d39414be1b8419ea37ae2e1b",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/563c384f04bc9425b6e4011cde1b738c5dbdcb93724c4ef2abdfa9ce7e2b4bf4.json": "e2ca9ceadd2726b61351eda3bbb037ba819c391539ac516a01f104b8d49027df",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/584e158daac53f888ac82f249c98b4a208f7f3a6c9d72e07c1291bdfb50eb777.hsaco": "14a4ba9641f5caee78c0970a3ecdc20b211f46ca224234b9a65fd5154b4808fd",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/584e158daac53f888ac82f249c98b4a208f7f3a6c9d72e07c1291bdfb50eb777.json": "b4be24545644ebf62bfef5b306591aa508ab58c28fe73e5bfff3cb44f581a94d",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/59f637b480a32b49b6f191ea2747ffeda7130d75ed3cc3ca9eacb9034e325e53.hsaco": "cb168f592f87774eecd2577736fe2e35ac5fac8a58fead74f1fbbb36d9ad6e8c",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/59f637b480a32b49b6f191ea2747ffeda7130d75ed3cc3ca9eacb9034e325e53.json": "967b310f9bda59dee16e1716861d4235c8bbe1c935681ceafeb4d31b1a5d29d3",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/5b6dfc54c44e80e1e6b8400e0493284a2e1ac597674fe3bb3b28ef7aa982d204.hsaco": "2f60bbb1b6e4ee4eb3b187e14c440673e84cb739d295cb05fdfe49746bfba872",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/5b6dfc54c44e80e1e6b8400e0493284a2e1ac597674fe3bb3b28ef7aa982d204.json": "e46916fd9afd983beedfc671edcffa5d4d5f1d5953bd63813b4bcc5152221ea3",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/61aef8e82f466ff134c2b5a6166d6c57aec15ccd8194c20b52851237a1de67c9.hsaco": "29b6882d624145780225e59359f9a9e04ee0b84a2aa6f9fc5714bc9aae95fb26",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/61aef8e82f466ff134c2b5a6166d6c57aec15ccd8194c20b52851237a1de67c9.json": "0ff0a705bdfb6d3a1c1ab78f0183873fb28c6a21f38547be389a388b901acfe4",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/6711948f10a3a4abca613f87095f7d11bd4ebbdb9a5616aa5dea476d31e6f6a5.hsaco": "fb5d5d6593ba6ae837d6333ddde29a01f7e7b8e5eee2af9b1b4043f41aee6307",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/6711948f10a3a4abca613f87095f7d11bd4ebbdb9a5616aa5dea476d31e6f6a5.json": "9f1a0c117060c78cb687a22d5ee373692c16cbef107316fd87af443327cd5706",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/6fd87469cfdcc607dd672d95d778f0453a028a7ae46241ea2d1e712a5c525d79.hsaco": "31331c25f20bb60ae4c14e551e37c4dc6b22443d907b347b7750d150bc3c32ff",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/6fd87469cfdcc607dd672d95d778f0453a028a7ae46241ea2d1e712a5c525d79.json": "11ca72fcbd67173cac8bf60d0b2e5f6b5d6c8f854af6b93c60afe1fe61f9fe3d",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/aea6099a9674c5b86a1e0ebcf2923221666545bb324495289ee11e37d6c09eb7.hsaco": "3cf3cb7175bdff3da162e1ea27d603f4ed0bbcc74bce332e5ae30d2db9bd2c0e",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/aea6099a9674c5b86a1e0ebcf2923221666545bb324495289ee11e37d6c09eb7.json": "89aca1fd711c7a9d734923a69c1886a9695d1fe6e938664d41d3880295326097",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/c66a1eff6fe95cddd1e8d8137f1a2f5a5a479ddac9420c6c9f15fed8dd5abeb9.hsaco": "cda1ee831258fcaeed02a1f9585e73a2afa524e60c0764d055c886817e57ce43",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/c66a1eff6fe95cddd1e8d8137f1a2f5a5a479ddac9420c6c9f15fed8dd5abeb9.json": "9176dd4b9817782469d0fac55ea7c31e009289936c2441561c050356329c9073",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/d21fc12408c4c834c1923685875336b2fdc812efd489696f8c1f4e11deea118f.hsaco": "1a50737e3d7367037a8eddffbb4b0c453c917361753817a41e82c512bf6cec06",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/d21fc12408c4c834c1923685875336b2fdc812efd489696f8c1f4e11deea118f.json": "36948d4c747e76bf1cbe01049b3ca95dbe25fe5ffb3336e355d7113d082870b2",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/db38a0f956bcdf2a22eaf04aad38cea6ee6c15cbde12dbcda0fb316c7fc7f640.hsaco": "793e3a179a5ed0982b56ba197747bdc1d6cb403c97b8db55c32ca7b7d920a7a3",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/db38a0f956bcdf2a22eaf04aad38cea6ee6c15cbde12dbcda0fb316c7fc7f640.json": "506ae0a8b1ac2cbd928c0c0503fc97a6d24b08439664e64ff8000a560605d5c1",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/e3cbbe0301653fee158e4de423e50ac78546658743f22f3e6c3bdaa149282968.hsaco": "f9226237c83f4f21861dc030b46f7c8d1674a55d94938871fcc958927658c664",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/compiled/e3cbbe0301653fee158e4de423e50ac78546658743f22f3e6c3bdaa149282968.json": "0787b0281bd51f51ba876f08ca77d8a6f4152c6a8e8498982a82ba6712ad7113",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1462/observer-report.json": "6874b2dcf02c7baf599fefbf75d1cf13b864a68762fc873327f7652735f42933",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/capture-records.jsonl": "ca39a08893ff221e17324960c0c819b5157824e7483ad3b6667aa8004c2b5b91",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/17b4b2c5469f49e26c91f56a755840b61ec750422c8b838f77550ca28265675a.hsaco": "f9226237c83f4f21861dc030b46f7c8d1674a55d94938871fcc958927658c664",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/17b4b2c5469f49e26c91f56a755840b61ec750422c8b838f77550ca28265675a.json": "959be397695f45ad4f2fceaefbb6c9585b78d4cc391c6e311d71e16c7bdf0dd8",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/22070f25b1c7f4decdcbd7cc2e1ebb3f4c52548142883b13f6841c408be0b120.hsaco": "f9226237c83f4f21861dc030b46f7c8d1674a55d94938871fcc958927658c664",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/22070f25b1c7f4decdcbd7cc2e1ebb3f4c52548142883b13f6841c408be0b120.json": "adbf437f8815448e52f62776d869957f6a1691c8ba04bc9aa4de39c3eddc13bb",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/33334f6c8f6fe60896ba48b1825940931a7ec806369a0b266648f50b5f75ce22.hsaco": "14a4ba9641f5caee78c0970a3ecdc20b211f46ca224234b9a65fd5154b4808fd",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/33334f6c8f6fe60896ba48b1825940931a7ec806369a0b266648f50b5f75ce22.json": "6c80cc1b99fcc42d44bb86fb88716f6adfe38b2bc165f5a949e428c24b40b155",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/563c384f04bc9425b6e4011cde1b738c5dbdcb93724c4ef2abdfa9ce7e2b4bf4.hsaco": "18957a9600edca5647300b4ff719fee3c19eb853d39414be1b8419ea37ae2e1b",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/563c384f04bc9425b6e4011cde1b738c5dbdcb93724c4ef2abdfa9ce7e2b4bf4.json": "e2ca9ceadd2726b61351eda3bbb037ba819c391539ac516a01f104b8d49027df",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/584e158daac53f888ac82f249c98b4a208f7f3a6c9d72e07c1291bdfb50eb777.hsaco": "14a4ba9641f5caee78c0970a3ecdc20b211f46ca224234b9a65fd5154b4808fd",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/584e158daac53f888ac82f249c98b4a208f7f3a6c9d72e07c1291bdfb50eb777.json": "b4be24545644ebf62bfef5b306591aa508ab58c28fe73e5bfff3cb44f581a94d",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/59f637b480a32b49b6f191ea2747ffeda7130d75ed3cc3ca9eacb9034e325e53.hsaco": "cb168f592f87774eecd2577736fe2e35ac5fac8a58fead74f1fbbb36d9ad6e8c",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/59f637b480a32b49b6f191ea2747ffeda7130d75ed3cc3ca9eacb9034e325e53.json": "967b310f9bda59dee16e1716861d4235c8bbe1c935681ceafeb4d31b1a5d29d3",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/5b6dfc54c44e80e1e6b8400e0493284a2e1ac597674fe3bb3b28ef7aa982d204.hsaco": "2f60bbb1b6e4ee4eb3b187e14c440673e84cb739d295cb05fdfe49746bfba872",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/5b6dfc54c44e80e1e6b8400e0493284a2e1ac597674fe3bb3b28ef7aa982d204.json": "e46916fd9afd983beedfc671edcffa5d4d5f1d5953bd63813b4bcc5152221ea3",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/61aef8e82f466ff134c2b5a6166d6c57aec15ccd8194c20b52851237a1de67c9.hsaco": "29b6882d624145780225e59359f9a9e04ee0b84a2aa6f9fc5714bc9aae95fb26",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/61aef8e82f466ff134c2b5a6166d6c57aec15ccd8194c20b52851237a1de67c9.json": "0ff0a705bdfb6d3a1c1ab78f0183873fb28c6a21f38547be389a388b901acfe4",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/6711948f10a3a4abca613f87095f7d11bd4ebbdb9a5616aa5dea476d31e6f6a5.hsaco": "fb5d5d6593ba6ae837d6333ddde29a01f7e7b8e5eee2af9b1b4043f41aee6307",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/6711948f10a3a4abca613f87095f7d11bd4ebbdb9a5616aa5dea476d31e6f6a5.json": "9f1a0c117060c78cb687a22d5ee373692c16cbef107316fd87af443327cd5706",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/6fd87469cfdcc607dd672d95d778f0453a028a7ae46241ea2d1e712a5c525d79.hsaco": "31331c25f20bb60ae4c14e551e37c4dc6b22443d907b347b7750d150bc3c32ff",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/6fd87469cfdcc607dd672d95d778f0453a028a7ae46241ea2d1e712a5c525d79.json": "11ca72fcbd67173cac8bf60d0b2e5f6b5d6c8f854af6b93c60afe1fe61f9fe3d",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/aea6099a9674c5b86a1e0ebcf2923221666545bb324495289ee11e37d6c09eb7.hsaco": "3cf3cb7175bdff3da162e1ea27d603f4ed0bbcc74bce332e5ae30d2db9bd2c0e",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/aea6099a9674c5b86a1e0ebcf2923221666545bb324495289ee11e37d6c09eb7.json": "89aca1fd711c7a9d734923a69c1886a9695d1fe6e938664d41d3880295326097",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/c66a1eff6fe95cddd1e8d8137f1a2f5a5a479ddac9420c6c9f15fed8dd5abeb9.hsaco": "cda1ee831258fcaeed02a1f9585e73a2afa524e60c0764d055c886817e57ce43",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/c66a1eff6fe95cddd1e8d8137f1a2f5a5a479ddac9420c6c9f15fed8dd5abeb9.json": "9176dd4b9817782469d0fac55ea7c31e009289936c2441561c050356329c9073",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/d21fc12408c4c834c1923685875336b2fdc812efd489696f8c1f4e11deea118f.hsaco": "1a50737e3d7367037a8eddffbb4b0c453c917361753817a41e82c512bf6cec06",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/d21fc12408c4c834c1923685875336b2fdc812efd489696f8c1f4e11deea118f.json": "36948d4c747e76bf1cbe01049b3ca95dbe25fe5ffb3336e355d7113d082870b2",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/db38a0f956bcdf2a22eaf04aad38cea6ee6c15cbde12dbcda0fb316c7fc7f640.hsaco": "793e3a179a5ed0982b56ba197747bdc1d6cb403c97b8db55c32ca7b7d920a7a3",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/db38a0f956bcdf2a22eaf04aad38cea6ee6c15cbde12dbcda0fb316c7fc7f640.json": "506ae0a8b1ac2cbd928c0c0503fc97a6d24b08439664e64ff8000a560605d5c1",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/e3cbbe0301653fee158e4de423e50ac78546658743f22f3e6c3bdaa149282968.hsaco": "f9226237c83f4f21861dc030b46f7c8d1674a55d94938871fcc958927658c664",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/compiled/e3cbbe0301653fee158e4de423e50ac78546658743f22f3e6c3bdaa149282968.json": "0787b0281bd51f51ba876f08ca77d8a6f4152c6a8e8498982a82ba6712ad7113",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1463/observer-report.json": "6397fd0c9cca107b74da12ba082899321df40f2bd5b8abaeace42996d1c8dc45",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1464/capture-records.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-1464/observer-report.json": "e61afc94c5ba8781ccd65da7e8d469b55b7e34a91ab7af36b93122b8b74a8be3",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-795/capture-records.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "result/tile-route-parallel67-20261009-b/model-graph-observer/pid-795/observer-report.json": "b33ae7c496d1b67b2db010457d45eefabc3c7bfc0ab920681da0bba816b69e47"
+  },
+  "review_artifact_sha256": {
+    "result/tile-route-parallel67-20261009-b/model-graph/graph-trace-analysis-v2.json": "6022c40c4eb1c4d08555b34ce8441454736b8081844d9917bd927cef62512449",
+    "result/tile-route-parallel67-v1-20261009-a-graph-retry3/model-graph/graph-trace-analysis.json": "7e592df9851d6b32b4c3dd14ee47e738de453bcb490dd37ab042df12980b6bdd",
+    "result/tile-route-parallel67-20261009-b/model-graph/capture-summary.json": "a89e813ae7364abdcbf26ecf625b24be70be960f3aff4873ba5db2a7a2f7c7a5",
+    "result/tile-route-parallel67-v1-20261009-a-graph-retry3/model-graph/capture-summary.json": "2a30a7d2bcb5a108cdacb257a723dc0e7b9f0730963f32848e6f4eca4edcb7f8",
+    "experiments/analyze_model_graph.py": "f08cf4a7aff29f5d56d7f786fe819474124b90f43b34d40fbc0f87bda03f0f0a",
+    "experiments/enable-model-graph-observer.json": "9c72d096eca20f45af435b404150bb712ec4073c8ed8f11cf80f663b8197c8f6"
+  },
+  "rank_reviews": [
+    {
+      "tp_rank": 0,
+      "physical_device": 6,
+      "actual_model_graph_launches": 75,
+      "matched_cpu_range_launches": 75,
+      "graph_correlated_matmul_kernels": 18960,
+      "m16_graph_replays": 66,
+      "actual_replayed_selected_shapes": [
+        [
+          16,
+          3072,
+          5120
+        ],
+        [
+          16,
+          5120,
+          7168
+        ],
+        [
+          16,
+          5120,
+          8192
+        ],
+        [
+          16,
+          5120,
+          17408
+        ]
+      ],
+      "compiler_config_and_binary_sha_verified": true,
+      "same_graph_capture_replay_association_verified": true,
+      "baseline_graph_launches": 75,
+      "baseline_graph_correlated_matmul": 18960
+    },
+    {
+      "tp_rank": 1,
+      "physical_device": 7,
+      "actual_model_graph_launches": 75,
+      "matched_cpu_range_launches": 75,
+      "graph_correlated_matmul_kernels": 18960,
+      "m16_graph_replays": 66,
+      "actual_replayed_selected_shapes": [
+        [
+          16,
+          3072,
+          5120
+        ],
+        [
+          16,
+          5120,
+          7168
+        ],
+        [
+          16,
+          5120,
+          8192
+        ],
+        [
+          16,
+          5120,
+          17408
+        ]
+      ],
+      "compiler_config_and_binary_sha_verified": true,
+      "same_graph_capture_replay_association_verified": true,
+      "baseline_graph_launches": 75,
+      "baseline_graph_correlated_matmul": 18960
+    }
+  ],
+  "observer_removed_before_formal_benchmark": true,
+  "selected_m16_configs": "Actual compiler constexpr/metadata and resolved grid matched all four selected M16 rows; preserved M16 K8704/N5120 compiled with stock BK256 in the same model Graph. Baseline stock reference is the unchanged v1 source and its real profile, not eager grid.",
+  "analysis_correction": "Initial report counted GPU user annotation copies as CPU ranges. Original report retained; v2 uses only user_annotation host ranges, which contain all 75 hipGraphLaunch events per rank.",
+  "scope": "Actual selected Decode configurations in model Graph replay. No performance claim from trace timings; core performance, independent same-pair reproduction and final quality gates remain separate."
+}

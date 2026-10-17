@@ -1,0 +1,18 @@
+{
+  "item": "BF16 copy-in native one-stage AR",
+  "tile_base_site_sha256": "8b8557ac4f43d78322f4988b8c2398c15087ed231bfd1c7a3384b19878147a19",
+  "files": {
+    "libtorch_c_dlpack_addon_torch210-rocm.so": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "build_unified.py": "9a0910d8c23705f3b17863f74f792120ee059a3af02a9b8e17e5c660e4892ccc",
+    "sitecustomize.py": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+    "triton_tiles.json": "4349ae5ebb6c6348323fecb75d35c756970e82b2e2d5d2a9197f1ae839a95758",
+    "k100_int8_gemv_unified.hip": "dd753458416463665a97c5aedc04cffaed7b992a58190a66c9188619d20c8ae2",
+    "native_bf16_ar_guard.py": "836ea4d43b1a4cd6bcc56c3998e09ff1e92d9ebdb5105b4937f6fe7a1f522d12",
+    "k100_int8_gemv_unified.so": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d",
+    "patch_dup_reg_guard.py": "038c207b72052c53ea1626b1408c91002aadf9dc99a543689456c4aed125deac"
+  },
+  "actual_model_graph_gate": "REVIEW_REQUIRED",
+  "formal_acceptance": false,
+  "physical_pair": "4,5",
+  "scope": "Same arithmetic; assertion-only physical-pair copy for new validation"
+}

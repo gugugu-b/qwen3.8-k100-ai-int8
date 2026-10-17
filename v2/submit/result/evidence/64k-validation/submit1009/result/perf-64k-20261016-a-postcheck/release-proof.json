@@ -1,0 +1,29 @@
+{
+  "status": "64K_COMPLETE_PAIR45_CONTAINER_STOPPED_LOCK_FREE",
+  "utc": "2026-10-16T03:37:25.783054+00:00",
+  "host_pid": 1633240,
+  "host_pid_exists": false,
+  "physical_pair": [
+    4,
+    5
+  ],
+  "tp": 2,
+  "container_running": false,
+  "pair45_lock": "FREE",
+  "gpu_probe": {
+    "card4": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "7"
+    },
+    "card5": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "7"
+    }
+  },
+  "accuracy": "NOT_RUN",
+  "other_pair": "6,7 remains exclusively held by existing ShareGPT matrix; untouched",
+  "default_patch_sha256": "f1789532d58daa66187ba901d3d7513ff142cb33fafc7793ce44f4e821464495",
+  "stock_dat_sha256": "c3e295b24494507ede49ee2b330a96ddc9fe1654c58e5fd9611b3adf8b227c55"
+}

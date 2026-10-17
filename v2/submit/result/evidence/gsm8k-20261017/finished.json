@@ -1,0 +1,55 @@
+{
+  "status": "GSM8K_COMPLETE",
+  "pid": 1259697,
+  "utc": "2026-10-16T21:30:09.276347+00:00",
+  "pair": "0,1",
+  "port": 31400,
+  "benchmark": "GSM8K",
+  "other_accuracy": "NOT_RUN",
+  "container": "qwen38-community-v2-01-gsm8k-20261017-e",
+  "summary": {
+    "status": "LOCAL_PROTOCOL_PASS",
+    "benchmark": "GSM8K",
+    "requests": 1319,
+    "completed": 1319,
+    "correct": 1288.0,
+    "accuracy": 0.976497346474602,
+    "community_threshold": 0.95,
+    "threshold_pass": true,
+    "minimum_correct": 1254,
+    "errors": 0,
+    "error_indices": [],
+    "text_flag_indices": [],
+    "truncated_indices": [],
+    "extraction_failed_indices": [],
+    "old_correct": 1291.0,
+    "old_accuracy": 0.9787717968157695,
+    "delta_percentage_points": -0.22744503411675512,
+    "regressed_indices": [
+      182,
+      590,
+      1192,
+      1059
+    ],
+    "fixed_indices": [
+      652
+    ],
+    "elapsed_s": 1445.1211432149867,
+    "official_precision_admission": "PENDING_EXACT_OFFICIAL_PROTOCOL",
+    "comparison": "Historical v1, identical frozen prompts and original scorer; not a contemporaneous A/B"
+  },
+  "gpu_after": {
+    "card0": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "9"
+    },
+    "card1": {
+      "HCU use (%)": "0.0",
+      "vram Total Memory (MiB)": "65520",
+      "vram Total Used Memory (MiB)": "9"
+    }
+  },
+  "finished_utc": "2026-10-16T21:30:40.914937+00:00",
+  "lock_released": true
+}

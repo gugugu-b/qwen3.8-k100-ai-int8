@@ -1,0 +1,19 @@
+{
+  "status": "REVIEW01_README_SMOKE_AND_RELEASE_PASS",
+  "run_id": "review01-20261017T073547Z-1208357",
+  "container_absent": true,
+  "lock_free": true,
+  "gpu_after": "\n================================= System Management Interface ==================================\n================================================================================================\nHCU[0]\t\t: HCU use (%): 0.0\nHCU[1]\t\t: HCU use (%): 0.0\n================================================================================================\n================================================================================================\nHCU[0]\t\t: vram Total Memory (MiB): 65520\nHCU[0]\t\t: vram Total Used Memory (MiB): 2\nHCU[1]\t\t: vram Total Memory (MiB): 65520\nHCU[1]\t\t: vram Total Used Memory (MiB): 2\n================================================================================================\n======================================== End of SMI Log ========================================\n\n",
+  "checked_utc": "2026-10-17T07:41:55.679335+00:00",
+  "driver": "6.3.30-V1.4.1a",
+  "native_guard_eligible_ranks": [
+    0,
+    1
+  ],
+  "service_limit": 32,
+  "graph_limit": 32,
+  "assets_status": "EXTERNAL_ASSET_IDENTITY_PASS",
+  "review_guard_sha256": "f9d5ec98c70724dcb80857228681a6c03c619606643cdd6918c9084af51cd7f4",
+  "source_image_id": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+  "benchmark_run": false
+}

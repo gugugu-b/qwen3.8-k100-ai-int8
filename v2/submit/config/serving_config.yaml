@@ -1,0 +1,37 @@
+# Reference declaration; scripts/serve.sh is the executable authority.
+# SGLang Serving Launch Configuration for Qwen3.8-27B-Channel-INT8-w8a8
+model_path: "/data/model/Qwen3.8-27B-Channel-INT8-w8a8"
+served_model_name: "Qwen3.8-27B-Channel-INT8-w8a8"
+host: "0.0.0.0"
+port: 31014
+nccl_port: 31015
+tp_size: 2
+pp_size: 1
+context_length: 67584
+
+# Attention & Memory
+attention_backend: "fa3"
+mm_attention_backend: "fa3"
+page_size: 64
+mem_fraction_static: 0.85
+mamba_scheduler_strategy: "no_buffer"
+disable_radix_cache: true
+disable_custom_all_reduce: false
+custom_all_reduce_backend: "native"
+
+# Concurrency & Chunking
+max_running_requests: 32
+cuda_graph_max_bs: 32
+max_prefill_tokens: 65536
+chunked_prefill_size: 8192
+
+# Parsers & Metrics
+tool_call_parser: "qwen3_coder"
+reasoning_parser: "qwen3"
+enable_metrics: true
+
+# Speculative Decoding (MTP)
+speculative_algorithm: "NEXTN"
+speculative_num_steps: 1
+speculative_num_draft_tokens: 2
+speculative_eagle_topk: 1

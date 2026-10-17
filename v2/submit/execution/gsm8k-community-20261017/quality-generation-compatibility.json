@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "source_wheel": "evalscope-1.6.1-py3-none-any.whl",
+  "sha256": "548c81877204bdcf7eb43a5440e6560f5453060e21c6c79cdcb473ad5d42c45d",
+  "max_tokens": "GenerateConfig default None; request adds max_tokens only if not None",
+  "temperature": 0.0,
+  "batch_size": 32,
+  "task_seed": "42 only for task sampling; fixed inputs replayed",
+  "model_quality_not_run": true,
+  "response_text": "ModelOutput.completion uses ChatMessage.text, which concatenates text parts only and excludes reasoning; replay uses message.content"
+}

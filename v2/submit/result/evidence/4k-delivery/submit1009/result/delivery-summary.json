@@ -1,0 +1,276 @@
+{
+  "status": "PERFORMANCE_DELIVERY_COMPLETE_NOT_FROZEN",
+  "utc": "2026-10-10T00:28:17.017837+00:00",
+  "package": "/data/wangzy/submit1009/delivery/20261010-4k1k/submit1009",
+  "performance": {
+    "status": "THREE_ROUND_4K1K_RAW_PERFORMANCE_REVIEW_PASS",
+    "run_id": "delivery-native-ar-4k1k-20261010-b",
+    "raw_files": 84,
+    "raw_manifest_sha256": "844051d73b6ea44cf9552ef6a06d3b6e9afebd1e221fb26f91db5f660c3d2270",
+    "workload": {
+      "input_len": 4096,
+      "output_len": 1024,
+      "concurrency": 8,
+      "seed": 20260912,
+      "physical_pair": "6,7",
+      "tp": 2,
+      "warmup_rounds": 2,
+      "warmup_requests_per_round": 8,
+      "measured_rounds_per_variant": 3,
+      "measured_requests_per_variant": 48
+    },
+    "measured_requests": 144,
+    "warmup_requests": 48,
+    "errors": 0,
+    "summaries": {
+      "v1": {
+        "status": "PASS",
+        "measured_rounds": 3,
+        "requests": 48,
+        "output_tps_rounds": [
+          204.13995005603343,
+          209.92460392892033,
+          211.81213538734266
+        ],
+        "mean_output_tps": 208.62556312409882,
+        "spread_percent": 3.6774905320425737,
+        "mean_wall_s": 78.55243289637535,
+        "ttft_s_p50_mean_of_rounds": 3.1087694898596965,
+        "ttft_s_p50_range": [
+          2.6915339620318264,
+          3.3231300375191495
+        ],
+        "ttft_s_p95_mean_of_rounds": 10.552450932736974,
+        "ttft_s_p95_range": [
+          10.543499080493348,
+          10.563617762207286
+        ],
+        "ttft_s_p99_mean_of_rounds": 10.562823107407894,
+        "ttft_s_p99_range": [
+          10.55383358495892,
+          10.57352367649437
+        ],
+        "tpot_ms_p50_mean_of_rounds": 33.041004979959915,
+        "tpot_ms_p50_range": [
+          32.501540601163384,
+          33.63164015447053
+        ],
+        "tpot_ms_p95_mean_of_rounds": 37.98122927228626,
+        "tpot_ms_p95_range": [
+          36.695314810294036,
+          38.666782392924496
+        ],
+        "tpot_ms_p99_mean_of_rounds": 39.27103325257423,
+        "tpot_ms_p99_range": [
+          37.104369013263906,
+          40.75372766177393
+        ]
+      },
+      "native-bf16-ar": {
+        "status": "PASS",
+        "measured_rounds": 3,
+        "requests": 48,
+        "output_tps_rounds": [
+          233.07519377930984,
+          239.81983396554736,
+          241.83187914377817
+        ],
+        "mean_output_tps": 238.2423022962118,
+        "spread_percent": 3.6755375850846796,
+        "mean_wall_s": 68.78746976567588,
+        "ttft_s_p50_mean_of_rounds": 2.99432914647817,
+        "ttft_s_p50_range": [
+          2.573583632009104,
+          3.2067025614669546
+        ],
+        "ttft_s_p95_mean_of_rounds": 10.171896598408543,
+        "ttft_s_p95_range": [
+          10.167388016241603,
+          10.177958982181735
+        ],
+        "ttft_s_p99_mean_of_rounds": 10.183242395417377,
+        "ttft_s_p99_range": [
+          10.178634894429706,
+          10.188545452454127
+        ],
+        "tpot_ms_p50_mean_of_rounds": 27.8550185193816,
+        "tpot_ms_p50_range": [
+          27.374896734660695,
+          28.470187146116032
+        ],
+        "tpot_ms_p95_mean_of_rounds": 33.77928691545186,
+        "tpot_ms_p95_range": [
+          32.40008851826097,
+          35.26876024786476
+        ],
+        "tpot_ms_p99_mean_of_rounds": 34.41321390004099,
+        "tpot_ms_p99_range": [
+          32.75617604499081,
+          35.9702380977317
+        ]
+      },
+      "v1-return": {
+        "status": "PASS",
+        "measured_rounds": 3,
+        "requests": 48,
+        "output_tps_rounds": [
+          203.95007130130216,
+          210.23385875658042,
+          211.78714648267004
+        ],
+        "mean_output_tps": 208.65702551351754,
+        "spread_percent": 3.755960367057071,
+        "mean_wall_s": 78.5421130709971,
+        "ttft_s_p50_mean_of_rounds": 3.1048822731827386,
+        "ttft_s_p50_range": [
+          2.6799773435341194,
+          3.321757180034183
+        ],
+        "ttft_s_p95_mean_of_rounds": 10.548406966670882,
+        "ttft_s_p95_range": [
+          10.54546470355126,
+          10.552317588502774
+        ],
+        "ttft_s_p99_mean_of_rounds": 10.557619714678731,
+        "ttft_s_p99_range": [
+          10.553736090369057,
+          10.562396298517706
+        ],
+        "tpot_ms_p50_mean_of_rounds": 32.82088494999076,
+        "tpot_ms_p50_range": [
+          32.2774431084666,
+          33.66318391988788
+        ],
+        "tpot_ms_p95_mean_of_rounds": 38.75805133123989,
+        "tpot_ms_p95_range": [
+          37.855279042012484,
+          40.39456077116448
+        ],
+        "tpot_ms_p99_mean_of_rounds": 40.23228560983229,
+        "tpot_ms_p99_range": [
+          39.772542420314274,
+          41.08335551133703
+        ]
+      }
+    },
+    "combined_v1_tps": 208.64129431880818,
+    "candidate_mean_tps": 238.2423022962118,
+    "gain_vs_combined_v1_percent": 14.187511668793928,
+    "paired_round_gains_percent": [
+      14.227342782891705,
+      14.156850457185044,
+      14.179551049374828
+    ],
+    "v1_return_drift_percent": 0.015080793047395069,
+    "observed_noise_percent": 3.755960367057071,
+    "gain_exceeds_observed_noise": true,
+    "noise_method": "Conservative observed variation reference: max of group ranges and baseline drift; round inputs differ and this is not a statistical noise bound",
+    "output_sha256_mismatch_requests_vs_baselines": {
+      "v1": 0,
+      "v1-return": 0
+    },
+    "output_comparison_scope": "Only the 48 deterministic synthetic prompts per variant; not a GSM8K or semantic accuracy gate",
+    "tail_regressions_vs_combined_v1_percent": {
+      "ttft_s_p95": -3.587838495476603,
+      "ttft_s_p99": -3.5698021940308022,
+      "tpot_ms_p95": -11.963503828052001,
+      "tpot_ms_p99": -13.429491013831319,
+      "e2e_s_p95": -11.500933845568328,
+      "e2e_s_p99": -11.462049278829733
+    },
+    "tail_regressions_vs_initial_v1_percent": {
+      "ttft_s_p95": -3.6063122847397877,
+      "ttft_s_p99": -3.5935536184858563,
+      "tpot_ms_p95": -11.063207898593275,
+      "tpot_ms_p99": -12.369981001747155,
+      "e2e_s_p95": -11.508246384302067,
+      "e2e_s_p99": -11.467603011145833
+    },
+    "tail_limit_percent": 5,
+    "measured_tail_gate_pass": true,
+    "required_gain_percent": 20,
+    "measured_4k_20pct_pass": false,
+    "actual_model_graph_gate": "REVIEW_REQUIRED",
+    "clean_room": "NOT_RUN",
+    "gsm8k": "NOT_RUN",
+    "formal_acceptance": false,
+    "frozen": false,
+    "other_scenes": "64K and ShareGPT C32 not rerun in timed delivery",
+    "protocol": "Three rounds per consecutive variant; v1 before and after bracket candidate. Same physical pair and workload."
+  },
+  "card_release": {
+    "utc": "2026-10-10T00:27:49.067481+00:00",
+    "status": "ALL_TASK_CONTAINERS_STOPPED_LOCKS_FREE",
+    "physical_devices": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "containers": {
+      "qwen38-submit1009-ab": {
+        "exists": true,
+        "running": false,
+        "pid": 0,
+        "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+        "finished_at": "2026-10-10T00:05:36.656417744Z",
+        "intentional_stop": true
+      },
+      "qwen38-submit1009-diag": {
+        "exists": true,
+        "running": false,
+        "pid": 0,
+        "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+        "finished_at": "2026-10-10T00:27:20.028099761Z",
+        "intentional_stop": true
+      },
+      "qwen38-submit1009-final": {
+        "exists": false
+      },
+      "Qwen3.8-27B-sglang0.5.12-tuning1": {
+        "exists": true,
+        "running": false,
+        "pid": 0,
+        "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+        "finished_at": "2026-10-05T14:37:10.909883Z",
+        "intentional_stop": true
+      }
+    },
+    "host_queue_pid": 3379907,
+    "host_queue_alive": false,
+    "gpu45_lock": "FREE",
+    "gpu67_lock": "FREE",
+    "gpu_memory_probe_returncode": 0,
+    "gpu_memory_probe_stdout": "{\"card4\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card5\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card6\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card7\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}}\n",
+    "gpu_memory_probe_stderr": "",
+    "reason": "Human timed delivery and release request; no final serving endpoint remains active"
+  },
+  "candidate_patch_sha256": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+  "baseline_patch_sha256": "f1789532d58daa66187ba901d3d7513ff142cb33fafc7793ce44f4e821464495",
+  "task_default_patch_unchanged": true,
+  "active_service": null,
+  "repro_service_url": "http://192.2.111.66:31014",
+  "acceptance": "Not FROZEN_PASS: full 4K/64K/C32 >=20% + actual-model Graph + clean-room + GSM8K gates not achieved",
+  "storage": "Complete deploy library and tar stay on server; local only small source/log/JSONL/report/SHA",
+  "package_startup_smoke": {
+    "utc_start": "2026-10-10T00:34:50.428654+00:00",
+    "scope": "FRESH_IMAGE_PACKAGED_STARTUP_SMOKE_ONLY",
+    "performance_measured": false,
+    "clean_room_performance_gate": "NOT_RUN",
+    "gsm8k": "NOT_RUN",
+    "start_returncode": 0,
+    "status": "FRESH_IMAGE_PACKAGED_STARTUP_SMOKE_PASS",
+    "stop_returncode": 0,
+    "task_container_status": "qwen38-submit1009-diag Exited (137) 11 minutes ago\nqwen38-submit1009-ab Exited (137) 33 minutes ago\n",
+    "utc_end": "2026-10-10T00:38:40.172613+00:00",
+    "gpu45_lock": "FREE",
+    "gpu67_lock": "FREE",
+    "gpu_probe": {
+      "returncode": 0,
+      "stdout": "{\"card4\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card5\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card6\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}, \"card7\": {\"HCU use (%)\": \"0.0\", \"vram Total Memory (MiB)\": \"65520\", \"vram Total Used Memory (MiB)\": \"4\"}}\n",
+      "stderr": ""
+    }
+  },
+  "packaged_runtime_cache_sha256": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+  "startup_failure_a_preserved": true
+}

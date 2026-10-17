@@ -1,0 +1,45 @@
+{
+  "requests": 1319,
+  "completion_tokens_total": 689311,
+  "max_completion_tokens": 25974,
+  "max_latency_s": 1266.9217718150467,
+  "mean_latency_s": 29.70338312236852,
+  "slowest": [
+    {
+      "index": 119,
+      "latency_s": 1266.9217718150467,
+      "completion_tokens": 25974,
+      "finish_reason": "stop",
+      "correct": 1.0
+    },
+    {
+      "index": 288,
+      "latency_s": 579.0879205499659,
+      "completion_tokens": 9803,
+      "finish_reason": "stop",
+      "correct": 1.0
+    },
+    {
+      "index": 1059,
+      "latency_s": 490.2697103230166,
+      "completion_tokens": 16135,
+      "finish_reason": "stop",
+      "correct": 0.0
+    },
+    {
+      "index": 590,
+      "latency_s": 467.79966956499266,
+      "completion_tokens": 7875,
+      "finish_reason": "stop",
+      "correct": 0.0
+    },
+    {
+      "index": 951,
+      "latency_s": 402.32210776401917,
+      "completion_tokens": 7945,
+      "finish_reason": "stop",
+      "correct": 1.0
+    }
+  ],
+  "scope": "GSM8K variable natural output; not the fixed-length formal performance benchmark"
+}

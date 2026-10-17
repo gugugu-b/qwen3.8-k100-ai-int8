@@ -1,0 +1,11 @@
+--- vendor:start_m-anchor
++++ runtime:start_m-anchor
+@@ -1 +1 @@
+-            start_m = MAX_SEQLENS_Q // BLOCK_M -1 - tl.program_id(0)
++            start_m = (MAX_SEQLENS_Q + BLOCK_M - 1) // BLOCK_M - 1 - tl.program_id(0)
+--- vendor:guard-anchor
++++ runtime:guard-anchor
+@@ -1,2 +1,2 @@
+             if start_m * BLOCK_M > seqlen_q:
+-                return
++                start_m = 0

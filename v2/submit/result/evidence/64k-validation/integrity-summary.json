@@ -1,0 +1,17 @@
+{
+  "status": "REMOTE_LOCAL_INDEPENDENT_REVIEW_BYTE_IDENTICAL",
+  "review_sha256": "d2478cf98f56373cbff16db5a7a0000d73ae12a13dcf86ef46717c541f329d9f",
+  "comparison_sha256": "c5f96c07050a58da328b1cbd1d83ce827b2ab0b3719434097ef5e2da8e3d0ccb",
+  "raw_manifest_sha256": "f8fe629a7e8b384a0b7471b739c90aa4ef7c26e4a5a8a315ea7b4e325dbdb736",
+  "archive_files": 134,
+  "gain_percent": 3.55971504803243,
+  "mean_tail_5pct_pass": true,
+  "paired_round_tail_5pct_pass": true,
+  "twenty_pct_pass": false,
+  "formal_acceptance": false,
+  "frozen": false,
+  "quality": "NOT_RUN",
+  "overlap": "ShareGPT 6,7 overlapped this 4,5 validation. Same-pair denominator only; isolated final acceptance not claimed",
+  "reviewer_a_failure_preserved": true,
+  "gpu_data_unchanged": true
+}

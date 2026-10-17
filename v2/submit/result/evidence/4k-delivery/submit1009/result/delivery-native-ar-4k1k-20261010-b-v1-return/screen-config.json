@@ -1,0 +1,16 @@
+{
+  "kind": "v1-return",
+  "physical_pair": "6,7",
+  "tp": 2,
+  "input_len": 4096,
+  "output_len": 1024,
+  "concurrency": 8,
+  "seed": 20260912,
+  "warmup_rounds": 2,
+  "measure_rounds": 3,
+  "requests_per_round": 16,
+  "site_sha256": "f1789532d58daa66187ba901d3d7513ff142cb33fafc7793ce44f4e821464495",
+  "profiler_used": false,
+  "performance_acceptance": false,
+  "policy": "each 4K/64K/C32 >=20%; matched >=3 rounds required"
+}

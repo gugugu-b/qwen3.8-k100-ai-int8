@@ -1,0 +1,11 @@
+{
+  "status": "ALL_1319_STANDARD_TEST_QUESTIONS_AND_TARGETS_MATCH",
+  "url": "https://sail-moe.oss-cn-hangzhou.aliyuncs.com/open_data/gsm8k/test.jsonl",
+  "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+  "bytes": 749738,
+  "count": 1319,
+  "bad_prompt_indices": [],
+  "bad_target_indices": [],
+  "source": "Server /data/model/gsm8k/gsm8k.py and dataset_infos.json expected download SHA; downloaded via client system TLS curl after server DNS and client Python TLS failures",
+  "official_final_protocol": "NOT_VERIFIED"
+}

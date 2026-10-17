@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-16T20:34:21.745003+00:00",
+  "status": "ASSETS_READY_NO_GPU_WORK_YET",
+  "source_sha256": {
+    "probe_template.py": "07c8241e2543460594b7eeba892aa06ed3d453cd06be0cb5ae0fef2b7ec58b86",
+    "controller.py": "fb73df944c616be69f483d1da7694fcc43d2a243f22d02663db161eb1dfa8bbd",
+    "review_performance.py": "a52bd6b2ea00346aac61bba2570693cf4f654117ef9aba67610d2e3425b841b3",
+    "official-profile.json": "01603feffd4e07debbadcdce8459de54b91e83092b7ee46b23ac509c8363f30e",
+    "after_matrix.py": "f319ab089d6452160ffb9cfd7eacd9f76f7d4513bc82d9561b067c182a2f973d",
+    "execution-plan.json": "a5da7aac0e6361df093efc3d66753dc7781fe9159a25d02129ecbc23e0e4c1c3"
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "status": "PASS",
+  "production_cases": [
+    {
+      "backend": "lightop-native",
+      "M": 32,
+      "K": 5120,
+      "N": 7168,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 32,
+      "K": 5120,
+      "N": 8192,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 32,
+      "K": 8704,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 64,
+      "K": 3072,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 64,
+      "K": 5120,
+      "N": 7168,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 64,
+      "K": 5120,
+      "N": 8192,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 64,
+      "K": 5120,
+      "N": 17408,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 64,
+      "K": 8704,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 4096,
+      "K": 3072,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 4096,
+      "K": 5120,
+      "N": 7168,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 4096,
+      "K": 5120,
+      "N": 17408,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 4096,
+      "K": 8704,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 8192,
+      "K": 3072,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 8192,
+      "K": 5120,
+      "N": 17408,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 16,
+      "K": 3072,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 16,
+      "K": 5120,
+      "N": 7168,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 16,
+      "K": 5120,
+      "N": 8192,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lightop-native",
+      "M": 16,
+      "K": 5120,
+      "N": 17408,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 32,
+      "K": 5120,
+      "N": 7168,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 32,
+      "K": 5120,
+      "N": 8192,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 32,
+      "K": 8704,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 64,
+      "K": 3072,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 64,
+      "K": 5120,
+      "N": 7168,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 64,
+      "K": 5120,
+      "N": 8192,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 64,
+      "K": 5120,
+      "N": 17408,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 64,
+      "K": 8704,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 4096,
+      "K": 3072,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 4096,
+      "K": 5120,
+      "N": 7168,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 4096,
+      "K": 5120,
+      "N": 17408,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 4096,
+      "K": 8704,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 8192,
+      "K": 3072,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 8192,
+      "K": 5120,
+      "N": 17408,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 16,
+      "K": 3072,
+      "N": 5120,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 16,
+      "K": 5120,
+      "N": 7168,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 16,
+      "K": 5120,
+      "N": 8192,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    },
+    {
+      "backend": "lmslim",
+      "M": 16,
+      "K": 5120,
+      "N": 17408,
+      "wrapper_equal": true,
+      "graph_equal": true,
+      "config_reached": true
+    }
+  ],
+  "case_count": 36,
+  "actual_backend": "lightop-native",
+  "noncontiguous_devices": [
+    0,
+    1
+  ],
+  "per_rank_current_device": true,
+  "supplied_stock_config_cases": 8,
+  "note": "Both distinct module identities validated. Actual model activation is an additional service gate."
+}

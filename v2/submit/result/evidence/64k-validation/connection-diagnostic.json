@@ -1,0 +1,12 @@
+{
+  "status": "INTERMITTENT_AUTH_RETRY_RECOVERED",
+  "journal_minutes": 10,
+  "failed_password_lines": 2,
+  "accepted_password_lines": 18,
+  "maxstartups_lines": 0,
+  "pam_lines": 0,
+  "cause": "UNPROVEN",
+  "credentials_changed": false,
+  "queue_restart": false,
+  "secrets_printed": false
+}

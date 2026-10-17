@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "documents": {
+    "README.md": {
+      "bash_blocks": 16,
+      "sha256": "e8fdfc9adfc0b564a1dc599a04b245ce223159d5efcfa198bc67130fcfd597c3"
+    },
+    "docs/性能优化报告.md": {
+      "bash_blocks": 2,
+      "sha256": "8a19c2f8fa367c7a132ee4cae641de1e31eda5fb506184acf3919f38d420577e"
+    },
+    "docs/服务端64与128并发复测-20261017.md": {
+      "bash_blocks": 0,
+      "sha256": "8bcbd8ff6fdcd6103217f4f2d620d00f38b3b07f6568861c79d7c8d2680cae53"
+    },
+    "logs/v2_benchmark_raw/server64-128-20261017/README.md": {
+      "bash_blocks": 0,
+      "sha256": "6c8385e72f3849f294c437d69a06e35d3e0565e2f32c6254f08c161e3a9292b0"
+    },
+    "execution/server64-128-20261017/README.md": {
+      "bash_blocks": 1,
+      "sha256": "9b19ab2315a027b9e5c8f48f5d1296983211da9aababe73cea69947661ee451c"
+    }
+  },
+  "new_gpu_tests_from_this_audit": false,
+  "original_site_sha256": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+  "original_guard_sha256": "55485f3994417b012fd76f3cf423b03b33fd90d52e2c73d98d0fc9315ab0b5aa"
+}

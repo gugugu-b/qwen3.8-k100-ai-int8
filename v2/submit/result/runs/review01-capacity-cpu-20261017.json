@@ -1,0 +1,1833 @@
+{
+  "reviewed_utc": "2026-10-17T07:36:22.316313+00:00",
+  "run_id": "high-concurrency-20261017-a",
+  "collection_root": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server",
+  "control": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a",
+  "source_base": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2",
+  "gpu_used": false,
+  "ssh_used": false,
+  "original_files_modified": false,
+  "workers": [
+    {
+      "pair": "4,5",
+      "requested_client_concurrency": 64,
+      "requested_server_max_running_requests": 64,
+      "requested_cuda_graph_max_bs": 64,
+      "review_status": "COMPLETE_PERFORMANCE_RECHECKED",
+      "issues": [],
+      "worker_status": "BENCHMARK_COMPLETE",
+      "worker_state_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/p45/state.json",
+      "worker_state_sha256": "9bf3cc659fb59a8782319adc7d1a56e3291681da594ff375f53a70a1e448ae4b",
+      "error": null,
+      "traceback": null,
+      "outcome_before_cleanup": "BENCHMARK_COMPLETE",
+      "cleanup_status": "OWNED_CONTAINER_STOPPED_OR_NOT_CREATED",
+      "cleanup_error": null,
+      "lock_acquired_reported": true,
+      "lock_released_reported": true,
+      "gpu_after": {
+        "card4": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "5"
+        },
+        "card5": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "5"
+        }
+      },
+      "gpu_after_snapshot_idle": true,
+      "api_capacity": {
+        "status": "ACTUAL_API_CAPACITY_VERIFIED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/runtime-p45/server-info.json",
+        "sha256": "7cde9ef30d06f7a5b168ed3ff8f1aaceab0ea2fa193122e3d0e61b6e58a030c8",
+        "actual": {
+          "tp_size": 2,
+          "pp_size": 1,
+          "max_running_requests": 64,
+          "cuda_graph_max_bs": 64,
+          "disable_cuda_graph": false,
+          "disable_custom_all_reduce": false,
+          "custom_all_reduce_backend": "native",
+          "context_length": 67584,
+          "page_size": 64,
+          "mem_fraction_static": 0.85,
+          "max_prefill_tokens": 65536,
+          "chunked_prefill_size": 8192,
+          "disable_radix_cache": true,
+          "mamba_scheduler_strategy": "no_buffer",
+          "attention_backend": "fa3",
+          "mm_attention_backend": "fa3",
+          "speculative_num_steps": 1,
+          "speculative_eagle_topk": 1,
+          "speculative_num_draft_tokens": 2
+        },
+        "cuda_graph_bs": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          40,
+          44,
+          48,
+          52,
+          56,
+          60,
+          64
+        ],
+        "does_not_prove_actual_running_request_peak": true
+      },
+      "runtime_gate": {
+        "status": "RUNTIME_PAIR_NUMERICAL_GRAPH_PASS",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/runtime-p45/gate/review.json",
+        "sha256": "89f9d6e218a29cee72429d113a48e1d35dacdcb646fbd08f1cdf05c38ea3aaa0",
+        "checks": 162,
+        "exclusions": 20,
+        "actual_model_graph_gate": "REVIEW_REQUIRED"
+      },
+      "container_initial": {
+        "status": "OWNED_IDENTITY_VERIFIED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/runtime-p45/container-inspect.json",
+        "sha256": "18b1e61e1b9d582d2a5d1e0f5ecbd45f1f3db1f97ecc4fcad06860c3e49010de",
+        "container_id": "50504d5c9063fbdc650d4da8820f543765b795e49468b995b16601d59a901985",
+        "running": true,
+        "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+        "run_label": "high-concurrency-20261017-a",
+        "physical_pair": "4,5"
+      },
+      "container_stopped": {
+        "status": "OWNED_IDENTITY_VERIFIED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/p45/container-stopped.json",
+        "sha256": "a2b65e9c185398f6b6b9e488d279f5c17f3a8ec6560b488870b0738a72dea1ef",
+        "container_id": "50504d5c9063fbdc650d4da8820f543765b795e49468b995b16601d59a901985",
+        "running": false,
+        "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+        "run_label": "high-concurrency-20261017-a",
+        "physical_pair": "4,5"
+      },
+      "metrics": {
+        "status": "RAW_SAMPLES_PARSED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/runtime-p45/running-metrics.jsonl",
+        "raw_samples": 269,
+        "http_success_samples": 269,
+        "error_samples": 0,
+        "parse_errors": 0,
+        "nonfinite_candidate_values": 0,
+        "errors": [],
+        "series": [
+          {
+            "metric_name": "sglang:num_decode_prealloc_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:num_decode_prealloc_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_decode_transfer_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:num_decode_transfer_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_grammar_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:num_grammar_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_prefill_bootstrap_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:num_prefill_bootstrap_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_prefill_inflight_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:num_prefill_inflight_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 61.0,
+            "observations": 269,
+            "peak_sample": 139,
+            "peak_utc": "2026-10-17T03:52:05.365007+00:00",
+            "original_peak_line": "sglang:num_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 61.0"
+          },
+          {
+            "metric_name": "sglang:num_running_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 64.0,
+            "observations": 269,
+            "peak_sample": 21,
+            "peak_utc": "2026-10-17T03:42:15.349966+00:00",
+            "original_peak_line": "sglang:num_running_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 64.0"
+          },
+          {
+            "metric_name": "sglang:pending_prealloc_token_usage",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:pending_prealloc_token_usage{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"0\",le=\"1\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"0\",le=\"1\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"1\",le=\"2\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"1\",le=\"2\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"10\",le=\"20\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"10\",le=\"20\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"100\",le=\"200\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"100\",le=\"200\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"2\",le=\"3\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"2\",le=\"3\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"20\",le=\"50\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"20\",le=\"50\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"200\",le=\"+Inf\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"200\",le=\"+Inf\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"3\",le=\"5\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"3\",le=\"5\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"5\",le=\"7\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"5\",le=\"7\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"50\",le=\"100\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"50\",le=\"100\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"7\",le=\"10\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 269,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:35.347378+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"7\",le=\"10\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          }
+        ],
+        "scope": "BENCHMARK_INCLUDING_WARMUP; NO_ABSOLUTE_FORMAL_WINDOW_FILTER",
+        "global_running_request_peak": null,
+        "aggregation": "MAX_OVER_SAMPLES_PER_EXACT_NAME_AND_LABELS; NEVER_SUM",
+        "requested_client_concurrency": 64,
+        "bytes": 23980851,
+        "sha256": "792986b9e9e65c096fc4bd5b73bdac820f0bad0a8e8325f35397d71c9fb8bc28",
+        "candidate_metrics_without_gauge_declaration": [
+          {
+            "metric_name": "sglang:queue_time_seconds_bucket",
+            "declared_type": "NOT_DECLARED"
+          },
+          {
+            "metric_name": "sglang:queue_time_seconds_count",
+            "declared_type": "NOT_DECLARED"
+          },
+          {
+            "metric_name": "sglang:queue_time_seconds_sum",
+            "declared_type": "NOT_DECLARED"
+          }
+        ],
+        "individual_running_series_reaching_requested_C": [
+          {
+            "metric_name": "sglang:num_running_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "peak_value": 64.0
+          }
+        ],
+        "configured_C_is_not_proof_of_actual_running_C": true
+      },
+      "previous_server32": {
+        "status": "HISTORICAL_SIDE_BY_SIDE_ONLY",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/result/runs/community-official-20261017-c-p45-matrix-4k-c64/4k-c64/reference_performance_review.json",
+        "sha256": "6586e71803c18fd5c8a2a72a36aa4770c80530996db865e5e48770607e043013",
+        "physical_pair": "4,5",
+        "client_concurrency": 64,
+        "server_max_running_requests": 32,
+        "cuda_graph_max_bs": 32,
+        "output_tps_rounds": [
+          378.3248892294217,
+          379.39767086286065,
+          380.51584518634337
+        ],
+        "mean_output_tps": 379.4128017595419,
+        "ttft_mean_s": 77.01322185878628,
+        "tpot_mean_ms": 75.51635726938345,
+        "text_integrity_status": "FLAGGED_UNRESOLVED",
+        "comparison": "Different server/Graph limits, date and host activity; C128 also changes pair. No contemporaneous single-variable causal comparison or improvement percentage."
+      },
+      "native_guard_eligible_ranks": [
+        0,
+        1
+      ],
+      "capacity_failure_evidence": {
+        "oom_marker_observed": false,
+        "log_markers": [],
+        "interpretation": "Observed log text; no automatic downgrade or unproven root-cause inference"
+      },
+      "scenes": [
+        {
+          "directory": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64",
+          "status": "PERFORMANCE_RAW_REVIEW_REPRODUCED",
+          "three_round_mean": {
+            "output_tps": 398.9657228595904,
+            "ttft_s_mean": 25.618354300241815,
+            "ttft_s_p95": 77.27599134893585,
+            "ttft_s_p99": 82.16694474427864,
+            "tpot_ms_mean": 133.05002895041198,
+            "tpot_ms_p95": 200.59999438763754,
+            "tpot_ms_p99": 219.52646996118756,
+            "e2e_s_mean": 161.72853391651324,
+            "e2e_s_p95": 238.73529317605136,
+            "e2e_s_p99": 249.80135241903753
+          },
+          "available_formal_round_files": [
+            "round-01/summary.json",
+            "round-02/summary.json",
+            "round-03/summary.json"
+          ],
+          "formal_rounds": 3,
+          "formal_requests": 384,
+          "output_tps_rounds": [
+            397.53899170401667,
+            400.03573100401576,
+            399.3224458707389
+          ],
+          "original_performance_status": "PASS",
+          "original_text_integrity_status": "FLAGGED_UNRESOLVED",
+          "flags_formal": [
+            {
+              "phase": "measure",
+              "round": 1,
+              "index": 59,
+              "replacement_chars": 1
+            },
+            {
+              "phase": "measure",
+              "round": 1,
+              "index": 114,
+              "replacement_chars": 1
+            },
+            {
+              "phase": "measure",
+              "round": 2,
+              "index": 72,
+              "replacement_chars": 1
+            }
+          ],
+          "flags_warmup": [],
+          "round_metrics": [
+            {
+              "round": 1,
+              "output_tps": 397.53899170401667,
+              "ttft_s": {
+                "count": 128,
+                "max": 82.29300299001625,
+                "mean": 26.028998175586366,
+                "min": 1.565715994045604,
+                "p50": 15.665409520006506,
+                "p90": 69.37974383179099,
+                "p95": 77.09242844478868,
+                "p99": 82.27787451301701
+              },
+              "tpot_ms": {
+                "count": 128,
+                "max": 231.8204278289659,
+                "mean": 132.93714290060618,
+                "min": 69.65301681817705,
+                "p50": 131.79235714125855,
+                "p90": 180.9637119747707,
+                "p95": 197.3781390401053,
+                "p99": 214.40498942625825
+              },
+              "e2e_s": {
+                "count": 128,
+                "max": 255.5366852870211,
+                "mean": 162.02369536290644,
+                "min": 72.82908924599178,
+                "p50": 160.08533788548084,
+                "p90": 230.22837620470673,
+                "p95": 238.89098706870863,
+                "p99": 249.2451585825038
+              }
+            },
+            {
+              "round": 2,
+              "output_tps": 400.03573100401576,
+              "ttft_s": {
+                "count": 128,
+                "max": 82.04832518904004,
+                "mean": 25.227652191397283,
+                "min": 1.5432875519618392,
+                "p50": 11.758286969503388,
+                "p90": 68.68596589617663,
+                "p95": 77.27405111412519,
+                "p99": 82.01383588267316
+              },
+              "tpot_ms": {
+                "count": 128,
+                "max": 219.87364973998305,
+                "mean": 133.14634341123144,
+                "min": 68.66222226980642,
+                "p50": 131.1195986602878,
+                "p90": 184.0059394284401,
+                "p95": 202.4327206937631,
+                "p99": 219.36345464613402
+              },
+              "e2e_s": {
+                "count": 128,
+                "max": 254.0871911739814,
+                "mean": 161.43636150108705,
+                "min": 73.0949256879976,
+                "p50": 160.7911975980096,
+                "p90": 228.7496834347083,
+                "p95": 236.95669193450598,
+                "p99": 252.96243775886137
+              }
+            },
+            {
+              "round": 3,
+              "output_tps": 399.3224458707389,
+              "ttft_s": {
+                "count": 128,
+                "max": 82.24330212804489,
+                "mean": 25.598412533741794,
+                "min": 1.5384827119996771,
+                "p50": 14.168530158494832,
+                "p90": 68.86823719890089,
+                "p95": 77.46149448789366,
+                "p99": 82.20912383714574
+              },
+              "tpot_ms": {
+                "count": 128,
+                "max": 236.43167213294865,
+                "mean": 133.06660053939834,
+                "min": 72.83855505672967,
+                "p50": 131.15276524339956,
+                "p90": 187.6210516644141,
+                "p95": 201.98912342904418,
+                "p99": 224.81096581117043
+              },
+              "e2e_s": {
+                "count": 128,
+                "max": 252.085738794005,
+                "mean": 161.72554488554624,
+                "min": 76.0860547790071,
+                "p50": 160.01139122148743,
+                "p90": 229.04155088569385,
+                "p95": 240.35820052493946,
+                "p99": 247.19646091574745
+              }
+            }
+          ],
+          "original_review_sha256": "a27964b08685cd1ea93cc50433e1d85e93ff3a14a0bd73f1adb4b764c475714f",
+          "auditor_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/scripts/review_performance.py",
+          "auditor_sha256": "a52bd6b2ea00346aac61bba2570693cf4f654117ef9aba67610d2e3425b841b3",
+          "config": {
+            "base_url": "http://127.0.0.1:31540",
+            "concurrency": 64,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64",
+            "output_len": 1024,
+            "requests_per_round": 128,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "source_files_sha256": {
+            "warmup-01/requests.jsonl": "834d84aeab5f3e21cf7398c1e3b311e02f4b24bfb37b73012ca3607148eec894",
+            "warmup-01/summary.json": "5e3a56b7da13a0d4b47e5afa047a4fb9191f97189c52af04ebeff624e11eee40",
+            "warmup-02/requests.jsonl": "05f86bb14c1cd2b62b9c0819848351a41b92da9fec111c080e04d1a8c2d16c02",
+            "warmup-02/summary.json": "46f46c211c94e0433dd35044e0c45b1d7c5895f5ac5943ddba86592536bc63c5",
+            "round-01/requests.jsonl": "1d17e8c82470184553c45c3e1e2e075fe92807cdc94b3f817682aa1581fe0d08",
+            "round-01/summary.json": "abc20801b3239e130f6d1e49bb4fb5081ec8a096cf631c6fa71e01fc1e10578d",
+            "round-02/requests.jsonl": "f4637c7bf21c6267671cc78d90987bb73c007d479b6ae9ee1a75ba19e05e9197",
+            "round-02/summary.json": "333510bb8f08a355709482fe83c98be2af0800ae5305bc6b4a27121fd14bd09f",
+            "round-03/requests.jsonl": "d6c5a2aa864c3a47abb325c015a02d790b065c197ce6c2f420ad8e7b808f46f5",
+            "round-03/summary.json": "0ed9bf572639552c545a1065d5a3c148c60f96bf9e17ca61ec9c8333c5868273"
+          },
+          "quantiles": "Mean of three per-round quantiles; not pooled quantiles",
+          "accuracy": "NOT_EVALUATED_BY_PERFORMANCE_AUDIT"
+        }
+      ],
+      "formal_window_evidence": {
+        "status": "ALL_THREE_FORMAL_WINDOWS_RECORDED",
+        "observer": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/progress-observer.jsonl",
+        "windows": [
+          {
+            "round": 1,
+            "started_at_epoch": 1792208789.6861532,
+            "wall_time_s": 329.7085386220133,
+            "ended_at_epoch": 1792209119.3946917,
+            "safe_start_epoch": 1792208794.6861532,
+            "safe_end_epoch": 1792209114.3946917,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-01/summary.json",
+            "summary_sha256": "abc20801b3239e130f6d1e49bb4fb5081ec8a096cf631c6fa71e01fc1e10578d"
+          },
+          {
+            "round": 2,
+            "started_at_epoch": 1792209119.8020635,
+            "wall_time_s": 327.65073177596787,
+            "ended_at_epoch": 1792209447.4527953,
+            "safe_start_epoch": 1792209124.8020635,
+            "safe_end_epoch": 1792209442.4527953,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-02/summary.json",
+            "summary_sha256": "333510bb8f08a355709482fe83c98be2af0800ae5305bc6b4a27121fd14bd09f"
+          },
+          {
+            "round": 3,
+            "started_at_epoch": 1792209447.8749018,
+            "wall_time_s": 328.23599413299235,
+            "ended_at_epoch": 1792209776.1108959,
+            "safe_start_epoch": 1792209452.8749018,
+            "safe_end_epoch": 1792209771.1108959,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-03/summary.json",
+            "summary_sha256": "0ed9bf572639552c545a1065d5a3c148c60f96bf9e17ca61ec9c8333c5868273"
+          }
+        ],
+        "inward_margin_s": 5,
+        "required_rounds": [
+          1,
+          2,
+          3
+        ],
+        "clock_basis": "Benchmark started_at epoch and sampler UTC on the same server",
+        "sample_timestamp": "UTC recorded before HTTP GET; 4s configured timeout",
+        "observer_sha256": "0d73935c9e67a1ce5762a280a2ef051bfec7c809c449f5a69bb46bced8d13805",
+        "observed_rounds": [
+          1,
+          2,
+          3
+        ],
+        "formal_progress_snapshots": 165,
+        "parse_errors": 0
+      },
+      "formal_window_metrics": {
+        "status": "RAW_SAMPLES_PARSED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/runtime-p45/running-metrics.jsonl",
+        "raw_samples": 269,
+        "http_success_samples": 192,
+        "error_samples": 0,
+        "parse_errors": 0,
+        "nonfinite_candidate_values": 0,
+        "errors": [],
+        "series": [
+          {
+            "metric_name": "sglang:num_decode_prealloc_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:num_decode_prealloc_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_decode_transfer_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:num_decode_transfer_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_grammar_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:num_grammar_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_prefill_bootstrap_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:num_prefill_bootstrap_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_prefill_inflight_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:num_prefill_inflight_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 61.0,
+            "observations": 192,
+            "peak_sample": 139,
+            "peak_utc": "2026-10-17T03:52:05.365007+00:00",
+            "original_peak_line": "sglang:num_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 61.0"
+          },
+          {
+            "metric_name": "sglang:num_running_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 64.0,
+            "observations": 192,
+            "peak_sample": 90,
+            "peak_utc": "2026-10-17T03:48:00.358905+00:00",
+            "original_peak_line": "sglang:num_running_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 64.0"
+          },
+          {
+            "metric_name": "sglang:pending_prealloc_token_usage",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:pending_prealloc_token_usage{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"0\",le=\"1\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"0\",le=\"1\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"1\",le=\"2\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"1\",le=\"2\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"10\",le=\"20\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"10\",le=\"20\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"100\",le=\"200\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"100\",le=\"200\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"2\",le=\"3\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"2\",le=\"3\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"20\",le=\"50\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"20\",le=\"50\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"200\",le=\"+Inf\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"200\",le=\"+Inf\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"3\",le=\"5\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"3\",le=\"5\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"5\",le=\"7\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"5\",le=\"7\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"50\",le=\"100\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"50\",le=\"100\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"7\",le=\"10\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 192,
+            "peak_sample": 73,
+            "peak_utc": "2026-10-17T03:46:35.356442+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"7\",le=\"10\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          }
+        ],
+        "scope": "FORMAL_ROUND_WINDOW_INTERIORS; PRE_GET_UTC; FIVE_SECOND_INWARD_MARGIN",
+        "global_running_request_peak": null,
+        "aggregation": "MAX_OVER_SAMPLES_PER_EXACT_NAME_AND_LABELS; NEVER_SUM",
+        "requested_client_concurrency": 64,
+        "selection_windows": [
+          {
+            "round": 1,
+            "started_at_epoch": 1792208789.6861532,
+            "wall_time_s": 329.7085386220133,
+            "ended_at_epoch": 1792209119.3946917,
+            "safe_start_epoch": 1792208794.6861532,
+            "safe_end_epoch": 1792209114.3946917,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-01/summary.json",
+            "summary_sha256": "abc20801b3239e130f6d1e49bb4fb5081ec8a096cf631c6fa71e01fc1e10578d"
+          },
+          {
+            "round": 2,
+            "started_at_epoch": 1792209119.8020635,
+            "wall_time_s": 327.65073177596787,
+            "ended_at_epoch": 1792209447.4527953,
+            "safe_start_epoch": 1792209124.8020635,
+            "safe_end_epoch": 1792209442.4527953,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-02/summary.json",
+            "summary_sha256": "333510bb8f08a355709482fe83c98be2af0800ae5305bc6b4a27121fd14bd09f"
+          },
+          {
+            "round": 3,
+            "started_at_epoch": 1792209447.8749018,
+            "wall_time_s": 328.23599413299235,
+            "ended_at_epoch": 1792209776.1108959,
+            "safe_start_epoch": 1792209452.8749018,
+            "safe_end_epoch": 1792209771.1108959,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p45-server64-4k-c64/4k-c64/round-03/summary.json",
+            "summary_sha256": "0ed9bf572639552c545a1065d5a3c148c60f96bf9e17ca61ec9c8333c5868273"
+          }
+        ],
+        "outside_window_samples": 77,
+        "samples_without_usable_utc": 0,
+        "bytes": 23980851,
+        "sha256": "792986b9e9e65c096fc4bd5b73bdac820f0bad0a8e8325f35397d71c9fb8bc28",
+        "candidate_metrics_without_gauge_declaration": [
+          {
+            "metric_name": "sglang:queue_time_seconds_bucket",
+            "declared_type": "NOT_DECLARED"
+          },
+          {
+            "metric_name": "sglang:queue_time_seconds_count",
+            "declared_type": "NOT_DECLARED"
+          },
+          {
+            "metric_name": "sglang:queue_time_seconds_sum",
+            "declared_type": "NOT_DECLARED"
+          }
+        ],
+        "individual_running_series_reaching_requested_C": [
+          {
+            "metric_name": "sglang:num_running_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "peak_value": 64.0
+          }
+        ],
+        "configured_C_is_not_proof_of_actual_running_C": true
+      },
+      "formal_only_global_running_request_peak": null,
+      "resource_release_status": "REPORTED_LOCK_RELEASE_AND_OWNED_STOP_VERIFIED",
+      "accuracy_or_official_acceptance": "NOT_ESTABLISHED"
+    },
+    {
+      "pair": "6,7",
+      "requested_client_concurrency": 128,
+      "requested_server_max_running_requests": 128,
+      "requested_cuda_graph_max_bs": 128,
+      "review_status": "COMPLETE_PERFORMANCE_RECHECKED",
+      "issues": [],
+      "worker_status": "BENCHMARK_COMPLETE",
+      "worker_state_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/p67/state.json",
+      "worker_state_sha256": "1f479b07da85d75d1b164784f30d901f18bbfee55d80b988e58eda2e77b9a8ad",
+      "error": null,
+      "traceback": null,
+      "outcome_before_cleanup": "BENCHMARK_COMPLETE",
+      "cleanup_status": "OWNED_CONTAINER_STOPPED_OR_NOT_CREATED",
+      "cleanup_error": null,
+      "lock_acquired_reported": true,
+      "lock_released_reported": true,
+      "gpu_after": {
+        "card6": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "2"
+        },
+        "card7": {
+          "HCU use (%)": "0.0",
+          "vram Total Memory (MiB)": "65520",
+          "vram Total Used Memory (MiB)": "2"
+        }
+      },
+      "gpu_after_snapshot_idle": true,
+      "api_capacity": {
+        "status": "ACTUAL_API_CAPACITY_VERIFIED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/runtime-p67/server-info.json",
+        "sha256": "b59b8d68ca1523f102768abefcdabd6e24936ec39dc3dfe0a0e75fe0064dec9f",
+        "actual": {
+          "tp_size": 2,
+          "pp_size": 1,
+          "max_running_requests": 128,
+          "cuda_graph_max_bs": 128,
+          "disable_cuda_graph": false,
+          "disable_custom_all_reduce": false,
+          "custom_all_reduce_backend": "native",
+          "context_length": 67584,
+          "page_size": 64,
+          "mem_fraction_static": 0.85,
+          "max_prefill_tokens": 65536,
+          "chunked_prefill_size": 8192,
+          "disable_radix_cache": true,
+          "mamba_scheduler_strategy": "no_buffer",
+          "attention_backend": "fa3",
+          "mm_attention_backend": "fa3",
+          "speculative_num_steps": 1,
+          "speculative_eagle_topk": 1,
+          "speculative_num_draft_tokens": 2
+        },
+        "cuda_graph_bs": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          40,
+          44,
+          48,
+          52,
+          56,
+          60,
+          64,
+          72,
+          80,
+          88,
+          96,
+          104,
+          112,
+          120,
+          128
+        ],
+        "does_not_prove_actual_running_request_peak": true
+      },
+      "runtime_gate": {
+        "status": "RUNTIME_PAIR_NUMERICAL_GRAPH_PASS",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/runtime-p67/gate/review.json",
+        "sha256": "9911c77faa8a0b9d73ac3960febf644123f6fec75de02317e7487a9e9afad57a",
+        "checks": 162,
+        "exclusions": 20,
+        "actual_model_graph_gate": "REVIEW_REQUIRED"
+      },
+      "container_initial": {
+        "status": "OWNED_IDENTITY_VERIFIED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/runtime-p67/container-inspect.json",
+        "sha256": "9ad18c4f6f8a8e1e913f79766ef86b177b3b88655873d72c1bda0d5b1442086b",
+        "container_id": "36c0416d495383aef31d615c2c0ae671d07f6899f362d92daf5d2b375792e272",
+        "running": true,
+        "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+        "run_label": "high-concurrency-20261017-a",
+        "physical_pair": "6,7"
+      },
+      "container_stopped": {
+        "status": "OWNED_IDENTITY_VERIFIED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/p67/container-stopped.json",
+        "sha256": "b330b7c8bbd3b0d2321bede69229ecce434113c31156d7d2a6b753a8e24dfb51",
+        "container_id": "36c0416d495383aef31d615c2c0ae671d07f6899f362d92daf5d2b375792e272",
+        "running": false,
+        "image": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+        "run_label": "high-concurrency-20261017-a",
+        "physical_pair": "6,7"
+      },
+      "metrics": {
+        "status": "RAW_SAMPLES_PARSED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/runtime-p67/running-metrics.jsonl",
+        "raw_samples": 558,
+        "http_success_samples": 558,
+        "error_samples": 0,
+        "parse_errors": 0,
+        "nonfinite_candidate_values": 0,
+        "errors": [],
+        "series": [
+          {
+            "metric_name": "sglang:num_decode_prealloc_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:num_decode_prealloc_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_decode_transfer_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:num_decode_transfer_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_grammar_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:num_grammar_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_prefill_bootstrap_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:num_prefill_bootstrap_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_prefill_inflight_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:num_prefill_inflight_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 125.0,
+            "observations": 558,
+            "peak_sample": 76,
+            "peak_utc": "2026-10-17T03:47:05.389710+00:00",
+            "original_peak_line": "sglang:num_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 125.0"
+          },
+          {
+            "metric_name": "sglang:num_running_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 84.0,
+            "observations": 558,
+            "peak_sample": 47,
+            "peak_utc": "2026-10-17T03:44:40.385272+00:00",
+            "original_peak_line": "sglang:num_running_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 84.0"
+          },
+          {
+            "metric_name": "sglang:pending_prealloc_token_usage",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:pending_prealloc_token_usage{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"0\",le=\"1\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"0\",le=\"1\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"1\",le=\"2\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"1\",le=\"2\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"10\",le=\"20\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"10\",le=\"20\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"100\",le=\"200\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"100\",le=\"200\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"2\",le=\"3\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"2\",le=\"3\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"20\",le=\"50\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"20\",le=\"50\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"200\",le=\"+Inf\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"200\",le=\"+Inf\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"3\",le=\"5\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"3\",le=\"5\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"5\",le=\"7\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"5\",le=\"7\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"50\",le=\"100\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"50\",le=\"100\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"7\",le=\"10\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 558,
+            "peak_sample": 1,
+            "peak_utc": "2026-10-17T03:40:50.379677+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"7\",le=\"10\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          }
+        ],
+        "scope": "BENCHMARK_INCLUDING_WARMUP; NO_ABSOLUTE_FORMAL_WINDOW_FILTER",
+        "global_running_request_peak": null,
+        "aggregation": "MAX_OVER_SAMPLES_PER_EXACT_NAME_AND_LABELS; NEVER_SUM",
+        "requested_client_concurrency": 128,
+        "bytes": 49852930,
+        "sha256": "1e403964ff636979e54b2892a4317fc644d1405b4101952d007dcb82badf9841",
+        "candidate_metrics_without_gauge_declaration": [
+          {
+            "metric_name": "sglang:queue_time_seconds_bucket",
+            "declared_type": "NOT_DECLARED"
+          },
+          {
+            "metric_name": "sglang:queue_time_seconds_count",
+            "declared_type": "NOT_DECLARED"
+          },
+          {
+            "metric_name": "sglang:queue_time_seconds_sum",
+            "declared_type": "NOT_DECLARED"
+          }
+        ],
+        "individual_running_series_reaching_requested_C": [],
+        "configured_C_is_not_proof_of_actual_running_C": true
+      },
+      "previous_server32": {
+        "status": "HISTORICAL_SIDE_BY_SIDE_ONLY",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/result/runs/community-official-20261017-c-p45-matrix-4k-c128/4k-c128/reference_performance_review.json",
+        "sha256": "671553ba7e757567f493b5cdea7f381f574524ba3ad6ccbc2dea9c2a615994a5",
+        "physical_pair": "4,5",
+        "client_concurrency": 128,
+        "server_max_running_requests": 32,
+        "cuda_graph_max_bs": 32,
+        "output_tps_rounds": [
+          380.3697219734119,
+          379.3167023094975,
+          382.18482717891106
+        ],
+        "mean_output_tps": 380.62375048727347,
+        "ttft_mean_s": 204.09545034469588,
+        "tpot_mean_ms": 78.41182835625811,
+        "text_integrity_status": "FLAGGED_UNRESOLVED",
+        "comparison": "Different server/Graph limits, date and host activity; C128 also changes pair. No contemporaneous single-variable causal comparison or improvement percentage."
+      },
+      "native_guard_eligible_ranks": [
+        0,
+        1
+      ],
+      "capacity_failure_evidence": {
+        "oom_marker_observed": false,
+        "log_markers": [],
+        "interpretation": "Observed log text; no automatic downgrade or unproven root-cause inference"
+      },
+      "scenes": [
+        {
+          "directory": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128",
+          "status": "PERFORMANCE_RAW_REVIEW_REPRODUCED",
+          "three_round_mean": {
+            "output_tps": 378.3502586752575,
+            "ttft_s_mean": 151.09697649278232,
+            "ttft_s_p95": 247.07284248732321,
+            "ttft_s_p99": 262.299103639334,
+            "tpot_ms_mean": 160.26154915108816,
+            "tpot_ms_p95": 226.1500514221223,
+            "tpot_ms_p99": 244.99778888250717,
+            "e2e_s_mean": 315.0445412743455,
+            "e2e_s_p95": 437.13984064642864,
+            "e2e_s_p99": 449.6498440988992
+          },
+          "available_formal_round_files": [
+            "round-01/summary.json",
+            "round-02/summary.json",
+            "round-03/summary.json"
+          ],
+          "formal_rounds": 3,
+          "formal_requests": 768,
+          "output_tps_rounds": [
+            377.9550781615184,
+            377.8335157950829,
+            379.26218206917133
+          ],
+          "original_performance_status": "PASS",
+          "original_text_integrity_status": "FLAGGED_UNRESOLVED",
+          "flags_formal": [
+            {
+              "phase": "measure",
+              "round": 1,
+              "index": 59,
+              "replacement_chars": 1
+            },
+            {
+              "phase": "measure",
+              "round": 2,
+              "index": 64,
+              "replacement_chars": 1
+            },
+            {
+              "phase": "measure",
+              "round": 2,
+              "index": 104,
+              "replacement_chars": 2
+            },
+            {
+              "phase": "measure",
+              "round": 3,
+              "index": 108,
+              "replacement_chars": 1
+            },
+            {
+              "phase": "measure",
+              "round": 3,
+              "index": 240,
+              "replacement_chars": 1
+            }
+          ],
+          "flags_warmup": [
+            {
+              "phase": "warmup",
+              "round": 1,
+              "index": 58,
+              "replacement_chars": 1
+            },
+            {
+              "phase": "warmup",
+              "round": 1,
+              "index": 14,
+              "replacement_chars": 6
+            },
+            {
+              "phase": "warmup",
+              "round": 2,
+              "index": 40,
+              "replacement_chars": 2
+            },
+            {
+              "phase": "warmup",
+              "round": 2,
+              "index": 53,
+              "replacement_chars": 1
+            },
+            {
+              "phase": "warmup",
+              "round": 2,
+              "index": 96,
+              "replacement_chars": 1
+            },
+            {
+              "phase": "warmup",
+              "round": 2,
+              "index": 80,
+              "replacement_chars": 1
+            }
+          ],
+          "round_metrics": [
+            {
+              "round": 1,
+              "output_tps": 377.9550781615184,
+              "ttft_s": {
+                "count": 256,
+                "max": 265.0504073330085,
+                "mean": 150.83701053568598,
+                "min": 5.151949021033943,
+                "p50": 169.80540722652222,
+                "p90": 229.70357187199988,
+                "p95": 249.697027224247,
+                "p99": 263.77289846643396
+              },
+              "tpot_ms": {
+                "count": 256,
+                "max": 260.41383680746185,
+                "mean": 160.57150193049983,
+                "min": 69.65087645944119,
+                "p50": 161.51162358064033,
+                "p90": 211.6710882790852,
+                "p95": 221.97329555741976,
+                "p99": 244.43546845455316
+              },
+              "e2e_s": {
+                "count": 256,
+                "max": 452.64430696400814,
+                "mean": 315.10165701058736,
+                "min": 174.68683608801803,
+                "p50": 327.5059862784983,
+                "p90": 417.96031515399227,
+                "p95": 438.77954828951624,
+                "p99": 450.4540175648144
+              }
+            },
+            {
+              "round": 2,
+              "output_tps": 377.8335157950829,
+              "ttft_s": {
+                "count": 256,
+                "max": 265.34347401501145,
+                "mean": 151.21115164630532,
+                "min": 3.8802538079908118,
+                "p50": 171.90597760447417,
+                "p90": 225.60590863000834,
+                "p95": 247.1685104899807,
+                "p99": 264.0687455574604
+              },
+              "tpot_ms": {
+                "count": 256,
+                "max": 252.7747086109548,
+                "mean": 160.32275492299658,
+                "min": 70.14578518671424,
+                "p50": 157.81292404788513,
+                "p90": 217.58644876883065,
+                "p95": 228.03041148657502,
+                "p99": 244.13135342726903
+              },
+              "e2e_s": {
+                "count": 256,
+                "max": 448.9376719520078,
+                "mean": 315.2213299325308,
+                "min": 175.17703675600933,
+                "p50": 319.80638819598244,
+                "p90": 416.59872662700946,
+                "p95": 436.5570060520113,
+                "p99": 448.291607679287
+              }
+            },
+            {
+              "round": 3,
+              "output_tps": 379.26218206917133,
+              "ttft_s": {
+                "count": 256,
+                "max": 265.41700585000217,
+                "mean": 151.24276729635562,
+                "min": 3.8820556619903073,
+                "p50": 171.67066534454352,
+                "p90": 224.4265755584929,
+                "p95": 244.35298974774196,
+                "p99": 259.0556668941077
+              },
+              "tpot_ms": {
+                "count": 256,
+                "max": 250.8320133362802,
+                "mean": 159.89039059976807,
+                "min": 69.64183360020031,
+                "p50": 162.65164427421686,
+                "p90": 212.78618086802086,
+                "p95": 228.44644722237206,
+                "p99": 246.4265447656993
+              },
+              "e2e_s": {
+                "count": 256,
+                "max": 457.18139527901076,
+                "mean": 314.8106368799183,
+                "min": 175.11358677200042,
+                "p50": 330.54571082798066,
+                "p90": 415.83163908848655,
+                "p95": 436.0829675977584,
+                "p99": 450.2039070525963
+              }
+            }
+          ],
+          "original_review_sha256": "cbbc13d72c90a9057d73f201f6756ee467bfcdbc70fb50e92b349c9650f6c253",
+          "auditor_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/scripts/review_performance.py",
+          "auditor_sha256": "a52bd6b2ea00346aac61bba2570693cf4f654117ef9aba67610d2e3425b841b3",
+          "config": {
+            "base_url": "http://127.0.0.1:31560",
+            "concurrency": 128,
+            "input_len": 4096,
+            "measure_rounds": 3,
+            "model": "Qwen3.8-27B-Channel-INT8-w8a8",
+            "output_dir": "/data/wangzy/v2/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128",
+            "output_len": 1024,
+            "requests_per_round": 256,
+            "seed": 20260912,
+            "timeout": 3600,
+            "warmup_rounds": 2
+          },
+          "source_files_sha256": {
+            "warmup-01/requests.jsonl": "f5bb8a2b1078d80eb7030b631762294e1bdb14ce97de33d8b53f09889c90dc94",
+            "warmup-01/summary.json": "5c1f9a463bbe109716191b25750ad1cb0eb7c10479b47d0adf6ddf865e0d1b40",
+            "warmup-02/requests.jsonl": "63832a9892fd5a79fa79e4ed847ac654dd747f258f79a5fe0b4431065943d304",
+            "warmup-02/summary.json": "b2f474dc9492c6130079979153dbf6c6a08f1921c30a7fc93f1a26f39f776ef4",
+            "round-01/requests.jsonl": "2d4db2ea9ae340b02db7f80bf16957ab36197726f871e383a2b393aadf27f637",
+            "round-01/summary.json": "9f35b5796c9286267162a64dfaf14e5db4063d2a60be66c1be596ab953787736",
+            "round-02/requests.jsonl": "26604e8443ae0abe7dc3e01b78f50d5da3e198a3a9279aed86dda6e6f9264e55",
+            "round-02/summary.json": "98289b80e11ddc20d846cf76889b490b0a8fd01c3deaca7e60f4c45bf9d7d9a2",
+            "round-03/requests.jsonl": "13e030e307c3c1e3766a4e1e21a20242737c7bf8437b1bc1334dd60b6a75b201",
+            "round-03/summary.json": "57ce81117f1802ed742c99dade56ea626e551e8e3d30c64b7be8cdd3c57f48b4"
+          },
+          "quantiles": "Mean of three per-round quantiles; not pooled quantiles",
+          "accuracy": "NOT_EVALUATED_BY_PERFORMANCE_AUDIT"
+        }
+      ],
+      "formal_window_evidence": {
+        "status": "ALL_THREE_FORMAL_WINDOWS_RECORDED",
+        "observer": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/progress-observer.jsonl",
+        "windows": [
+          {
+            "round": 1,
+            "started_at_epoch": 1792209159.2905626,
+            "wall_time_s": 693.5850717369467,
+            "ended_at_epoch": 1792209852.8756344,
+            "safe_start_epoch": 1792209164.2905626,
+            "safe_end_epoch": 1792209847.8756344,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-01/summary.json",
+            "summary_sha256": "9f35b5796c9286267162a64dfaf14e5db4063d2a60be66c1be596ab953787736"
+          },
+          {
+            "round": 2,
+            "started_at_epoch": 1792209853.7047837,
+            "wall_time_s": 693.8082225139951,
+            "ended_at_epoch": 1792210547.5130062,
+            "safe_start_epoch": 1792209858.7047837,
+            "safe_end_epoch": 1792210542.5130062,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-02/summary.json",
+            "summary_sha256": "98289b80e11ddc20d846cf76889b490b0a8fd01c3deaca7e60f4c45bf9d7d9a2"
+          },
+          {
+            "round": 3,
+            "started_at_epoch": 1792210548.3518226,
+            "wall_time_s": 691.1946732199867,
+            "ended_at_epoch": 1792211239.546496,
+            "safe_start_epoch": 1792210553.3518226,
+            "safe_end_epoch": 1792211234.546496,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-03/summary.json",
+            "summary_sha256": "57ce81117f1802ed742c99dade56ea626e551e8e3d30c64b7be8cdd3c57f48b4"
+          }
+        ],
+        "inward_margin_s": 5,
+        "required_rounds": [
+          1,
+          2,
+          3
+        ],
+        "clock_basis": "Benchmark started_at epoch and sampler UTC on the same server",
+        "sample_timestamp": "UTC recorded before HTTP GET; 4s configured timeout",
+        "observer_sha256": "0d73935c9e67a1ce5762a280a2ef051bfec7c809c449f5a69bb46bced8d13805",
+        "observed_rounds": [
+          1,
+          2,
+          3
+        ],
+        "formal_progress_snapshots": 381,
+        "parse_errors": 0
+      },
+      "formal_window_metrics": {
+        "status": "RAW_SAMPLES_PARSED",
+        "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/runtime-p67/running-metrics.jsonl",
+        "raw_samples": 558,
+        "http_success_samples": 410,
+        "error_samples": 0,
+        "parse_errors": 0,
+        "nonfinite_candidate_values": 0,
+        "errors": [],
+        "series": [
+          {
+            "metric_name": "sglang:num_decode_prealloc_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:num_decode_prealloc_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_decode_transfer_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:num_decode_transfer_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_grammar_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:num_grammar_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_prefill_bootstrap_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:num_prefill_bootstrap_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_prefill_inflight_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:num_prefill_inflight_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:num_queue_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 124.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:num_queue_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 124.0"
+          },
+          {
+            "metric_name": "sglang:num_running_reqs",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 76.0,
+            "observations": 410,
+            "peak_sample": 230,
+            "peak_utc": "2026-10-17T03:59:55.408303+00:00",
+            "original_peak_line": "sglang:num_running_reqs{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 76.0"
+          },
+          {
+            "metric_name": "sglang:pending_prealloc_token_usage",
+            "original_labels": "{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "queue_gauge",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:pending_prealloc_token_usage{engine_type=\"unified\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"0\",le=\"1\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"0\",le=\"1\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"1\",le=\"2\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"1\",le=\"2\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"10\",le=\"20\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"10\",le=\"20\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"100\",le=\"200\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"100\",le=\"200\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"2\",le=\"3\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"2\",le=\"3\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"20\",le=\"50\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"20\",le=\"50\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"200\",le=\"+Inf\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"200\",le=\"+Inf\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"3\",le=\"5\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"3\",le=\"5\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"5\",le=\"7\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"5\",le=\"7\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"50\",le=\"100\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"50\",le=\"100\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          },
+          {
+            "metric_name": "sglang:routing_key_running_req_count",
+            "original_labels": "{engine_type=\"unified\",gt=\"7\",le=\"10\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"}",
+            "category": "running_requests",
+            "peak_value": 0.0,
+            "observations": 410,
+            "peak_sample": 144,
+            "peak_utc": "2026-10-17T03:52:45.397892+00:00",
+            "original_peak_line": "sglang:routing_key_running_req_count{engine_type=\"unified\",gt=\"7\",le=\"10\",model_name=\"Qwen3.8-27B-Channel-INT8-w8a8\",moe_ep_rank=\"0\",pp_rank=\"0\",tp_rank=\"0\"} 0.0"
+          }
+        ],
+        "scope": "FORMAL_ROUND_WINDOW_INTERIORS; PRE_GET_UTC; FIVE_SECOND_INWARD_MARGIN",
+        "global_running_request_peak": null,
+        "aggregation": "MAX_OVER_SAMPLES_PER_EXACT_NAME_AND_LABELS; NEVER_SUM",
+        "requested_client_concurrency": 128,
+        "selection_windows": [
+          {
+            "round": 1,
+            "started_at_epoch": 1792209159.2905626,
+            "wall_time_s": 693.5850717369467,
+            "ended_at_epoch": 1792209852.8756344,
+            "safe_start_epoch": 1792209164.2905626,
+            "safe_end_epoch": 1792209847.8756344,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-01/summary.json",
+            "summary_sha256": "9f35b5796c9286267162a64dfaf14e5db4063d2a60be66c1be596ab953787736"
+          },
+          {
+            "round": 2,
+            "started_at_epoch": 1792209853.7047837,
+            "wall_time_s": 693.8082225139951,
+            "ended_at_epoch": 1792210547.5130062,
+            "safe_start_epoch": 1792209858.7047837,
+            "safe_end_epoch": 1792210542.5130062,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-02/summary.json",
+            "summary_sha256": "98289b80e11ddc20d846cf76889b490b0a8fd01c3deaca7e60f4c45bf9d7d9a2"
+          },
+          {
+            "round": 3,
+            "started_at_epoch": 1792210548.3518226,
+            "wall_time_s": 691.1946732199867,
+            "ended_at_epoch": 1792211239.546496,
+            "safe_start_epoch": 1792210553.3518226,
+            "safe_end_epoch": 1792211234.546496,
+            "summary_path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/submit/result/runs/high-concurrency-20261017-a-p67-server128-4k-c128/4k-c128/round-03/summary.json",
+            "summary_sha256": "57ce81117f1802ed742c99dade56ea626e551e8e3d30c64b7be8cdd3c57f48b4"
+          }
+        ],
+        "outside_window_samples": 148,
+        "samples_without_usable_utc": 0,
+        "bytes": 49852930,
+        "sha256": "1e403964ff636979e54b2892a4317fc644d1405b4101952d007dcb82badf9841",
+        "candidate_metrics_without_gauge_declaration": [
+          {
+            "metric_name": "sglang:queue_time_seconds_bucket",
+            "declared_type": "NOT_DECLARED"
+          },
+          {
+            "metric_name": "sglang:queue_time_seconds_count",
+            "declared_type": "NOT_DECLARED"
+          },
+          {
+            "metric_name": "sglang:queue_time_seconds_sum",
+            "declared_type": "NOT_DECLARED"
+          }
+        ],
+        "individual_running_series_reaching_requested_C": [],
+        "configured_C_is_not_proof_of_actual_running_C": true
+      },
+      "formal_only_global_running_request_peak": null,
+      "resource_release_status": "REPORTED_LOCK_RELEASE_AND_OWNED_STOP_VERIFIED",
+      "accuracy_or_official_acceptance": "NOT_ESTABLISHED"
+    }
+  ],
+  "comparison_scope": "Cross-condition side-by-side only; not causal A/B",
+  "metrics_scope": "All benchmark peaks include warmup. Optional formal_window_metrics uses all three observer windows with 5s inward margins and pre-GET UTC.",
+  "submission_ready": false,
+  "collection_identity": {
+    "status": "ALL_SOURCE_FILES_SIZE_SHA256_PASS",
+    "files": 591,
+    "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server-source-inventory.json",
+    "sha256": "ff5b44909ebf0e37ae8aa6a83a5615def0d2c28f805496e031c6b2d0caee776d"
+  },
+  "controller-source.py": {
+    "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/controller-source.py",
+    "sha256": "1f2f2247725832e8af04f666d494902951c38b0b0d30e3a90b78f9adb1c3fb1f"
+  },
+  "finished.json": {
+    "path": "/Users/zixuan/Desktop/base/hygon/K100-AI/tuning/Qwen3.8-27B/v2/submit/logs/v2_benchmark_raw/server64-128-20261017/server/retest-server64-128-20261017-a/finished.json",
+    "sha256": "9486a11dcf5f23c7dd280e348374f3b230555c59d5cfde779eef177533bc9a43"
+  },
+  "status": "COMPLETE_PERFORMANCE_RECHECKED"
+}

@@ -1,0 +1,32 @@
+{
+  "status": "SOURCE_EXPORTED_WITHOUT_IMPORT_OR_COMPILATION",
+  "image_id": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+  "files": {
+    "utils/_build_optional_torch_c_dlpack.py": {
+      "bytes": 30608,
+      "sha256": "00642488be9a3bdc9560f14fa5d5b73172e096e89b09ffc35a7f18225feae9ce"
+    },
+    "_optional_torch_c_dlpack.py": {
+      "bytes": 7874,
+      "sha256": "71fa7ff562ab5cb6a714200f31b5caa3d0a1c9cf949fd21c6a2a830580c60a18"
+    },
+    "libinfo.py": {
+      "bytes": 11012,
+      "sha256": "d7fec22223bb77925a9971d97d6a51e00a5c1c6d6ddaff8b160318354f787158"
+    },
+    "utils/lockfile.py": {
+      "bytes": 5606,
+      "sha256": "5e5b941036979eb44566e64e351e7fddadd27360a9efe56c52493313be15f100"
+    },
+    "include/dlpack/dlpack.h": {
+      "bytes": 23463,
+      "sha256": "62052bef24bd69bb7b52e95428f9e99bd7951783850c36c5f2a41e71fd63c2fc"
+    },
+    "addon.cc": {
+      "bytes": 17384,
+      "sha256": "e7cf41adcf0b4a0477ebf2726fb539c8f2571619077ebfe77301e70b76db9dfe",
+      "extraction": "ast.literal_eval of cpp_source, no torch/tvm import"
+    }
+  },
+  "cached_binary_bitwise_rebuild": "NOT_CLAIMED"
+}

@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-16T15:25:50.718983+00:00",
+  "status": "ASSETS_READY_NO_GPU_WORK_YET",
+  "source_sha256": {
+    "probe_template.py": "07c8241e2543460594b7eeba892aa06ed3d453cd06be0cb5ae0fef2b7ec58b86",
+    "controller.py": "85e0b168f1d61d339d177b2a09c6fb5b850c7da3ea3e137d68abc3be6d4b9d3b",
+    "execution-plan.json": "bcaacc3654a173150eb0c07b6bf083fa5ed4213caa52fd972c6fe96c46c76393"
+  }
+}

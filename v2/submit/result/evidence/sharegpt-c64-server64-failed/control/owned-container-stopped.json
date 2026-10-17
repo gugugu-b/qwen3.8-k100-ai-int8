@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-16T14:43:49.406525+00:00",
+  "name": "/qwen38-submit1009-perf01-server64-20261016",
+  "id": "a0b207e0d79aa0c6ea0186efb924258effe282869241ac1c90c838dee2565def",
+  "state": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 137,
+    "Error": "",
+    "StartedAt": "2026-10-16T13:55:44.89929451Z",
+    "FinishedAt": "2026-10-16T14:32:03.374737175Z"
+  },
+  "physical_pair": [
+    0,
+    1
+  ],
+  "queue_pid_absent": true,
+  "lock_was_free": true
+}

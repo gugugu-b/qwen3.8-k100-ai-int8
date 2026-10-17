@@ -1,0 +1,14 @@
+Error response from daemon: Container 8e257b126bcc634e31570ceb0da0e6d07d69de0d653fa060cba89925a793269c is not running
+{"phase": "failed", "pid": 3368076, "utc": "2026-10-10T00:05:37.152732+00:00", "run_id": "delivery-native-ar-4k1k-20261010-a", "physical_pair": "6,7", "tp": 2, "profiler_used": false, "observer_enabled": false, "default_patch": "v1", "formal_acceptance": false, "error": "CalledProcessError(1, ['docker', 'top', 'qwen38-submit1009-ab', '-eo', 'pid,ppid,args'])"}
+qwen38-submit1009-diag
+qwen38-submit1009-diag
+Traceback (most recent call last):
+  File "/data/wangzy/submit1009/02-测试与结果/delivery-4k-20261010-work/run_delivery_4k1k.py", line 179, in <module>
+    main()
+  File "/data/wangzy/submit1009/02-测试与结果/delivery-4k-20261010-work/run_delivery_4k1k.py", line 91, in main
+    ab_top=subprocess.check_output(['docker','top','qwen38-submit1009-ab','-eo','pid,ppid,args'],text=True)
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['docker', 'top', 'qwen38-submit1009-ab', '-eo', 'pid,ppid,args']' returned non-zero exit status 1.

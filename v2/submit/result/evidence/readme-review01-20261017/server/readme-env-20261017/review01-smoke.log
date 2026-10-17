@@ -1,0 +1,384 @@
+/usr/bin/docker
+/usr/bin/python3
+/usr/bin/flock
+6.3.30-V1.4.1a
+
+================================= System Management Interface ==================================
+================================================================================================
+HCU[0]		: HCU use (%): 0.0
+HCU[1]		: HCU use (%): 0.0
+================================================================================================
+================================================================================================
+HCU[0]		: vram Total Memory (MiB): 65520
+HCU[0]		: vram Total Used Memory (MiB): 2
+HCU[1]		: vram Total Memory (MiB): 65520
+HCU[1]		: vram Total Used Memory (MiB): 2
+================================================================================================
+======================================== End of SMI Log ========================================
+
+PORTS_FREE
+{
+  "status": "PACKAGE_INTEGRITY_PASS",
+  "files": 6158,
+  "runtime": "NOT_CHECKED",
+  "accuracy": "NOT_EVALUATED_BY_INTEGRITY_CHECK",
+  "submission_ready": false
+}
+{
+  "status": "PASS",
+  "scope": "Offline source/manifest/diff consistency only",
+  "checks": 109,
+  "files": 63,
+  "gpu_used": false,
+  "rebuild_executed": false,
+  "remaining_source_gaps": [
+    {
+      "component": "TVM FFI Torch C DLPack cache",
+      "status": "FIXED_IMAGE_SOURCE_AND_RECIPE_EXPORTED_ORIGINAL_CACHE_BUILD_LOG_AND_BITWISE_REBUILD_NOT_VERIFIED",
+      "binary_sha256": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6"
+    },
+    {
+      "component": "Vendor native AR common_ops",
+      "status": "MATCHING_CPP_HIP_SOURCE_AND_BUILD_RECIPE_NOT_ARCHIVED",
+      "binary_sha256": "8c81c808faa6ea332b1c0c81a9474877b95b01eb4738473c6a1e9854c4d6b230"
+    },
+    {
+      "component": "Inherited HIP GEMV build",
+      "status": "FULL_SOURCE_AND_RECIPE_SUPPLIED_ORIGINAL_NINJA_LOG_NOT_ARCHIVED"
+    }
+  ],
+  "runtime_or_accuracy_certification": false
+}
+{
+  "status": "PACKAGE_INTEGRITY_PASS",
+  "files": 6158,
+  "runtime": "LIBRARY_SHA256_PASS",
+  "accuracy": "NOT_EVALUATED_BY_INTEGRITY_CHECK",
+  "submission_ready": false,
+  "library_files": 162
+}
+{
+  "status": "EXTERNAL_ASSET_IDENTITY_PASS",
+  "scope": "CPU byte-count and SHA256 identity check of the 31 manifest-listed INT8 model/config/tokenizer files and the fixed ShareGPT file; unlisted model files, quantization provenance, official asset permission, GPU runtime, performance and accuracy are not verified",
+  "manifest": {
+    "path": "/data/wangzy/v2/submit/result/evidence/official-alignment-20261017/community-official-20261017-c/model-sha256.json",
+    "model_key": "/data/model/Qwen3.8-27B-Channel-INT8-w8a8",
+    "sha256": "29fe022dbce08d7e976c0793aea41e03d0cc4285d5df4561246a48861286049a",
+    "default_recorded_manifest": true
+  },
+  "model": {
+    "path": "/data/model/Qwen3.8-27B-Channel-INT8-w8a8",
+    "expected_files": 31,
+    "checked_files": 31,
+    "matched_files": 31,
+    "expected_bytes": 30902757820,
+    "files": [
+      {
+        "file": ".gitattributes",
+        "expected_bytes": 2229,
+        "expected_sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937",
+        "status": "PASS",
+        "bytes": 2229,
+        "sha256": "ea531a2287d6df7b3d3760738c1d10289568afe669efd9fe34f54ffe5e76e937"
+      },
+      {
+        "file": "README.md",
+        "expected_bytes": 1387,
+        "expected_sha256": "f666408a49cdb7f887d56c34f3b3912683c0bdbc4b49d61e4690dbac294ee11b",
+        "status": "PASS",
+        "bytes": 1387,
+        "sha256": "f666408a49cdb7f887d56c34f3b3912683c0bdbc4b49d61e4690dbac294ee11b"
+      },
+      {
+        "file": "chat_template.jinja",
+        "expected_bytes": 8952,
+        "expected_sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+        "status": "PASS",
+        "bytes": 8952,
+        "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+      },
+      {
+        "file": "config.json",
+        "expected_bytes": 4982,
+        "expected_sha256": "c8c89574834abe1bab2fd76b0ca680399ce0707c20b887d3a4890a04e0101a5e",
+        "status": "PASS",
+        "bytes": 4982,
+        "sha256": "c8c89574834abe1bab2fd76b0ca680399ce0707c20b887d3a4890a04e0101a5e"
+      },
+      {
+        "file": "configuration.json",
+        "expected_bytes": 29,
+        "expected_sha256": "8fa209ef18ac53dea0c47cf8d6f4e92c907565a4971bee413c1772e314a251fa",
+        "status": "PASS",
+        "bytes": 29,
+        "sha256": "8fa209ef18ac53dea0c47cf8d6f4e92c907565a4971bee413c1772e314a251fa"
+      },
+      {
+        "file": "generation_config.json",
+        "expected_bytes": 202,
+        "expected_sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+        "status": "PASS",
+        "bytes": 202,
+        "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+      },
+      {
+        "file": "merges.txt",
+        "expected_bytes": 3353259,
+        "expected_sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+        "status": "PASS",
+        "bytes": 3353259,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "file": "model-00001-of-00018.safetensors",
+        "expected_bytes": 2447272408,
+        "expected_sha256": "61cf64c4e2a52ea3b247620bed5a19ffaad0b380db2552a2158116eb1300529f",
+        "status": "PASS",
+        "bytes": 2447272408,
+        "sha256": "61cf64c4e2a52ea3b247620bed5a19ffaad0b380db2552a2158116eb1300529f"
+      },
+      {
+        "file": "model-00002-of-00018.safetensors",
+        "expected_bytes": 1523622920,
+        "expected_sha256": "2a6c100e71707533a6375bc9edd4efbe9e187f025a12018048c070f36c470a13",
+        "status": "PASS",
+        "bytes": 1523622920,
+        "sha256": "2a6c100e71707533a6375bc9edd4efbe9e187f025a12018048c070f36c470a13"
+      },
+      {
+        "file": "model-00003-of-00018.safetensors",
+        "expected_bytes": 2542796928,
+        "expected_sha256": "1e22bff91476ac31fd41fa6c5b6772286cacb458fcb0b13cd0d401d15504cf42",
+        "status": "PASS",
+        "bytes": 2542796928,
+        "sha256": "1e22bff91476ac31fd41fa6c5b6772286cacb458fcb0b13cd0d401d15504cf42"
+      },
+      {
+        "file": "model-00004-of-00018.safetensors",
+        "expected_bytes": 1997972800,
+        "expected_sha256": "2d83707e5b4bc21f5a3c44c8f899c1fd06279467ef6f7c51882942074d63d7b0",
+        "status": "PASS",
+        "bytes": 1997972800,
+        "sha256": "2d83707e5b4bc21f5a3c44c8f899c1fd06279467ef6f7c51882942074d63d7b0"
+      },
+      {
+        "file": "model-00005-of-00018.safetensors",
+        "expected_bytes": 1051425416,
+        "expected_sha256": "a3f7143fa64d115a73e717052f136716c0d02c290aebc5aecc6ecd51e845122a",
+        "status": "PASS",
+        "bytes": 1051425416,
+        "sha256": "a3f7143fa64d115a73e717052f136716c0d02c290aebc5aecc6ecd51e845122a"
+      },
+      {
+        "file": "model-00006-of-00018.safetensors",
+        "expected_bytes": 1993792256,
+        "expected_sha256": "26fa317b4efd07a9c0aa098b5b2c2707777b73bbd56ed9b70bc72a886261a5ff",
+        "status": "PASS",
+        "bytes": 1993792256,
+        "sha256": "26fa317b4efd07a9c0aa098b5b2c2707777b73bbd56ed9b70bc72a886261a5ff"
+      },
+      {
+        "file": "model-00007-of-00018.safetensors",
+        "expected_bytes": 1055606016,
+        "expected_sha256": "b7e34fb94e03990ac01547c7f08c2288d1c7f4c811d60a23248e3244ae783a2e",
+        "status": "PASS",
+        "bytes": 1055606016,
+        "sha256": "b7e34fb94e03990ac01547c7f08c2288d1c7f4c811d60a23248e3244ae783a2e"
+      },
+      {
+        "file": "model-00008-of-00018.safetensors",
+        "expected_bytes": 1993792256,
+        "expected_sha256": "fb3a8f9deeac2dad3eaf97748bb942868bfa30854fbd38deadb39250afc4e731",
+        "status": "PASS",
+        "bytes": 1993792256,
+        "sha256": "fb3a8f9deeac2dad3eaf97748bb942868bfa30854fbd38deadb39250afc4e731"
+      },
+      {
+        "file": "model-00009-of-00018.safetensors",
+        "expected_bytes": 1055606016,
+        "expected_sha256": "09f95ad0b7020c5b3dd3143ca5875d0e109eefe3633d0ae9b855d4cc979f3231",
+        "status": "PASS",
+        "bytes": 1055606016,
+        "sha256": "09f95ad0b7020c5b3dd3143ca5875d0e109eefe3633d0ae9b855d4cc979f3231"
+      },
+      {
+        "file": "model-00010-of-00018.safetensors",
+        "expected_bytes": 1993792256,
+        "expected_sha256": "5eb235790cd6d00735aca3c3ab38fba4470bd3eb8351a2c88cf1c0bcd47e726f",
+        "status": "PASS",
+        "bytes": 1993792256,
+        "sha256": "5eb235790cd6d00735aca3c3ab38fba4470bd3eb8351a2c88cf1c0bcd47e726f"
+      },
+      {
+        "file": "model-00011-of-00018.safetensors",
+        "expected_bytes": 1055606016,
+        "expected_sha256": "5319d76ed415544cbfbbdbee36e68abf8c449628521510502d95bc9ff618217e",
+        "status": "PASS",
+        "bytes": 1055606016,
+        "sha256": "5319d76ed415544cbfbbdbee36e68abf8c449628521510502d95bc9ff618217e"
+      },
+      {
+        "file": "model-00012-of-00018.safetensors",
+        "expected_bytes": 1993792256,
+        "expected_sha256": "0f997fcaa215bb3724c7e590ce637b5c6ee941dbb5ac4635b80e52183456cb43",
+        "status": "PASS",
+        "bytes": 1993792256,
+        "sha256": "0f997fcaa215bb3724c7e590ce637b5c6ee941dbb5ac4635b80e52183456cb43"
+      },
+      {
+        "file": "model-00013-of-00018.safetensors",
+        "expected_bytes": 1055606016,
+        "expected_sha256": "142e9e311284f807e8ca28ca35d675e8249c6c166619295e3fa4b75e45e0db82",
+        "status": "PASS",
+        "bytes": 1055606016,
+        "sha256": "142e9e311284f807e8ca28ca35d675e8249c6c166619295e3fa4b75e45e0db82"
+      },
+      {
+        "file": "model-00014-of-00018.safetensors",
+        "expected_bytes": 1993792256,
+        "expected_sha256": "8cd7118401fea8e8907ece0971a312b347ea40821434333552c4ac41cd7ac219",
+        "status": "PASS",
+        "bytes": 1993792256,
+        "sha256": "8cd7118401fea8e8907ece0971a312b347ea40821434333552c4ac41cd7ac219"
+      },
+      {
+        "file": "model-00015-of-00018.safetensors",
+        "expected_bytes": 1055606016,
+        "expected_sha256": "26b78bb4d344731dc738fcc6150f1580b858a0a336fd01fdb71014d87073639b",
+        "status": "PASS",
+        "bytes": 1055606016,
+        "sha256": "26b78bb4d344731dc738fcc6150f1580b858a0a336fd01fdb71014d87073639b"
+      },
+      {
+        "file": "model-00016-of-00018.safetensors",
+        "expected_bytes": 1993802600,
+        "expected_sha256": "17f3023f28d4a0bd5962c07fd875637728d0588cd0c1102285e7b2b0527c3454",
+        "status": "PASS",
+        "bytes": 1993802600,
+        "sha256": "17f3023f28d4a0bd5962c07fd875637728d0588cd0c1102285e7b2b0527c3454"
+      },
+      {
+        "file": "model-00017-of-00018.safetensors",
+        "expected_bytes": 1055606016,
+        "expected_sha256": "7ceb03d73beb76449ad37c8bad4abba15ef33748cbc4a8e6f867bef36a4cadd6",
+        "status": "PASS",
+        "bytes": 1055606016,
+        "sha256": "7ceb03d73beb76449ad37c8bad4abba15ef33748cbc4a8e6f867bef36a4cadd6"
+      },
+      {
+        "file": "model-00018-of-00018.safetensors",
+        "expected_bytes": 3020191144,
+        "expected_sha256": "faf47d69794af3a160c3ca571f8a0af18dd6fa1fb7cb6fdbafc47162926772b7",
+        "status": "PASS",
+        "bytes": 3020191144,
+        "sha256": "faf47d69794af3a160c3ca571f8a0af18dd6fa1fb7cb6fdbafc47162926772b7"
+      },
+      {
+        "file": "model.safetensors.index.json",
+        "expected_bytes": 154406,
+        "expected_sha256": "7ad3c3ab8c5eb2397b20e17aa31932494c3f97384807cb59e8689ddb99c96f23",
+        "status": "PASS",
+        "bytes": 154406,
+        "sha256": "7ad3c3ab8c5eb2397b20e17aa31932494c3f97384807cb59e8689ddb99c96f23"
+      },
+      {
+        "file": "preprocessor_config.json",
+        "expected_bytes": 390,
+        "expected_sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+        "status": "PASS",
+        "bytes": 390,
+        "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+      },
+      {
+        "file": "tokenizer.json",
+        "expected_bytes": 12809320,
+        "expected_sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+        "status": "PASS",
+        "bytes": 12809320,
+        "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "expected_bytes": 17928,
+        "expected_sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+        "status": "PASS",
+        "bytes": 17928,
+        "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27"
+      },
+      {
+        "file": "video_preprocessor_config.json",
+        "expected_bytes": 385,
+        "expected_sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+        "status": "PASS",
+        "bytes": 385,
+        "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+      },
+      {
+        "file": "vocab.json",
+        "expected_bytes": 6722759,
+        "expected_sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+        "status": "PASS",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "dataset": {
+    "path": "/data/wangzy/datasets/ShareGPT_V3_unfiltered_cleaned_split.json",
+    "expected_sha256": "35f0e213ce091ed9b9af2a1f0755e9d39f9ccec34ab281cd4ca60d70f6479ba4",
+    "bytes": 672837942,
+    "sha256": "35f0e213ce091ed9b9af2a1f0755e9d39f9ccec34ab281cd4ca60d70f6479ba4",
+    "status": "PASS"
+  },
+  "errors": []
+}
+{
+  "status": "PRIVATE_REVIEW01_PATCH_PREPARED",
+  "physical_devices": [
+    0,
+    1
+  ],
+  "original_guard_sha256": "55485f3994417b012fd76f3cf423b03b33fd90d52e2c73d98d0fc9315ab0b5aa",
+  "review_guard_sha256": "f9d5ec98c70724dcb80857228681a6c03c619606643cdd6918c9084af51cd7f4",
+  "change": "Only physical device assertion 6,7 -> 0,1",
+  "original_package_modified": false,
+  "files": {
+    "libtorch_c_dlpack_addon_torch210-rocm.so": "89a8fd252cf44cc4ae1120c75f938c54e796f79f94e083717a85df1cfe5ef7f6",
+    "build_unified.py": "9a0910d8c23705f3b17863f74f792120ee059a3af02a9b8e17e5c660e4892ccc",
+    "sitecustomize.py": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
+    "triton_tiles.json": "4349ae5ebb6c6348323fecb75d35c756970e82b2e2d5d2a9197f1ae839a95758",
+    "k100_int8_gemv_unified.hip": "dd753458416463665a97c5aedc04cffaed7b992a58190a66c9188619d20c8ae2",
+    "native_bf16_ar_guard.py": "f9d5ec98c70724dcb80857228681a6c03c619606643cdd6918c9084af51cd7f4",
+    "k100_int8_gemv_unified.so": "786865c76847c43aab8b389702cf4cbf522b90157575b67a3ca5d61a3f0ec97d",
+    "patch_dup_reg_guard.py": "038c207b72052c53ea1626b1408c91002aadf9dc99a543689456c4aed125deac"
+  }
+}
+89c74d82a439e862f3c5bea18767edd12bb1e815d89bec8fde25c5b1842c3694
+sglang 0.5.12+das185.dtk2604.torch2100.2608121934.gcbf025
+torch 2.10.0+das.opt1.dtk2604.2608131652.g28498c
+triton 3.6.0+das185.dtk2604.torch2100.2608131719.gb796b1
+aiter 0.1.5+das185.dtk2604.torch2100.2608131714.gb0979d
+transformers 5.6.0
+aiohttp 3.14.3
+requests 2.34.2
+0 K100_AI gfx928:sramecc+:xnack-
+1 K100_AI gfx928:sramecc+:xnack-
+REVIEW01_RUNTIME_PASS
+{
+  "status": "PACKAGE_INTEGRITY_PASS",
+  "files": 6158,
+  "runtime": "LIBRARY_SHA256_PASS",
+  "accuracy": "NOT_EVALUATED_BY_INTEGRITY_CHECK",
+  "submission_ready": false,
+  "library_files": 162
+}
+Server ready: pid=251 port=31014 logs=/data/wangzy/v2/submit/logs/review01-20261017T073547Z-1208357-server
+Service: http://127.0.0.1:31014 ; stop: bash scripts/run_review01.sh stop
+用户：请用一句中文解释张量并行。
+用户要求：请用一句中文解释张量并行。需要一句中文，简洁准确。张量并行（Tensor Parallelism）通常指将模型中的大矩阵/张量运算切分到多个设备/GPU上并行计算，以加速大模型训练或推理。需要只给一句中文。
+
+
+张量并行是把模型中的大矩阵运算切分到多个 GPU 上同时计算，从而加速大模型训练或推理的并行方式。
+REVIEW01_README_SMOKE_PASS review01-20261017T073547Z-1208357
+qwen38-v2-review01
+qwen38-v2-review01
