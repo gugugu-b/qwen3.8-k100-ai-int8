@@ -15,19 +15,11 @@ bash scripts/run_review01.sh check
 
 随后从 [提交README第1节](submit/README.md#1-环境准备)开始：拉取／载入固定镜像，设置当前包路径、权重与数据路径，核空闲卡和资产，创建容器，再检查依赖、启动及Benchmark。完整库目录准备好后默认LIBRARY_DIR即可使用；准备工具遇到已有库时只核验，拒绝覆盖不匹配内容。
 
-## 本版结果与证据
+## 一张表查看全部性能
 
-| 项目 | 当前结果 |
-|---|---|
-| 随机负载主矩阵 | 服务32／Graph32，4K与64K各C1／8／16／32，共8场景、24正式轮 |
-| ShareGPT | C1／4／16／32／64，各3正式轮；C32为419.7877 TPS |
-| 新增C64容量配置 | 服务64／Graph64，398.9657 TPS；正式期间5秒采样运行峰值64 |
-| 新增C128容量配置 | 服务128／Graph128，378.3503 TPS；正式采样峰值76，保留为排队诊断，实际128并发未验证 |
-| SLA | 本地阈值逐轮P95：4K已测C7通过、C8失败；64K C1跨阶段不一致，稳定性待解决 |
-| GSM8K | 本地冻结四样例全量1319题，1288正确，97.6497%；最终官方协议一致性待核对 |
-| 物理卡0、1复现 | 新容器依赖、31项模型与数据SHA、模型health和真实API通过，两个rank的AR guard eligible；容器已停止、锁已释放 |
+**[完整性能总表](submit/docs/性能总表.md)** 汇总38组v2候选测量、114正式轮。4K覆盖C1–8、16、32、64、128；64K覆盖C1、2、8、16、32；ShareGPT覆盖C1、4、16、32、64。相同并发下的不同协议、卡对、服务／Graph上限、复测和原失败记录分别列出，不再只选代表值展示。
 
-所有TPS为三正式轮输出TPS的算术均值，排除预热。不同服务上限、Graph和并行条件分别记录；随机输出U+FFFD标记保留，性能完整性通过不代表精度或赛事准入。
+仓库首页、提交README§5和性能报告§4使用同一张总表，含每轮TPS、均值、TTFT／TPOT mean与尾延迟、SLA通过轮数、U+FFFD标记及原始数据链接。旧服务32高客户端并发明确作排队诊断；新C128实际采样峰值76；ShareGPT服务64虽测得473.6951 TPS但原文本门禁FAIL不变。原始文件和历史判定保持原样，6组v1对照不计入v2总表。
 
 - [当前性能报告 §4](submit/docs/性能优化报告.md#4-性能结果)：预期结果、完整逐轮数据及适用范围。
 - [原始矩阵／SLA／ShareGPT归档](submit/logs/v2_benchmark_raw/final/README.md)：26场景、78正式轮，附来源清单与CPU复核入口。
@@ -35,4 +27,4 @@ bash scripts/run_review01.sh check
 - [GSM8K报告](submit/docs/GSM8K精度验证-20261017.md)、[Demo与视频](submit/docs/Demo说明.md)、[卡0、1运行验证](submit/result/evidence/readme-review01-20261017/runtime-review.json)。
 - [材料状态](submit/docs/提交材料状态-20261017.md)：其余三项精度、最终官方协议、64K SLA稳定性与最终组合验证仍待完成，当前不标记全部赛事准入通过。
 
-`submit/manifest/package-sha256.json`封存6192个文件；仓库保留完整原始日志及历史运行目录。模型与ShareGPT大文件在包外，完整库由上述已校验压缩包准备。`tools/seal_manifest.py`仅供有意编辑材料后重新封存，正常复现不运行它。
+`submit/manifest/package-sha256.json`封存当前源码、报告及证据；仓库保留完整原始日志及历史运行目录。模型与ShareGPT大文件在包外，完整库由上述已校验压缩包准备。`tools/seal_manifest.py`仅供有意编辑材料后重新封存，正常复现不运行它。

@@ -241,7 +241,7 @@
     "verifier": "scripts/verify_benchmark_archive.py",
     "new_gpu_measurements_this_edit": false,
     "diagnostic_high_client_concurrency": 2,
-    "display_policy": "4K client C64/C128 retained as queue diagnostics only; service max_running_requests=32; excluded from README expected results and report primary tables"
+    "display_policy": "All v2 candidate measurements are shown in the single complete table; old S32 C64/C128 remain explicitly labelled queue diagnostics"
   },
   "review_image": "harbor.sourcefind.cn:5443/dcu/admin/base/sglang:0.5.12-ubuntu22.04-dtk2604-py3.10",
   "review_image_identity": "NOT_VERIFIED_DNS_LOOKUP_FAILED_20261017; require image ID match",
@@ -297,5 +297,45 @@
     "lock_released": true,
     "evidence": "result/evidence/readme-review01-20261017/runtime-review.json",
     "new_benchmark_in_this_smoke": false
+  },
+  "all_performance_table": {
+    "document": "docs/性能总表.md",
+    "json": "result/summary/performance-all-concurrency.json",
+    "verifier": "scripts/build_performance_table.py --check",
+    "candidate_runs": 38,
+    "formal_rounds": 114,
+    "coverage": {
+      "4K/1K": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "64K/1K": [
+        1,
+        2,
+        8,
+        16,
+        32
+      ],
+      "ShareGPT": [
+        1,
+        4,
+        16,
+        32,
+        64
+      ]
+    },
+    "excluded_v1_comparators": 6,
+    "original_raw_modified": false,
+    "new_gpu_measurements": false
   }
 }
