@@ -2,6 +2,8 @@
 
 更新日期：2026-10-17。完整提交入口为 [submit/README.md](submit/README.md)，按 **环境准备 → 依赖安装 → 模型启动 → Benchmark → 得到结果** 执行；默认使用物理卡0、1。源码、完整运行文件及分项Diff见 [补丁说明](submit/patch/README.md)。
 
+[六类实测环境声明](submit/docs/实测环境声明.md)已填写硬件拓扑与存储、宿主／容器软件版本、框架依赖、18个权重分片SHA256前8位、完整启动命令和采集协议，并放在仓库首页与实测报告第一段。
+
 ## 从GitHub仓库准备运行库
 
 模型权重和ShareGPT按提交README准备。rocBLAS使用仓库已有的 `v1/submit1005/config/library_gpu4_int8tuned_stock_clean.tar.gz`，其全部162文件与v2清单逐项SHA一致。无需再次下载或重复存储展开后的827,205,083字节库：

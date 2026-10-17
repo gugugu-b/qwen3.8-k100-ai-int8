@@ -1,0 +1,20 @@
+{
+  "collected_utc": "2026-10-17T12:35:53.367433+00:00",
+  "nested_dtype_quantization": {
+    "/compression_config/quant_method": "compressed-tensors",
+    "/text_config/dtype": "bfloat16",
+    "/text_config/mamba_ssm_dtype": "float32"
+  },
+  "weight_header_tensor_dtypes": {
+    "F32": 407,
+    "BF16": 792,
+    "I8": 407
+  },
+  "scope": "Header metadata only; full weight SHA identities taken from archived 31-file verification",
+  "image_benchmark_metadata": {
+    "python": "3.10.12 (main, Mar  3 2026, 11:56:32) [GCC 11.4.0]",
+    "benchmark_file": "/usr/local/lib/python3.10/dist-packages/sglang/bench_serving.py",
+    "benchmark_sha256": "f2206dcda74932e1b148cdf7b5ef07443bb5d9e0f2729b7a67d602182e3aa050",
+    "framework_version": "0.5.12+das185.dtk2604.torch2100.2608121934.gcbf025"
+  }
+}

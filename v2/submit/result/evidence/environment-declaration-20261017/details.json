@@ -1,0 +1,142 @@
+{
+  "collected_utc": "2026-10-17T12:33:52.035297+00:00",
+  "stage": "Read-only post-measurement topology and image metadata",
+  "topology": {
+    "command": [
+      "/opt/dtk/bin/rocm-smi",
+      "--showtopo"
+    ],
+    "returncode": 0,
+    "stdout": "\n================================= System Management Interface ==================================\n================================================================================================\nLink accessible between HCUs\n          HCU[0]    HCU[1]    HCU[2]    HCU[3]    HCU[4]    HCU[5]    HCU[6]    HCU[7]    \nHCU[0]    TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      \nHCU[1]    TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      \nHCU[2]    TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      \nHCU[3]    TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      \nHCU[4]    TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      \nHCU[5]    TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      \nHCU[6]    TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      \nHCU[7]    TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      TRUE      \n================================================================================================\n================================================================================================\nWeight between HCUs\n          HCU[0]    HCU[1]    HCU[2]    HCU[3]    HCU[4]    HCU[5]    HCU[6]    HCU[7]    \nHCU[0]    0         0         0         0         0         0         0         0         \nHCU[1]    0         0         0         0         0         0         0         0         \nHCU[2]    0         0         0         0         0         0         0         0         \nHCU[3]    0         0         0         0         0         0         0         0         \nHCU[4]    0         0         0         0         0         0         0         0         \nHCU[5]    0         0         0         0         0         0         0         0         \nHCU[6]    0         0         0         0         0         0         0         0         \nHCU[7]    0         0         0         0         0         0         0         0         \n================================================================================================\n================================================================================================\nHops between HCUs\n          HCU[0]    HCU[1]    HCU[2]    HCU[3]    HCU[4]    HCU[5]    HCU[6]    HCU[7]    \nHCU[0]    0         2         2         2         3         3         3         3         \nHCU[1]    2         0         2         2         3         3         3         3         \nHCU[2]    2         2         0         2         3         3         3         3         \nHCU[3]    2         2         2         0         3         3         3         3         \nHCU[4]    3         3         3         3         0         2         2         2         \nHCU[5]    3         3         3         3         2         0         2         2         \nHCU[6]    3         3         3         3         2         2         0         2         \nHCU[7]    3         3         3         3         2         2         2         0         \n================================================================================================\n================================================================================================\nLink Type between HCUs\n          HCU[0]    HCU[1]    HCU[2]    HCU[3]    HCU[4]    HCU[5]    HCU[6]    HCU[7]    \nHCU[0]    None      PCIE      PCIE      PCIE      PCIE      PCIE      PCIE      PCIE      \nHCU[1]    PCIE      None      PCIE      PCIE      PCIE      PCIE      PCIE      PCIE      \nHCU[2]    PCIE      PCIE      None      PCIE      PCIE      PCIE      PCIE      PCIE      \nHCU[3]    PCIE      PCIE      PCIE      None      PCIE      PCIE      PCIE      PCIE      \nHCU[4]    PCIE      PCIE      PCIE      PCIE      None      PCIE      PCIE      PCIE      \nHCU[5]    PCIE      PCIE      PCIE      PCIE      PCIE      None      PCIE      PCIE      \nHCU[6]    PCIE      PCIE      PCIE      PCIE      PCIE      PCIE      None      PCIE      \nHCU[7]    PCIE      PCIE      PCIE      PCIE      PCIE      PCIE      PCIE      None      \n================================================================================================\n================================================================================================\nHCU[0]\t\t: (Topology) Numa Node 0\nHCU[0]\t\t: (Topology) Numa Affinity 0\nHCU[1]\t\t: (Topology) Numa Node 0\nHCU[1]\t\t: (Topology) Numa Affinity 0\nHCU[2]\t\t: (Topology) Numa Node 0\nHCU[2]\t\t: (Topology) Numa Affinity 0\nHCU[3]\t\t: (Topology) Numa Node 0\nHCU[3]\t\t: (Topology) Numa Affinity 0\nHCU[4]\t\t: (Topology) Numa Node 1\nHCU[4]\t\t: (Topology) Numa Affinity 1\nHCU[5]\t\t: (Topology) Numa Node 1\nHCU[5]\t\t: (Topology) Numa Affinity 1\nHCU[6]\t\t: (Topology) Numa Node 1\nHCU[6]\t\t: (Topology) Numa Affinity 1\nHCU[7]\t\t: (Topology) Numa Node 1\nHCU[7]\t\t: (Topology) Numa Affinity 1\n================================================================================================\n======================================== End of SMI Log ========================================\n\n",
+    "stderr": ""
+  },
+  "bus": {
+    "command": [
+      "/opt/dtk/bin/rocm-smi",
+      "--showbus",
+      "--json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"card0\": {\"PCI Bus\": \"0000:07:00.0 --> SN: TRCW330025080901\"}, \"card1\": {\"PCI Bus\": \"0000:0f:00.0 --> SN: TRCW340005080801\"}, \"card2\": {\"PCI Bus\": \"0000:14:00.0 --> SN: TPXT060013030201\"}, \"card3\": {\"PCI Bus\": \"0000:17:00.0 --> SN: TRCW340014070301\"}, \"card4\": {\"PCI Bus\": \"0000:57:00.0 --> SN: TRFU320020080401\"}, \"card5\": {\"PCI Bus\": \"0000:5a:00.0 --> SN: TR3A440008080801\"}, \"card6\": {\"PCI Bus\": \"0000:61:00.0 --> SN: TR3A440012060301\"}, \"card7\": {\"PCI Bus\": \"0000:66:00.0 --> SN: TRCW340025090201\"}}\n",
+    "stderr": ""
+  },
+  "host_dtk_version": {
+    "path": "/opt/dtk/.dtk_version",
+    "content": "DTK-25.04\nFri Feb 28 13:13:26 CST 2025\n"
+  },
+  "pci_links": [
+    {
+      "drm_card": "card1",
+      "bdf": "0000:07:00.0",
+      "vendor": "0x1d94",
+      "device": "0x6211",
+      "numa_node": "0",
+      "local_cpulist": "0-15",
+      "current_link_speed": "16.0 GT/s PCIe",
+      "current_link_width": "16",
+      "max_link_speed": "16.0 GT/s PCIe",
+      "max_link_width": "16"
+    },
+    {
+      "drm_card": "card2",
+      "bdf": "0000:0f:00.0",
+      "vendor": "0x1d94",
+      "device": "0x6211",
+      "numa_node": "0",
+      "local_cpulist": "0-15",
+      "current_link_speed": "16.0 GT/s PCIe",
+      "current_link_width": "16",
+      "max_link_speed": "16.0 GT/s PCIe",
+      "max_link_width": "16"
+    },
+    {
+      "drm_card": "card3",
+      "bdf": "0000:14:00.0",
+      "vendor": "0x1d94",
+      "device": "0x6211",
+      "numa_node": "0",
+      "local_cpulist": "0-15",
+      "current_link_speed": "16.0 GT/s PCIe",
+      "current_link_width": "16",
+      "max_link_speed": "16.0 GT/s PCIe",
+      "max_link_width": "16"
+    },
+    {
+      "drm_card": "card4",
+      "bdf": "0000:17:00.0",
+      "vendor": "0x1d94",
+      "device": "0x6211",
+      "numa_node": "0",
+      "local_cpulist": "0-15",
+      "current_link_speed": "16.0 GT/s PCIe",
+      "current_link_width": "16",
+      "max_link_speed": "16.0 GT/s PCIe",
+      "max_link_width": "16"
+    },
+    {
+      "drm_card": "card5",
+      "bdf": "0000:57:00.0",
+      "vendor": "0x1d94",
+      "device": "0x6211",
+      "numa_node": "1",
+      "local_cpulist": "16-31",
+      "current_link_speed": "16.0 GT/s PCIe",
+      "current_link_width": "16",
+      "max_link_speed": "16.0 GT/s PCIe",
+      "max_link_width": "16"
+    },
+    {
+      "drm_card": "card6",
+      "bdf": "0000:5a:00.0",
+      "vendor": "0x1d94",
+      "device": "0x6211",
+      "numa_node": "1",
+      "local_cpulist": "16-31",
+      "current_link_speed": "16.0 GT/s PCIe",
+      "current_link_width": "16",
+      "max_link_speed": "16.0 GT/s PCIe",
+      "max_link_width": "16"
+    },
+    {
+      "drm_card": "card7",
+      "bdf": "0000:61:00.0",
+      "vendor": "0x1d94",
+      "device": "0x6211",
+      "numa_node": "1",
+      "local_cpulist": "16-31",
+      "current_link_speed": "16.0 GT/s PCIe",
+      "current_link_width": "16",
+      "max_link_speed": "16.0 GT/s PCIe",
+      "max_link_width": "16"
+    },
+    {
+      "drm_card": "card8",
+      "bdf": "0000:66:00.0",
+      "vendor": "0x1d94",
+      "device": "0x6211",
+      "numa_node": "1",
+      "local_cpulist": "16-31",
+      "current_link_speed": "16.0 GT/s PCIe",
+      "current_link_width": "16",
+      "max_link_speed": "16.0 GT/s PCIe",
+      "max_link_width": "16"
+    }
+  ],
+  "image_metadata": {
+    "image_id": "sha256:caeff0e9e6efef918a31359c4764b18bf2d428f2b76e3580c788f4cc8b0e93ad",
+    "returncode": 0,
+    "stdout": "{\"os\": \"PRETTY_NAME=\\\"Ubuntu 22.04.5 LTS\\\"\\nNAME=\\\"Ubuntu\\\"\\nVERSION_ID=\\\"22.04\\\"\\nVERSION=\\\"22.04.5 LTS (Jammy Jellyfish)\\\"\\nVERSION_CODENAME=jammy\\nID=ubuntu\\nID_LIKE=debian\\nHOME_URL=\\\"https://www.ubuntu.com/\\\"\\nSUPPORT_URL=\\\"https://help.ubuntu.com/\\\"\\nBUG_REPORT_URL=\\\"https://bugs.launchpad.net/ubuntu/\\\"\\nPRIVACY_POLICY_URL=\\\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\\\"\\nUBUNTU_CODENAME=jammy\\n\", \"versions\": {\"sglang\": \"0.5.12+das185.dtk2604.torch2100.2608121934.gcbf025\", \"torch\": \"2.10.0+das.opt1.dtk2604.2608131652.g28498c\", \"triton\": \"3.6.0+das185.dtk2604.torch2100.2608131719.gb796b1\", \"aiter\": \"0.1.5+das185.dtk2604.torch2100.2608131714.gb0979d\", \"transformers\": \"5.6.0\", \"aiohttp\": \"3.14.3\", \"requests\": \"2.34.2\", \"lightop\": \"0.6.0+das.dtk2604.torch2100.2608121706.g09a4f3\", \"lmslim\": \"0.3.1+das.opt4.dtk2604.torch2100.2607241157.gf9a687\", \"apache-tvm-ffi\": \"0.1.9\"}, \"version_files\": {\"/opt/dtk/.dtk_version\": \"DTK-26.04-rc4\\nWed Mar 18 13:01:34 CST 2026\\n\"}}\n",
+    "stderr": "",
+    "gpu_devices_attached": false
+  },
+  "model_config": {
+    "dtype": null,
+    "torch_dtype": null,
+    "quantization_config": null,
+    "architectures": [
+      "Qwen3_5ForConditionalGeneration"
+    ],
+    "model_type": "qwen3_5"
+  },
+  "model_readme_head": "---\nlicense: Apache-2.0\ntags: []\n\n#model-type:\n##如 gpt、phi、llama、chatglm、baichuan 等\n#- gpt\n\n#domain:\n##如 nlp、cv、audio、multi-modal\n#- nlp\n\n#language:\n##语言代码列表 https://help.aliyun.com/document_detail/215387.html?spm=a2c4g.11186623.0.0.9f8d7467kni6Aa\n#- cn \n\n#metrics:\n##如 CIDEr、Blue、ROUGE 等\n#- CIDEr\n\n#tags:\n##各种自定义，包括 pretrained、fine-tuned、instruction-tuned、RL-tuned 等训练方法和其他\n#- pretrained\n\n#tools:\n##如 vllm、fastchat、llamacpp、AdaSeq 等\n#- vllm\n---\n### 当前模型的贡献者未提供更加详细的模型介绍。模型文件和权重，可浏览“模型文件”页面获取。\n#### 您可以通过如下git clone命令，或者ModelScope SDK来下载模型\n\nSDK下载\n```bash\n#安装ModelScope\npip install modelscope\n```\n```python\n#SDK模型下载\nfrom modelscope import snapshot_download\nmodel_dir = snapshot_download('hygon/Qwen3.8-27B-Channel-INT8-w8a8')\n```\nGit下载\n```\n#Git模型下载\ngit clone https://www.modelscope.cn/hygon/Qwen3.8-27B-Channel-INT8-w8a8.git\n```\n\n<p style=\"color: lightgrey;\">如果您是本模型的贡献者，我们邀请您根据<a href=\"https://modelscope.cn/docs/ModelScope%E6%A8%A1%E5%9E%8B%E6%8E%A5%E5%85%A5%E6%B5%81%E7%A8%8B%E6%A6%82%E8%A7%88\" style=\"color: lightgrey; text-decoration: underline;\">模型贡献文档</a>，及时完善模型卡片内容。</p>"
+}

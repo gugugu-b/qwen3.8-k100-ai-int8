@@ -289,8 +289,23 @@ def render_table(data, destination):
     return '\n'.join(lines)
 
 
+def render_environment(destination):
+    source = ROOT / 'docs/实测环境声明.md'
+    content = source.read_text().split('\n\n', 1)[1].strip()
+    def rebase(match):
+        target = match.group(1)
+        if '://' in target or target.startswith('#'):
+            return match.group(0)
+        path, mark, fragment = target.partition('#')
+        relative = os.path.relpath((source.parent / path).resolve(), destination.parent)
+        return '](' + relative + (mark + fragment if mark else '') + ')'
+    return re.sub(r'\]\(([^)]+)\)', rebase, content)
+
+
 def render_document(data):
     return f'''# v2性能总表：全部已测并发与复测批次
+
+{render_environment(DOC_PATH)}
 
 本表覆盖包内 **{data['row_count']}组v2候选测量、{data['formal_rounds']}个正式轮**。扫描所有逐轮原件，按正式轮SHA去重；同一次测量的归档副本不重复计行，不同批次、协议、服务上限与复测全部保留。另有{len(data['excluded_v1_comparators'])}组v1／v1-return对照不冒充v2成绩，清单与全部来源见 [机器可读总表](../result/summary/performance-all-concurrency.json)。
 
@@ -334,6 +349,9 @@ def main():
             if path.is_file() and start in path.read_text():
                 value = path.read_text().split(start, 1)[1].split(end, 1)[0]
                 require(value == '\n' + render_table(data, path) + '\n', 'Embedded table differs: ' + str(path))
+            if path.is_file() and '<!-- V2_MEASURED_ENV:START -->' in path.read_text():
+                first_block = path.read_text().split('\n\n', 1)[1]
+                require(first_block.startswith(render_environment(path)), 'Leading environment declaration differs: ' + str(path))
     print(json.dumps({'status': 'ALL_PERFORMANCE_TABLE_PASS', 'rows': data['row_count'],
                       'formal_rounds': data['formal_rounds'], 'coverage': data['concurrency_coverage'],
                       'excluded_v1_comparators': len(data['excluded_v1_comparators']),

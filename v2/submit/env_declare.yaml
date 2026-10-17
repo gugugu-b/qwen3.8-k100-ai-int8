@@ -18,7 +18,10 @@
     "aiter": "0.1.5+das185.dtk2604.torch2100.2608131714.gb0979d",
     "transformers": "5.6.0",
     "aiohttp": "3.14.3",
-    "requests": "2.34.2"
+    "requests": "2.34.2",
+    "lightop": "0.6.0+das.dtk2604.torch2100.2608121706.g09a4f3",
+    "lmslim": "0.3.1+das.opt4.dtk2604.torch2100.2607241157.gf9a687",
+    "apache-tvm-ffi": "0.1.9"
   },
   "runtime_overlay": {
     "installed_path": "/usr/local/lib/python3.10/dist-packages/lightop/_lmslim_native/vllm_compat/direct_register_custom_op.py",
@@ -49,7 +52,51 @@
     "rounds": 3,
     "official_tutorial": "https://forum.sourcefind.cn/thread/d006a0e2-b624-11f1-93f4-0242ac150003",
     "warmup_rounds": 2,
-    "requests_per_round": "max(8,2*C)"
+    "requests_per_round": "max(8,2*C)",
+    "reference_sha256": "08d7e43d2b347f2a2cfef3a577f7db4ab2472b3139939db8a6731b07369c5fc6",
+    "legacy_script_sha256": "1d8eca3e2325d45c1b2ac5004d6e49eb39b1494ece66e74c3e1b237b2b6471b8",
+    "sharegpt_script_sha256": "f2206dcda74932e1b148cdf7b5ef07443bb5d9e0f2729b7a67d602182e3aa050",
+    "sharegpt_framework_version": "0.5.12+das185.dtk2604.torch2100.2608121934.gcbf025",
+    "concurrency_coverage": {
+      "4K/1K": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "64K/1K": [
+        1,
+        2,
+        8,
+        16,
+        32
+      ],
+      "ShareGPT": [
+        1,
+        4,
+        16,
+        32,
+        64
+      ]
+    },
+    "warmup_rounds_scope": "2 for reference matrix / SLA / clean / capacity; legacy4K 2, legacy64K 1; old delivery4K 2, old candidate64K 1",
+    "requests_per_round_scope": "reference max(8,2*C); legacy max(16,2*C)",
+    "sharegpt_protocol": {
+      "full_warmup_rounds": 1,
+      "full_warmup_requests": 1000,
+      "formal_rounds": 3,
+      "requests_per_formal_round": 1000,
+      "additional_short_warmups_per_invocation": 64
+    },
+    "profiler_trace_enabled": false
   },
   "candidate_site_sha256": "da5b59bd28ea434356c7c96744c47f19493e540da7ba6f9bb890410e168c1610",
   "default_task_patch": "Original submit1009 remains v1; v2/submit intentionally selects measured candidate",
@@ -74,7 +121,37 @@
     "quantization_recipe": "Official published Channel-INT8-w8a8 variant per user confirmation; no local re-quantization; on-disk model source and 31-file SHA recorded",
     "weight_manifest": "result/evidence/official-alignment-20261017/community-official-20261017-c/model-sha256.json",
     "official_weight_permission": "User confirms official published Channel-INT8-w8a8 weights; final submission protocol admission separate",
-    "deployed_source": "hygon/Qwen3.8-27B-Channel-INT8-w8a8 per on-disk model README"
+    "deployed_source": "hygon/Qwen3.8-27B-Channel-INT8-w8a8 per on-disk model README",
+    "weight_shards_sha256_prefix8": {
+      "model-00001-of-00018.safetensors": "61cf64c4",
+      "model-00002-of-00018.safetensors": "2a6c100e",
+      "model-00003-of-00018.safetensors": "1e22bff9",
+      "model-00004-of-00018.safetensors": "2d83707e",
+      "model-00005-of-00018.safetensors": "a3f7143f",
+      "model-00006-of-00018.safetensors": "26fa317b",
+      "model-00007-of-00018.safetensors": "b7e34fb9",
+      "model-00008-of-00018.safetensors": "fb3a8f9d",
+      "model-00009-of-00018.safetensors": "09f95ad0",
+      "model-00010-of-00018.safetensors": "5eb23579",
+      "model-00011-of-00018.safetensors": "5319d76e",
+      "model-00012-of-00018.safetensors": "0f997fca",
+      "model-00013-of-00018.safetensors": "142e9e31",
+      "model-00014-of-00018.safetensors": "8cd71184",
+      "model-00015-of-00018.safetensors": "26b78bb4",
+      "model-00016-of-00018.safetensors": "17f3023f",
+      "model-00017-of-00018.safetensors": "7ceb03d7",
+      "model-00018-of-00018.safetensors": "faf47d69"
+    },
+    "precision_metadata": {
+      "/compression_config/quant_method": "compressed-tensors",
+      "/text_config/dtype": "bfloat16",
+      "/text_config/mamba_ssm_dtype": "float32"
+    },
+    "weight_header_tensor_dtypes": {
+      "F32": 407,
+      "BF16": 792,
+      "I8": 407
+    }
   },
   "dataset": {
     "filename": "ShareGPT_V3_unfiltered_cleaned_split.json",
@@ -92,8 +169,60 @@
     "server_full_sha_verified": true
   },
   "hardware_details": {
-    "accelerator": "2 x K100-AI, gfx928; review physical HCU0,1; original default6,7; historical matrix uses recorded pairs",
-    "cpu_memory_numa_driver_firmware_topology": "CPU/memory/NUMA/kernel/GPU-before recorded in original evidence; driver supplemented from hycu module sysfs on 2026-10-17; firmware/topology completeness not certified"
+    "accelerator": "K100-AI",
+    "architecture": "gfx928",
+    "host_cards": 8,
+    "cards_per_instance": 2,
+    "vram_mib_per_card": 65520,
+    "tp": 2,
+    "pp": 1,
+    "review_physical_pair": [
+      0,
+      1
+    ],
+    "historical_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "interconnect": {
+      "type": "PCIe",
+      "endpoint_current_gt_s": 16.0,
+      "endpoint_width": 16,
+      "p2p_accessible": "all pairs per rocm-smi",
+      "hops": "2 within HCU0-3 or HCU4-7; 3 across groups",
+      "bandwidth_benchmark_performed": false
+    },
+    "cpu": "2 x Hygon C86 7490 64-core",
+    "cores": 128,
+    "logical_cpus": 128,
+    "numa_nodes": 8,
+    "os_visible_memory_kib": 1056563624,
+    "os_visible_memory_gib": 1007.6176,
+    "storage": {
+      "physical_disk": "nvme2n1",
+      "model": "INTEL SSDPF2KX038T1",
+      "physical_bytes": 3840755982336,
+      "root_lv": "/dev/mapper/ubuntu--vg-ubuntu--lv",
+      "filesystem": "ext4",
+      "filesystem_bytes": 3776075399168,
+      "model_and_results_on_same_root_filesystem": true
+    },
+    "evidence": "result/evidence/environment-declaration-20261017/host-inventory.json",
+    "topology_evidence": "result/evidence/environment-declaration-20261017/details.json"
   },
   "accuracy": {
     "order": "USER_UPDATE_20261017_GSM8K_CONCURRENT_DEDICATED_TP2_OTHER_THREE_LAST",
@@ -337,5 +466,32 @@
     "excluded_v1_comparators": 6,
     "original_raw_modified": false,
     "new_gpu_measurements": false
+  },
+  "software_details": {
+    "host_os": "Ubuntu 22.04.5 LTS",
+    "container_os": "Ubuntu 22.04.5 LTS",
+    "host_kernel": "5.15.0-119-generic",
+    "host_dtk": "25.04",
+    "container_dtk": "26.04-rc4",
+    "das_build_identifier": "das185",
+    "version_source": "Pinned image package metadata and /opt/dtk/.dtk_version; DAS identifier retained verbatim",
+    "host_hyhal_exists": true
+  },
+  "measured_environment_declaration": {
+    "document": "docs/实测环境声明.md",
+    "categories": [
+      "硬件",
+      "软件",
+      "框架",
+      "模型",
+      "运行",
+      "采集"
+    ],
+    "evidence": "result/evidence/environment-declaration-20261017",
+    "commands": "result/evidence/environment-declaration-20261017/launch-commands.json",
+    "post_measurement_collected_utc": "2026-10-17T12:33:03.991480+00:00",
+    "image_devices_attached": false,
+    "gpu_rebenchmark": false,
+    "raw_results_changed": false
   }
 }

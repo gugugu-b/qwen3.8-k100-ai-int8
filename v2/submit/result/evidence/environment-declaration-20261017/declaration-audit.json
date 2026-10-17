@@ -1,0 +1,19 @@
+{
+  "status": "ENVIRONMENT_DECLARATION_AUDIT_PASS",
+  "six_categories": 6,
+  "pages_checked": 5,
+  "links_checked": 60,
+  "model_shards_sha_prefix_verified": 18,
+  "full_launch_commands_verified": 3,
+  "bash_syntax": "PASS",
+  "existing_sealed_files_changed": [
+    "README.md",
+    "docs/性能优化报告.md",
+    "docs/性能总表.md",
+    "env_declare.yaml",
+    "scripts/build_performance_table.py"
+  ],
+  "performance_data_changed": false,
+  "gpu_used": false,
+  "original_manifest_sha256": "8bc88360f44a04a28dfcdb9109f654ac7f75c498bcf5bd965922f3f3084441b8"
+}
