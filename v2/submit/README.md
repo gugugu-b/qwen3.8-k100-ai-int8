@@ -60,7 +60,7 @@ python3 -u -m sglang.launch_server \
 
 ## 1. 环境准备
 
-以下命令在K100-AI Linux宿主执行，以 `/data/wangzy/v2/submit` 为例；按顺序在同一终端执行。评审入口使用**物理卡0、1，TP=2**，容器名 `qwen38-v2-review01`。
+以下命令在K100-AI Linux宿主执行。完整克隆GitHub仓库后，先在仓库根目录执行 `python3 -I v2/prepare_library.py`，再执行 `cd v2/submit`；已按仓库首页完成这两步则保持当前目录继续。后续按顺序在同一终端执行，`SUBMIT_ROOT`取当前实际目录，模型与数据路径按宿主实际位置填写。评审入口使用**物理卡0、1，TP=2**，容器名 `qwen38-v2-review01`。
 
 ### 1.1 镜像与宿主
 
@@ -87,7 +87,7 @@ test "$(docker image inspect "$REVIEW_IMAGE" --format '{{.Id}}')" = "$REVIEW_IMA
 ### 1.2 路径与权重
 
 ```bash
-cd /data/wangzy/v2/submit
+test -f env_declare.yaml && test -f scripts/run_review01.sh
 export SUBMIT_ROOT="$PWD"
 export REVIEW_ID="review01-$(date -u +%Y%m%dT%H%M%SZ)-$$"
 export MODEL_PATH=/data/model/Qwen3.8-27B-Channel-INT8-w8a8
@@ -103,7 +103,7 @@ export PATCH_DIR="$SUBMIT_ROOT/result/runs/${REVIEW_ID}-runtime/patch"
 |---|---|
 | 光合官方发布权重 `Qwen3.8-27B-Channel-INT8-w8a8` | 本机模型README标识为 `hygon/Qwen3.8-27B-Channel-INT8-w8a8`；完整模型／tokenizer／config共31文件、30,902,757,820字节，保持官方INT8权重。用下节资产检查与归档SHA逐项核对 |
 | ShareGPT | 准备 `ShareGPT_V3_unfiltered_cleaned_split.json`；SHA256为 `35f0e213ce091ed9b9af2a1f0755e9d39f9ccec34ab281cd4ca60d70f6479ba4` |
-| rocBLAS完整库 | 162文件，身份见 `config/library-sha256.json`。服务器版已包含；本地小文件归档不含约790MiB完整库，需交付同一清单对应的完整目录 |
+| rocBLAS完整库 | 162文件，身份见 `config/library-sha256.json`。完整GitHub仓库已附 `v1/submit1005/config/library_gpu4_int8tuned_stock_clean.tar.gz`；上述 `v2/prepare_library.py` 将其解包至当前包的 `config/library_gpu4_int8tuned_stock_clean/` 并逐文件核对SHA。单独交付 `submit` 时应同时提供该完整目录或压缩包 |
 
 模型与数据可调整上述路径。若库在包外，直接设置 `LIBRARY_DIR=/实际完整库目录`；也可在包内目标不存在时执行 `python3 scripts/prepare_assets.py --library-source /实际完整库目录`。
 

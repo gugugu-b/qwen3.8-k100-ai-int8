@@ -1,12 +1,12 @@
 {
   "version": "v2",
-  "updated": "2026-10-17",
+  "updated": "2026-10-19",
   "track": "K100-AI / SGLang / TP=2",
   "package": "submit",
-  "package_manifest_sha256": "e07efeb9b5a31e7cfbb827986398419df3ae818ba4c47435e68825abd1efbc72",
+  "package_manifest_sha256": "540547c073f4ca1abf0364f6a629df547341880cb8e9eee3fe3ff9a04b27857f",
   "sealed_files": 6201,
   "snapshot_files": 6665,
-  "snapshot_bytes": 404041456,
+  "snapshot_bytes": 404041904,
   "copy_status": "ALL_CURRENT_SEALED_FILES_BYTE_IDENTICAL",
   "library_archive": "../v1/submit1005/config/library_gpu4_int8tuned_stock_clean.tar.gz",
   "library_archive_sha256": "60c1992063a4101ba7c55450304963485abed405e451fb40c1810485f34a9c6e",
@@ -16,7 +16,7 @@
     1
   ],
   "remaining_admission": "See submit/docs/提交材料状态-20261017.md",
-  "previous_package_manifest_sha256": "8bc88360f44a04a28dfcdb9109f654ac7f75c498bcf5bd965922f3f3084441b8",
+  "previous_package_manifest_sha256": "e07efeb9b5a31e7cfbb827986398419df3ae818ba4c47435e68825abd1efbc72",
   "performance_table": {
     "rows": 38,
     "formal_rounds": 114,
@@ -36,5 +36,14 @@
     "placement": "First block in root README, submit README, measured report and full performance table",
     "evidence": "submit/result/evidence/environment-declaration-20261017",
     "gpu_measurements_added": false
+  },
+  "reproduction_readme_review": {
+    "date": "2026-10-19",
+    "fixed": [
+      "Use clone current directory as SUBMIT_ROOT",
+      "Prepare exact included rocBLAS archive before runtime checks"
+    ],
+    "runtime_smoke_evidence": "submit/result/evidence/readme-review01-20261017/runtime-review.json",
+    "complete_benchmark_rerun_this_review": false
   }
 }

@@ -1,5 +1,5 @@
 {
-  "README.md": "bfd8e00c7a171c8559710261b7d7ad0495572dd89702df943f87ae0c0db78e6d",
+  "README.md": "953825085ebcd3a6b949b77d247b3aa623844ab37d6a239284515b325ad3b543",
   "config/aiter/chunk_fwd_o/chunk_fwd_o-gfx928.json": "22c2237c2e5c60942dd6f91d81757008a9944d75e354856382fcc720e36c155f",
   "config/aiter/chunk_gated_delta_rule_fwd_h/chunk_gated_delta_rule_fwd_h-gfx928.json": "28705647a81d1d8ecd550be5f1eda338a0adbf288d4b19ff6c9a1051142a2f48",
   "config/aiter/fused_recurrent_gated_delta_rule_packed_decode/fused_recurrent_gated_delta_rule_packed_decode-gfx928.json": "d855d364daf1b9ad9ae83bfbc7fcf95c9df28898beca291035034d8188bbc27e",
